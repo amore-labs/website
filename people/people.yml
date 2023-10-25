@@ -1,3 +1,13 @@
+Andrei Simion-Constantinescu: # Put your name here, it will replace <name> in the description
+  position: PhD Researcher # permanent, engineer, postdoc or phd
+  description:
+    <name> is a PhD Researcher in the AutoML group focused on self-supervised learning for computer vision tasks.
+    He holds an MSc degree from TU Delft with the graduation topic on
+    (<a href="https://repository.tudelft.nl/islandora/object/uuid%3A6b74a0e6-37aa-4ff4-bada-3e414498eafd" target="_blank">contrastive learning for unlabeled videos</a>.
+    His current research focuses on adapting state-of-the-art self-supervise techniques for greenhouse/vertical farm images to predict the crop growing parameters (such as fresh weight, height, diameter a.s.o).
+  picture: ../images/people/andrei_simion.jpg
+
+
 Alexis Cvetkov-Iliev: # Put your name here, it will replace <name> in the description
   position: postdoc # permanent, engineer, postdoc or phd
   description:
