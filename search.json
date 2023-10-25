@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "research/publications.html",
-    "href": "research/publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "2014\nJoaquin Vanschoren, Jan N. van Rijn, Bernd Bischl, and Luis Torgo. (2014) \"OpenML: Networked Science in Machine Learning.\" ACM SIGKDD Explorations Newsletter\n        \n        Preprint\n     \n        \n        Github\n     \n        \n        Published"
-  },
-  {
     "objectID": "research/blog.html",
     "href": "research/blog.html",
     "title": "Blog",
@@ -54,5 +47,12 @@
     "title": "People",
     "section": "",
     "text": "Permanent researchers\n\n\nResearch engineers\n\n\n\n        \n            \n            \n                \n                    \n                        \n                    \n                    \n                        Pieter Gijsbers is working on making (automated) machine learning research simple through developing open source software. He is a long-term contributor to openml-python, started the AutoML Benchmark and GAMA, and is currently rewriting the OpenML server in Python.\n                    \n                \n            \n            \n        \n    \n\n\nPostdocs\n\n\n\n        \n            \n            \n                \n                    \n                        \n                    \n                    \n                        Alexis Cvetkov-Iliev is a postdoc in the group, applying machine-learning techniques to study and optimize building renovation. His research interests include active learning, Bayesian optimization, and transfer learning.\n                    \n                \n            \n            \n        \n    \n\n\nPhD students"
+  },
+  {
+    "objectID": "research/publications.html",
+    "href": "research/publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "2014\nJoaquin Vanschoren, Jan N. van Rijn, Bernd Bischl, and Luis Torgo. (2014) \"OpenML: Networked Science in Machine Learning.\" ACM SIGKDD Explorations Newsletter\n        \n        Preprint\n     \n        \n        Github\n     \n        \n        Published"
   }
 ]
