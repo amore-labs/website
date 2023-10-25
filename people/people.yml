@@ -1,5 +1,5 @@
 Andrei Simion-Constantinescu: # Put your name here, it will replace <name> in the description
-  position: PhD Researcher # permanent, engineer, postdoc or phd
+  position: phd # permanent, engineer, postdoc or phd
   description:
     <name> is a PhD Researcher in the AutoML group focused on self-supervised learning for computer vision tasks.
     He holds an MSc degree from TU Delft with the graduation topic on
