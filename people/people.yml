@@ -13,6 +13,13 @@ Alexis Cvetkov-Iliev: # Put your name here, it will replace <name> in the descri
     <name> is a postdoc in the group, applying machine-learning techniques to study and optimize building renovation. His research interests include active learning, Bayesian optimization, and transfer learning.
   picture: ../images/people/alexis_cvetkov.jpg
 
+Israel Campero Jurado:
+  position: PhD student
+  description:
+    <name> is a PhD student in computer science working on the European ITEA project called <a href="https://inno4health.eu/" target="_blank">INNO4HEALTH.
+    His interests focus on the application of automated machine learning (AutoML) and meta-learning to healthcare solutions.
+  picture: ../images/people/israel.webp
+
 Pieter Gijsbers:
   position: engineer
   description:
