@@ -11,7 +11,7 @@ Alexis Cvetkov-Iliev: # Put your name here, it will replace <name> in the descri
   position: postdoc # permanent, engineer, postdoc or phd
   description:
     <name> is a postdoc in the group, applying machine-learning techniques to study and optimize building renovation. His research interests include active learning, Bayesian optimization, and transfer learning.
-  picture: ../images/people/alexis_cvetkov.jpg
+  picture: ../images/people/alexis_cvetkov.webp
 
 Israel Campero Jurado:
   position: PhD student
