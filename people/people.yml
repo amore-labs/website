@@ -28,3 +28,10 @@ Pieter Gijsbers:
     started the <a href="https://github.com/openml/automlbenchmark" target="_blank">AutoML Benchmark</a> and 
     <a href="https://github.com/openml-labs/gama" target="_blank">GAMA</a>, and is currently rewriting the OpenML server in Python.
   picture: ../images/people/pieter_gijsbers.webp
+
+  
+  Taniya Das:
+  position: engineer
+  description:
+    <name> is a Research Engineer working on various engineering and machine learning tasks for OpenML and AI-on-Demand platform (a EU project), and is currently thinking of ML methods to make OpenML better. 
+  picture: ../images/people/taniya_image.webp
