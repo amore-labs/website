@@ -6,12 +6,20 @@ Andrei Simion-Constantinescu: # Put your name here, it will replace <name> in th
     <a href="https://repository.tudelft.nl/islandora/object/uuid%3A6b74a0e6-37aa-4ff4-bada-3e414498eafd" target="_blank">contrastive learning for unlabeled videos</a>.
     His current research focuses on adapting state-of-the-art self-supervise techniques for greenhouse/vertical farm images to predict the crop growing parameters (such as fresh weight, height, diameter a.s.o).
   picture: ../images/people/andrei_simion.webp
+  mail:
+  scholar:
+  linkedin:
+  personal:
 
 Alexis Cvetkov-Iliev: # Put your name here, it will replace <name> in the description
   position: postdoc # permanent, engineer, postdoc or phd
   description:
     <name> is a postdoc in the group, applying machine-learning techniques to study and optimize building renovation. His research interests include active learning, Bayesian optimization, and transfer learning.
   picture: ../images/people/alexis_cvetkov.webp
+  mail:
+  scholar:
+  linkedin:
+  personal:
 
 Israel Campero Jurado:
   position: PhD student
@@ -19,6 +27,10 @@ Israel Campero Jurado:
     <name> is a PhD student in computer science working on the European ITEA project called <a href="https://inno4health.eu/" target="_blank">INNO4HEALTH.
     His interests focus on the application of automated machine learning (AutoML) and meta-learning to healthcare solutions.
   picture: ../images/people/israel.webp
+  mail:
+  scholar:
+  linkedin:
+  personal:
 
 Pieter Gijsbers:
   position: engineer
@@ -28,18 +40,30 @@ Pieter Gijsbers:
     started the <a href="https://github.com/openml/automlbenchmark" target="_blank">AutoML Benchmark</a> and 
     <a href="https://github.com/openml-labs/gama" target="_blank">GAMA</a>, and is currently rewriting the OpenML server in Python.
   picture: ../images/people/pieter_gijsbers.webp
+  mail:
+  scholar:
+  linkedin:
+  personal:
 
 Jiarong Pan:
   position: phd
   description:
     <name> is a PhD student in the group, working on improving sample efficiency in machine learning algorithms. His research interests include  meta-learning, Bayesian optimization and multi-objective optimization.
   picture: ../images/people/jiarong_pan.jpg 
+  mail:
+  scholar:
+  linkedin:
+  personal:
 
 Taniya Das:
   position: engineer
   description:
     <name> is a Research Engineer working on various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a> and  <a href="https://github.com/aiondemand/AIOD-rest-api" target="_blank">AI-on-Demand</a> platform (a EU project), and is currently thinking of ML methods to make OpenML better. 
   picture: ../images/people/taniya_image.webp
+  mail:
+  scholar:
+  linkedin:
+  personal:
 
 Fangqin Zhou:
   position: PhD student
@@ -47,4 +71,18 @@ Fangqin Zhou:
     <name> is a PhD student working on the TWINERGY project, which aims to optimize the growth of cherry tomatos in a vertical farm.
     Her interests focus on the Hyperspectral Imaging using deep learning and transformer models, as well as Reinforcement Learning.
   picture: ../images/people/Fangqin Zhou.webp
+  mail:
+  scholar:
+  linkedin:
+  personal:
+
+Subhaditya Mukherjee:
+  position: engineer
+  description:
+    <name> is a Research Engineer working on various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a>. He is currently working on making the OpenML experience better and more user-friendly.
+  picture: ../images/people/Subhaditya_Mukherjee.webp
+  mail: S.mukherjee@tue.nl
+  scholar: https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=subhaditya+mukherjee&btnG=&oq=su
+  linkedin: https://www.linkedin.com/in/subhaditya-mukherjee-a36883100/
+  personal: https://www.github.com/SubhadityaMukherjee
 

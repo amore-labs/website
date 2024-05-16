@@ -18,6 +18,7 @@ def make_person_description(name, attrs):
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    flex-direction: column; /* Added */
                 }
 
                 .image-container {
@@ -39,7 +40,16 @@ def make_person_description(name, attrs):
                     display: flex;
                     align-items: center;
                     padding: 10px;
-                    margin-bottom: 0px;
+                    # margin-bottom: 20px;
+                }
+                 .social-icons {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .social-icons img {
+                    width: 20px; /* Adjust size as needed */
+                    margin: 0 10px; /* Adjust spacing */
                 }
             </style>
             <body>
@@ -50,6 +60,12 @@ def make_person_description(name, attrs):
                     <div class="text">
                         $description
                     </div>
+                    <div class="social-icons">
+                    <a href = "mailto:$mail"><img src="../images/gmail.png" alt="Email"></a>
+                    <a href = "$link"><img src="../images/linkedin.png" alt="Linkedin"></a>
+                    <a href = "$scholar"><img src="../images/scholar.png" alt="Google Scholar"></a>
+                    <a href = "$personal"><img src="../images/ux.png" alt="Personal"></a>
+                    </div>
                 </div>
             </body>
             <br>
@@ -58,7 +74,7 @@ def make_person_description(name, attrs):
     template = Template(s)
     description = "<p>" + attrs["description"] + "</p>"
     description = description.replace("<name>", "<b>" + name + "</b>") # Add bold name
-    return template.substitute(picture=attrs["picture"], description=description)
+    return template.substitute(picture=attrs["picture"], description=description, mail = attrs["mail"], link = attrs["linkedin"], scholar = attrs["scholar"], personal = attrs["personal"])
 
 
 yaml_data = yaml.safe_load(open("people.yml"))
