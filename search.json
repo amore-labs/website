@@ -7,18 +7,39 @@
     "text": "Permanent researchers\n\n\nResearch engineers\n\n\n\n        \n            \n            \n                \n                    \n                        \n                    \n                    \n                        Pieter Gijsbers is working on making (automated) machine learning research simple through developing open source software. He is a long-term contributor to openml-python, started the AutoML Benchmark and GAMA, and is currently rewriting the OpenML server in Python.\n                    \n                \n            \n            \n        \n    \n\n\n\n        \n            \n            \n                \n                    \n                        \n                    \n                    \n                        Taniya Das is a Research Engineer working on various engineering and machine learning tasks for openml.org and  AI-on-Demand platform (a EU project), and is currently thinking of ML methods to make OpenML better.\n                    \n                \n            \n            \n        \n    \n\n\nPostdocs\n\n\n\n        \n            \n            \n                \n                    \n                        \n                    \n                    \n                        Alexis Cvetkov-Iliev is a postdoc in the group, applying machine-learning techniques to study and optimize building renovation. His research interests include active learning, Bayesian optimization, and transfer learning.\n                    \n                \n            \n            \n        \n    \n\n\nPhD students\n\n\n\n        \n            \n            \n                \n                    \n                        \n                    \n                    \n                        Andrei Simion-Constantinescu is a PhD Researcher in the AutoML group focused on self-supervised learning for computer vision tasks. He holds an MSc degree from TU Delft with the graduation topic on contrastive learning for unlabeled videos. His current research focuses on adapting state-of-the-art self-supervise techniques for greenhouse/vertical farm images to predict the crop growing parameters (such as fresh weight, height, diameter a.s.o).\n                    \n                \n            \n            \n        \n    \n\n\n\n        \n            \n            \n                \n                    \n                        \n                    \n                    \n                        Jiarong Pan is a PhD student in the group, working on improving sample efficiency in machine learning algorithms. His research interests include  meta-learning, Bayesian optimization and multi-objective optimization.\n                    \n                \n            \n            \n        \n    \n\n\n\n        \n            \n            \n                \n                    \n                        \n                    \n                    \n                        Murat Onur Yildirim is a PhD Candidate in the AutoML group. He focuses on automatically and continually learning sparse experts for computer vision tasks. His research is dedicated to creating efficient continual learners by leveraging sparsity in networks, data, and labels."
   },
   {
-    "objectID": "blogs/blog.html",
-    "href": "blogs/blog.html",
+    "objectID": "software/software.html",
+    "href": "software/software.html",
+    "title": "Software",
+    "section": "",
+    "text": "OpenML\nMachine learning research should be easily accessible and reusable. OpenML is an open platform for sharing datasets, algorithms, and experiments - to learn how to learn better, together.\n\n        \n        Website\n     \n        \n        Github"
+  },
+  {
+    "objectID": "research/publications.html",
+    "href": "research/publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "2014\nJoaquin Vanschoren, Jan N. van Rijn, Bernd Bischl, and Luis Torgo. (2014) \"OpenML: Networked Science in Machine Learning.\" ACM SIGKDD Explorations Newsletter\n        \n        Preprint\n     \n        \n        Github\n     \n        \n        Published"
+  },
+  {
+    "objectID": "research/blog.html",
+    "href": "research/blog.html",
     "title": "Blog",
     "section": "",
     "text": "Example\n\n    \n\n    \n    \n    \n\n    \n    \n        Example of jupyter notebook for Quarto"
   },
   {
-    "objectID": "notebooks/example.html",
-    "href": "notebooks/example.html",
-    "title": "Example of jupyter notebook for Quarto",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
     "section": "",
-    "text": "1) Import packages\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n\n2) Plotting\nWe plot below (Figure 1) the histogram of 1000 samples from a normal distribution.\n\nx = np.random.normal(size=1000)\nplt.figure(figsize=(10, 6))\nplt.hist(x, density=True, bins=30)\nplt.ylabel('Probability')\nplt.xlabel('X')\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Histogram of X"
+    "text": "picture: images/group_image.jpg"
+  },
+  {
+    "objectID": "index.html#mission",
+    "href": "index.html#mission",
+    "title": "Home",
+    "section": "Mission",
+    "text": "Mission"
   },
   {
     "objectID": "index.html#highlights",
@@ -42,17 +63,10 @@
     "text": "Contact\n\nThis website is powered by Quarto and inspired from Drew Dimmery’s blogpost: Quarto for an Academic Website."
   },
   {
-    "objectID": "software/software.html",
-    "href": "software/software.html",
-    "title": "Software",
+    "objectID": "notebooks/example.html",
+    "href": "notebooks/example.html",
+    "title": "Example of jupyter notebook for Quarto",
     "section": "",
-    "text": "OpenML\nMachine learning research should be easily accessible and reusable. OpenML is an open platform for sharing datasets, algorithms, and experiments - to learn how to learn better, together.\n\n        \n        Website\n     \n        \n        Github"
-  },
-  {
-    "objectID": "publications/publications.html",
-    "href": "publications/publications.html",
-    "title": "Publications",
-    "section": "",
-    "text": "2014\nJoaquin Vanschoren, Jan N. van Rijn, Bernd Bischl, and Luis Torgo. (2014) \"OpenML: Networked Science in Machine Learning.\" ACM SIGKDD Explorations Newsletter\n        \n        Preprint\n     \n        \n        Github\n     \n        \n        Published"
+    "text": "1) Import packages\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n\n2) Plotting\nWe plot below (Figure 1) the histogram of 1000 samples from a normal distribution.\n\nx = np.random.normal(size=1000)\nplt.figure(figsize=(10, 6))\nplt.hist(x, density=True, bins=30)\nplt.ylabel('Probability')\nplt.xlabel('X')\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Histogram of X"
   }
 ]
