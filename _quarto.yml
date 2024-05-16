@@ -9,11 +9,9 @@ website:
     collapse-below: lg
     left:
       - index.qmd
-      - text: "Research"
-        menu: 
-          - file: research/projects.qmd
-          - file: research/publications.qmd
-          - file: research/blog.qmd
+      - projects/projects.qmd
+      - publications/publications.qmd
+      - blogs/blog.qmd
       - software/software.qmd
       - people/people.qmd
     right:
