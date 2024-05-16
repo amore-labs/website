@@ -1,6 +1,6 @@
+picture: images/group_image.jpg
 ---
 title: "Home"
-  image: images/group_image.jpg
 ---
 
 ## Mission
