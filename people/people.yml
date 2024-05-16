@@ -53,3 +53,10 @@ Elif Ceren Gok Yildirim:
   description:
     <name> is a PhD student working on continual learning. Her research centers on exploring the capabilities of machine learning algorithms and advancing them to adapt and evolve over time. She likes to explore novel approaches to enable machines to accumulate knowledge from past experiences and apply it to new tasks without forgetting and contribute to the CL field.
   picture: ../images/people/Ceren_GokYildirim.webp
+
+Murat Onur Yildirim: # Put your name here, it will replace <name> in the description
+  position: phd # permanent, engineer, postdoc or phd
+  description:
+    <name> is a PhD Candidate in the AutoML group. He focuses on automatically and continually learning sparse experts for computer vision tasks.
+    His research is dedicated to creating efficient continual learners by leveraging sparsity in networks, data, and labels.
+  picture: ../images/people/onur_yildirim.webp
