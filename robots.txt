@@ -1,1 +1,1 @@
-Sitemap: https://github.com/openml-labs/website/sitemap.xml
+Sitemap: https://openml-labs.github.io/website/sitemap.xml

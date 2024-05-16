@@ -1,10 +1,17 @@
 [
   {
-    "objectID": "research/publications.html",
-    "href": "research/publications.html",
-    "title": "Publications",
+    "objectID": "notebooks/example.html",
+    "href": "notebooks/example.html",
+    "title": "Example of jupyter notebook for Quarto",
     "section": "",
-    "text": "2014\nJoaquin Vanschoren, Jan N. van Rijn, Bernd Bischl, and Luis Torgo. (2014) \"OpenML: Networked Science in Machine Learning.\" ACM SIGKDD Explorations Newsletter\n        \n        Preprint\n     \n        \n        Github\n     \n        \n        Published"
+    "text": "1) Import packages\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n\n2) Plotting\nWe plot below (Figure 1) the histogram of 1000 samples from a normal distribution.\n\nx = np.random.normal(size=1000)\nplt.figure(figsize=(10, 6))\nplt.hist(x, density=True, bins=30)\nplt.ylabel('Probability')\nplt.xlabel('X')\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Histogram of X"
+  },
+  {
+    "objectID": "software/software.html",
+    "href": "software/software.html",
+    "title": "Software",
+    "section": "",
+    "text": "OpenML\nMachine learning research should be easily accessible and reusable. OpenML is an open platform for sharing datasets, algorithms, and experiments - to learn how to learn better, together.\n\n        \n        Website\n     \n        \n        Github"
   },
   {
     "objectID": "research/blog.html",
@@ -33,20 +40,6 @@
     "title": "Home",
     "section": "Contact",
     "text": "Contact\n\nThis website is powered by Quarto and inspired from Drew Dimmery’s blogpost: Quarto for an Academic Website."
-  },
-  {
-    "objectID": "software/software.html",
-    "href": "software/software.html",
-    "title": "Software",
-    "section": "",
-    "text": "OpenML\nMachine learning research should be easily accessible and reusable. OpenML is an open platform for sharing datasets, algorithms, and experiments - to learn how to learn better, together.\n\n        \n        Website\n     \n        \n        Github"
-  },
-  {
-    "objectID": "notebooks/example.html",
-    "href": "notebooks/example.html",
-    "title": "Example of jupyter notebook for Quarto",
-    "section": "",
-    "text": "1) Import packages\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n\n2) Plotting\nWe plot below (Figure 1) the histogram of 1000 samples from a normal distribution.\n\nx = np.random.normal(size=1000)\nplt.figure(figsize=(10, 6))\nplt.hist(x, density=True, bins=30)\nplt.ylabel('Probability')\nplt.xlabel('X')\nplt.show()\n\n\n\n\nFigure 1: Histogram of X"
   },
   {
     "objectID": "people/people.html",
