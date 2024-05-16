@@ -48,3 +48,8 @@ Fangqin Zhou:
     Her interests focus on the Hyperspectral Imaging using deep learning and transformer models, as well as Reinforcement Learning.
   picture: ../images/people/Fangqin Zhou.webp
 
+Elif Ceren Gok Yildirim:
+  position: PhD student
+  description:
+    <name> is a PhD student working on continual learning. Her research centers on exploring the capabilities of machine learning algorithms and advancing them to adapt and evolve over time. She likes to explore novel approaches to enable machines to accumulate knowledge from past experiences and apply it to new tasks without forgetting and contribute to the CL field.
+  picture: ../images/people/Ceren_GokYildirim.webp
