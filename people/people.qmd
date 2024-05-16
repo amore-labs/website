@@ -18,7 +18,7 @@ def make_person_description(name, attrs):
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    flex-direction: column; /* Added */
+                    flex-direction: column; 
                 }
 
                 .image-container {
@@ -40,7 +40,6 @@ def make_person_description(name, attrs):
                     display: flex;
                     align-items: center;
                     padding: 10px;
-                    # margin-bottom: 20px;
                 }
                  .social-icons {
                     display: flex;
@@ -64,7 +63,7 @@ def make_person_description(name, attrs):
                     <a href = "mailto:$mail"><img src="../images/gmail.png" alt="Email"></a>
                     <a href = "$link"><img src="../images/linkedin.png" alt="Linkedin"></a>
                     <a href = "$scholar"><img src="../images/scholar.png" alt="Google Scholar"></a>
-                    <a href = "$personal"><img src="../images/ux.png" alt="Personal"></a>
+                    <a href = "$personal"><img src="../images/personalsite.png" alt="Personal"></a>
                     </div>
                 </div>
             </body>
