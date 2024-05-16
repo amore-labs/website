@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://openml-labs.github.io/website/notebooks/example.html</loc>
-    <lastmod>2024-05-16T09:16:25.094Z</lastmod>
+    <loc>https://openml-labs.github.io/website/people/people.html</loc>
+    <lastmod>2024-05-16T09:39:48.836Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/software/software.html</loc>
-    <lastmod>2024-05-16T09:16:25.096Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/research/blog.html</loc>
-    <lastmod>2024-05-16T09:16:25.095Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/research/projects.html</loc>
-    <lastmod>2024-05-16T09:16:25.096Z</lastmod>
+    <lastmod>2024-05-16T09:39:48.836Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/research/publications.html</loc>
-    <lastmod>2024-05-16T09:35:24.883Z</lastmod>
+    <lastmod>2024-05-16T09:39:48.836Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/research/blog.html</loc>
+    <lastmod>2024-05-16T09:39:48.836Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/research/projects.html</loc>
+    <lastmod>2024-05-16T09:39:48.836Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/index.html</loc>
-    <lastmod>2024-05-16T09:16:25.094Z</lastmod>
+    <lastmod>2024-05-16T09:39:48.836Z</lastmod>
   </url>
   <url>
-    <loc>https://openml-labs.github.io/website/people/people.html</loc>
-    <lastmod>2024-05-16T09:16:25.095Z</lastmod>
+    <loc>https://openml-labs.github.io/website/notebooks/example.html</loc>
+    <lastmod>2024-05-16T09:39:48.836Z</lastmod>
   </url>
 </urlset>
