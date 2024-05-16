@@ -29,6 +29,12 @@ Pieter Gijsbers:
     <a href="https://github.com/openml-labs/gama" target="_blank">GAMA</a>, and is currently rewriting the OpenML server in Python.
   picture: ../images/people/pieter_gijsbers.webp
 
+Jiarong Pan:
+  position: phd
+  description:
+    <name> is a PhD student in the group, working on improving sample efficiency in machine learning algorithms. His research interests include  meta-learning, Bayesian optimization and multi-objective optimization.
+  picture: ../images/people/jiarong_pan.jpg 
+
 Taniya Das:
   position: engineer
   description:
@@ -41,3 +47,4 @@ Fangqin Zhou:
     <name> is a PhD student working on the TWINERGY project, which aims to optimize the growth of cherry tomatos in a vertical farm.
     Her interests focus on the Hyperspectral Imaging using deep learning and transformer models, as well as Reinforcement Learning.
   picture: ../images/people/Fangqin Zhou.webp
+
