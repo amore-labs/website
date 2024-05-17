@@ -38,7 +38,11 @@ Jiarong Pan:
 Taniya Das:
   position: engineer
   description:
-    <name> is a Research Engineer working on various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a> and  <a href="https://github.com/aiondemand/AIOD-rest-api" target="_blank">AI-on-Demand</a> platform (a EU project), and is currently thinking of ML methods to make OpenML better. 
+    <name> is a Research Engineer solving various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a> and  <a href="https://github.com/aiondemand/AIOD-rest-api" target="_blank">AI-on-Demand</a> 
+    platform (an EU project), to make ML research better. 
+    She has contributed to <a href="https://github.com/openml/openml-tensorflow" target="_blank">openml-tensorflow</a>  and <a href="https://github.com/openml/openml-pytorch =" target="_blank">openml-pytorch</a> extensions for OpenML, 
+    making it possible to use solve deep learning tasks using <a href="https://github.com/openml/openml-python" target="_blank">openml-python</a> API. 
+    She is currently working on using LLMs to  make both the platforms more intelligent. 
   picture: ../images/people/taniya_image.webp
 
 Fangqin Zhou:
