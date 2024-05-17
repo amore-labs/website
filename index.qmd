@@ -1,4 +1,4 @@
-picture: images/group_image.jpg
+image: images/group_image.jpg
 ---
 title: "Home"
 ---
