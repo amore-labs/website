@@ -3,7 +3,7 @@ project:
 
 website:
   title: "AutoML Eindhoven"
-  image: images/group_image.jpg
+  image: images/group_image.webp
   navbar:
     background: light
     logo: "images/logo.png"
