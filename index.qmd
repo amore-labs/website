@@ -1,6 +1,7 @@
 ---
 title: "Home"
 ---
+![AutoML Group TU/e Picture](images/group_image.webp)  
 
 ## Mission
 
