@@ -21,6 +21,20 @@
     "text": "1) Import packages\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n\n\n2) Plotting\nWe plot below (Figure 1) the histogram of 1000 samples from a normal distribution.\n\nx = np.random.normal(size=1000)\nplt.figure(figsize=(10, 6))\nplt.hist(x, density=True, bins=30)\nplt.ylabel('Probability')\nplt.xlabel('X')\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Histogram of X"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "AutoML Group TU/e Picture"
+  },
+  {
+    "objectID": "index.html#mission",
+    "href": "index.html#mission",
+    "title": "Home",
+    "section": "Mission",
+    "text": "Mission"
+  },
+  {
     "objectID": "index.html#highlights",
     "href": "index.html#highlights",
     "title": "Home",
