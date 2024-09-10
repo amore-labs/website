@@ -10,6 +10,10 @@ title: "Home"
 ## Vacancies
 
 ## Contact
+|   |   |
+|---|---|
+|E-mail:| [OpenML Labs](mailto:openml-labs@tue.nl)|
+|Address: |Groene Loper 5<br>Metaforum 7.104<br>5600 MB Eindhoven<br>The Netherlands|
 
 ***
 
