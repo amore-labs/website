@@ -11,6 +11,13 @@ title: "Home"
 
 ## Contact
 
+E-mail: [OpenML Labs](mailto:openml-labs@tue.nl)
+Address: 
+Groene Loper 5
+Metaforum 7.104a
+5600 MB Eindhoven
+The Netherlands
+
 ***
 
 This website is powered by [Quarto](https://quarto.org/) and inspired from Drew Dimmery's blogpost: [Quarto for an Academic Website.](https://ddimmery.com/posts/quarto-website)
