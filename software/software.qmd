@@ -4,6 +4,12 @@ echo: false
 jupyter: python3
 section-divs: false
 ---
+This page provides an overview of the software that we built with the goal of transforming
+the way people do (automated) machine learning research in a way that is more open, reproducible, and accessible.
+Most of the software below is developed with collaborators outside of our lab.
+
+We also open-source the code for our papers under our [GitHub organisation](https://github.com/openml-labs).
+Code for each paper is also linked in the overview in the [papers](../publications/publications.qmd) page.
 
 ```{python}
 #| output: asis
@@ -19,8 +25,8 @@ def button(url, str, icon):
 
 yaml_data = yaml.safe_load(open("software.yml"))
 
-for data in yaml_data[::-1]:
-    display(Markdown("## `" + data["title"] + "` {#" + data["title"] + "}"))
+for data in sorted(yaml_data, key=lambda sw: sw['order']):
+    display(Markdown("## `" + data["title"] + "` {#" + data["title"].replace(" ", "-") + "}"))
     display(Markdown(data["description"]))
     buttons = []
     if "website" in data:

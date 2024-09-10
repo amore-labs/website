@@ -1,7 +1,33 @@
 - title: "OpenML"
+  order: 0
   description:
     Machine learning research should be easily accessible and reusable.
     `OpenML` is an open platform for sharing datasets, algorithms, and
     experiments - to learn how to learn better, together.
   website: https://www.openml.org/
   github: https://github.com/openml/OpenML
+
+- title: "AutoML Benchmark"
+  order: 1
+  description:
+    The AutoML Benchmark (AMLB) is software that performs end-to-end
+    evaluation of AutoML frameworks. It can be used to compare 
+    current state-of-the-art and evaluate new methods with ablation
+    studies. Over 10 AutoML frameworks can be evaluated out-of-the-box
+    on over 100 datasets, and it's easy to bring your own data or
+    AutoML framework.
+  website: https://openml.github.io/automlbenchmark
+  github: https://github.com/openml/automlbenchmark
+
+- title: "GAMA"
+  order: 2
+  description:
+    The General Automated Machine learning Assistant (GAMA) was developed
+    to be able to easily experiment with new AutoML design through ablation
+    studies by providing a modular AutoML framework.
+  
+    We have sunset the project, and decided to focus our efforts on OpenML and AMLB.
+    If you are interested in a modern implementations driven by similar 
+    philosophies, please have a look at the [AutoML Toolkit](https://github.com/automl/amltk).
+  website: https://openml-labs.github.io/gama
+  github: https://github.com/openml-labs/gama
