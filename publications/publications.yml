@@ -10,4 +10,43 @@ openml:
   preprint: https://arxiv.org/abs/1407.7722
   published_url: https://dl.acm.org/doi/10.1145/2641190.2641198
   github: https://github.com/openml/OpenML
-  
+
+amlb-jmlr:
+  title: "AMLB: an AutoML Benchmark"
+  authors:
+    - P. Gijsbers
+    - Marcos L.P. de Bueno
+    - Stefan Coors
+    - Erin LeDell
+    - Sébastian Poirier
+    - Janek Thomas
+    - Bernd Bischl
+    - Joaquin Vanschoren
+  year: 2024
+  venue: Journal of Machine Learning Research
+  published_url: https://jmlr.org/papers/v25/22-0493.html
+  github: https://github.com/openml/automlbenchmark
+
+amlb-workshop:
+  title: "An Open Source AutoML Benchmark"
+  authors:
+    - P. Gijsbers
+    - Erin LeDell
+    - Janek Thomas
+    - Sébastian Poirier
+    - Bernd Bischl
+    - Joaquin Vanschoren
+  year: 2019
+  venue: AutoML Workshop @ ICML 2019
+  published_url: https://arxiv.org/pdf/1907.00909
+  github: https://github.com/openml/automlbenchmark
+
+gama-ecml:
+  title: "GAMA: a General Automated Machine learning Assistant"
+  authors:
+    - P. Gijsbers
+    - Joaquin Vanschoren
+  year: 2021
+  venue: ECML-PKDD 2020 Demo Track
+  published_url: https://dl.acm.org/doi/10.1007/978-3-030-67670-4_39
+  github: https://github.com/openml-labs/gama

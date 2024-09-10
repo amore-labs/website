@@ -25,10 +25,16 @@ def button(url, str, icon):
         {str}
     </a>"""
 
+def validate_entry(publication):
+    allowed = {"title", "authors", "year", "preprint", "published_url", "venue", "github"}
+    disallowed = set(publication.keys()) - allowed
+    assert not disallowed, f"Fields {disallowed!r} not allowed for publication {publication!r}."
+
 
 yaml_data = yaml.safe_load(open("publications.yml"))
 pub_strs = {"pubs": {}, "wps": {}}
 for _, data in yaml_data.items():
+    validate_entry(data)
     title_str = data["title"]
     authors = data["authors"]
     author_str = readable_list(authors)
