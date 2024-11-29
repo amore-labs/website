@@ -1,13 +1,33 @@
 ---
 title: "Home"
 ---
-![AutoML Group TU/e Picture](images/group_image.webp)  
+![Our team on retreat near the sea.](images/group_image.webp)  
 
 ## Mission
+<b>Our mission is to scientifically understand (human-like) intelligence, design AI models with advanced capabilities, and make AI accessible to all to benefit all of humanity.</b>
 
-## Highlights
+We invent new neural network architectures and train them in new ways to learn better and faster, and use our insights to automate this process so you can design
+optimal AI models, too. Everything we create is open-source and crafted with user-friendliness in mind.
 
-## Vacancies
+In this pursuit, we created OpenML, an open platform with curated datasets, AI models, and experiments, for streamlining machine learning research and 
+make it accessible to all. We do projects that tackle sustainable development goals including health care, food security, and climate change.
+We perform cutting-edge research on Automated Machine Learning (AutoML), Meta-Learning, Continual Learning, Foundation Models, Open-Endedness, and many related fields.
+
+You can find our work in top AI conferences and journals, and we take pride in good engineering and open science to build AI models and systems that are widely used by people every day.
+
+## Recent highlights
+<b>NeurIPS 2024 Spotlight for Croissant</b><br />
+
+Croissant is a new standard for describing machine learning datasets, making it easier to share and reuse data and load it automatically into AI libraries. Joined work with Google, HuggingFace, Kaggle, MLCommons, and many more. Join us at NeurIPS 2024!
+
+<b>ICML 2024 Spotlight for MALIBO</b><br />
+MALIBO is a neural network that meta-learns how to tune hyperparameters - it learns across many prior tasks to tune models much more efficiently than other techniques. Jiarong Pan will present his work as a spotlight talk at ICML 2024.
+
+## Join us!
+**PhD, PostDoc, or AI Engineer positions**: [please check out our open positions](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1). Without an open position, you need to be self-funded or have a scholarship.
+
+**Visiting researchers**: We love discussing new ideas and collaborations! Note that we generally expect you to stay for at least a few months. Our lab is generally not able to offer paid internships.
+
 
 ## Contact
 |   |   |
