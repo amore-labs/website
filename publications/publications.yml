@@ -367,17 +367,6 @@ sentiment_expression:
   venue: "Social Network Analysis and Mining, 6 (1), 68:1–68:16"
   published_url: "https://www.researchgate.net/publication/307630558"
 
-openml_networked_science:
-  title: "OpenML: Networked Science in Machine Learning"
-  authors:
-    - J. Vanschoren
-    - J. N. van Rijn
-    - B. Bischl
-    - L. Torgo
-  year: 2013
-  venue: "ACM SIGKDD Explorations, 15 (2), 49–60"
-  published_url: "https://www.researchgate.net/publication/263890323"
-
 intelligent_assistants_survey:
   title: "A Survey of Intelligent Assistants for Data Analysis"
   authors:
@@ -769,189 +758,6 @@ algorithm_selection_streams:
   venue: "Proceedings of Discovery Science 2014, Lecture Notes in Computer Science 8777, 325-336"
   published_url: "https://www.researchgate.net/publication/267213201"
 
-sensor_dependency_modeling:
-  title: "Modeling Sensor Dependencies Between Multiple Sensor Types"
-  authors:
-    - S. Miao
-    - U. Vespier
-    - J. Vanschoren
-    - A. Knobbe
-    - R. Cachucho
-  year: 2013
-  venue: "Machine Learning Conference of Belgium and The Netherlands (BeNeLearn 2013)"
-  published_url: "https://benelearn2013.org/proceedings/papers/1.html"
-
-openml_science_platform:
-  title: "OpenML: An Open Science Platform for Machine Learning"
-  authors:
-    - J. N. van Rijn
-    - J. Vanschoren
-  year: 2013
-  venue: "Machine Learning Conference of Belgium and The Netherlands 2013, 99-100"
-  published_url: "https://www.researchgate.net/publication/260311303"
-
-openml_collaborative_platform:
-  title: "OpenML: A Collaborative Science Platform"
-  authors:
-    - J. N. van Rijn
-    - B. Bischl
-    - L. Torgo
-    - B. Gao
-    - V. Umaashankar
-    - S. Fischer
-    - P. Winter
-    - B. Wiswedel
-    - M. R. Berthold
-    - J. Vanschoren
-  year: 2013
-  venue: "Proceedings of ECMLPKDD 2013, Lecture Notes in Computer Science 8190, 645-649"
-  published_url: "https://www.researchgate.net/publication/257364389"
-
-open_science_ml:
-  title: "Open Science in Machine Learning"
-  authors:
-    - J. Vanschoren
-    - M. Braun
-    - C. S. Ong
-  year: 2013
-  venue: "Proceedings of CLADAG 2013, 462-465"
-  published_url: "https://www.researchgate.net/publication/260366696"
-
-active_testing:
-  title: "Selecting Classification Algorithms with Active Testing"
-  authors:
-    - R. Leite
-    - P. Brazdil
-    - J. Vanschoren
-  year: 2012
-  venue: "Proceedings of MLDM 2012, Lecture Notes in Computer Science 7376, 117-131"
-  published_url: "https://www.researchgate.net/publication/260311386"
-
-workflow_management_adams:
-  title: "Scientific Workflow Management with ADAMS"
-  authors:
-    - P. Reuttemann
-    - J. Vanschoren
-  year: 2012
-  venue: "Proceedings of ECMLPKDD 2012, Lecture Notes in Computer Science 7524, 833-837"
-  published_url: "https://www.researchgate.net/publication/260311281"
-
-mdl_time_series:
-  title: "MDL-Based Analysis of Time Series at Multiple Time-Scales"
-  authors:
-    - U. Vespier
-    - A. J. Knobbe
-    - S. Nijssen
-    - J. Vanschoren
-  year: 2012
-  venue: "Proceedings of ECMLPKDD 2012, Lecture Notes in Computer Science 7524, 371-386"
-  published_url: "https://www.researchgate.net/publication/260311284"
-
-ml_visualization:
-  title: "Visualizations of Machine Learning Behavior with Dimensionality Reduction Techniques"
-  authors:
-    - B. Gao
-    - J. Vanschoren
-  year: 2011
-  venue: "Machine Learning Conference of Belgium and The Netherlands 2011, 35-42"
-  published_url: "https://www.researchgate.net/publication/260311308"
-
-sensor_correlation:
-  title: "A Range of Data Mining Techniques to Correlate Multiple Sensor Types"
-  authors:
-    - S. Miao
-    - A. Knobbe
-    - J. Vanschoren
-    - U. Vespier
-    - A. Koopman
-    - R. Cachucho
-    - X. Chen
-  year: 2011
-  venue: "Dutch-Belgian Database Day 2011, Art.5"
-  published_url: "https://www.researchgate.net/publication/289380568"
-
-traffic_events_modeling:
-  title: "Traffic Events Modeling for Structural Health Monitoring"
-  authors:
-    - U. Vespier
-    - A. Knobbe
-    - J. Vanschoren
-    - S. Miao
-    - A. Koopman
-    - B. Obladen
-    - C. Bosma
-  year: 2011
-  venue: "Proceedings of IDA 2011, Lecture Notes in Computer Science 7014, 276-387"
-  published_url: "https://www.researchgate.net/publication/221461028"
-
-ml_experimentation_platform:
-  title: "A Community-Based Platform for Machine Learning Experimentation"
-  authors:
-    - J. Vanschoren
-    - H. Blockeel
-  year: 2009
-  venue: "Proceedings of ECMLPKDD 2009, Lecture Notes in Computer Science 5782, 750-754"
-  published_url: "https://www.researchgate.net/publication/220699153"
-
-classifier_learning_behavior:
-  title: "Investigating Classifier Learning Behavior with Experiment Databases"
-  authors:
-    - J. Vanschoren
-    - H. Blockeel
-  year: 2008
-  venue: "Proceedings of GfKL 2008, Data Analysis, Machine Learning and Applications, 421-428"
-  published_url: "https://www.researchgate.net/publication/221649448"
-
-organizing_ml_information:
-  title: "Organizing the World's Machine Learning Information"
-  authors:
-    - J. Vanschoren
-    - H. Blockeel
-    - B. Pfahringer
-    - G. Holmes
-  year: 2008
-  venue: "Proceedings of ISOLA 2008, Communications in Computer and Information Science 17, 693-708"
-  published_url: "https://www.researchgate.net/publication/221430852"
-
-learning_experiment_databases:
-  title: "Learning from the Past with Experiment Databases"
-  authors:
-    - J. Vanschoren
-    - B. Pfahringer
-    - G. Holmes
-  year: 2008
-  venue: "Proceedings of PRICAI 2008, Lecture Notes in Artificial Intelligence 5351, 485-496"
-  published_url: "https://www.researchgate.net/publication/33051185"
-
-experiment_databases_methodology:
-  title: "Experiment Databases: Towards an Improved Experimental Methodology in Machine Learning"
-  authors:
-    - H. Blockeel
-    - J. Vanschoren
-  year: 2007
-  venue: "Proceedings of ECMLPKDD 2007, Lecture Notes in Computer Science 4702, 6-17"
-  published_url: "https://www.researchgate.net/publication/220699279"
-
-meta_learning_experiment_databases:
-  title: "Meta-Learning from Experiment Databases: An Illustration"
-  authors:
-    - J. Vanschoren
-    - A. Van Assche
-    - C. Vens
-    - H. Blockeel
-  year: 2007
-  venue: "Machine Learning Conference of Belgium and The Netherlands 2007, 120-127"
-  published_url: "https://www.researchgate.net/publication/228951137"
-
-understanding_learning_behavior:
-  title: "Towards Understanding Learning Behavior"
-  authors:
-    - J. Vanschoren
-    - H. Blockeel
-  year: 2006
-  venue: "Machine Learning Conference of Belgium and The Netherlands 2006, 89-96"
-  published_url: "https://www.researchgate.net/publication/228376299"
-
 croissant_metadata_format:
   title: "Croissant: A Metadata Format for ML-Ready Datasets"
   authors:
@@ -1255,73 +1061,6 @@ meta_learning_streams:
   venue: "MetaSel Workshop @ ECAI 2014, CEUR Workshop Proceedings 1201, 37-38"
   published_url: "https://www.researchgate.net/publication/267213271"
 
-active_testing_similar_datasets:
-  title: "Selecting Classification Algorithms with Active Testing on Similar Datasets"
-  authors:
-    - R. Leite
-    - P. Brazdil
-    - J. Vanschoren
-  year: 2012
-  venue: "PlanLearn Workshop @ ECAI 2012, CEUR Workshop Proceedings 950, 30-37"
-  published_url: "https://www.researchgate.net/publication/275966928"
-
-experiment_database:
-  title: "The Experiment Database for Machine Learning"
-  authors:
-    - J. Vanschoren
-  year: 2012
-  venue: "PlanLearn Workshop @ ECAI 2012, CEUR Workshop Proceedings 950, 30-37"
-  published_url: "https://www.researchgate.net/publication/275967146"
-
-temporal_scales_identification:
-  title: "MDL-Based Identification of Relevant Temporal Scales in Time Series"
-  authors:
-    - U. Vespier
-    - A. Knobbe
-    - S. Nijssen
-    - J. Vanschoren
-  year: 2012
-  venue: "Workshop on Information Theoretic Methods in Science and Engineering, WITMSE 2012"
-  published_url: "https://www.researchgate.net/publication/289380384"
-
-experiment_db_meta_learning:
-  title: "Experiment Databases: Creating a New Platform for Meta-Learning Research"
-  authors:
-    - J. Vanschoren
-    - H. Blockeel
-    - B. Pfahringer
-    - G. Holmes
-  year: 2008
-  venue: "Planning to Learn Workshop @ ICML 2008, 10-15"
-  published_url: "https://www.researchgate.net/publication/33051998"
-
-expose_ontology:
-  title: "Exposé: An Ontology for Data Mining Experiments"
-  authors:
-    - J. Vanschoren
-    - S. Soldatova
-  year: 2010
-  venue: "Workshop on Third Generation Data Mining @ ECMLPKDD 2010, 31-46"
-  published_url: "https://www.researchgate.net/publication/228525536"
-
-collaborative_meta_learning:
-  title: "Collaborative Meta-Learning"
-  authors:
-    - J. Vanschoren
-    - S. Soldatova
-  year: 2010
-  venue: "Planning to Learn Workshop @ ECAI 2010, 37-46"
-  published_url: "https://www.researchgate.net/publication/228346232"
-
-collaborative_experimentation_portal:
-  title: "Stand on the Shoulders of Giants: Towards a Portal for Collaborative Experimentation in Data Mining"
-  authors:
-    - J. Vanschoren
-    - H. Blockeel
-  year: 2009
-  venue: "3rd Generation Data Mining Workshop @ ECMLPKDD 2009, 88-99"
-  published_url: "https://www.researchgate.net/publication/242142515"
-
 democratising_ai:
   title: "Democratising Artificial Intelligence to Accelerate Scientific Discovery"
   authors:
@@ -1350,45 +1089,6 @@ ontology_design_pattern:
   year: 2016
   venue: "In: Studies on the Semantic Web (Hitzler.P., Gangemi, A., Janowicz, K., Krisnadhi, A., Presutti, V., eds.), IOS Press"
   published_url: "https://www.researchgate.net/publication/308608405"
-
-sensor_network_analysis:
-  title: "Large-Scale Sensor Network Analysis"
-  authors:
-    - J. Vanschoren
-    - U. Vespier
-    - S. Miao
-    - R. Cachucho
-    - A. Knobbe
-  year: 2013
-  venue: "In: Big Data Management, Technologies, and Applications (W-C. Hu, N. Kaabouch, ed.), IGI Global, 2013"
-  published_url: "https://www.researchgate.net/publication/260311405"
-
-data_analysis_visualization:
-  title: "Datenanalyse und -visualisierung"
-  authors:
-    - B. Berendt
-    - J. Vanschoren
-    - B. Gao
-  year: 2011
-  venue: "In: Handbuch Forschungsdatenmanagement (S. Büttner, H-C. Hobohm, L. Müller, ed.), Bock+Herchen, 2011"
-  published_url: "https://www.researchgate.net/publication/260311541"
-
-meta_learning_architectures:
-  title: "Meta-Learning Architectures"
-  authors:
-    - J. Vanschoren
-  year: 2011
-  venue: "In: Meta-Learning in Computational Intelligence (N. Jankowski, W. Duch, K. Grabczewski, ed.), Springer, 2011"
-  published_url: "https://www.researchgate.net/publication/226597515"
-
-experiment_databases:
-  title: "Experiment Databases"
-  authors:
-    - J. Vanschoren
-    - H. Blockeel
-  year: 2010
-  venue: "In: Inductive Databases and Constraint-Based Data Mining (S. Dzeroski, B. Goethals, P. Panov, ed.), Springer, 2010"
-  published_url: "https://www.researchgate.net/publication/226922608"
 
 automl_conference:
   title: "International Conference on Automated Machine Learning"
@@ -1507,34 +1207,291 @@ meta_learning_2014:
   venue: "CEUR Workshop Proceedings 1201, CEUR 2014"
   published_url: "https://www.researchgate.net/publication/275966998"
 
-planning_to_learn_2012:
-  title: "Proceedings of the International Workshop on Planning to Learn @ ECAI"
+standardized_dataset_docs:
+  title: "A Standardized Machine-Readable Dataset Documentation Format for Responsible AI"
+  authors:
+    - N. Jain
+    - M. Akhtar
+    - J. Giner-Miguelez
+    - R. Shinde
+    - J. Vanschoren
+    - S. Vogler
+    - S. Goswami
+    - Y. Rao
+    - T. Santos
+    - L. Oala
+  year: 2024
+  venue: "arXiv preprint arXiv:2407.16883, 2024"
+  published_url: "https://arxiv.org/abs/2407.16883"
+
+sample_selection_few_shot:
+  title: "Automatic Combination of Sample Selection Strategies for Few-Shot Learning"
+  authors:
+    - B. Pecher
+    - I. Srba
+    - M. Bielikova
+    - J. Vanschoren
+  year: 2024
+  venue: "arXiv preprint arXiv:2402.03038, 2024"
+  published_url: "https://arxiv.org/abs/2402.03038"
+
+clams_model_selection:
+  title: "CLAMS: A System for Zero-Shot Model Selection for Clustering"
+  authors:
+    - P. Singh
+    - P. Gijsbers
+    - M. O. Yildirim
+    - E. C. Gok
+    - J. Vanschoren
+  year: 2024
+  venue: "arXiv preprint arXiv:2407.11286, 2024"
+  published_url: "https://arxiv.org/abs/2407.11286"
+
+supernet_transfer_nas:
+  title: "Robust and Efficient Transfer Learning via Supernet Transfer in Warm-Started Neural Architecture Search"
+  authors:
+    - P. Singh
+    - J. Vanschoren
+  year: 2024
+  venue: "arXiv preprint arXiv:2407.20279, 2024"
+  published_url: "https://arxiv.org/abs/2407.20279"
+
+automated_time_series:
+  title: "Can Time Series Forecasting Be Automated? A Benchmark and Analysis"
+  authors:
+    - A. T. Sreedhara
+    - J. Vanschoren
+  year: 2024
+  venue: "arXiv preprint arXiv:2407.16445, 2024"
+  published_url: "https://arxiv.org/abs/2407.16445"
+
+unsupervised_meta_learning:
+  title: "Unsupervised Meta-Learning via In-Context Learning"
+  authors:
+    - A. Vettoruzzo
+    - L. Braccaioli
+    - J. Vanschoren
+    - M. Nowaczyk
+  year: 2024
+  venue: "arXiv preprint arXiv:2405.16124, 2024"
+  published_url: "https://arxiv.org/abs/2405.16124"
+
+ai_safety_benchmark:
+  title: "Introducing v0.5 of the AI Safety Benchmark from MLCommons"
+  authors:
+    - B. Vidgen
+    - A. Agrawal
+    - A. M. Ahmed
+    - V. Akinwande
+    - N. Al-Nuaimi
+    - N. Alfaraj
+    - E. Alhajjar
+    - L. Aroyo
+    - T. Bavalatti
+    - B. Blili-Hamelin
+    - J. Vanschoren
+  year: 2024
+  venue: "arXiv preprint arXiv:2404.12241, 2024"
+  published_url: "https://arxiv.org/abs/2404.12241"
+
+continual_learning_diet:
+  title: "Continual Learning on a Data Diet"
+  authors:
+    - E. C. Gok Yildirim
+    - M. O. Yildirim
+    - J. Vanschoren
+  year: 2024
+  venue: "arXiv preprint arXiv:2410.17715, 2024"
+  published_url: "https://arxiv.org/abs/2410.17715"
+
+focil_sparse_experts:
+  title: "FOCIL: Finetune-and-Freeze for Online Class Incremental Learning by Training Randomly Pruned Sparse Experts"
+  authors:
+    - M. O. Yildirim
+    - E. C. Gok Yildirim
+    - D. C. Mocanu
+    - J. Vanschoren
+  year: 2024
+  venue: "arXiv preprint arXiv:2403.14684, 2024"
+  published_url: "https://arxiv.org/abs/2403.14684"
+
+continual_test_time_adaptation:
+  title: "Evaluating Continual Test-Time Adaptation for Contextual and Semantic Domain Shifts"
+  authors:
+    - T. Kerssies
+    - M. Kılıçkaya
+    - J. Vanschoren
+  year: 2023
+  venue: "arXiv preprint arXiv:2208.08767, 2023"
+  published_url: "https://arxiv.org/abs/2208.08767"
+
+automl_continual_learning:
+  title: "What Can AutoML Do for Continual Learning?"
+  authors:
+    - M. Kılıçkaya
+    - J. Vanschoren
+  year: 2023
+  venue: "arXiv preprint arXiv:2311.11963, 2023"
+  published_url: "https://arxiv.org/abs/2311.11963"
+
+dmlr_data_research:
+  title: "DMLR: Data-Centric Machine Learning Research -- Past, Present and Future"
+  authors:
+    - L. Oala
+    - M. Maskey
+    - L. Bat-Leah
+    - A. Parrish
+    - N. M. Gürel
+    - T.-S. Kuo
+    - Y. Liu
+    - R. Dror
+    - D. Brajovic
+    - X. Yao
+    - J. Vanschoren
+  year: 2023
+  venue: "arXiv preprint arXiv:2311.13028, 2023"
+  published_url: "https://arxiv.org/abs/2311.13028"
+
+automated_rl_overview:
+  title: "Automated Reinforcement Learning: An Overview"
+  authors:
+    - R. R. Afshar
+    - Y. Zhang
+    - J. Vanschoren
+    - U. Kaymak
+  year: 2022
+  venue: "arXiv preprint arXiv:2201.05000, 2022"
+  published_url: "https://arxiv.org/abs/2201.05000"
+
+warm_start_darts:
+  title: "Warm-starting DARTS Using Meta-Learning"
+  authors:
+    - M. Grobelnik
+    - J. Vanschoren
+  year: 2022
+  venue: "arXiv preprint arXiv:2205.06355, 2022"
+  published_url: "https://arxiv.org/abs/2205.06355"
+
+biomedical_feature_selection:
+  title: "Automated Feature Selection and Classification for High-Dimensional Biomedical Data"
+  authors:
+    - T. P. Beishuizen
+    - J. Vanschoren
+    - P. A. Hilbers
+    - D. Bošnački
+  year: 2021
+  venue: "ResearchSquare, 2021"
+  published_url: "https://assets-eu.researchsquare.com/files/rs-563410/v1_covered.pdf?c=1634050550"
+
+cats_not_scans:
+  title: "Cats, Not CAT Scans: A Study of Dataset Similarity in Transfer Learning for 2D Medical Image Classification"
+  authors:
+    - I. van den Brandt
+    - F. Fok
+    - B. Mulders
+    - J. Vanschoren
+    - V. Cheplygina
+  year: 2021
+  venue: "arXiv preprint arXiv:2107.05940, 2021"
+  published_url: "https://arxiv.org/pdf/2107.05940.pdf"
+
+frugal_ml:
+  title: "Frugal Machine Learning"
+  authors:
+    - M. Evchenko
+    - J. Vanschoren
+    - H. H. Hoos
+    - M. Schoenauer
+    - M. Sebag
+  year: 2021
+  venue: "arXiv preprint arXiv:2111.03731, 2021"
+  published_url: "https://arxiv.org/abs/2111.03731"
+
+cnn_quantization:
+  title: "Fixed-Point Quantization of Convolutional Neural Networks for Quantized Inference on Embedded Platforms"
+  authors:
+    - R. Goyal
+    - J. Vanschoren
+    - V. Van Acht
+    - S. Nijssen
+  year: 2021
+  venue: "arXiv preprint arXiv:2102.02147, 2021"
+  published_url: "https://arxiv.org/pdf/2102.02147.pdf"
+
+aerial_segmentation:
+  title: "Aerial Imagery Pixel-Level Segmentation"
+  authors:
+    - M. R. Heffels
+    - J. Vanschoren
+  year: 2020
+  venue: "arXiv preprint arXiv:2012.02024, 2020"
+  published_url: "https://arxiv.org/pdf/2012.02024.pdf"
+
+hyperparameter_tuning:
+  title: "Importance of Tuning Hyperparameters of Machine Learning Algorithms"
+  authors:
+    - H. Weerts
+    - A. Mueller
+    - J. Vanschoren
+  year: 2020
+  venue: "arXiv preprint arXiv:2007.07588, 2020"
+  published_url: "https://arxiv.org/pdf/2007.07588.pdf"
+
+mlsys_frontier:
+  title: "MLSys: The New Frontier of Machine Learning Systems"
+  authors:
+    - A. Ratner
+    - J. Vanschoren
+    - and others
+  year: 2019
+  venue: "arXiv preprint arXiv:1904.03257, 2019"
+  published_url: "https://arxiv.org/pdf/1904.03257.pdf"
+
+metalearning_survey:
+  title: "Metalearning: A Survey"
   authors:
     - J. Vanschoren
-    - P. Brazdil
-    - J.-U. Kietz
-  year: 2012
-  venue: "CEUR Workshop Proceedings 950, CEUR 2012"
-  published_url: "https://www.researchgate.net/publication/260311461"
+  year: 2018
+  venue: "arXiv preprint arXiv:1810.03548, 2018"
+  published_url: "https://arxiv.org/pdf/1810.03548.pdf"
 
-learning_unexpected_results:
-  title: "The Silver Lining: Proceedings of the International Workshop on Learning from Unexpected Results @ ECMLPKDD"
+reproducible_meta_learning:
+  title: "Towards Reproducible Empirical Research in Meta-Learning"
   authors:
+    - A. Rivolli
+    - L. Garcia
+    - C. Soares
     - J. Vanschoren
-    - W. Duivesteijn
-  year: 2012
-  venue: "Leiden University"
-  published_url: "https://www.researchgate.net/publication/260311717"
+    - A. C. de Carvalho
+  year: 2018
+  venue: "arXiv preprint arXiv:1808.10406, 2018"
+  published_url: "https://arxiv.org/pdf/1808.10406.pdf"
 
-benelux_2011:
-  title: "Proceedings of the 20th Annual Belgian-Dutch Conference on Machine Learning"
+medieval_social_networks:
+  title: "Reconstructing Medieval Social Networks from English and Latin Charters"
   authors:
-    - P. H. W. van der Putten
-    - C. Veenman
+    - A. J. Knobbe
+    - M. Meeng
     - J. Vanschoren
-    - M. Israel
-    - H. Blockeel
-  year: 2011
-  venue: "Leiden University, 2011"
-  published_url: "https://www.researchgate.net/publication/275967042"
+    - S. Rees Jones
+    - S. Merlo Penning
+  year: 2014
+  venue: "Population Reconstruction 2014"
+  published_url: "https://www.researchgate.net/publication/275966769"
 
+openml_rapidminer:
+  title: "A RapidMiner Extension for Open Machine Learning"
+  authors:
+    - J. N. van Rijn
+    - V. Umaashankar
+    - S. Fischer
+    - B. Bischl
+    - T. Lorgo
+    - B. Gao
+    - P. Winter
+    - B. Wiswedel
+    - M. R. Berthold
+    - J. Vanschoren
+  year: 2013
+  venue: "Proceedings of RCOMM 2013, 59-70"
+  published_url: "https://www.researchgate.net/publication/260311444"
