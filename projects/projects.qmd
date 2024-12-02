@@ -1,3 +1,67 @@
 ---
 title: "Projects"
+echo: false
+jupyter: python3
+section-divs: false
+keep-md: true
 ---
+
+***
+
+```{python}
+import yaml
+from IPython.display import display, Markdown, HTML
+
+def readable_list(_s):
+  if len(_s) < 3:
+    return ' and '.join(map(str, _s))
+  *a, b = _s
+  return f"{', '.join(map(str, a))}, and {b}"
+
+def button(url, str, icon):
+    icon_base = icon[:2]
+    return f"""<a class="btn btn-outline-dark btn-sm", href="{url}" target="_blank" rel="noopener noreferrer">
+        <i class="{icon_base} {icon}" role='img' aria-label='{str}'></i>
+        {str}
+    </a>"""
+
+
+yaml_data = yaml.safe_load(open("projects.yml"))
+pub_strs = {"pubs": {}, "wps": {}}
+for _, data in yaml_data.items():
+    title_str = data["title"]
+    funding = data["funding"]
+    year_str = data["year"]
+
+    buttons = []
+    preprint = data.get("preprint")
+    if preprint is not None:
+        buttons.append(button(preprint, "Preprint", "bi-file-earmark-pdf"))
+
+    github = data.get("github")
+    if github is not None:
+        buttons.append(button(github, "Github", "bi-github"))
+
+    pub_url = data.get("project_url")
+    description = data.get("description")
+
+    pub_str = f'{funding}. ({year_str})'
+
+    if year_str not in pub_strs["pubs"]:
+        pub_strs["pubs"][year_str] = []
+    buttons.append(button(pub_url, "Project website", "bi-journal-text"))
+    pub_strs["pubs"][year_str].append(
+        "<li class='list-group-item'><b>" + title_str + "</b><br>" + pub_str + "<br><em>" + description + "</em><br>" + " ".join(buttons) + "</li>"
+    )
+```
+
+```{python}
+#| label: "published-year"
+#| id: "published-year"
+#| output: asis
+for year in sorted(pub_strs["pubs"].keys(), reverse=True):
+    display(Markdown(f"### {year}" + "{#" + f"published-{year}" + "}"))
+    display(HTML(
+        "<ul class='list-group list-group-flush'>" + '\n'.join(pub_strs["pubs"][year]) + "</ul>"
+    ))
+```

@@ -1,0 +1,132 @@
+alfie:
+  title: "Assessment of Learning technologies and Frameworks for Intelligent and Ethical AI"
+  funding: EU Horizon Europe
+  year: 2024
+  description: ALFIE aims to harness AI responsibly with essential skills, ethical practices, and people-centered, trustworthy AI. Our AutoML platform streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values. Together, we’ll build a transparent, democratic AI ecosystem for the public good.
+  project_url: https://alfie-project.eu/
+
+edih-snl:
+  title: "EDIH-SNL"
+  funding: EU Horizon Europe
+  year: 2024
+  description: Description
+  project_url: https://edih-snl.eu/
+
+synergies:
+  title: "SYNERGIES"
+  funding: EU Horizon Europe
+  year: 2024
+  description: Description
+  project_url: https://synergies-project.eu/
+
+automl-for-all:
+  title: "Automated Machine Learning for all"
+  funding: Dutch Science Foundation, Open Science Fund
+  year: 2024
+  description: Description
+  project_url: https://automlforall.eu/
+
+ai4europe:
+  title: "AI4Europe"
+  funding: EU Horizon Europe
+  year: 2022
+  description: Description
+  project_url: https://ai4europe.eu/
+
+ml-renovations:
+  title: "Machine Learning for building renovations"
+  funding: Dutch Government
+  year: 2022
+  description: Description
+  project_url: https://ml-renovations.eu/
+
+digital-twin-farm:
+  title: "Digital Twin of a Vertical Farm"
+  funding: Dutch Science Foundation, Merian Fund
+  year: 2022
+  description: Description
+  project_url: https://digitaltwinfarm.eu/
+
+stairway-to-ai:
+  title: "Stairway to AI"
+  funding: EU Horizon 2020
+  year: 2020
+  description: Description
+  project_url: https://stairway-to-ai.eu/
+
+inno4health:
+  title: "Continuous monitoring in personal and physical health"
+  funding: ITEA Inno4Health
+  year: 2020
+  description: Description
+  project_url: https://inno4health.eu/
+
+multi-modal-photochemistry:
+  title: "Multi Modal Photochemistry"
+  funding: Dutch Science Foundation, TTW
+  year: 2020
+  description: Description
+  project_url: https://multi-modal-photochemistry.eu/
+
+tailor:
+  title: "TAILOR Network of AI Excellence"
+  funding: EU Horizon 2020
+  year: 2020
+  description: Description
+  project_url: https://tailor-network.eu/
+
+skyhigh:
+  title: "SkyHigh: Leveraging AI in Vertical Farming"
+  funding: Dutch Science Foundation
+  year: 2020
+  description: Description
+  project_url: https://skyhigh-ai.eu/
+
+boost:
+  title: "Educational platform for machine learning and medical image analysis"
+  funding: BOOST
+  year: 2019
+  description: Description
+  project_url: https://boost-platform.eu/
+
+automl-gym:
+  title: "The AutoML Gym"
+  funding: Amazon Research Award
+  year: 2019
+  description: Description
+  project_url: https://automl-gym.eu/
+
+dynamic-data-analytics:
+  title: "Dynamic Data Analytics through Automatically Constructed Machine Learning Pipelines"
+  funding: Dutch Science Foundation, Commit2Data
+  year: 2017
+  description: Description
+  project_url: https://dynamic-data-analytics.eu/
+
+data-driven-discovery:
+  title: "Data Driven Discovery of Models"
+  funding: DARPA
+  year: 2017
+  description: Description
+  project_url: https://data-discovery.eu/
+
+cloud-automl:
+  title: "A Cloud-Based Platform for AutoML"
+  funding: Microsoft Azure Research Award
+  year: 2016
+  description: Description
+  project_url: https://cloud-automl.eu/
+
+massively-collaborative-ml:
+  title: "Massively Collaborative ML"
+  funding: Dutch Science Foundation, Free Competition
+  year: 2012
+  description: Description
+  project_url: https://massively-collaborative-ml.eu/
+
+mlopen-platform:
+  title: "MLOpen Machine Learning Platform"
+  funding: EU PASCAL Harvest
+  year: 2012
+  description: Description
+  project_url: https://mlopen.eu/

@@ -1,1 +1,11 @@
 /* css styles */
+.box {
+    flex: 1;
+    padding: 0 15px 15px; /* Remove top padding, keep other sides */
+    background: #ffffff; /* White background for a clean look */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a modern look */
+    border: 1px solid #e0e0e0; /* Light border to separate cards */
+    overflow: hidden; /* Prevent content overflow for images or text */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add hover effect transitions */
+  }

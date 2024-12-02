@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "AutoML Eindhoven"
+  title: "TU/e AutoML Lab"
   navbar:
     background: light
     logo: "images/logo.png"
