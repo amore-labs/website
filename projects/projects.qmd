@@ -32,6 +32,7 @@ for _, data in yaml_data.items():
     title_str = data["title"]
     funding = data["funding"]
     year_str = data["year"]
+    year = year_str.split("-")[0]
 
     buttons = []
     preprint = data.get("preprint")
@@ -44,15 +45,29 @@ for _, data in yaml_data.items():
 
     pub_url = data.get("project_url")
     description = data.get("description")
+    image = data.get("image")
 
-    pub_str = f'{funding}. ({year_str})'
+    pub_str = f'{funding} ({year_str})'
 
-    if year_str not in pub_strs["pubs"]:
-        pub_strs["pubs"][year_str] = []
+    if year not in pub_strs["pubs"]:
+        pub_strs["pubs"][year] = []
     buttons.append(button(pub_url, "Project website", "bi-journal-text"))
-    pub_strs["pubs"][year_str].append(
-        "<li class='list-group-item'><b>" + title_str + "</b><br>" + pub_str + "<br><em>" + description + "</em><br>" + " ".join(buttons) + "</li>"
-    )
+
+    image_html = f"<img src='{image}' alt='{title_str}' style='float:left; margin-right:10px; width:100%; height:auto;'>" if image else ""
+
+    content_html = (
+            f"<div class='grid'>"  # Ensure text flows properly next to the image
+            f"<div class='g-col-12 g-col-md-4'>"
+            f"{image_html}"
+            f"</div>"
+            f"<div class='g-col-12 g-col-md-8'>"
+            f"<b>{title_str}</b><br>{pub_str}<br><em>{description}</em><br>"
+            f"{' '.join(buttons)}"
+            f"</div>"
+            f"</div>"
+        )
+
+    pub_strs["pubs"][year].append(f"<li class='list-group-item'>{content_html}</li>")
 ```
 
 ```{python}

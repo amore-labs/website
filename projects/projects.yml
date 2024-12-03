@@ -1,132 +1,144 @@
 alfie:
   title: "Assessment of Learning technologies and Frameworks for Intelligent and Ethical AI"
   funding: EU Horizon Europe
-  year: 2024
-  description: ALFIE aims to harness AI responsibly with essential skills, ethical practices, and people-centered, trustworthy AI. Our AutoML platform streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values. Together, we’ll build a transparent, democratic AI ecosystem for the public good.
+  year: 2024-2027
+  description: ALFIE aims to build an AutoML platform that streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values.
   project_url: https://alfie-project.eu/
-
-edih-snl:
-  title: "EDIH-SNL"
-  funding: EU Horizon Europe
-  year: 2024
-  description: Description
-  project_url: https://edih-snl.eu/
+  image: ../images/projects/alfie.png
 
 synergies:
   title: "SYNERGIES"
   funding: EU Horizon Europe
-  year: 2024
-  description: Description
-  project_url: https://synergies-project.eu/
+  year: 2024-2027
+  description: SYNERGIES will enhance the development, training, virtual testing, and validation of cooperative, connected and automated mobility systems.
+  project_url: https://synergies-ccam.eu/
+  image: ../images/projects/synergies.jpg
+
+edih-snl:
+  title: "EDIH-SNL"
+  funding: EU Digital Europe
+  year: 2024-2025
+  description: The European Digital Innovation Hub South Netherlands aims to accellerate the digital transformation of manufacturing and maintenance SMEs.
+  project_url: https://www.klikopmorgen.nl/
+  image: ../images/projects/edih.png
 
 automl-for-all:
   title: "Automated Machine Learning for all"
   funding: Dutch Science Foundation, Open Science Fund
-  year: 2024
-  description: Description
-  project_url: https://automlforall.eu/
-
-ai4europe:
-  title: "AI4Europe"
-  funding: EU Horizon Europe
-  year: 2022
-  description: Description
-  project_url: https://ai4europe.eu/
+  year: 2024-2025
+  description: This project leverages OpenML and AutoML to automatically build AI models and provide intuitive reports to help scientists make progress across many different fields.
+  project_url: https://www.nwo.nl/projecten/osf232109
+  image: ../images/projects/automl4all.webp
 
 ml-renovations:
   title: "Machine Learning for building renovations"
   funding: Dutch Government
-  year: 2022
-  description: Description
-  project_url: https://ml-renovations.eu/
+  year: 2022-2026
+  description: To make cities more sustainable, this project uses machine learning to predict the energy performance of buildings and optimize renovation strategies.
+  project_url: https://www.tue.nl/en/research/research-groups/building-physics-and-services/building-performance/renovatieverkenner
+  image: ../images/projects/renovation.png
 
 digital-twin-farm:
   title: "Digital Twin of a Vertical Farm"
   funding: Dutch Science Foundation, Merian Fund
-  year: 2022
-  description: Description
-  project_url: https://digitaltwinfarm.eu/
+  year: 2022-2026
+  description: Vertical farming allows us to grow more food using less resources. We use AI to model plants in 3D to understand how different light, CO2 and temperature scenarios impact plant growth and photosynthesis.
+  project_url: https://dai.win.tue.nl/researchprojects/110/
+  image: ../images/projects/twinergy.webp
+
+ai4europe:
+  title: "AI4Europe"
+  funding: EU Horizon Europe
+  year: 2022-2025
+  description: The AI-on-Demand platform (AIoD) is a community-driven platform designed to empower European research and innovation in Artificial Intelligence (AI).
+  project_url: https://aiod.eu/
+  image: ../images/projects/aiod.png
 
 stairway-to-ai:
   title: "Stairway to AI"
   funding: EU Horizon 2020
-  year: 2020
-  description: Description
-  project_url: https://stairway-to-ai.eu/
+  year: 2020-2024
+  description: The StairwAI project aims to provide a matchmaking service for users of the AI-on-Demand platform to easily find AI assets, experts, knowledge, hardware resource providers and much more.
+  project_url: https://stairwai.nws.cs.unibo.it/
+  image: ../images/projects/stairwai.png
 
 inno4health:
   title: "Continuous monitoring in personal and physical health"
   funding: ITEA Inno4Health
-  year: 2020
-  description: Description
+  year: 2020-2024
+  description: Inno4Health stimulates continuous monitoring in personal and physical health, improving patient care and athlete performance.
   project_url: https://inno4health.eu/
+  image: ../images/projects/inno4health.jpg
+
 
 multi-modal-photochemistry:
   title: "Multi Modal Photochemistry"
   funding: Dutch Science Foundation, TTW
-  year: 2020
-  description: Description
-  project_url: https://multi-modal-photochemistry.eu/
+  year: 2020-2024
+  description: In this project, we aimed to optimize the photochemical synthesis of complex molecules using machine learning.
+  image: ../images/projects/photochemistry.jpg
 
 tailor:
   title: "TAILOR Network of AI Excellence"
   funding: EU Horizon 2020
-  year: 2020
-  description: Description
+  year: 2020-2024
+  description: TAILOR is one of the first European networks of research excellence in AI, focussing on Trustworthy AI.
   project_url: https://tailor-network.eu/
+  image: ../images/projects/tailor.jpg
 
 skyhigh:
   title: "SkyHigh: Leveraging AI in Vertical Farming"
   funding: Dutch Science Foundation
-  year: 2020
-  description: Description
-  project_url: https://skyhigh-ai.eu/
+  year: 2020-2024
+  description: Vertical farming allows us to grow more food using less resources. We use AI to track plant growth non-invasively and optimize growth.
+  project_url: https://www.sky-high.info/
+  image: ../images/projects/skyhigh.png
 
 boost:
   title: "Educational platform for machine learning and medical image analysis"
-  funding: BOOST
-  year: 2019
+  funding: TU Eindhoven, BOOST
+  year: 2019-2025
   description: Description
   project_url: https://boost-platform.eu/
 
 automl-gym:
   title: "The AutoML Gym"
   funding: Amazon Research Award
-  year: 2019
+  year: 2019-2020
   description: Description
   project_url: https://automl-gym.eu/
 
 dynamic-data-analytics:
   title: "Dynamic Data Analytics through Automatically Constructed Machine Learning Pipelines"
   funding: Dutch Science Foundation, Commit2Data
-  year: 2017
+  year: 2017-2021
   description: Description
   project_url: https://dynamic-data-analytics.eu/
 
 data-driven-discovery:
   title: "Data Driven Discovery of Models"
   funding: DARPA
-  year: 2017
+  year: 2017-2021
   description: Description
   project_url: https://data-discovery.eu/
 
 cloud-automl:
   title: "A Cloud-Based Platform for AutoML"
   funding: Microsoft Azure Research Award
-  year: 2016
+  year: 2016-2016
   description: Description
   project_url: https://cloud-automl.eu/
 
 massively-collaborative-ml:
   title: "Massively Collaborative ML"
   funding: Dutch Science Foundation, Free Competition
-  year: 2012
+  year: 2012-2016
   description: Description
   project_url: https://massively-collaborative-ml.eu/
 
 mlopen-platform:
   title: "MLOpen Machine Learning Platform"
   funding: EU PASCAL Harvest
-  year: 2012
+  year: 2012-2013
   description: Description
   project_url: https://mlopen.eu/
