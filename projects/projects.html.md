@@ -64,10 +64,7 @@ keep-md: true
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
     </a></div></div></li>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/photochemistry.jpg' alt='Multi Modal Photochemistry' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Multi Modal Photochemistry</b><br>Dutch Science Foundation, TTW (2020-2024)<br><em>In this project, we aimed to optimize the photochemical synthesis of complex molecules using machine learning.</em><br><a class="btn btn-outline-dark btn-sm", href="None" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
-        Project website
-    </a></div></div></li>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/photochemistry.jpg' alt='Multi Modal Photochemistry' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Multi Modal Photochemistry</b><br>Dutch Science Foundation, TTW (2020-2024)<br><em>In this project, we aimed to optimize the photochemical synthesis of complex molecules using machine learning.</em><br></div></div></li>
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/tailor.jpg' alt='TAILOR Network of AI Excellence' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>TAILOR Network of AI Excellence</b><br>EU Horizon 2020 (2020-2024)<br><em>TAILOR is one of the first European networks of research excellence in AI, focussing on Trustworthy AI.</em><br><a class="btn btn-outline-dark btn-sm", href="https://tailor-network.eu/" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
@@ -81,11 +78,11 @@ keep-md: true
 ### 2019{#published-2019}
 
 ```{=html}
-<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'></div><div class='g-col-12 g-col-md-8'><b>Educational platform for machine learning and medical image analysis</b><br>TU Eindhoven, BOOST (2019-2025)<br><em>Description</em><br><a class="btn btn-outline-dark btn-sm", href="https://boost-platform.eu/" target="_blank" rel="noopener noreferrer">
+<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/boost.png' alt='Educational platform for machine learning and medical image analysis' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Educational platform for machine learning and medical image analysis</b><br>TU Eindhoven, BOOST (2019-2025)<br><em>AI education should be scalable and engaging. This project aims to leverage OpenML for AI-related university courses, challenging students to build the best AI models in an engaging environment.</em><br><a class="btn btn-outline-dark btn-sm", href="https://boost.tue.nl/" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
     </a></div></div></li>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'></div><div class='g-col-12 g-col-md-8'><b>The AutoML Gym</b><br>Amazon Research Award (2019-2020)<br><em>Description</em><br><a class="btn btn-outline-dark btn-sm", href="https://automl-gym.eu/" target="_blank" rel="noopener noreferrer">
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/AutoMLGym.webp' alt='The AutoML Gym' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>The AutoML Gym</b><br>Amazon Research Award (2019-2020)<br><em>This project aimed to evolve AutoML systems (agents) in an environment of increasingly difficult tasks, in which AutoML agents can be uploaded as docker images and run on AWS infrastructure.</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.amazon.science/research-awards/recipients/joaquin-vanschoren" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
     </a></div></div></li></ul>
@@ -94,11 +91,11 @@ keep-md: true
 ### 2017{#published-2017}
 
 ```{=html}
-<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'></div><div class='g-col-12 g-col-md-8'><b>Dynamic Data Analytics through Automatically Constructed Machine Learning Pipelines</b><br>Dutch Science Foundation, Commit2Data (2017-2021)<br><em>Description</em><br><a class="btn btn-outline-dark btn-sm", href="https://dynamic-data-analytics.eu/" target="_blank" rel="noopener noreferrer">
+<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/daccompli.webp' alt='Dynamic Data Analytics through Automatically Constructed Machine Learning Pipelines' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Dynamic Data Analytics through Automatically Constructed Machine Learning Pipelines</b><br>Dutch Science Foundation, Commit2Data (2017-2021)<br><em>This project created new online automated machine learning pipelines, new methods for multi-variate time series prediction, and new approaches for early stage Parkinson's disease diagnostics from videos.</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.nwo.nl/en/projects/628011002" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
     </a></div></div></li>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'></div><div class='g-col-12 g-col-md-8'><b>Data Driven Discovery of Models</b><br>DARPA (2017-2021)<br><em>Description</em><br><a class="btn btn-outline-dark btn-sm", href="https://data-discovery.eu/" target="_blank" rel="noopener noreferrer">
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/darpa.png' alt='Data Driven Discovery of Models' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Data Driven Discovery of Models</b><br>DARPA (2017-2021)<br><em>The first DARPA challenge on AutoML, the Data-Driven Discovery of Models (D3M) program developed automated methods to create empirical models of real, complex processes. It also lead to the creation of the AutoML benchmark.</em><br><a class="btn btn-outline-dark btn-sm", href="https://datadrivendiscovery.org/" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
     </a></div></div></li></ul>
@@ -107,7 +104,7 @@ keep-md: true
 ### 2016{#published-2016}
 
 ```{=html}
-<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'></div><div class='g-col-12 g-col-md-8'><b>A Cloud-Based Platform for AutoML</b><br>Microsoft Azure Research Award (2016-2016)<br><em>Description</em><br><a class="btn btn-outline-dark btn-sm", href="https://cloud-automl.eu/" target="_blank" rel="noopener noreferrer">
+<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/cloud.jpg' alt='A Cloud-Based Platform for AutoML' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>A Cloud-Based Platform for AutoML</b><br>Microsoft Azure Research Award (2016-2016)<br><em>With sponsorship from Microsoft, we ran the first large-scale machine learning benchmarks on Azure, which are still accessible on OpenML today.</em><br><a class="btn btn-outline-dark btn-sm", href="https://research.tue.nl/nl/prizes/microsoft-azure-research-award" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
     </a></div></div></li></ul>
@@ -116,14 +113,11 @@ keep-md: true
 ### 2012{#published-2012}
 
 ```{=html}
-<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'></div><div class='g-col-12 g-col-md-8'><b>Massively Collaborative ML</b><br>Dutch Science Foundation, Free Competition (2012-2016)<br><em>Description</em><br><a class="btn btn-outline-dark btn-sm", href="https://massively-collaborative-ml.eu/" target="_blank" rel="noopener noreferrer">
+<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/openml-black.png' alt='Massively Collaborative Machine Learning' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Massively Collaborative Machine Learning</b><br>Dutch Science Foundation, Free Competition (2012-2016)<br><em>This project created OpenML, an open science platform for sharing data, code, and experiments in machine learning.</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.nwo.nl/en/projects/612001206-0" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
     </a></div></div></li>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'></div><div class='g-col-12 g-col-md-8'><b>MLOpen Machine Learning Platform</b><br>EU PASCAL Harvest (2012-2013)<br><em>Description</em><br><a class="btn btn-outline-dark btn-sm", href="https://mlopen.eu/" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
-        Project website
-    </a></div></div></li></ul>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/pascal.jpg' alt='MLOpen Machine Learning Platform' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>MLOpen Machine Learning Platform</b><br>EU PASCAL Harvest (2012-2013)<br><em>This exploratory project brought together scientists and engineers to create an open machine learning platform, forming the foundation of the OpenML community.</em><br></div></div></li></ul>
 ```
 
 :::

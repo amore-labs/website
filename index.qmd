@@ -15,6 +15,8 @@ and validate our methods in projects that tackle sustainable development goals, 
 
 You can find our work in [top AI conferences and journals](publications/publications.html), and we take pride in [good engineering and open science](software/software.html) to build AI models and systems that are widely used by people every day.
 
+We are integrated in the [Data and AI cluster](https://dai.win.tue.nl/), which does excellent research in all aspects of AI.
+
 ## Recent highlights
 
 ::::: {.box-container}
@@ -27,7 +29,7 @@ You can find our work in [top AI conferences and journals](publications/publicat
 ---
 
 Our team is growing! We have 7 new openings for [PhD students, PostDocs, and Research Engineers](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1) for research on foundation models,
-AutoML, and industry collaboration. Apply now! 
+AutoML, and industry collaboration. Apply now!
 :::
 :::
 

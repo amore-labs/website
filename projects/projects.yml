@@ -98,47 +98,53 @@ boost:
   title: "Educational platform for machine learning and medical image analysis"
   funding: TU Eindhoven, BOOST
   year: 2019-2025
-  description: Description
-  project_url: https://boost-platform.eu/
+  description: AI education should be scalable and engaging. This project aims to leverage OpenML for AI-related university courses, challenging students to build the best AI models in an engaging environment.
+  project_url: https://boost.tue.nl/
+  image: ../images/projects/boost.png
 
 automl-gym:
   title: "The AutoML Gym"
   funding: Amazon Research Award
   year: 2019-2020
-  description: Description
-  project_url: https://automl-gym.eu/
+  description: This project aimed to evolve AutoML systems (agents) in an environment of increasingly difficult tasks, in which AutoML agents can be uploaded as docker images and run on AWS infrastructure.
+  project_url: https://www.amazon.science/research-awards/recipients/joaquin-vanschoren
+  image: ../images/projects/AutoMLGym.webp
 
 dynamic-data-analytics:
   title: "Dynamic Data Analytics through Automatically Constructed Machine Learning Pipelines"
   funding: Dutch Science Foundation, Commit2Data
   year: 2017-2021
-  description: Description
-  project_url: https://dynamic-data-analytics.eu/
+  description: This project created new online automated machine learning pipelines, new methods for multi-variate time series prediction, and new approaches for early stage Parkinson's disease diagnostics from videos.
+  project_url: https://www.nwo.nl/en/projects/628011002
+  image: ../images/projects/daccompli.webp
 
 data-driven-discovery:
   title: "Data Driven Discovery of Models"
   funding: DARPA
   year: 2017-2021
-  description: Description
-  project_url: https://data-discovery.eu/
+  description: The first DARPA challenge on AutoML, the Data-Driven Discovery of Models (D3M) program developed automated methods to create empirical models of real, complex processes. It also lead to the creation of the AutoML benchmark.
+  project_url: https://datadrivendiscovery.org/
+  image: ../images/projects/darpa.png
 
 cloud-automl:
   title: "A Cloud-Based Platform for AutoML"
   funding: Microsoft Azure Research Award
   year: 2016-2016
-  description: Description
-  project_url: https://cloud-automl.eu/
+  description: With sponsorship from Microsoft, we ran the first large-scale machine learning benchmarks on Azure, which are still accessible on OpenML today.
+  project_url: https://research.tue.nl/nl/prizes/microsoft-azure-research-award
+  image: ../images/projects/cloud.jpg
 
 massively-collaborative-ml:
-  title: "Massively Collaborative ML"
+  title: "Massively Collaborative Machine Learning"
   funding: Dutch Science Foundation, Free Competition
   year: 2012-2016
-  description: Description
-  project_url: https://massively-collaborative-ml.eu/
+  description: This project created OpenML, an open science platform for sharing data, code, and experiments in machine learning.
+  project_url: https://www.nwo.nl/en/projects/612001206-0
+  image: ../images/projects/openml-black.png
 
 mlopen-platform:
   title: "MLOpen Machine Learning Platform"
   funding: EU PASCAL Harvest
   year: 2012-2013
-  description: Description
-  project_url: https://mlopen.eu/
+  description: This exploratory project brought together scientists and engineers to create an open machine learning platform, forming the foundation of the OpenML community.
+  image: ../images/projects/pascal.jpg
