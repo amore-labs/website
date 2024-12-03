@@ -4,7 +4,7 @@ alfie:
   year: 2024-2027
   description: ALFIE aims to build an AutoML platform that streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values.
   project_url: https://alfie-project.eu/
-  image: ../images/projects/alfie.png
+  image: ../images/projects/alfie.webp
 
 synergies:
   title: "SYNERGIES"
@@ -12,7 +12,7 @@ synergies:
   year: 2024-2027
   description: SYNERGIES will enhance the development, training, virtual testing, and validation of cooperative, connected and automated mobility systems.
   project_url: https://synergies-ccam.eu/
-  image: ../images/projects/synergies.jpg
+  image: ../images/projects/synergies.webp
 
 edih-snl:
   title: "EDIH-SNL"
@@ -20,7 +20,7 @@ edih-snl:
   year: 2024-2025
   description: The European Digital Innovation Hub South Netherlands aims to accellerate the digital transformation of manufacturing and maintenance SMEs.
   project_url: https://www.klikopmorgen.nl/
-  image: ../images/projects/edih.png
+  image: ../images/projects/edih.webp
 
 automl-for-all:
   title: "Automated Machine Learning for all"
@@ -36,7 +36,7 @@ ml-renovations:
   year: 2022-2026
   description: To make cities more sustainable, this project uses machine learning to predict the energy performance of buildings and optimize renovation strategies.
   project_url: https://www.tue.nl/en/research/research-groups/building-physics-and-services/building-performance/renovatieverkenner
-  image: ../images/projects/renovation.png
+  image: ../images/projects/renovation.webp
 
 digital-twin-farm:
   title: "Digital Twin of a Vertical Farm"
@@ -52,7 +52,7 @@ ai4europe:
   year: 2022-2025
   description: The AI-on-Demand platform (AIoD) is a community-driven platform designed to empower European research and innovation in Artificial Intelligence (AI).
   project_url: https://aiod.eu/
-  image: ../images/projects/aiod.png
+  image: ../images/projects/aiod.webp
 
 stairway-to-ai:
   title: "Stairway to AI"
@@ -60,7 +60,7 @@ stairway-to-ai:
   year: 2020-2024
   description: The StairwAI project aims to provide a matchmaking service for users of the AI-on-Demand platform to easily find AI assets, experts, knowledge, hardware resource providers and much more.
   project_url: https://stairwai.nws.cs.unibo.it/
-  image: ../images/projects/stairwai.png
+  image: ../images/projects/stairwai.webp
 
 inno4health:
   title: "Continuous monitoring in personal and physical health"
@@ -68,7 +68,7 @@ inno4health:
   year: 2020-2024
   description: Inno4Health stimulates continuous monitoring in personal and physical health, improving patient care and athlete performance.
   project_url: https://inno4health.eu/
-  image: ../images/projects/inno4health.jpg
+  image: ../images/projects/inno4health.webp
 
 
 multi-modal-photochemistry:
@@ -76,7 +76,7 @@ multi-modal-photochemistry:
   funding: Dutch Science Foundation, TTW
   year: 2020-2024
   description: In this project, we aimed to optimize the photochemical synthesis of complex molecules using machine learning.
-  image: ../images/projects/photochemistry.jpg
+  image: ../images/projects/photochemistry.webp
 
 tailor:
   title: "TAILOR Network of AI Excellence"
@@ -84,7 +84,7 @@ tailor:
   year: 2020-2024
   description: TAILOR is one of the first European networks of research excellence in AI, focussing on Trustworthy AI.
   project_url: https://tailor-network.eu/
-  image: ../images/projects/tailor.jpg
+  image: ../images/projects/tailor.webp
 
 skyhigh:
   title: "SkyHigh: Leveraging AI in Vertical Farming"
@@ -92,7 +92,7 @@ skyhigh:
   year: 2020-2024
   description: Vertical farming allows us to grow more food using less resources. We use AI to track plant growth non-invasively and optimize growth.
   project_url: https://www.sky-high.info/
-  image: ../images/projects/skyhigh.png
+  image: ../images/projects/skyhigh.webp
 
 boost:
   title: "Educational platform for machine learning and medical image analysis"
@@ -100,7 +100,7 @@ boost:
   year: 2019-2025
   description: AI education should be scalable and engaging. This project aims to leverage OpenML for AI-related university courses, challenging students to build the best AI models in an engaging environment.
   project_url: https://boost.tue.nl/
-  image: ../images/projects/boost.png
+  image: ../images/projects/boost.webp
 
 automl-gym:
   title: "The AutoML Gym"
@@ -124,7 +124,7 @@ data-driven-discovery:
   year: 2017-2021
   description: The first DARPA challenge on AutoML, the Data-Driven Discovery of Models (D3M) program developed automated methods to create empirical models of real, complex processes. It also lead to the creation of the AutoML benchmark.
   project_url: https://datadrivendiscovery.org/
-  image: ../images/projects/darpa.png
+  image: ../images/projects/darpa.webp
 
 cloud-automl:
   title: "A Cloud-Based Platform for AutoML"
@@ -132,7 +132,7 @@ cloud-automl:
   year: 2016-2016
   description: With sponsorship from Microsoft, we ran the first large-scale machine learning benchmarks on Azure, which are still accessible on OpenML today.
   project_url: https://research.tue.nl/nl/prizes/microsoft-azure-research-award
-  image: ../images/projects/cloud.jpg
+  image: ../images/projects/cloud.webp
 
 massively-collaborative-ml:
   title: "Massively Collaborative Machine Learning"
@@ -140,11 +140,11 @@ massively-collaborative-ml:
   year: 2012-2016
   description: This project created OpenML, an open science platform for sharing data, code, and experiments in machine learning.
   project_url: https://www.nwo.nl/en/projects/612001206-0
-  image: ../images/projects/openml-black.png
+  image: ../images/projects/openml-black.webp
 
 mlopen-platform:
   title: "MLOpen Machine Learning Platform"
   funding: EU PASCAL Harvest
   year: 2012-2013
   description: This exploratory project brought together scientists and engineers to create an open machine learning platform, forming the foundation of the OpenML community.
-  image: ../images/projects/pascal.jpg
+  image: ../images/projects/pascal.webp

@@ -62,12 +62,14 @@ def make_person_description(name, attrs):
 
 
 yaml_data = yaml.safe_load(open("people.yml"))
-
+ 
 positions = {
     "Permanent researchers": "permanent",
     "Research engineers": "engineer",
+    "Lecturers": "lecturer",
     "Postdocs": "postdoc",
-    "PhD students": "phd"
+    "PhD students": "phd",
+    "Alumni": "alumnus"
 }
 
 for long_pos, short_pos in positions.items():
