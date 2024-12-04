@@ -94,6 +94,12 @@ Subhaditya Mukherjee:
     <name> is an engineer developing user-friendly machine learning systems, focussing on improving OpenML. My aim is to push the boundaries of what we deem possible and contribute to the community along the way.
   picture: ../images/people/Subhaditya_Mukherjee.webp
 
+Prabhant Singh: 
+  position: lecturer 
+  description:
+    <name> I am currently working as a lecturer and researcher. I have experience in Python, data and systems as well as infrastructure engineering.
+  picture: ../images/people/Singh_Prabhant.webp
+
 Jos van der Velde:
   position: alumnus
   description:
@@ -101,9 +107,10 @@ Jos van der Velde:
     and the <a href="https://www.aiod.eu/" target="_blank">AI-on-Demand</a> platform. I'm still actively contributing to the OpenML infrastructure.
   picture: ../images/people/van_der_Velde_Jos.webp
 
-Prabhant Singh: 
-  position: lecturer 
+Rafael Gomes Mantovani:
+  position: alumnus
   description:
-    <name> I am currently working as a lecturer and researcher. I have experience in Python, data and systems as well as infrastructure engineering.
-  picture: ../images/people/Singh_Prabhant.webp
+    <name> is a former PhD student, and currently a professor at the Federal Technology University - Paraná (UTFPR), campus of Apucarana, Brazil. He researches Machine Learning, Data Mining, Meta-learning, and Automated Machine Learning/Data Science.
+  picture: ../images/people/rafaelgomes.webp
+
 

@@ -69,7 +69,7 @@ positions = {
     "Lecturers": "lecturer",
     "Postdocs": "postdoc",
     "PhD students": "phd",
-    "Alumni": "alumnus"
+    "Alumni and visitors": "alumnus"
 }
 
 for long_pos, short_pos in positions.items():
