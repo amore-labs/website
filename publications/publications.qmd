@@ -10,6 +10,7 @@ keep-md: true
 
 ```{python}
 import yaml
+import os
 from IPython.display import display, Markdown, HTML
 
 def readable_list(_s):
@@ -27,17 +28,24 @@ def button(url, str, icon):
 
 
 yaml_data = yaml.safe_load(open("publications.yml"))
-pub_strs = {"pubs": {}, "wps": {}}
-for _, data in yaml_data.items():
+pub_strs = {"pubs": {}}
+for key, data in yaml_data.items():
     title_str = data["title"]
     authors = data["authors"]
     author_str = readable_list(authors)
     year_str = data["year"]
 
-    buttons = []
+    if year_str not in pub_strs["pubs"]:
+        pub_strs["pubs"][year_str] = []
+
+    buttons = [] 
     preprint = data.get("preprint")
     if preprint is not None:
         buttons.append(button(preprint, "Preprint", "bi-file-earmark-pdf"))
+
+    pdf = data.get("pdf")
+    if pdf is not None:
+        buttons.append(button(pdf, "PDF", "bi-file-earmark-pdf"))
 
     github = data.get("github")
     if github is not None:
@@ -45,26 +53,33 @@ for _, data in yaml_data.items():
 
     pub_url = data.get("published_url")
     venue = data.get("venue")
-    working_paper = pub_url is None
-    
-    pub_str = f'{author_str}. ({year_str}) "{title_str}."'
+    image = data.get("image") 
 
-    if venue is not None:
-        pub_str += f" <em>{venue}</em>"
+    if not image and os.path.exists(f"../images/papers/{key}.png"):
+        image = f"../images/papers/{key}.png"
 
-    if working_paper:
-        if year_str not in pub_strs["wps"]:
-            pub_strs["wps"][year_str] = []
-        pub_strs["wps"][year_str].append(
-            "<li class='list-group-item'>" + pub_str + "<br>" + " ".join(buttons) + "</li>"
+    if pub_url is not None:
+        buttons.append(button(pub_url, "Published", "bi-journal-text"))
+
+    if image:
+        image_html = f"<img src='{image}' alt='{title_str}' style='float:left; margin-right:10px; width:100%; height:auto;'>" if image else ""
+        content_html = (
+            f"<div class='grid'>"  # Ensure text flows properly next to the image
+            f"<div class='g-col-12 g-col-md-4'>"
+            f"{image_html}"
+            f"</div>"
+            f"<div class='g-col-12 g-col-md-8'>"
+            f"<b>{title_str}</b><br>{author_str}<br><em>{venue} ({year_str})</em><br>"
+            f"{' '.join(buttons)}"
+            f"</div>"
+            f"</div>"
         )
     else:
-        if year_str not in pub_strs["pubs"]:
-            pub_strs["pubs"][year_str] = []
-        buttons.append(button(pub_url, "Published", "bi-journal-text"))
-        pub_strs["pubs"][year_str].append(
-            "<li class='list-group-item'>" + pub_str + "<br>" + " ".join(buttons) + "</li>"
-        )
+        content_html = (
+            f"<b>{title_str}</b><br>{author_str}<br><em>{venue} ({year_str})</em><br>"
+            f"{' '.join(buttons)}"
+        )  
+    pub_strs["pubs"][year_str].append(f"<li class='list-group-item'>{content_html}</li>")
 ```
 
 ```{python}

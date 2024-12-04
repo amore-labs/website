@@ -25,6 +25,8 @@ amlb:
   year: 2024
   venue: "Journal of Machine Learning Research, 25 (101), 1--65"
   published_url: "https://www.jmlr.org/papers/v25/22-0493.html"
+  pdf: "https://www.jmlr.org/papers/volume25/22-0493/22-0493.pdf"
+  github: "https://github.com/openml/automlbenchmark"
 
 towards_efficient_automl:
   title: "Towards Efficient AutoML: A Pipeline Synthesis Approach Leveraging Pre-Trained Transformers for Multimodal Data"
@@ -36,6 +38,7 @@ towards_efficient_automl:
   year: 2024
   venue: "Machine Learning, 113, 7011–7053"
   published_url: "https://link.springer.com/article/10.1007/s10994-024-06568-1"
+  pdf: :https://link.springer.com/content/pdf/10.1007/s10994-024-06568-1.pdf"
 
 advances_meta_learning:
   title: "Advances and Challenges in Meta-Learning: A Technical Review"
@@ -439,6 +442,7 @@ malibo_bayesian_optimization:
   year: 2024
   venue: "International Conference on Machine Learning (ICML 2024)"
   published_url: "https://proceedings.mlr.press/v235/pan24b.html"
+  pdf: "https://raw.githubusercontent.com/mlresearch/v235/main/assets/pan24b/pan24b.pdf"
 
 learning_attention:
   title: "Learning to Learn without Forgetting Using Attention"
@@ -450,6 +454,8 @@ learning_attention:
   year: 2024
   venue: "Conference on Lifelong Learning Agents (CoLLAs 2024)"
   published_url: "https://lifelong-ml.cc/Conferences/2024/acceptedpapersandvideos/conf-2024-22"
+  pdf: "https://drive.google.com/file/d/1RhBj6JlAygfO7Ptip_NW4ygBRYSpIEbL/view?usp=share_link"
+  
 
 dynamic_sparse_training:
   title: "Continual Learning with Dynamic Sparse Training: Exploring Algorithms for Effective Model Updates"
@@ -1222,7 +1228,7 @@ standardized_dataset_docs:
     - L. Oala
   year: 2024
   venue: "arXiv preprint arXiv:2407.16883, 2024"
-  published_url: "https://arxiv.org/abs/2407.16883"
+  preprint: "https://arxiv.org/abs/2407.16883"
 
 sample_selection_few_shot:
   title: "Automatic Combination of Sample Selection Strategies for Few-Shot Learning"
@@ -1233,7 +1239,7 @@ sample_selection_few_shot:
     - J. Vanschoren
   year: 2024
   venue: "arXiv preprint arXiv:2402.03038, 2024"
-  published_url: "https://arxiv.org/abs/2402.03038"
+  preprint: "https://arxiv.org/abs/2402.03038"
 
 clams_model_selection:
   title: "CLAMS: A System for Zero-Shot Model Selection for Clustering"
@@ -1245,7 +1251,7 @@ clams_model_selection:
     - J. Vanschoren
   year: 2024
   venue: "arXiv preprint arXiv:2407.11286, 2024"
-  published_url: "https://arxiv.org/abs/2407.11286"
+  preprint: "https://arxiv.org/abs/2407.11286"
 
 supernet_transfer_nas:
   title: "Robust and Efficient Transfer Learning via Supernet Transfer in Warm-Started Neural Architecture Search"
@@ -1254,7 +1260,7 @@ supernet_transfer_nas:
     - J. Vanschoren
   year: 2024
   venue: "arXiv preprint arXiv:2407.20279, 2024"
-  published_url: "https://arxiv.org/abs/2407.20279"
+  preprint: "https://arxiv.org/abs/2407.20279"
 
 automated_time_series:
   title: "Can Time Series Forecasting Be Automated? A Benchmark and Analysis"
@@ -1263,7 +1269,7 @@ automated_time_series:
     - J. Vanschoren
   year: 2024
   venue: "arXiv preprint arXiv:2407.16445, 2024"
-  published_url: "https://arxiv.org/abs/2407.16445"
+  preprint: "https://arxiv.org/abs/2407.16445"
 
 unsupervised_meta_learning:
   title: "Unsupervised Meta-Learning via In-Context Learning"
@@ -1274,7 +1280,7 @@ unsupervised_meta_learning:
     - M. Nowaczyk
   year: 2024
   venue: "arXiv preprint arXiv:2405.16124, 2024"
-  published_url: "https://arxiv.org/abs/2405.16124"
+  preprint: "https://arxiv.org/abs/2405.16124"
 
 ai_safety_benchmark:
   title: "Introducing v0.5 of the AI Safety Benchmark from MLCommons"
@@ -1292,7 +1298,7 @@ ai_safety_benchmark:
     - J. Vanschoren
   year: 2024
   venue: "arXiv preprint arXiv:2404.12241, 2024"
-  published_url: "https://arxiv.org/abs/2404.12241"
+  preprint: "https://arxiv.org/abs/2404.12241"
 
 continual_learning_diet:
   title: "Continual Learning on a Data Diet"
@@ -1302,7 +1308,7 @@ continual_learning_diet:
     - J. Vanschoren
   year: 2024
   venue: "arXiv preprint arXiv:2410.17715, 2024"
-  published_url: "https://arxiv.org/abs/2410.17715"
+  preprint: "https://arxiv.org/abs/2410.17715"
 
 focil_sparse_experts:
   title: "FOCIL: Finetune-and-Freeze for Online Class Incremental Learning by Training Randomly Pruned Sparse Experts"
@@ -1313,7 +1319,7 @@ focil_sparse_experts:
     - J. Vanschoren
   year: 2024
   venue: "arXiv preprint arXiv:2403.14684, 2024"
-  published_url: "https://arxiv.org/abs/2403.14684"
+  preprint: "https://arxiv.org/abs/2403.14684"
 
 continual_test_time_adaptation:
   title: "Evaluating Continual Test-Time Adaptation for Contextual and Semantic Domain Shifts"
@@ -1323,7 +1329,7 @@ continual_test_time_adaptation:
     - J. Vanschoren
   year: 2023
   venue: "arXiv preprint arXiv:2208.08767, 2023"
-  published_url: "https://arxiv.org/abs/2208.08767"
+  preprint: "https://arxiv.org/abs/2208.08767"
 
 automl_continual_learning:
   title: "What Can AutoML Do for Continual Learning?"
@@ -1332,7 +1338,7 @@ automl_continual_learning:
     - J. Vanschoren
   year: 2023
   venue: "arXiv preprint arXiv:2311.11963, 2023"
-  published_url: "https://arxiv.org/abs/2311.11963"
+  preprint: "https://arxiv.org/abs/2311.11963"
 
 dmlr_data_research:
   title: "DMLR: Data-Centric Machine Learning Research -- Past, Present and Future"
@@ -1350,7 +1356,7 @@ dmlr_data_research:
     - J. Vanschoren
   year: 2023
   venue: "arXiv preprint arXiv:2311.13028, 2023"
-  published_url: "https://arxiv.org/abs/2311.13028"
+  preprint: "https://arxiv.org/abs/2311.13028"
 
 automated_rl_overview:
   title: "Automated Reinforcement Learning: An Overview"
@@ -1361,7 +1367,7 @@ automated_rl_overview:
     - U. Kaymak
   year: 2022
   venue: "arXiv preprint arXiv:2201.05000, 2022"
-  published_url: "https://arxiv.org/abs/2201.05000"
+  preprint: "https://arxiv.org/abs/2201.05000"
 
 warm_start_darts:
   title: "Warm-starting DARTS Using Meta-Learning"
@@ -1370,7 +1376,7 @@ warm_start_darts:
     - J. Vanschoren
   year: 2022
   venue: "arXiv preprint arXiv:2205.06355, 2022"
-  published_url: "https://arxiv.org/abs/2205.06355"
+  preprint: "https://arxiv.org/abs/2205.06355"
 
 biomedical_feature_selection:
   title: "Automated Feature Selection and Classification for High-Dimensional Biomedical Data"
@@ -1393,7 +1399,7 @@ cats_not_scans:
     - V. Cheplygina
   year: 2021
   venue: "arXiv preprint arXiv:2107.05940, 2021"
-  published_url: "https://arxiv.org/pdf/2107.05940.pdf"
+  preprint: "https://arxiv.org/pdf/2107.05940.pdf"
 
 frugal_ml:
   title: "Frugal Machine Learning"
@@ -1405,7 +1411,7 @@ frugal_ml:
     - M. Sebag
   year: 2021
   venue: "arXiv preprint arXiv:2111.03731, 2021"
-  published_url: "https://arxiv.org/abs/2111.03731"
+  preprint: "https://arxiv.org/abs/2111.03731"
 
 cnn_quantization:
   title: "Fixed-Point Quantization of Convolutional Neural Networks for Quantized Inference on Embedded Platforms"
@@ -1416,7 +1422,7 @@ cnn_quantization:
     - S. Nijssen
   year: 2021
   venue: "arXiv preprint arXiv:2102.02147, 2021"
-  published_url: "https://arxiv.org/pdf/2102.02147.pdf"
+  preprint: "https://arxiv.org/pdf/2102.02147.pdf"
 
 aerial_segmentation:
   title: "Aerial Imagery Pixel-Level Segmentation"
@@ -1425,7 +1431,7 @@ aerial_segmentation:
     - J. Vanschoren
   year: 2020
   venue: "arXiv preprint arXiv:2012.02024, 2020"
-  published_url: "https://arxiv.org/pdf/2012.02024.pdf"
+  preprint: "https://arxiv.org/pdf/2012.02024.pdf"
 
 hyperparameter_tuning:
   title: "Importance of Tuning Hyperparameters of Machine Learning Algorithms"
@@ -1435,7 +1441,7 @@ hyperparameter_tuning:
     - J. Vanschoren
   year: 2020
   venue: "arXiv preprint arXiv:2007.07588, 2020"
-  published_url: "https://arxiv.org/pdf/2007.07588.pdf"
+  preprint: "https://arxiv.org/pdf/2007.07588.pdf"
 
 mlsys_frontier:
   title: "MLSys: The New Frontier of Machine Learning Systems"
@@ -1445,7 +1451,7 @@ mlsys_frontier:
     - and others
   year: 2019
   venue: "arXiv preprint arXiv:1904.03257, 2019"
-  published_url: "https://arxiv.org/pdf/1904.03257.pdf"
+  preprint: "https://arxiv.org/pdf/1904.03257.pdf"
 
 metalearning_survey:
   title: "Metalearning: A Survey"
@@ -1453,7 +1459,7 @@ metalearning_survey:
     - J. Vanschoren
   year: 2018
   venue: "arXiv preprint arXiv:1810.03548, 2018"
-  published_url: "https://arxiv.org/pdf/1810.03548.pdf"
+  preprint: "https://arxiv.org/pdf/1810.03548.pdf"
 
 reproducible_meta_learning:
   title: "Towards Reproducible Empirical Research in Meta-Learning"
@@ -1465,7 +1471,7 @@ reproducible_meta_learning:
     - A. C. de Carvalho
   year: 2018
   venue: "arXiv preprint arXiv:1808.10406, 2018"
-  published_url: "https://arxiv.org/pdf/1808.10406.pdf"
+  preprint: "https://arxiv.org/pdf/1808.10406.pdf"
 
 medieval_social_networks:
   title: "Reconstructing Medieval Social Networks from English and Latin Charters"
