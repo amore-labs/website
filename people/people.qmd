@@ -16,9 +16,8 @@ def make_person_description(name, attrs):
             <style>
                 .container {
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     justify-content: center;
-                    flex-direction: column; 
                 }
 
                 .image-container {
@@ -35,20 +34,22 @@ def make_person_description(name, attrs):
                     max-height: 100%;
                 }
 
-                .text {
-                    flex: 1;
+                .text-container {
                     display: flex;
-                    align-items: center;
+                    flex-direction: column; /* Stack description and icons vertically */
+                    align-items: flex-start; /* Align content to the left */
                     padding: 10px;
                 }
-                 .social-icons {
+                
+                .social-icons {
                     display: flex;
                     justify-content: center;
                 }
 
-                .social-icons img {
+                .social-icons a {
                     width: 20px; /* Adjust size as needed */
                     margin: 0 10px; /* Adjust spacing */
+                    text-decoration: none;
                 }
             </style>
             <body>
@@ -56,14 +57,16 @@ def make_person_description(name, attrs):
                     <div class="image-container">
                         <img src="$picture">
                     </div>
-                    <div class="text">
-                        $description
-                    </div>
-                    <div class="social-icons">
-                    <a href = "mailto:$mail"><img src="../images/gmail.png" alt="Email"></a>
-                    <a href = "$link"><img src="../images/linkedin.png" alt="Linkedin"></a>
-                    <a href = "$scholar"><img src="../images/scholar.png" alt="Google Scholar"></a>
-                    <a href = "$personal"><img src="../images/personalsite.png" alt="Personal"></a>
+                    <div class="text-container">
+                        <div class="text">
+                            $description
+                        </div>
+                        <div class="social-icons">
+                        <a href = "mailto:$mail"><i class="bi bi-envelope-fill fs-4" style="color: red;"></i></a>
+                        <a href = "$link"><i class="bi bi-linkedin fs-4"></i></a>
+                        <a href = "$scholar"><i class="bi bi-mortarboard-fill fs-4" style="color: green;"></i></a>
+                        <a href = "$personal"><i class="bi bi-globe fs-4" style="color: orange;"></i></a>
+                        </div>
                     </div>
                 </div>
             </body>
@@ -73,16 +76,23 @@ def make_person_description(name, attrs):
     template = Template(s)
     description = "<p>" + attrs["description"] + "</p>"
     description = description.replace("<name>", "<b>" + name + "</b>") # Add bold name
-    return template.substitute(picture=attrs["picture"], description=description, mail = attrs["mail"], link = attrs["linkedin"], scholar = attrs["scholar"], personal = attrs["personal"])
+    picture = attrs.get("picture", None)
+    mail = attrs.get("mail", None)
+    link = attrs.get("linkedin", None)
+    scholar = attrs.get("scholar", None)
+    personal = attrs.get("personal", None)
+    return template.substitute(picture = picture, description = description, mail = mail, link = link, scholar = scholar, personal = personal)
 
 
 yaml_data = yaml.safe_load(open("people.yml"))
-
+ 
 positions = {
     "Permanent researchers": "permanent",
     "Research engineers": "engineer",
+    "Lecturers": "lecturer",
     "Postdocs": "postdoc",
-    "PhD students": "phd"
+    "PhD students": "phd",
+    "Alumni and visitors": "alumnus"
 }
 
 for long_pos, short_pos in positions.items():

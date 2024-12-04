@@ -1,15 +1,73 @@
 ---
-title: "Home"
+title: "Lab"
 ---
+![Our team on a retreat near the sea.](images/group_image.webp)  
 
 ## Mission
+<b>Our mission is to scientifically understand and build AI systems with advanced capabilities, and make AI accessible to all to benefit all of humanity.</b>
 
-## Highlights
+We invent new neural network architectures and train them in new ways to learn better and faster, study models systematically, and use our insights to automate this process so 
+that AI systems can self-assemble and optimize themselves. Everything we create is open-source and crafted with user-friendliness in mind.
 
-## Vacancies
+In this pursuit, we created [OpenML](https://www.openml.org), an global open platform with myriad curated datasets, AI models, and experiments, for streamlining machine learning research and 
+making it accessible to all. We perform cutting-edge research on Automated Machine Learning (AutoML), Meta-Learning, Continual Learning, Foundation Models, Open-Endedness, and related fields,
+and validate our methods in projects that tackle sustainable development goals, including health care, food security, and climate change.
+
+You can find our work in [top AI conferences and journals](publications/publications.html), and we take pride in [good engineering and open science](software/software.html) to build AI models and systems that are widely used by people every day.
+
+We are integrated in the [Data and AI cluster](https://dai.win.tue.nl/), which does excellent research in all aspects of AI.
+
+## Recent highlights
+
+::::: {.box-container}
+::: {.grid}
+::: {.g-col-12 .g-col-md-4}
+
+::: {.box}
+#### We are hiring!
+
+---
+
+Our team is growing! We have 7 new openings for [PhD students, PostDocs, and Research Engineers](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1) for research on foundation models,
+AutoML, and industry collaboration. Apply now!
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.box}
+#### NeurIPS 2024 Spotlight for Croissant
+
+---
+
+Croissant is a new standard for describing machine learning datasets, making it easier to share and reuse data and load it automatically into AI libraries. Joined work with Google, HuggingFace, Kaggle, MLCommons, and many more. Join us at NeurIPS 2024!
+:::
+:::
+
+::: {.g-col-12 .g-col-md-4}
+::: {.box}
+#### ICML 2024 Spotlight for MALIBO
+
+---
+
+MALIBO is a neural network that meta-learns how to tune hyperparameters - it learns across many prior tasks to tune models much more efficiently than other techniques. Jiarong Pan will present his work as a spotlight talk at ICML 2024.
+:::
+:::
+
+:::
+:::::
+
+## Join us!
+**PhD, PostDoc, or AI Engineer positions**: [please check out our open positions](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1). Without an open position, you need to be self-funded or have a scholarship.
+
+**Visiting researchers**: We love discussing new ideas and collaborations! Note that we generally expect you to stay for at least a few months. Our lab is generally not able to offer paid internships.
+
 
 ## Contact
+|   |   |
+|---|---|
+|E-mail:| [OpenML Labs](mailto:openml-labs@tue.nl)|
+|Address: |Groene Loper 5<br>Metaforum 7.104<br>5600 MB Eindhoven<br>The Netherlands|
 
 ***
 
-This website is powered by [Quarto](https://quarto.org/) and inspired from Drew Dimmery's blogpost: [Quarto for an Academic Website.](https://ddimmery.com/posts/quarto-website)
+This website is powered by [Quarto](https://quarto.org/), with thanks to [Drew Dimmery](https://ddimmery.com/posts/quarto-website).

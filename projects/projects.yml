@@ -1,0 +1,150 @@
+alfie:
+  title: "Assessment of Learning technologies and Frameworks for Intelligent and Ethical AI"
+  funding: EU Horizon Europe
+  year: 2024-2027
+  description: ALFIE aims to build an AutoML platform that streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values.
+  project_url: https://alfie-project.eu/
+  image: ../images/projects/alfie.webp
+
+synergies:
+  title: "SYNERGIES"
+  funding: EU Horizon Europe
+  year: 2024-2027
+  description: SYNERGIES will enhance the development, training, virtual testing, and validation of cooperative, connected and automated mobility systems.
+  project_url: https://synergies-ccam.eu/
+  image: ../images/projects/synergies.webp
+
+edih-snl:
+  title: "EDIH-SNL"
+  funding: EU Digital Europe
+  year: 2024-2025
+  description: The European Digital Innovation Hub South Netherlands aims to accellerate the digital transformation of manufacturing and maintenance SMEs.
+  project_url: https://www.klikopmorgen.nl/
+  image: ../images/projects/edih.webp
+
+automl-for-all:
+  title: "Automated Machine Learning for all"
+  funding: Dutch Science Foundation, Open Science Fund
+  year: 2024-2025
+  description: This project leverages OpenML and AutoML to automatically build AI models and provide intuitive reports to help scientists make progress across many different fields.
+  project_url: https://www.nwo.nl/projecten/osf232109
+  image: ../images/projects/automl4all.webp
+
+ml-renovations:
+  title: "Machine Learning for building renovations"
+  funding: Dutch Government
+  year: 2022-2026
+  description: To make cities more sustainable, this project uses machine learning to predict the energy performance of buildings and optimize renovation strategies.
+  project_url: https://www.tue.nl/en/research/research-groups/building-physics-and-services/building-performance/renovatieverkenner
+  image: ../images/projects/renovation.webp
+
+digital-twin-farm:
+  title: "Digital Twin of a Vertical Farm"
+  funding: Dutch Science Foundation, Merian Fund
+  year: 2022-2026
+  description: Vertical farming allows us to grow more food using less resources. We use AI to model plants in 3D to understand how different light, CO2 and temperature scenarios impact plant growth and photosynthesis.
+  project_url: https://dai.win.tue.nl/researchprojects/110/
+  image: ../images/projects/twinergy.webp
+
+ai4europe:
+  title: "AI4Europe"
+  funding: EU Horizon Europe
+  year: 2022-2025
+  description: The AI-on-Demand platform (AIoD) is a community-driven platform designed to empower European research and innovation in Artificial Intelligence (AI).
+  project_url: https://aiod.eu/
+  image: ../images/projects/aiod.webp
+
+stairway-to-ai:
+  title: "Stairway to AI"
+  funding: EU Horizon 2020
+  year: 2020-2024
+  description: The StairwAI project aims to provide a matchmaking service for users of the AI-on-Demand platform to easily find AI assets, experts, knowledge, hardware resource providers and much more.
+  project_url: https://stairwai.nws.cs.unibo.it/
+  image: ../images/projects/stairwai.webp
+
+inno4health:
+  title: "Continuous monitoring in personal and physical health"
+  funding: ITEA Inno4Health
+  year: 2020-2024
+  description: Inno4Health stimulates continuous monitoring in personal and physical health, improving patient care and athlete performance.
+  project_url: https://inno4health.eu/
+  image: ../images/projects/inno4health.webp
+
+
+multi-modal-photochemistry:
+  title: "Multi Modal Photochemistry"
+  funding: Dutch Science Foundation, TTW
+  year: 2020-2024
+  description: In this project, we aimed to optimize the photochemical synthesis of complex molecules using machine learning.
+  image: ../images/projects/photochemistry.webp
+
+tailor:
+  title: "TAILOR Network of AI Excellence"
+  funding: EU Horizon 2020
+  year: 2020-2024
+  description: TAILOR is one of the first European networks of research excellence in AI, focussing on Trustworthy AI.
+  project_url: https://tailor-network.eu/
+  image: ../images/projects/tailor.webp
+
+skyhigh:
+  title: "SkyHigh: Leveraging AI in Vertical Farming"
+  funding: Dutch Science Foundation
+  year: 2020-2024
+  description: Vertical farming allows us to grow more food using less resources. We use AI to track plant growth non-invasively and optimize growth.
+  project_url: https://www.sky-high.info/
+  image: ../images/projects/skyhigh.webp
+
+boost:
+  title: "Educational platform for machine learning and medical image analysis"
+  funding: TU Eindhoven, BOOST
+  year: 2019-2025
+  description: AI education should be scalable and engaging. This project aims to leverage OpenML for AI-related university courses, challenging students to build the best AI models in an engaging environment.
+  project_url: https://boost.tue.nl/
+  image: ../images/projects/boost.webp
+
+automl-gym:
+  title: "The AutoML Gym"
+  funding: Amazon Research Award
+  year: 2019-2020
+  description: This project aimed to evolve AutoML systems (agents) in an environment of increasingly difficult tasks, in which AutoML agents can be uploaded as docker images and run on AWS infrastructure.
+  project_url: https://www.amazon.science/research-awards/recipients/joaquin-vanschoren
+  image: ../images/projects/AutoMLGym.webp
+
+dynamic-data-analytics:
+  title: "Dynamic Data Analytics through Automatically Constructed Machine Learning Pipelines"
+  funding: Dutch Science Foundation, Commit2Data
+  year: 2017-2021
+  description: This project created new online automated machine learning pipelines, new methods for multi-variate time series prediction, and new approaches for early stage Parkinson's disease diagnostics from videos.
+  project_url: https://www.nwo.nl/en/projects/628011002
+  image: ../images/projects/daccompli.webp
+
+data-driven-discovery:
+  title: "Data Driven Discovery of Models"
+  funding: DARPA
+  year: 2017-2021
+  description: The first DARPA challenge on AutoML, the Data-Driven Discovery of Models (D3M) program developed automated methods to create empirical models of real, complex processes. It also lead to the creation of the AutoML benchmark.
+  project_url: https://datadrivendiscovery.org/
+  image: ../images/projects/darpa.webp
+
+cloud-automl:
+  title: "A Cloud-Based Platform for AutoML"
+  funding: Microsoft Azure Research Award
+  year: 2016-2016
+  description: With sponsorship from Microsoft, we ran the first large-scale machine learning benchmarks on Azure, which are still accessible on OpenML today.
+  project_url: https://research.tue.nl/nl/prizes/microsoft-azure-research-award
+  image: ../images/projects/cloud.webp
+
+massively-collaborative-ml:
+  title: "Massively Collaborative Machine Learning"
+  funding: Dutch Science Foundation, Free Competition
+  year: 2012-2016
+  description: This project created OpenML, an open science platform for sharing data, code, and experiments in machine learning.
+  project_url: https://www.nwo.nl/en/projects/612001206-0
+  image: ../images/projects/openml-black.webp
+
+mlopen-platform:
+  title: "MLOpen Machine Learning Platform"
+  funding: EU PASCAL Harvest
+  year: 2012-2013
+  description: This exploratory project brought together scientists and engineers to create an open machine learning platform, forming the foundation of the OpenML community.
+  image: ../images/projects/pascal.webp

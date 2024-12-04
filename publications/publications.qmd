@@ -1,0 +1,94 @@
+---
+title: "Publications"
+echo: false
+jupyter: python3
+section-divs: false
+keep-md: true
+---
+
+***
+
+```{python}
+import yaml
+import os
+from IPython.display import display, Markdown, HTML
+
+def readable_list(_s):
+  if len(_s) < 3:
+    return ' and '.join(map(str, _s))
+  *a, b = _s
+  return f"{', '.join(map(str, a))}, and {b}"
+
+def button(url, str, icon):
+    icon_base = icon[:2]
+    return f"""<a class="btn btn-outline-dark btn-sm", href="{url}" target="_blank" rel="noopener noreferrer">
+        <i class="{icon_base} {icon}" role='img' aria-label='{str}'></i>
+        {str}
+    </a>"""
+
+
+yaml_data = yaml.safe_load(open("publications.yml"))
+pub_strs = {"pubs": {}}
+for key, data in yaml_data.items():
+    title_str = data["title"]
+    authors = data["authors"]
+    author_str = readable_list(authors)
+    year_str = data["year"]
+
+    if year_str not in pub_strs["pubs"]:
+        pub_strs["pubs"][year_str] = []
+
+    buttons = [] 
+    preprint = data.get("preprint")
+    if preprint is not None:
+        buttons.append(button(preprint, "Preprint", "bi-file-earmark-pdf"))
+
+    pdf = data.get("pdf")
+    if pdf is not None:
+        buttons.append(button(pdf, "PDF", "bi-file-earmark-pdf"))
+
+    github = data.get("github")
+    if github is not None:
+        buttons.append(button(github, "Github", "bi-github"))
+
+    pub_url = data.get("published_url")
+    venue = data.get("venue")
+    image = data.get("image") 
+
+    if not image and os.path.exists(f"../images/papers/{key}.png"):
+        image = f"../images/papers/{key}.png"
+
+    if pub_url is not None:
+        buttons.append(button(pub_url, "Published", "bi-journal-text"))
+
+    if image:
+        image_html = f"<img src='{image}' alt='{title_str}' style='float:left; margin-right:10px; width:100%; height:auto;'>" if image else ""
+        content_html = (
+            f"<div class='grid'>"  # Ensure text flows properly next to the image
+            f"<div class='g-col-12 g-col-md-4'>"
+            f"{image_html}"
+            f"</div>"
+            f"<div class='g-col-12 g-col-md-8'>"
+            f"<b>{title_str}</b><br>{author_str}<br><em>{venue} ({year_str})</em><br>"
+            f"{' '.join(buttons)}"
+            f"</div>"
+            f"</div>"
+        )
+    else:
+        content_html = (
+            f"<b>{title_str}</b><br>{author_str}<br><em>{venue} ({year_str})</em><br>"
+            f"{' '.join(buttons)}"
+        )  
+    pub_strs["pubs"][year_str].append(f"<li class='list-group-item'>{content_html}</li>")
+```
+
+```{python}
+#| label: "published-year"
+#| id: "published-year"
+#| output: asis
+for year in sorted(pub_strs["pubs"].keys(), reverse=True):
+    display(Markdown(f"### {year}" + "{#" + f"published-{year}" + "}"))
+    display(HTML(
+        "<ul class='list-group list-group-flush'>" + '\n'.join(pub_strs["pubs"][year]) + "</ul>"
+    ))
+```
