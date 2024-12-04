@@ -478,7 +478,9 @@ hytas_analysis:
     - R. Piao
   year: 2024
   venue: "European Conference on Computer Vision (ECCV 2024)"
-  published_url: "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04703.pdf"
+  pdf: "https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/04703.pdf"
+  published_url: "https://link.springer.com/chapter/10.1007/978-3-031-73411-3_14"
+  github: "https://github.com/zhoufangqin/HyTAS"
 
 efficient_dash:
   title: "Efficient-DASH: Automated Radar Neural Network Design Across Tasks and Datasets"
