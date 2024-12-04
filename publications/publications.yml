@@ -443,6 +443,7 @@ malibo_bayesian_optimization:
   venue: "International Conference on Machine Learning (ICML 2024)"
   published_url: "https://proceedings.mlr.press/v235/pan24b.html"
   pdf: "https://raw.githubusercontent.com/mlresearch/v235/main/assets/pan24b/pan24b.pdf"
+  github: "https://github.com/boschresearch/meta-learning-likelihood-free-bayesian-optimization"
 
 learning_attention:
   title: "Learning to Learn without Forgetting Using Attention"
