@@ -6,20 +6,16 @@ Andrei Simion-Constantinescu: # Put your name here, it will replace <name> in th
     <a href="https://repository.tudelft.nl/islandora/object/uuid%3A6b74a0e6-37aa-4ff4-bada-3e414498eafd" target="_blank">contrastive learning for unlabeled videos</a>.
     His current research focuses on adapting state-of-the-art self-supervise techniques for greenhouse/vertical farm images to predict the crop growing parameters (such as fresh weight, height, diameter a.s.o).
   picture: ../images/people/andrei_simion.webp
-  mail: temp@tue.nl
-  scholar: https://scholar.google.com/
-  linkedin: https://linkedin.com/
-  personal: https://github.com/
+  mail: a.simion.constantinescu@tue.nl
+  scholar: https://scholar.google.com/citations?user=pSs-xW4AAAAJ
 
 Alexis Cvetkov-Iliev: # Put your name here, it will replace <name> in the description
   position: postdoc # permanent, engineer, postdoc or phd
   description:
     <name> is a postdoc in the group, applying machine-learning techniques to study and optimize building renovation. His research interests include active learning, Bayesian optimization, and transfer learning.
   picture: ../images/people/alexis_cvetkov.webp
-  mail: temp@tue.nl
-  scholar: https://scholar.google.com/
-  linkedin: https://linkedin.com/
-  personal: https://github.com/
+  mail: a.cvetkov.iliev@tue.nl
+  scholar: https://scholar.google.com/citations?user=PF3sn18AAAAJ
 
 Israel Campero Jurado:
   position: phd
@@ -27,10 +23,8 @@ Israel Campero Jurado:
     <name> is a PhD student in computer science working on the European ITEA project called <a href="https://inno4health.eu/" target="_blank">INNO4HEALTH</a>.
     His interests focus on applying automated machine learning (AutoML) to healthcare solutions and democratising AutoML.
   picture: ../images/people/israel.webp
-  mail: temp@tue.nl
-  scholar: https://scholar.google.com/
-  linkedin: https://linkedin.com/
-  personal: https://github.com/
+  mail: i.campero.jurado@tue.nl
+  scholar: https://scholar.google.com/citations?user=mytAZ-YAAAAJ
 
 Pieter Gijsbers:
   position: engineer
@@ -41,20 +35,16 @@ Pieter Gijsbers:
     <a href="https://github.com/openml-labs/gama" target="_blank">GAMA</a>.
     Pieter is currently working on improving the <a href="https://www.aiod.eu/" target="_blank">AI-on-Demand</a> platform.
   picture: ../images/people/pieter_gijsbers.webp
-  mail: temp@tue.nl
-  scholar: https://scholar.google.com/
-  linkedin: https://linkedin.com/
-  personal: https://github.com/
+  mail: p.gijsbers@tue.nl
+  scholar: https://scholar.google.com/citations?user=Za3OsTwAAAAJ
 
 Jiarong Pan:
   position: phd
   description:
     <name> is a PhD student in the group, working on improving sample efficiency in machine learning algorithms. His research interests include  meta-learning, Bayesian optimization and multi-objective optimization.
   picture: ../images/people/jiarong_pan.webp 
-  mail: temp@tue.nl
-  scholar: https://scholar.google.com/
-  linkedin: https://linkedin.com/
-  personal: https://github.com/
+  mail: j.pan@tue.nl
+  scholar: https://scholar.google.com/citations?user=3KjbaRUAAAAJ
 
 Taniya Das:
   position: engineer
@@ -65,10 +55,8 @@ Taniya Das:
     making it possible to use solve deep learning tasks using <a href="https://github.com/openml/openml-python" target="_blank">openml-python</a> API. 
     She is currently working on using LLMs to  make both the platforms more intelligent. 
   picture: ../images/people/taniya_image.webp
-  mail: temp@tue.nl
-  scholar: https://scholar.google.com/
-  linkedin: https://linkedin.com/
-  personal: https://github.com/
+  mail: t.das@tue.nl
+  scholar: https://scholar.google.com/citations?user=6D5WlrgAAAAJ
 
 Joaquin Vanschoren:
   position: permanent
@@ -79,6 +67,10 @@ Joaquin Vanschoren:
     He was the inaugural chair of the <a href="https://neuripsconf.medium.com/announcing-the-neurips-2021-datasets-and-benchmarks-track-644e27c1e66c" target="_blank">NeurIPS Datasets and Benchmarks track</a>, editor-in-chief of the <a href="https://data.mlr.press/" target="_blank">DMLR journal</a>, and co-chair of the <a href="https://mlcommons.org/working-groups/ai-risk-reliability/ai-risk-reliability/" target="_blank">MLCommons AI Risk & Reliability</a> working group. 
     He is a founding member of the European AI societies <a href="https://ellis.eu/" target="_blank">ELLIS</a> and <a href="https://claire-ai.org/" target="_blank">CAIRNE</a>.
   picture: ../images/people/joaquin.webp
+  mail: j.vanschoren@tue.nl
+  scholar: https://scholar.google.com/citations?user=HhDsD9UAAAAJ
+  linkedin: https://www.linkedin.com/in/jvanschoren/
+  personal: https://joaquinvanschoren.github.io/
 
 Fangqin Zhou:
   position: phd
@@ -86,17 +78,14 @@ Fangqin Zhou:
     <name> is a PhD student working on the TWINERGY project, which aims to optimize the growth of cherry tomatos in a vertical farm.
     Her interests focus on the Hyperspectral Imaging using deep learning and transformer models, as well as Reinforcement Learning.
   picture: ../images/people/Fangqin Zhou.webp
-  mail: temp@tue.nl
-  scholar: https://scholar.google.com/
-  linkedin: https://linkedin.com/
-  personal: https://github.com/
+  mail: f.zhou@tue.nl
 
 Subhaditya Mukherjee:
   position: engineer
   description:
     <name> is a Research Engineer working on various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a>. He is currently working on making the OpenML experience better and more user-friendly.
   picture: ../images/people/Subhaditya_Mukherjee.webp
-  mail: S.mukherjee@tue.nl
+  mail: s.mukherjee@tue.nl
   scholar: https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=subhaditya+mukherjee&btnG=&oq=su
   linkedin: https://www.linkedin.com/in/subhaditya-mukherjee-a36883100/
   personal: https://www.github.com/SubhadityaMukherjee
@@ -106,6 +95,8 @@ Elif Ceren Gok Yildirim:
   description:
     <name> is a PhD student working on continual learning. Her research centers on exploring the capabilities of machine learning algorithms and advancing them to adapt and evolve over time. She likes to explore novel approaches to enable machines to accumulate knowledge from past experiences and apply it to new tasks without forgetting and contribute to the CL field.
   picture: ../images/people/Ceren_GokYildirim.webp
+  mail: e.c.gok@tue.nl
+  scholar: https://scholar.google.com/citations?user=JGWGEIYAAAAJ
 
 Murat Onur Yildirim: # Put your name here, it will replace <name> in the description
   position: phd # permanent, engineer, postdoc or phd
@@ -113,24 +104,48 @@ Murat Onur Yildirim: # Put your name here, it will replace <name> in the descrip
     <name> is a PhD Candidate in the AutoML group. He focuses on automatically and continually learning sparse experts for computer vision tasks.
     His research is dedicated to creating efficient continual learners by leveraging sparsity in networks, data, and labels.
   picture: ../images/people/onur_yildirim.webp
-
-Mert Kilickaya: 
-  position: alumnus 
-  description:
-    <name> is a former postdoctoral fellow researching autonomous visual learners that can continuously improve by extracting their own supervision from dynamic visual data streams. He advanced techniques in self-supervised continual learning, enabling AI systems to autonomously adapt and improve without relying on external annotations.
-  picture: ../images/people/mert.webp
+  mail: m.o.yildirim@tue.nl
+  scholar: https://scholar.google.com/citations?user=3NAjgx0AAAAJ
 
 Bilge Celik: 
   position: phd 
   description:
     <name> is a PhD student focusing on Automated Machine Learning for online data streams. She develops machine learning systems automatically adjusting to changing dynamics of real-time data streams.
   picture: ../images/people/bilge.webp
+  mail: bilgecelik@gmail.com
 
 Prabhant Singh: 
   position: lecturer 
   description:
     <name> I am currently working as a lecturer and researcher. I have experience in Python, data and systems as well as infrastructure engineering.
   picture: ../images/people/Singh_Prabhant.webp
+  mail: p.singh@tue.nl
+  scholar: https://scholar.google.com/citations?user=AGBlKsAAAAAJ
+
+Anna Vettoruzzo:
+  position: alumnus
+  description:
+    <name> received her B.Sc. degree in Information Engineering at the University of Padova, Italy, 
+    in 2019, and her M.Sc. degree in ICT for Internet and Multimedia at the University of Padova in 2021, with a focus 
+    on Machine Learning for Healthcare. Since 2021, she has been pursuing a Ph.D. degree in the field of machine learning 
+    at the School of Information Technology, Halmstad University, Sweden, under the supervision of Assoc. Prof. 
+    Mohamed-Rafik Bouguelia and Prof. Thorsteinn Rögnvaldsson. Her research interests include meta-learning, few-shot learning, 
+    continual learning, and, more broadly, enhancing the generalization capabilities of machine learning models.
+  picture: ../images/people/anna.webp
+  mail: anna.vettoruzzo@hh.se
+  scholar: https://scholar.google.com/citations?user=lKNNc5kAAAAJ
+
+Branislav Pecher:
+  position: alumnus
+  description:
+    <name> is a former visiting PhD student from Kempelen Institute of Intelligent Technologies. His 
+    research mainly focuses on learning with limited labelled data and a better understanding of its sensitivity to 
+    different factors that influence how well these approaches work. During the visit, he worked on few-shot learning, 
+    exploring how different subsets of samples of different characteristics affect the success of transfer in these 
+    approaches, and proposing a new method for selecting a subset of high-quality samples for few-shot learning.
+  picture: ../images/people/branislav.webp
+  mail: branislav.pecher@kinit.sk
+  scholar: https://scholar.google.com/citations?user=AsuFpHwAAAAJ
 
 Jos van der Velde:
   position: alumnus
@@ -138,11 +153,22 @@ Jos van der Velde:
     <name> is a senior engineer focusing on software architecture and infrastructure. I previously worked on the <a href="https://mlcommons.org/working-groups/data/croissant/" target="_blank">Croissant</a> standard,
     and the <a href="https://www.aiod.eu/" target="_blank">AI-on-Demand</a> platform. I'm still actively contributing to the OpenML infrastructure.
   picture: ../images/people/van_der_Velde_Jos.webp
+  mail: j.d.v.d.velde@tue.nl
+
+Mert Kilickaya: 
+  position: alumnus 
+  description:
+    <name> is a former postdoctoral fellow researching autonomous visual learners that can continuously improve by extracting their own supervision from dynamic visual data streams. He advanced techniques in self-supervised continual learning, enabling AI systems to autonomously adapt and improve without relying on external annotations.
+  picture: ../images/people/mert.webp
+  mail: kilickayamert@gmail.com
+  scholar: https://scholar.google.com/citations?user=MBMjO0sAAAAJ
 
 Rafael Gomes Mantovani:
   position: alumnus
   description:
     <name> is a former PhD student, and currently a professor at the Federal Technology University - Paraná (UTFPR), campus of Apucarana, Brazil. He researches Machine Learning, Data Mining, Meta-learning, and Automated Machine Learning/Data Science.
   picture: ../images/people/rafaelgomes.webp
+  mail: rgmantovani@gmail.com
+  scholar: https://scholar.google.com/citations?user=lRFTBFgAAAAJ
 
 

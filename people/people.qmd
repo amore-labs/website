@@ -62,10 +62,10 @@ def make_person_description(name, attrs):
                             $description
                         </div>
                         <div class="social-icons">
-                        <a href = "mailto:$mail"><i class="bi bi-envelope-fill fs-4" style="color: red;"></i></a>
-                        <a href = "$link"><i class="bi bi-linkedin fs-4"></i></a>
-                        <a href = "$scholar"><i class="bi bi-mortarboard-fill fs-4" style="color: green;"></i></a>
-                        <a href = "$personal"><i class="bi bi-globe fs-4" style="color: orange;"></i></a>
+                            $mail
+                            $linkedin
+                            $scholar
+                            $personal
                         </div>
                     </div>
                 </div>
@@ -77,11 +77,12 @@ def make_person_description(name, attrs):
     description = "<p>" + attrs["description"] + "</p>"
     description = description.replace("<name>", "<b>" + name + "</b>") # Add bold name
     picture = attrs.get("picture", None)
-    mail = attrs.get("mail", None)
-    link = attrs.get("linkedin", None)
-    scholar = attrs.get("scholar", None)
-    personal = attrs.get("personal", None)
-    return template.substitute(picture = picture, description = description, mail = mail, link = link, scholar = scholar, personal = personal)
+    mail = f'<a href="mailto:{attrs.get("mail")}"><i class="bi bi-envelope-fill fs-4" style="color: red;"></i></a>' if attrs.get("mail") else ""
+    linkedin = f'<a href="{attrs.get("linkedin")}"><i class="bi bi-linkedin fs-4"></i></a>' if attrs.get("linkedin") else ""
+    scholar = f'<a href="{attrs.get("scholar")}"><i class="bi bi-mortarboard-fill fs-4" style="color: green;"></i></a>' if attrs.get("scholar") else ""
+    personal = f'<a href="{attrs.get("personal")}"><i class="bi bi-globe fs-4" style="color: orange;"></i></a>' if attrs.get("personal") else ""
+
+    return template.substitute(picture = picture, description = description, mail = mail, linkedin = linkedin, scholar = scholar, personal = personal)
 
 
 yaml_data = yaml.safe_load(open("people.yml"))
