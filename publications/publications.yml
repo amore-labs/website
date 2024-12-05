@@ -992,7 +992,7 @@ layered_tpot:
     - R. Olson
   year: 2017
   venue: "AutoML Workshop @ ECML 2017, CEUR Workshop Proceedings vol. 1998"
-  published_url: ""
+  published_url: "https://arxiv.org/pdf/1801.06007"
 
 decision_tree_tuning:
   title: "Hyper-Parameter Tuning of a Decision Tree Induction Algorithm"
