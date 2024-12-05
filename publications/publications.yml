@@ -213,6 +213,7 @@ openml_python_api:
   year: 2021
   venue: "Journal of Machine Learning Research, 22 (100), 1–5"
   published_url: "https://www.jmlr.org/papers/volume22/19-920/19-920.pdf"
+  github: "https://github.com/openml/openml-python"
 
 transformational_machine_learning:
   title: "Transformational Machine Learning: Learning How to Learn from Many Related Scientific Problems"
@@ -252,6 +253,7 @@ gama_genetic_automl:
   year: 2019
   venue: "Journal of Open Source Software, 4 (33), 1–2"
   published_url: "http://joss.theoj.org/papers/10.21105/joss.01132"
+  github: "https://github.com/openml-labs/gama"
 
 meta_learning_hyperparameter_tuning:
   title: "A Meta-Learning Recommender System for Hyperparameter Tuning: Predicting When Tuning Improves SVM Classifiers"
@@ -624,6 +626,7 @@ meta_learning_hyperparameter_defaults:
   year: 2021
   venue: "Genetic and Evolutionary Computation Conference (GECCO) Companion, 2021"
   published_url: "https://arxiv.org/abs/2106.05767"
+  github: "https://github.com/PGijsbers/symbolicdefaults"
 
 gama_general_automl:
   title: "GAMA: A General Automated Machine Learning Assistant"
@@ -633,6 +636,7 @@ gama_general_automl:
   year: 2021
   venue: "Proceedings of ECMLPKDD 2021. Lecture Notes in Computer Science, 12461 (2021), p560-564"
   published_url: "https://arxiv.org/pdf/2007.04911.pdf"
+  github: "https://github.com/openml-labs/gama"
 
 vectors_locally_aggregated_concepts:
   title: "Beyond Bag-of-Concepts: Vectors of Locally Aggregated Concepts"
