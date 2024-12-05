@@ -11,9 +11,9 @@ website:
       - index.qmd
       - projects/projects.qmd
       - publications/publications.qmd
-      - blogs/blog.qmd
       - software/software.qmd
       - people/people.qmd
+      - join/join.qmd
     right:
       - icon: github
         href: https://github.com/openml-labs/website

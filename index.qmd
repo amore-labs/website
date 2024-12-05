@@ -1,7 +1,7 @@
 ---
 title: "Lab"
 ---
-![Our team on a retreat near the sea.](images/group_image.webp)  
+![Our team on a retreat near the sea.](images/group_image2.webp)  
 
 ## Mission
 <b>Our mission is to scientifically understand and build AI systems with advanced capabilities, and make AI accessible to all to benefit all of humanity.</b>
@@ -45,7 +45,7 @@ Croissant is a new standard for describing machine learning datasets, making it 
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {.box}
-#### ICML 2024 Spotlight for MALIBO
+#### ICML 2024 Spotlight for MALIBO 
 
 ---
 
@@ -57,16 +57,15 @@ MALIBO is a neural network that meta-learns how to tune hyperparameters - it lea
 :::::
 
 ## Join us!
-**PhD, PostDoc, or AI Engineer positions**: [please check out our open positions](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1). Without an open position, you need to be self-funded or have a scholarship.
+**PhD, PostDoc, or AI Engineer positions**: [please check out our open positions](join/join.html). Without an open position, you need to be self-funded or have a scholarship.
 
 **Visiting researchers**: We love discussing new ideas and collaborations! Note that we generally expect you to stay for at least a few months. Our lab is generally not able to offer paid internships.
 
 
 ## Contact
-|   |   |
-|---|---|
-|E-mail:| [OpenML Labs](mailto:openml-labs@tue.nl)|
-|Address: |Groene Loper 5<br>Metaforum 7.104<br>5600 MB Eindhoven<br>The Netherlands|
+**E-mail:** [openml-labs@tue.nl](mailto:openml-labs@tue.nl)
+
+**Address:** Groene Loper 5, Metaforum 7.104, 5600 MB Eindhoven, The Netherlands
 
 ***
 
