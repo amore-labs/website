@@ -12,6 +12,7 @@ website:
       - projects/projects.qmd
       - publications/publications.qmd
       - software/software.qmd
+      - blogs/blog.qmd
       - people/people.qmd
       - join/join.qmd
     right:

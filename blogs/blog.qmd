@@ -31,7 +31,6 @@ def make_html_link(nb, title):
     </head>
 
     <body>
-    (under construction)
     <li>
         <a class="custom-link" href="$nb">$title</a>
     </li>
