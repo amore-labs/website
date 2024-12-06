@@ -1,6 +1,8 @@
 ---
 title: "Lab"
 ---
+Welcome to the Automated Machine Learning lab at Eindhoven University of Technology!
+
 ![Our team on a retreat near the sea.](images/group_image2.webp)  
 
 ## Mission
