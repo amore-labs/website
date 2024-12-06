@@ -1,13 +1,15 @@
 Andrei Simion-Constantinescu: # Put your name here, it will replace <name> in the description
   position: phd # permanent, engineer, postdoc or phd
   description:
-    <name> is a PhD Researcher in the AutoML group focused on self-supervised learning for computer vision tasks.
-    He holds an MSc degree from TU Delft with the graduation topic on
+    <name> is a PhD Researcher in the <a href="https://dai.win.tue.nl/team/5/" target="_blank">AutoML group</a>
+    focused on self-supervised learning for computer vision tasks. He holds an MSc degree from TU Delft with the graduation topic on
     <a href="https://repository.tudelft.nl/islandora/object/uuid%3A6b74a0e6-37aa-4ff4-bada-3e414498eafd" target="_blank">contrastive learning for unlabeled videos</a>.
-    His current research focuses on adapting state-of-the-art self-supervise techniques for greenhouse/vertical farm images to predict the crop growing parameters (such as fresh weight, height, diameter a.s.o).
+    His work involves adapting state-of-the-art self-supervised techniques to solve practical problems in greenhouse crop prediction and vertical farming 
+    as part of <a href="https://innovationorigins.com/en/the-vertical-farm-goes-from-hype-to-reality-nice-promises-lots-of-bottlenecks/" target="_blank">NWO Sky High Project</a>. 
   picture: ../images/people/andrei_simion.webp
   mail: a.simion.constantinescu@tue.nl
   scholar: https://scholar.google.com/citations?user=pSs-xW4AAAAJ
+  linkedin: https://www.linkedin.com/in/andrei-simion-constantinescu/
 
 Alexis Cvetkov-Iliev: # Put your name here, it will replace <name> in the description
   position: postdoc # permanent, engineer, postdoc or phd
@@ -37,6 +39,7 @@ Pieter Gijsbers:
   picture: ../images/people/pieter_gijsbers.webp
   mail: p.gijsbers@tue.nl
   scholar: https://scholar.google.com/citations?user=Za3OsTwAAAAJ
+  personal: https://pgijsbers.github.io/
 
 Jiarong Pan:
   position: phd
