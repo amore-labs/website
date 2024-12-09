@@ -64,8 +64,8 @@ All positions are **fully funded**, so you can focus entirely on your research a
 
 ### World-leading research
 We change the world, together. We’re a tight-knit team of about 20 PhD's, postdocs, and engineers working together to create real impact. 
-You can find our work in [top AI conferences and journals](publications/publications.html), including NeurIPS, ICML, CVPR, JMLR, and TPAMI, 
-and we take pride in [good engineering and open science](software/software.html), building AI tools used by hundreds of thousands of people.
+You can find our work in [top AI conferences and journals](../publications/publications.html), including NeurIPS, ICML, CVPR, JMLR, and TPAMI, 
+and we take pride in [good engineering and open science](../software/software.html), building AI tools used by hundreds of thousands of people.
 
 ### Freedom to Study Deeply and Think Big
 We don’t just follow trends — we set them. We encourage every team member to become a leading expert, think outside the box, and find novel avenues of research.
