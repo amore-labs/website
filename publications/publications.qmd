@@ -55,8 +55,11 @@ for key, data in yaml_data.items():
     venue = data.get("venue")
     image = data.get("image") 
 
-    if not image and os.path.exists(f"../images/papers/{key}.png"):
-        image = f"../images/papers/{key}.png"
+    if not image:
+        if os.path.exists(f"../images/papers/{key}.png"):
+            image = f"../images/papers/{key}.png"
+        if os.path.exists(f"../images/papers/{key}.webp"):
+            image = f"../images/papers/{key}.webp"
 
     if pub_url is not None:
         buttons.append(button(pub_url, "Published", "bi-journal-text"))
