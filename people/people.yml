@@ -175,4 +175,13 @@ Rafael Gomes Mantovani:
   mail: rgmantovani@gmail.com
   scholar: https://scholar.google.com/citations?user=lRFTBFgAAAAJ
 
+Jan van Rijn:
+  position: alumnus
+  description:
+    <name> Jan is a former PhD student, and currently assistant professor at Leiden University. During his PhD, he co-founded and developed OpenML.org, and did research towards meta-learning and algorithm selection based on OpenML data. He co-authored the Open Access book on Metalearning. His current research activities include AutoML and Trustworthy Artificial Intelligence.
+  picture: ../images/people/janvanrijn.webp
+  mail: j.n.van.rijn@liacs.leidenuniv.nl
+  scholar: https://scholar.google.be/citations?user=O4X5CpwAAAAJ
+
+
 
