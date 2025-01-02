@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://openml-labs.github.io/website/blogs/blog.html</loc>
-    <lastmod>2024-12-26T21:31:15.067Z</lastmod>
+    <lastmod>2025-01-02T14:35:38.448Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/index.html</loc>
-    <lastmod>2024-12-26T21:31:15.099Z</lastmod>
+    <lastmod>2025-01-02T14:35:38.524Z</lastmod>
   </url>
   <url>
-    <loc>https://openml-labs.github.io/website/projects/projects.html</loc>
-    <lastmod>2024-12-26T21:31:15.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/join/join.html</loc>
-    <lastmod>2024-12-26T21:31:15.099Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/people/people.html</loc>
-    <lastmod>2024-12-26T21:31:15.099Z</lastmod>
+    <loc>https://openml-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
+    <lastmod>2025-01-02T14:35:38.524Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/software/software.html</loc>
-    <lastmod>2024-12-26T21:31:15.099Z</lastmod>
+    <lastmod>2025-01-02T14:35:38.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/people/people.html</loc>
+    <lastmod>2025-01-02T14:35:38.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/join/join.html</loc>
+    <lastmod>2025-01-02T14:35:38.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/projects/projects.html</loc>
+    <lastmod>2025-01-02T14:35:38.524Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/notebooks/amlb-introduction.html</loc>
-    <lastmod>2024-12-26T21:31:15.099Z</lastmod>
+    <lastmod>2025-01-02T14:35:38.524Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/publications/publications.html</loc>
-    <lastmod>2024-12-26T21:31:15.099Z</lastmod>
+    <lastmod>2025-01-02T14:35:38.524Z</lastmod>
   </url>
 </urlset>
