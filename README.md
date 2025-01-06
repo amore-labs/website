@@ -27,3 +27,9 @@ format:
 ```
 
 The `topic` field is used to group similar posts into sections. In each section, the most recent posts are on top. Note that Quarto won't run again the code, so you must run everything before adding the notebook. An example of blog post is given [here](https://github.com/openml-labs/website/blob/main/notebooks/example.ipynb).
+
+### Important notes
+- For the blog post notebooks
+  - The `date` field must be in the format `mm-dd-yyyy` , not `dd-mm-yyyy`
+  - Convert the images to WebP format before adding them to the notebook
+    - On mac, you can use ` for image in *.png; do magick "$image" "${image%.png}.webp";done` to convert all the images in the folder to WebP format. Replace `*.png` with the appropriate file extension if needed.
