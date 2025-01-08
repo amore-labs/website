@@ -23,6 +23,8 @@ date: 08-03-2023
 format:
   html:
     code-fold: false
+preview: Text that is displayed on the blog overview page.
+image: amlb/amlb-boat-or-car.webp # image in the images/blogs subdirectory
 ---
 ```
 
