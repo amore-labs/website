@@ -8,12 +8,14 @@ section-divs: false
 ```{python}
 #| output: asis
 from datetime import datetime as dt
+from collections import defaultdict
+import re
 import glob
 import json
 from string import Template
 from IPython.display import display, Markdown, HTML
 
-def make_html_link(nb, title):
+def make_html_link(nb, attributes):
     s = """
     <html>
 
@@ -23,33 +25,41 @@ def make_html_link(nb, title):
         a {
         text-decoration: none;
         }
-        /* Add custom color to the link */
-        .custom-link {
-        color: rgb(100, 150, 200); /* Replace the RGB values with your desired color */
+        .blog-title {
+            color:#1f4eb6;
+            font-size:1.1em;
         }
     </style>
     </head>
 
     <body>
-    <li>
-        <a class="custom-link" href="$nb">$title</a>
-    </li>
+        <div style="display:flex; gap: 2em;">
+            <img src=../images/blogs/$image style="height:100px">
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="$nb" class="blog-title"><strong>$title</strong></a>
+                <p>$preview</p>
+            </div>
+        </div>
     </body>
 
     </html>
     """
     template = Template(s)
-    return template.substitute(nb=nb, title=title)
+    return template.substitute(nb=nb, **attributes) # preview=attributes["preview"], image=attributes["image"], title=attributes["title"])
                 
 # Find all notebooks and get their metadata by parsing the first cell
 D = {}
 for nb in glob.glob("../notebooks/*.ipynb"):
-    D[nb] = {}
     with open(nb) as f:
         metadata = json.load(f)["cells"][0]
-        D[nb]["title"] = metadata["source"][1].split(":")[1].strip()
-        D[nb]["topic"] = metadata["source"][2].split(":")[1].strip()
-        D[nb]["date"] = metadata["source"][4].split(":")[1].strip()
+
+    # Non-nested attributes, otherwise should just reach for yaml parser.
+    SIMPLE_ATTRIBUTE = re.compile(r"(\w+) ?: ?(.+)")
+    simple_attributes = [
+        re.match(SIMPLE_ATTRIBUTE, line)
+        for line in metadata["source"]
+    ]
+    D[nb] = defaultdict(str, (attribute.groups() for attribute in simple_attributes if attribute is not None))
 
 # Make a section for each topic and list notebook by date
 topics = set([D[nb]["topic"] for nb in D])
@@ -57,6 +67,6 @@ for topic in topics:
     display(Markdown("## " + topic ))
     for nb in sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%m-%d-%Y"), reverse=True):
         if D[nb]["topic"] == topic:
-            display(HTML(make_html_link(nb, D[nb]["title"])))
+            display(HTML(make_html_link(nb, D[nb])))
 # 
 ```
