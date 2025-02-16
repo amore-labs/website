@@ -8,7 +8,7 @@ title: "Join us!"
 We currently have room for **seven** outstanding machine learning Ph.D. students, PostDocs, and Engineers. 
 The vacancies will remain open until the positions are filled. **Apply now!**
 
-#### [PhD in Open-Source Foundation Models](https://jobs.tue.nl/nl/vacature/phd-on-opensource-foundation-models-1126709.html) (2 positions - Offline now, please check back mid-February!)
+#### [PhD in Open-Source Foundation Models](https://jobs.tue.nl/nl/vacature/phd-on-opensource-foundation-models-1126709.html) (2 positions - Offline now, please check back late February!)
 Join a groundbreaking project to develop a next-generation, open-source family of foundation models. 
 We are seeking a proficient and talented PhD student with a true passion for AI. 
 You will play a pivotal role in a team exploring new large model architectures, novel efficient 
@@ -16,14 +16,14 @@ finetuning and adaptation techniques, refining data to enhance learning and gene
 creating benchmarks, and ensuring AI safety.
 **[4 year position]** 
 
-#### [Postdoctoral Fellow in Open-Source Foundation Models](https://jobs.tue.nl/nl/vacature/postdoc-in-opensource-foundation-models-1126761.html) (2 positions - Offline now, please check back early February!)
+#### [Postdoctoral Fellow in Open-Source Foundation Models](https://jobs.tue.nl/nl/vacature/postdoc-in-opensource-foundation-models-1126761.html) (2 positions - Offline now, please check back late February!)
 Join a groundbreaking project to develop a next-generation, open-source family of foundation models. 
 We are seeking a proficient and talented researcher who is passionate about large models and learning to learn. You will play a pivotal role in a team 
 exploring new model architectures, novel efficient finetuning and adaptation techniques, refining data to enhance learning and generalizability, 
 creating benchmarks, and ensuring AI safety.
 **[3-4 year position]** 
 
-#### [Research Engineer in Open-Source Foundation Models](https://jobs.tue.nl/en/vacancy/research-engineer-on-opensource-foundation-models-1132197.html) (2 positions - Offline now, please check back mid-February!)
+#### [Research Engineer in Open-Source Foundation Models](https://jobs.tue.nl/en/vacancy/research-engineer-on-opensource-foundation-models-1132197.html) (2 positions - Offline now, please check back late February!)
 We are looking for an exceptional research engineer with a passion for AI and open-source development. In this role, you will design and 
 build cutting-edge tools and software that will shape the future of foundation models, used by millions of people worldwide.
 **[3-4 year position]** 
