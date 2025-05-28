@@ -23,10 +23,13 @@ date: 08-03-2023
 format:
   html:
     code-fold: false
+preview: Text that is displayed on the blog overview page.
+image: amlb/amlb-boat-or-car.webp # image in the images/blogs subdirectory
 ---
 ```
 
 The `topic` field is used to group similar posts into sections. In each section, the most recent posts are on top. Note that Quarto won't run again the code, so you must run everything before adding the notebook. An example of blog post is given [here](https://github.com/openml-labs/website/blob/main/notebooks/example.ipynb).
+
 
 ### Important notes
 - For the blog post notebooks

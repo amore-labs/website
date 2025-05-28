@@ -183,5 +183,11 @@ Jan van Rijn:
   mail: j.n.van.rijn@liacs.leidenuniv.nl
   scholar: https://scholar.google.be/citations?user=O4X5CpwAAAAJ
 
-
-
+Dalton Harmsen:
+  position: phd
+  description:
+    Dalton Harmsen obtained his M.Sc. degree in Data Science & Artificial Intelligence at Eindhoven University of Technology (Netherlands). His M.Sc. dissertation was carried out on the topic of benchmarking post-training quantization techniques for large language models under the supervision of J.M. Tomczak. Currently, he is a Ph.D. student at Eindhoven University of Technology – Data Science Domain with the DAI Cluster. Dalton Harmsen works on the OpenEuroLLM project under the supervision of Joaquin Vanschoren.
+  picture: ../images/people/dalton.webp
+  mail: d.r.harmsen@tue.nl
+  scholar: https://scholar.google.com/citations?user=O5wWI0gAAAAJ
+  linkedin: https://www.linkedin.com/in/dalton-harmsen/
