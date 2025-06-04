@@ -192,10 +192,10 @@ Dalton Harmsen:
   scholar: https://scholar.google.com/citations?user=O5wWI0gAAAAJ
   linkedin: https://www.linkedin.com/in/dalton-harmsen/
 
-Diana Alexandra Onuțu:
+Diana Alexandra Onutu:
   position: phd
   descritption: 
-    Diana is a PhD candidate in the AutoML group at Eindhoven University of Technology (TU/e), Netherlands. 
+    <name> is a PhD candidate in the AutoML group at Eindhoven University of Technology (TU/e), Netherlands. 
     She is involved in the <a href="https://openeurollm.eu/" target="_blank">Open Euro LLM project</a>, which focuses 
     on developing the next generation of open-source, multilingual foundation models. Her main interests include model
     exploration, pre-training strategies, and diffusion-based language models. Diana obtained her M.Sc. degree in Data
