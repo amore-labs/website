@@ -27,7 +27,12 @@ jobs:
       - run: pip install jupyter
       - run: pip install -r requirements.txt
 
-      - name: Render & Publish Quarto Project
+      - name: Render Quarto Project  # this step is just for feedback on PR
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html # If set, it will be equivalent to `quarto render --to html`
+
+      - name: Publish Quarto Project
         if: github.ref == 'refs/heads/main'
         uses: quarto-dev/quarto-actions/publish@v2
         with:

@@ -127,7 +127,7 @@ Prabhant Singh:
   scholar: https://scholar.google.com/citations?user=AGBlKsAAAAAJ
 
 Anna Vettoruzzo:
-  position: postdoc
+  position: alumnus
   description:
     <name> received her B.Sc. degree in Information Engineering at the University of Padova, Italy, 
     in 2019, and her M.Sc. degree in ICT for Internet and Multimedia at the University of Padova in 2021, with a focus 
@@ -199,3 +199,18 @@ Gennaro Gala:
   picture: ../images/people/gennaro_gala.webp 
   mail: ggala@tue.nl
   scholar: https://scholar.google.com/citations?user=TGxSR8IAAAAJ
+
+Diana Alexandra Onutu:
+  position: phd
+  description: 
+    <name> is a PhD candidate in the AutoML group at Eindhoven University of Technology (TU/e), Netherlands. 
+    She is involved in the <a href="https://openeurollm.eu/" target="_blank">Open Euro LLM project</a>, which focuses 
+    on developing the next generation of open-source, multilingual foundation models. Her main interests include model
+    exploration, pre-training strategies, and diffusion-based language models. Diana obtained her M.Sc. degree in Data
+    Science & Artificial Intelligence from TU/e. Her M.Sc. thesis was carried out within the field of Machine Learning for 
+    Science, in which she proposed a score matching generative model for large geometric graphs designed to produce cosmological data.
+  picture: ../images/people/diana.webp
+  mail: d.onutu@tue.nl
+  scholar: https://scholar.google.com/citations?user=smrRc5YAAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/diana-onutu/
+  
