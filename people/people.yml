@@ -192,6 +192,14 @@ Dalton Harmsen:
   scholar: https://scholar.google.com/citations?user=O5wWI0gAAAAJ
   linkedin: https://www.linkedin.com/in/dalton-harmsen/
 
+Gennaro Gala:
+  position: postdoc
+  description:
+    <name> is a postdoctoral researcher contributing to the OpenEuroLLM project. His current research focuses on large language models, probabilistic generative modeling, structured representation learning, and tensor networks. In March 2025, he completed his PhD in probabilistic ML at Eindhoven University of Technology, under the supervision of Prof. Cassio de Campos and Dr. Erik Quaeghebeur. From 2015 to 2020, he completed both his BSc and MSc in Computer Science at the Università degli Studi di Bari Aldo Moro (Italy), with a focus on Machine Intelligence and Knowledge Engineering. During this period, he actively collaborated with the Italian National Research Council on projects applying machine learning and deep learning to marine biology.
+  picture: ../images/people/gennaro_gala.webp 
+  mail: ggala@tue.nl
+  scholar: https://scholar.google.com/citations?user=TGxSR8IAAAAJ
+
 Diana Alexandra Onutu:
   position: phd
   description: 
@@ -205,4 +213,4 @@ Diana Alexandra Onutu:
   mail: d.onutu@tue.nl
   scholar: https://scholar.google.com/citations?user=smrRc5YAAAAJ&hl=en
   linkedin: https://www.linkedin.com/in/diana-onutu/
-    
+  
