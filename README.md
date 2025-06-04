@@ -10,6 +10,17 @@ Resizing your portrait picture to 160x200 and compressing it into WebP format wi
 You can add publications here: [publications.yml](https://github.com/openml-labs/website/blob/main/research/publications.yml) and softwares here:
 [softwares.yml](https://github.com/openml-labs/website/blob/main/software/software.yml)
 
+The picture used in the gallery will be matched based on the name in the `yaml` file.
+For example, this entry:
+```yaml
+amlb:
+  title: "AMLB: An AutoML Benchmark"
+  authors:
+    - P. Gijsbers
+  ...
+```
+Will use image `images/papers/amlb.webp` or `.png`.
+
 ### Adding a blog post
 
 Blog posts in the form of a Jupyter notebook can be added to the `notebooks` folder. However, you must add a "raw" cell at the top of the notebook and fill it with the following content:
