@@ -62,11 +62,15 @@ for nb in glob.glob("../notebooks/*.ipynb"):
     D[nb] = defaultdict(str, (attribute.groups() for attribute in simple_attributes if attribute is not None))
 
 # Make a section for each topic and list notebook by date
-topics = set([D[nb]["topic"] for nb in D])
-for topic in topics:
-    display(Markdown("## " + topic ))
-    for nb in sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%Y-%m-%d"), reverse=True):
-        if D[nb]["topic"] == topic:
-            display(HTML(make_html_link(nb, D[nb])))
+try:
+    topics = set([D[nb]["topic"] for nb in D])
+    for topic in topics:
+        display(Markdown("## " + topic ))
+        for nb in sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%Y-%m-%d"), reverse=True):
+            if D[nb]["topic"] == topic:
+                display(HTML(make_html_link(nb, D[nb])))
+except Exception as e:
+    print(f"Exception building blogpost with title: {D[nb].get('title')}")
+    raise
 # 
 ```
