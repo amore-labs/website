@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://openml-labs.github.io/website/publications/publications.html</loc>
-    <lastmod>2025-06-04T09:54:32.777Z</lastmod>
+    <lastmod>2025-06-04T11:06:24.293Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/notebooks/amlb-introduction.html</loc>
-    <lastmod>2025-06-04T09:54:32.776Z</lastmod>
+    <lastmod>2025-06-04T11:06:24.292Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
-    <lastmod>2025-06-04T09:54:32.776Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/projects/projects.html</loc>
-    <lastmod>2025-06-04T09:54:32.777Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/blogs/blog.html</loc>
-    <lastmod>2025-06-04T09:54:32.744Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/join/join.html</loc>
-    <lastmod>2025-06-04T09:54:32.776Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/people/people.html</loc>
-    <lastmod>2025-06-04T09:54:32.777Z</lastmod>
+    <lastmod>2025-06-04T11:06:24.292Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/index.html</loc>
-    <lastmod>2025-06-04T09:54:32.776Z</lastmod>
+    <lastmod>2025-06-04T11:06:24.292Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/people/people.html</loc>
+    <lastmod>2025-06-04T11:06:24.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/join/join.html</loc>
+    <lastmod>2025-06-04T11:06:24.292Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/blogs/blog.html</loc>
+    <lastmod>2025-06-04T11:06:24.258Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/projects/projects.html</loc>
+    <lastmod>2025-06-04T11:06:24.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/notebooks/adacl-introduction.html</loc>
+    <lastmod>2025-06-04T11:06:24.292Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/notebooks/cldst-introduction.html</loc>
-    <lastmod>2025-06-04T09:54:32.777Z</lastmod>
+    <lastmod>2025-06-04T11:06:24.292Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/software/software.html</loc>
-    <lastmod>2025-06-04T09:54:32.777Z</lastmod>
+    <lastmod>2025-06-04T11:06:24.293Z</lastmod>
   </url>
 </urlset>

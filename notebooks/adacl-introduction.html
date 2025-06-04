@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Elif Ceren Gok Yildirim">
+<meta name="dcterms.date" content="2025-06-04">
 
-<title>Blog – TU/e AutoML Lab</title>
+<title>AdaCL Adaptive Continual Learning – TU/e AutoML Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,9 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -112,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blogs/blog.html" aria-current="page"> 
+    <a class="nav-link" href="../blogs/blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -146,9 +145,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#hackathon" id="toc-hackathon" class="nav-link active" data-scroll-target="#hackathon">Hackathon</a></li>
-  <li><a href="#benchmarking" id="toc-benchmarking" class="nav-link" data-scroll-target="#benchmarking">Benchmarking</a></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
+  <li><a href="#adacl-adaptive-continual-learning" id="toc-adacl-adaptive-continual-learning" class="nav-link active" data-scroll-target="#adacl-adaptive-continual-learning">AdaCL: Adaptive Continual Learning</a>
+  <ul class="collapse">
+  <li><a href="#understanding-continual-learning-and-the-catastrophic-forgetting" id="toc-understanding-continual-learning-and-the-catastrophic-forgetting" class="nav-link" data-scroll-target="#understanding-continual-learning-and-the-catastrophic-forgetting">Understanding Continual Learning and the Catastrophic Forgetting</a></li>
+  <li><a href="#understanding-class-incremental-learning" id="toc-understanding-class-incremental-learning" class="nav-link" data-scroll-target="#understanding-class-incremental-learning">Understanding Class-Incremental Learning</a></li>
+  <li><a href="#solutions-for-solving-catastrophic-forgetting" id="toc-solutions-for-solving-catastrophic-forgetting" class="nav-link" data-scroll-target="#solutions-for-solving-catastrophic-forgetting">Solutions for solving Catastrophic Forgetting</a></li>
+  <li><a href="#motivation-for-adacl" id="toc-motivation-for-adacl" class="nav-link" data-scroll-target="#motivation-for-adacl">Motivation for AdaCL</a></li>
+  <li><a href="#high-stability---low-plasticity" id="toc-high-stability---low-plasticity" class="nav-link" data-scroll-target="#high-stability---low-plasticity">High Stability - Low Plasticity:</a></li>
+  <li><a href="#introducing-adacl" id="toc-introducing-adacl" class="nav-link" data-scroll-target="#introducing-adacl">Introducing AdaCL</a></li>
+  <li><a href="#experimental-setup" id="toc-experimental-setup" class="nav-link" data-scroll-target="#experimental-setup">Experimental Setup</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -157,14 +165,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<h1 class="title">AdaCL Adaptive Continual Learning</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Elif Ceren Gok Yildirim </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 4, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -174,123 +194,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<h2 id="hackathon" class="anchored">Hackathon</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/openmlxsci/openmlxsci-1.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
-                <p>We visited Probabl to discuss open source and open science. </p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="benchmarking" class="anchored">Benchmarking</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/amlb/amlb-boat-or-car.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
-                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="analysis" class="anchored">Analysis</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/adacl/teaser.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/adacl-introduction.html" class="blog-title"><strong>AdaCL Adaptive Continual Learning</strong></a>
-                <p>A blogpost based on our paper "AdaCL Adaptive Continual Learning" showing how continual learning can benefit from hyperparameter optimization.</p>
-            </div>
-        </div>
-    
-
-    
-    
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/cldst/brain.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
-                <p>A blogpost based on our paper "CL-with-DST" showing how continual learning can benefit from sparse training.</p>
-            </div>
-        </div>
-    
-
-    
-    
+<section id="adacl-adaptive-continual-learning" class="level1">
+<h1>AdaCL: Adaptive Continual Learning</h1>
+<p>Elif Ceren Gok Yildirim, Murat Onur Yildirim, Mert Kilickaya, Joaquin Vanschoren</p>
+<section id="understanding-continual-learning-and-the-catastrophic-forgetting" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-continual-learning-and-the-catastrophic-forgetting">Understanding Continual Learning and the Catastrophic Forgetting</h2>
+<p>In the rapidly evolving field of machine learning, one challenge remains particularly persistent: the ability to continually learn new information without forgetting previously acquired knowledge. This forgetting problem is generally referred to in the field as “catastrophic forgetting”. Catastrophic forgetting occurs because, while models are learning new tasks, they lose the ability to recall information about previously learned tasks. This happens because the model’s parameters are updated to fit the new data, which can overwrite the representations of the old data.</p>
+</section>
+<section id="understanding-class-incremental-learning" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-class-incremental-learning">Understanding Class-Incremental Learning</h2>
+<p>Class-Incremental Learning is one challenging scenario in CL which aims to update a model’s parameters and expand the classification layer to learn new categories while maintaining its accuracy on previously observed classes. Then during the test time, it assumes not to have access to task ids.</p>
+</section>
+<section id="solutions-for-solving-catastrophic-forgetting" class="level2">
+<h2 class="anchored" data-anchor-id="solutions-for-solving-catastrophic-forgetting">Solutions for solving Catastrophic Forgetting</h2>
+<p>Three major approaches have been explored to mitigate this issue:</p>
+<ul>
+<li><strong>Regularization-based Methods:</strong> These techniques prevent abrupt shifts in the neural network weights by applying penalties that stabilize important parameters.</li>
+<li><strong>Replay-based Methods:</strong> These involve storing a subset of training data and replaying it during the learning of new tasks to maintain previous knowledge.</li>
+<li><strong>Architecture-based Methods:</strong> These methods adapt the network structure, either by expanding it or isolating parts of it to retain past information.</li>
+</ul>
+</section>
+<section id="motivation-for-adacl" class="level2">
+<h2 class="anchored" data-anchor-id="motivation-for-adacl">Motivation for AdaCL</h2>
+<p>All these CL methods bring additional hyperparameters to the learning process. For example: <strong>regularization strength</strong>, <strong>learning rate</strong>, <strong>memory size</strong>, etc. Current methods define these hyperparameters to a fixed value and assume that using the same hyperparameter setting will be sufficient for learning all different subsequent tasks. However, this approach does not reflect a realistic scenario. We can imagine 2 realistic scenarios:</p>
+<p>##High Plasticity- Low Stability: Let’s say you have learned large animal categories and now you will have to learn vehicle categories. In this case, you would go for mid-to low <strong>regularization strength</strong> to learn the new categories. In addition to that, you might want to store many exemplars from the large animal category in the memory buffer because you will probably forget that since the vehicle category will change the model’s parameters a lot.</p>
+<div style="text-align:center;">
+<p><img src="../images/blogs/adacl/adaclexample.webp" alt="motivation for adacl" style="width:30%;"></p>
+</div>
+</section>
+<section id="high-stability---low-plasticity" class="level2">
+<h2 class="anchored" data-anchor-id="high-stability---low-plasticity">High Stability - Low Plasticity:</h2>
+<p>This time you have learned small vehicle categories and now you will have to learn large vehicle categories. In this case, you would think that these two subsequent tasks are intuitively similar so you don’t need to lower <strong>regularization strength</strong> because with high regularization, model weights will not change too much and current weights will probably be sufficient to learn the large vehicle category. Also, you might not want to store many exemplars from small vehicle categories because you did not change the model’s weights too much and you don’t want to use your budget unnecessarily.</p>
+</section>
+<section id="introducing-adacl" class="level2">
+<h2 class="anchored" data-anchor-id="introducing-adacl">Introducing AdaCL</h2>
+<p>AdaCL (Adaptive Continual Learning) introduces a novel approach where learning rate, regularization, and memory size are treated as dynamic, tunable variables. Instead of being fixed, these parameters adapt according to the learner’s current condition and the complexity of the task.</p>
+<p><strong>But how to find optimum hyperparameter values?</strong></p>
+<p><strong>Search Algorithm =</strong> Tree Parzen Estimators</p>
+<p><strong>Validation set =</strong> some amount of data from the current task + some amount of data from previous tasks.</p>
+<p>To achieve this, we use an AutoML tool which is Optuna and as a search algorithm, we apply Bayesian Optimization Tree Parzen Estimators. AdaCL searches and predicts the optimal values for these hyperparameters by evaluating the model’s performance on the validation set.</p>
+<div style="text-align:center;">
+<p><img src="../images/blogs/adacl/adacl.webp" alt="flow of adacl" style="width:75%;"></p>
+</div>
+</section>
+<section id="experimental-setup" class="level2">
+<h2 class="anchored" data-anchor-id="experimental-setup">Experimental Setup</h2>
+<p>Our experiments utilized two well-known datasets: <strong>CIFAR100</strong> and <strong>MiniImageNet</strong>. Each dataset contains images from 100 different categories, and we trained all models with 10 tasks, with each task containing 10 classes. Standard metrics for evaluation were used:</p>
+<p><strong>Accuracy (ACC)</strong> measures the final accuracy averaged over all tasks.</p>
+<p><strong>Backward Transfer (BWT)</strong> measures the average accuracy change of each task after learning new tasks.</p>
+<p>We compared AdaCL with various baseline methods including EWC, LwF, iCaRL, and WA but the <strong>GOOD NEWS is: it is a plugged-in approach</strong> that means you can actually combine it with other methods that require better hyperparameter setting in CL.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p><strong>Key Findings:</strong></p>
+<ol type="1">
+<li>AdaCL boosts the performance of regularization-based methods.</li>
+<li>AdaCL yields better resource usage by leading to less memory size with the same performance.</li>
+</ol>
+<div style="text-align:center;">
+<p><img src="../images/blogs/adacl/table.webp" alt="main results" style="width:75%;"></p>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>AdaCL treats crucial hyperparameters as adaptable, addressing the challenges of CIL more effectively than traditional fixed-parameter approaches. We aim to underscore the importance of flexible, dynamic adaptation in the CL scenario. For those interested in further details, the full paper provides an in-depth analysis of the methods, experimental setup, and results. <a href="https://proceedings.mlr.press/v249/yildirim24a.html">Read the full paper here.</a></p>
+<hr>
+<p>This post was written by Elif Ceren Gok Yildirim and need not reflect the view of co-authors.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
