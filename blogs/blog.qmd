@@ -65,7 +65,7 @@ for nb in glob.glob("../notebooks/*.ipynb"):
 topics = set([D[nb]["topic"] for nb in D])
 for topic in topics:
     display(Markdown("## " + topic ))
-    for nb in sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%m-%d-%Y"), reverse=True):
+    for nb in sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%Y-%m-%d"), reverse=True):
         if D[nb]["topic"] == topic:
             display(HTML(make_html_link(nb, D[nb])))
 # 
