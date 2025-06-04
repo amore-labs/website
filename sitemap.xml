@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://openml-labs.github.io/website/people/people.html</loc>
-    <lastmod>2025-05-09T14:14:16.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/blogs/blog.html</loc>
-    <lastmod>2025-05-09T14:14:16.238Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/index.html</loc>
-    <lastmod>2025-05-09T14:14:16.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/software/software.html</loc>
-    <lastmod>2025-05-09T14:14:16.267Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/projects/projects.html</loc>
-    <lastmod>2025-05-09T14:14:16.266Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/join/join.html</loc>
-    <lastmod>2025-05-09T14:14:16.266Z</lastmod>
+    <loc>https://openml-labs.github.io/website/publications/publications.html</loc>
+    <lastmod>2025-06-04T08:20:59.153Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/notebooks/amlb-introduction.html</loc>
-    <lastmod>2025-05-09T14:14:16.266Z</lastmod>
+    <lastmod>2025-06-04T08:20:59.153Z</lastmod>
   </url>
   <url>
-    <loc>https://openml-labs.github.io/website/publications/publications.html</loc>
-    <lastmod>2025-05-09T14:14:16.266Z</lastmod>
+    <loc>https://openml-labs.github.io/website/projects/projects.html</loc>
+    <lastmod>2025-06-04T08:20:59.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/blogs/blog.html</loc>
+    <lastmod>2025-06-04T08:20:59.126Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/join/join.html</loc>
+    <lastmod>2025-06-04T08:20:59.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/people/people.html</loc>
+    <lastmod>2025-06-04T08:20:59.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/index.html</loc>
+    <lastmod>2025-06-04T08:20:59.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/software/software.html</loc>
+    <lastmod>2025-06-04T08:20:59.155Z</lastmod>
   </url>
 </urlset>
