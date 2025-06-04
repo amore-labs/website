@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Subhaditya Mukherjee, Emily Chen">
+<meta name="dcterms.date" content="2024-09-19">
 
-<title>Blog – TU/e AutoML Lab</title>
+<title>OpenML x Probabl Hackathon – TU/e AutoML Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,9 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -112,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blogs/blog.html" aria-current="page"> 
+    <a class="nav-link" href="../blogs/blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -146,9 +145,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link active" data-scroll-target="#analysis">Analysis</a></li>
-  <li><a href="#hackathon" id="toc-hackathon" class="nav-link" data-scroll-target="#hackathon">Hackathon</a></li>
-  <li><a href="#benchmarking" id="toc-benchmarking" class="nav-link" data-scroll-target="#benchmarking">Benchmarking</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#community-engagement-and-onboarding-contributors" id="toc-community-engagement-and-onboarding-contributors" class="nav-link" data-scroll-target="#community-engagement-and-onboarding-contributors">Community Engagement and Onboarding Contributors</a></li>
+  <li><a href="#governance-funding-and-sponsorship" id="toc-governance-funding-and-sponsorship" class="nav-link" data-scroll-target="#governance-funding-and-sponsorship">Governance, Funding, and Sponsorship</a></li>
+  <li><a href="#development-tooling-and-workflows" id="toc-development-tooling-and-workflows" class="nav-link" data-scroll-target="#development-tooling-and-workflows">Development Tooling and Workflows</a></li>
+  <li><a href="#broader-ecosystem-and-scope-of-collaboration" id="toc-broader-ecosystem-and-scope-of-collaboration" class="nav-link" data-scroll-target="#broader-ecosystem-and-scope-of-collaboration">Broader Ecosystem and Scope of Collaboration</a></li>
+  <li><a href="#discussion-on-croissant" id="toc-discussion-on-croissant" class="nav-link" data-scroll-target="#discussion-on-croissant">Discussion on Croissant</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#reach-out" id="toc-reach-out" class="nav-link" data-scroll-target="#reach-out">Reach out</a></li>
   </ul>
 </nav>
     </div>
@@ -157,14 +161,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<h1 class="title">OpenML x Probabl Hackathon</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Subhaditya Mukherjee, Emily Chen </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 19, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -174,95 +190,101 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<h2 id="analysis" class="anchored">Analysis</h2>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p><a href="http://scikit-learn.org">scikit-learn</a> is a free and open-source machine learning library for the Python programming language, while <a href="http://openml.org">OpenML</a> is an open platform for sharing datasets, algorithms, and experiments. While our teams have been working together for many years, we do not always have the time to meet in person. When we do get the chance though, many interesting discussions stem from those conversations.</p>
+<p>Last June we had a developers hackathon at the Paris office of <a href="https://probabl.ai/about">Probabl</a>, the official operating brand of scikit-learn, focused on maintaining and expanding open-source ML in Europe and beyond. We met to discuss not only the state of AI and how both our organizations fit in, but also to brainstorm solutions to challenges faced by our developers and communities.</p>
+<div style="text-align:center">
+<p><img alt="View from the office" src="../images/blogs/openmlxsci/openmlxsci-1.webp" style="width:40%"></p>
+</div>
+<p>Many interesting topics were brought up, most of which were not only relevant to us but also to the broader open-source community. In the spirit of open-source, we wanted to share these insights with you.</p>
+</section>
+<section id="community-engagement-and-onboarding-contributors" class="level2">
+<h2 class="anchored" data-anchor-id="community-engagement-and-onboarding-contributors">Community Engagement and Onboarding Contributors</h2>
+<p>The focus of this discussion was around community engagement and emphasized the importance of effectively attracting, onboarding, and retaining contributors, especially newcomers.</p>
+<p>Over the past few years, both in OpenML and scikit-learn, we have been noticing that a majority of contributors are only active for short durations and do not stick around for too long. The ones that do are distributed between a smaller number of more experienced senior developers and a much larger pool of junior developers. This then leads to many PR’s being of lower quality and thus requiring a lot more verification and correction.</p>
+<p>The question at hand then, is not only how we can attract new contributors to our projects but also how we can make it easier for them and our developers to maintain these projects. Some of the ideas that came up have been tried and tested by communities our colleagues have founded or been part of across the globe.</p>
+<p><strong>Takeaways:</strong></p>
+<ul>
+<li><p><strong>Emotional connection</strong> : All of the participants agreed that the most important part of any community is its people. Contributors only stick around if they have an emotional connection to either the project, or the people contributing to the project. In this vein, it would be nice if the maintainers of the project could also be present at events. It also helps if the contributors use the projects themselves.</p></li>
+<li><p><strong>Focus on beginners</strong> : Since we see that most of our contributors are beginners, it serves to organize sprints that are inclusive of them with a focus on beginner-friendly issues, especially documentation tasks. Having these would not only help them understand the project and contribute better, but also let them form a connection with the project.</p></li>
+<li><p><strong>Curated issues</strong> : Most of our external contributors have enough on their plate already. Having a curated list of issues before sprints would ensure that no time is wasted and let our contributors focus on the tasks suitable for them.</p></li>
+<li><p><strong>Different tiers of events</strong> : To ensure that everyone is given tasks they can handle, it would be nice to have separate events for contributors with varying levels of expertise. This would also have the added benefit of retaining beginner-friendly issues for sprints to prevent more experienced contributors from claiming them early.</p></li>
+<li><p><strong>Mentoring</strong> : Incorporating one-to-one mentoring to help new contributors set up their development environments would help them feel more connected to the project. It is understandable that this is time consuming, so perhaps some way of deciding who gets mentored can be set up in time.</p></li>
+<li><p><strong>Contributors guide</strong> : Simplifying the contributor’s guide and adding video tutorials would make it a lot more beginner-friendly, especially to those who have never filed a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#about-pull-requests">pull request</a> (PR) before.</p></li>
+<li><p><strong>Semi regular events</strong> : Some of our colleagues found that they tended to care about a project more if there were semi regular events they could set time aside for. Having these helped them slowly build a sense of community as well.</p></li>
+<li><p><strong>Incentives</strong> : A common question that many developers have is why they should even bother contributing. Helping them understand how contributing to open source projects can aid their careers, bring them closer to the community and also help them get internships would be a good start.</p></li>
+</ul>
+<div style="text-align:center">
+<p><img alt="Discussions" src="../images/blogs/openmlxsci/discussion.webp" style="width:40%"></p>
+</div>
+</section>
+<section id="governance-funding-and-sponsorship" class="level2">
+<h2 class="anchored" data-anchor-id="governance-funding-and-sponsorship">Governance, Funding, and Sponsorship</h2>
+<p>This focus of this discussion was the governance structures of open-source projects, sustainable funding models, and the role of sponsorships in supporting project activities.</p>
+<p><strong>Takeaways:</strong></p>
+<ul>
+<li><p><strong>Evolving Governance</strong> : Since governance is not static, we can treat it as a living document that evolves with the needs of the community.</p></li>
+<li><p><strong>Communication</strong>: It is good practise to maintain open communication channels, such as mailing lists and monthly meetings. This keeps all interested contributors in the loop.</p></li>
+<li><p><strong>Pull Requests</strong>: When a project becomes popular on GitHub, it often receives a large number of pull requests from the broader community, many of which may lack quality and become a time sink for senior developers. Finding a balance between approving and rejecting these contributions, without making the community feel unheard, remains an ongoing challenge.</p></li>
+<li><p><strong>Sponsorship</strong>: It would be beneficial to explore sponsorship models similar to the <a href="https://www.fondation-inria.fr">INRIA Foundation (website is in French)</a>, where sponsors have a voice in company policy during bi-annual meetings. Such a policy could also provide an added incentive for companies to sponsor, especially if they frequently use the products of their beneficiaries.</p></li>
+<li><p><strong>Corporate partnerships</strong>: To keep investors interested, it would also be interesting to look into corporate partnerships (similar to those used by the Linux Foundation) that are of mutual benefit.</p></li>
+</ul>
+</section>
+<section id="development-tooling-and-workflows" class="level2">
+<h2 class="anchored" data-anchor-id="development-tooling-and-workflows">Development Tooling and Workflows</h2>
+<p>Setting up and maintaining CI/CD pipelines across multiple repositories and programming languages puts a huge burden on the maintainers of the repositories.</p>
+<p>Having to keep up with the trends and learn new technology very frequently also makes developers more reluctant to change the stack, even if doing so would be beneficial.</p>
+<p>This discussion looked at how to tackle these challenges and make it easier for developers to handle such complex workloads.</p>
+<p><strong>Takeaways:</strong></p>
+<ul>
+<li><p><strong>Automation</strong>: Automating as much of the CI/CD pipeline as possible by using bots for linting and code coverage checks makes PR quality control easier.</p></li>
+<li><p><strong>Better workflows</strong>: Migrating to Github Actions and Azure workflows for testing and deployment also seems to help significantly.</p></li>
+<li><p><strong>Open source tools</strong>: There are many open source platforms/tools that offer comparable convenience to tools that are currently used. Some examples of these are CodeBerg and Forgejo as an alternative to GitHub and its issue trackers. Eventually migrating to using these tools might also help manage projects like scikit-learn and OpenML.</p></li>
+<li><p><strong>CircleCI</strong>: Tools for rendering documentation examples directly in the browser can also be used to enhance the review process.</p></li>
+</ul>
+<div style="text-align:center">
+<p><img alt="Brainstorming sessions" src="../images/blogs/openmlxsci/discussion2.webp" style="width:40%"></p>
+</div>
+</section>
+<section id="broader-ecosystem-and-scope-of-collaboration" class="level2">
+<h2 class="anchored" data-anchor-id="broader-ecosystem-and-scope-of-collaboration">Broader Ecosystem and Scope of Collaboration</h2>
+<p>While both OpenML and scikit-learn focus on the open source ML community, it is sometimes hard to explain how we fit into the broader AI ecosystem.</p>
+<p>Especially with the rise of LLMs and Generative AI, stakeholders are somewhat inclined to think that frameworks such as ours are just not “enough”. Of course, this is not true at all.</p>
+<p><strong>Takeaways:</strong></p>
+<ul>
+<li><p><strong>Community projects</strong>: There are so many successful examples of open source projects, and a lot can be learned from their efforts. Projects like Scientific Python for example, have very well set up CI documentation and governance processes that can be quite readily applied to any open source project.</p></li>
+<li><p><strong>Exploring connections</strong>: A longer term focus for both our teams would be to explore connections with other open-source ML frameworks, such as PyTorch, Tensorflow as well as AutoML tools. Doing so would also help integrate and strengthen the open-source ML communities and ecosystems.</p></li>
+</ul>
+</section>
+<section id="discussion-on-croissant" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-on-croissant">Discussion on Croissant</h2>
+<p>Machine Learning datasets can consist of structure, unstructured data, or both, which makes them all the more complicated to manage. This has led to the rise of multiple “dataset formats” which further make it hard to consistently load data across platforms and tools.</p>
+<p><a href="https://github.com/mlcommons/croissant">Croissant</a> is a dataset metadata format which, among other things, describes how to load and interpret the dataset, which helps load data regardless of which underlying dataset format is used. This format is now not only compatible with the most popular ML libraries/platforms (scikit-learn, PyTorch, Tensorflow, Kaggle, Hugging Face), it is also recommended by NeurIPS (one of the topmost conferences in the AI space).</p>
+<p><strong>Features of Croissant:</strong></p>
+<ul>
+<li><p><strong>Schema.org</strong>: Croissant was built on top of schema.org with more metadata information specific to ML datasets. Since it does not require any changes to the underlying data structure, existing datasets can quite easily be converted to use it.</p></li>
+<li><p><strong>Layers</strong>: The format has 4 layers - Dataset level metadata, resource descriptions, content structure, and ML semantics. Each of which make it possible to encode and maintain structural information about datasets regardless of platform.</p></li>
+<li><p><strong>XAI and Visualization</strong>: Analysis and visualisation of the data works out of the box for all datasets and across multiple platforms. Croissant also supports the Core RAI vocabulary for explainable AI.</p></li>
+<li><p><strong>Supported Platforms</strong>: Every dataset in OpenML has a Croissant representation, while a majority of data on Kaggle and Google Dataset search also support it.</p></li>
+</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<div style="text-align:center">
+<p><img alt="Our teams enjoying a nice lunch in Paris" src="../images/blogs/openmlxsci/lunch.webp" style="width:40%"></p>
+</div>
+<p>Overall, this discussion was quite a successful one for both of our teams. We learnt a lot from each other and found new ways of collaborating on our shared dream of open-source ML. So much in fact, that we wanted to share our discussion with you, dear reader.</p>
+<p>We hope you learnt something new. We would love to welcome you to our community and would be glad to support your journey in this ML space.</p>
+<p>❤️ The OpenML and scikit-learn team</p>
+</section>
+<section id="reach-out" class="level2">
+<h2 class="anchored" data-anchor-id="reach-out">Reach out</h2>
+<hr>
+<p>For more information about this hackathon or just to chat with us, feel free to reach out to us on <a href="mailto:openml-labs@tue.nl">OpenML Email</a>, <a href="https://probabl.ai/about">Probabl</a>. To contact the authors, send them an email here - <a href="mailto:msubhaditya@gmail.com">Subhaditya Mukherjee</a>, <a href="mailto:emilyxinyi.chen2021@gmail.com">Emily Chen</a>.</p>
 
-    
 
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/cldst/brain.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
-                <p>A blogpost based on our paper "CL-with-DST" showing how continual learning can benefit from sparse training.</p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="hackathon" class="anchored">Hackathon</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/openmlxsci/openmlxsci-1.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
-                <p>We visited Probabl to discuss open source and open science. </p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="benchmarking" class="anchored">Benchmarking</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/amlb/amlb-boat-or-car.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
-                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
-            </div>
-        </div>
-    
-
-    
-    
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

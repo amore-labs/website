@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Murat Onur Yildirim">
+<meta name="dcterms.date" content="2025-06-04">
 
-<title>Blog – TU/e AutoML Lab</title>
+<title>Continual Learning with Dynamic Sparse Training – TU/e AutoML Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,9 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -112,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blogs/blog.html" aria-current="page"> 
+    <a class="nav-link" href="../blogs/blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -146,9 +145,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link active" data-scroll-target="#analysis">Analysis</a></li>
-  <li><a href="#hackathon" id="toc-hackathon" class="nav-link" data-scroll-target="#hackathon">Hackathon</a></li>
-  <li><a href="#benchmarking" id="toc-benchmarking" class="nav-link" data-scroll-target="#benchmarking">Benchmarking</a></li>
+  <li><a href="#continual-learning-with-dynamic-sparse-training-exploring-algorithms-for-effective-model-updates" id="toc-continual-learning-with-dynamic-sparse-training-exploring-algorithms-for-effective-model-updates" class="nav-link active" data-scroll-target="#continual-learning-with-dynamic-sparse-training-exploring-algorithms-for-effective-model-updates">Continual Learning with Dynamic Sparse Training: Exploring Algorithms for Effective Model Updates</a>
+  <ul class="collapse">
+  <li><a href="#the-challenge-catastrophic-forgetting" id="toc-the-challenge-catastrophic-forgetting" class="nav-link" data-scroll-target="#the-challenge-catastrophic-forgetting">The Challenge: Catastrophic Forgetting</a></li>
+  <li><a href="#neuroscience-natures-blueprint" id="toc-neuroscience-natures-blueprint" class="nav-link" data-scroll-target="#neuroscience-natures-blueprint">Neuroscience: Nature’s Blueprint</a></li>
+  <li><a href="#a-smart-way-to-build-a-brain" id="toc-a-smart-way-to-build-a-brain" class="nav-link" data-scroll-target="#a-smart-way-to-build-a-brain">A Smart Way to Build a Brain</a></li>
+  <li><a href="#continual-learning-the-ultimate-test" id="toc-continual-learning-the-ultimate-test" class="nav-link" data-scroll-target="#continual-learning-the-ultimate-test">Continual Learning: The Ultimate Test</a></li>
+  <li><a href="#a-technical-snapshot" id="toc-a-technical-snapshot" class="nav-link" data-scroll-target="#a-technical-snapshot">A Technical Snapshot</a></li>
+  <li><a href="#bringing-all-together-and-wrapping-it-up" id="toc-bringing-all-together-and-wrapping-it-up" class="nav-link" data-scroll-target="#bringing-all-together-and-wrapping-it-up">Bringing All Together and Wrapping It Up</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -157,14 +162,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<h1 class="title">Continual Learning with Dynamic Sparse Training</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Murat Onur Yildirim </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 4, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -174,95 +191,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<h2 id="analysis" class="anchored">Analysis</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/cldst/brain.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
-                <p>A blogpost based on our paper "CL-with-DST" showing how continual learning can benefit from sparse training.</p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="hackathon" class="anchored">Hackathon</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/openmlxsci/openmlxsci-1.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
-                <p>We visited Probabl to discuss open source and open science. </p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="benchmarking" class="anchored">Benchmarking</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/amlb/amlb-boat-or-car.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
-                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
-            </div>
-        </div>
-    
-
-    
-    
+<section id="continual-learning-with-dynamic-sparse-training-exploring-algorithms-for-effective-model-updates" class="level1">
+<h1>Continual Learning with Dynamic Sparse Training: Exploring Algorithms for Effective Model Updates</h1>
+<p><a href="https://muratonuryildirim.github.io/">Murat Onur Yildirim</a>, <a href="https://elifcerengokyildirim.github.io/">Elif Ceren Gok Yildirim</a>, <a href="https://scholar.google.nl/citations?user=0e6fdZsAAAAJ&amp;hl=en">Ghada Sokar</a>, <a href="https://scholar.google.nl/citations?user=RlQgUwEAAAAJ&amp;hl=en">Decebal Constantin Mocanu</a>, <a href="https://joaquinvanschoren.github.io/home/">Joaquin Vanschoren</a>.</p>
+<p><strong>TL;DR:</strong> This blog post dives into our recent paper “Continual Learning with Dynamic Sparse Training: Exploring Algorithms for Effective Model Updates” (📄 <a href="https://proceedings.mlr.press/v234/yildirim24a.html">Paper</a>, 🤖 <a href="https://github.com/muratonuryildirim/CL-with-DST">Code</a>) published in CPAL 2024. We explore how Continual Learning can benefit from Dynamic Sparse Training, a process that closely mirrors the brain’s ability to constantly rewire and optimize its connections. Read on for a brief overview of our key findings 😊</p>
+<hr>
+<p>Hey there!</p>
+<p>Have you ever wondered how our brains learn new skills without forgetting the old ones? Imagine learning a new language while still chatting away in your native tongue, or watching yourself grow from crawling to walking, running, and even biking—all while never losing that ability to crawl! It’s truly fascinating, and yet, teaching our deep learning models to do the same remains an exciting challenge.</p>
+<section id="the-challenge-catastrophic-forgetting" class="level2">
+<h2 class="anchored" data-anchor-id="the-challenge-catastrophic-forgetting">The Challenge: Catastrophic Forgetting</h2>
+<p>Traditional neural networks tend to overwrite older information when learning new tasks, which isn’t very brain-like at all. This major hurdle is called catastrophic forgetting. Imagine if every time you learned a new recipe, you suddenly couldn’t remember your grandma’s secret and delicious recipe anymore! That’s where continual learning (CL) steps in—allowing models to learn from a stream of data without letting past knowledge vanish into thin air.</p>
+<div style="text-align:center;">
+<p><img src="../images/blogs/cldst/grandma_recipe.webp" alt="Grandma serving cookies." style="width:33%;"></p>
+</div>
+</section>
+<section id="neuroscience-natures-blueprint" class="level2">
+<h2 class="anchored" data-anchor-id="neuroscience-natures-blueprint">Neuroscience: Nature’s Blueprint</h2>
+<p>In neuroscience, it’s well known that our brain is always under a change and on the move! Our synaptic connections are constantly being reshaped or kept steady based on what we experience—a delightful dance of plasticity and stability that fuels our lifelong ability to learn and adapt. Picture your brain as a vibrant, ever-changing city where new pathways light up and old ones evolve based on your experiences.</p>
+</section>
+<section id="a-smart-way-to-build-a-brain" class="level2">
+<h2 class="anchored" data-anchor-id="a-smart-way-to-build-a-brain">A Smart Way to Build a Brain</h2>
+<p>To mimic this amazing ability, a technique called Dynamic Sparse Training (DST) offers an artificial version of the plasticity and the stability, ensuring that our neural networks remain both efficient and adaptable over time. Imagine starting with an overparameterized network, like a bustling metropolis with way more roads than you actually need. But instead of keeping all these roads open, DST acts as an ingenious city planner: it decides which roads to close down (prune) and which new ones to build (regrow) so that traffic flows optimally—all while staying within a fixed budget.</p>
+<section id="step-1-the-beginning-with-initialization" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-the-beginning-with-initialization">Step 1: The Beginning with Initialization</h4>
+<p>We kick things off by initializing our network using one of two methods: - Uniform Initialization: Every layer gets an equal share of connections, kind of like giving every neighborhood the same number of streets. - Erdős-Rényi Kernel (ERK) Initialization: Instead of treating all layers equally, ERK smartly allocates more connections to the “busy” areas (the layers with more parameters) and fewer to the “quiet” ones. This is a bit like investing more in the main highways that keep the city moving.</p>
+</section>
+<section id="step-2-training-pruning-and-regrowing" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-training-pruning-and-regrowing">Step 2: Training, Pruning, and Regrowing</h4>
+<p>After some initial training, the network doesn’t just sit idle but actively refines itself. Here’s how it works: - <strong>Pruning:</strong> Based on the magnitude of the weights, the network prunes away a fixed number (which can be scheduled) of the least important connections. Think of it as cutting off the rarely used, winding side streets to save resources. - <strong>Regrowth:</strong> To maintain the same overall sparsity level for each task, the network then regrows exactly same amount of connections. And guess what? There are three main approaches to choose which connections to regrow: - <em>Random</em>: Sometimes, a bit of randomness helps explore new possibilities, like testing out an unexpected shortcut. - <em>Unfired</em>: Alternatively, the model can explore the connections that is never tried or checked before. - <em>Gradient-based</em>: Finally, it can look at the gradient or momentum signals that indicate which potential connections could boost performance—and regrow those most promising ones.</p>
+</section>
+<section id="step-3-sharing-is-caring" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-sharing-is-caring">Step 3: Sharing is Caring</h4>
+<p>What’s truly fascinating in this approach is that, even though the network is carving out different “subnetworks” for each new task, it also allows for sharing connections between tasks. This means that if two tasks are similar, they can use the same neural “road,” which enhances knowledge sharing and makes learning even more efficient. It’s like having a communal library where everyone benefits from the same resources!</p>
+<div style="text-align:center;">
+<p><img src="../images/blogs/cldst/brain.webp" alt="Our brain is always under a change, tends to wire neurons that needs to work or fire together." style="width:75%;"></p>
+</div>
+</section>
+</section>
+<section id="continual-learning-the-ultimate-test" class="level2">
+<h2 class="anchored" data-anchor-id="continual-learning-the-ultimate-test">Continual Learning: The Ultimate Test</h2>
+<p>Now, combine DST with Continual Learning (CL)—a setup where a single network learns a series of tasks over time without forgetting earlier ones, just like how you can learn to cook a new recipes without forgetting grandma’s special.</p>
+<p>Traditionally, many systems tackle each new task with a separate network or by keeping extra data around. But here, DST is applied to one overparameterized network that evolves over time. As new tasks come along, the network dynamically adjusts itself by pruning away unused connections and regrowing new ones, while allowing to share common connections to build on past knowledge.</p>
+</section>
+<section id="a-technical-snapshot" class="level2">
+<h2 class="anchored" data-anchor-id="a-technical-snapshot">A Technical Snapshot</h2>
+<p>For those of you who love the technical nitty-gritty, here’s a quick summary of the key findings from our study: - <strong>Initialization Matters:</strong> At low to moderate sparsity levels (around 80–90%), the ERK initialization leverages the network’s capacity more efficiently by assigning fewer connections to narrow layers. This helps in learning incremental tasks effectively. At higher sparsities, ERK still doing its job when the right growth strategy is selected. - <strong>Growth Strategy Dynamics:</strong> The choice of growth strategy is closely tied to the initialization and the degree of sparsity. While gradient-based and momentum-based growth methods excel at high sparsity by carefully selecting promising connections, random growth performs competitively at lower sparsity levels where there’s less room for exploration. - <strong>Adaptive Approaches are Promising:</strong> There’s no one-size-fits-all DST setup. Even a simple adaptive strategy that switches between growth methods (like using random growth initially and shifting to gradient-based growth later) can boost performance compared to sticking with a fixed strategy. - <strong>Shared Connections Enhance Knowledge Transfer:</strong> Allowing the network to share connections between tasks not only saves resources but also boosts overall learning by transferring knowledge from previous tasks, much like how our brains reuse familiar circuits when learning something new.</p>
+<div style="text-align:center;">
+<p><img src="../images/blogs/cldst/result.webp" alt="ERK is a preffered way of initialization, growth depends on the initialization, and adaptivity helps." style="width:70%;"></p>
+</div>
+</section>
+<section id="bringing-all-together-and-wrapping-it-up" class="level2">
+<h2 class="anchored" data-anchor-id="bringing-all-together-and-wrapping-it-up">Bringing All Together and Wrapping It Up</h2>
+<p>By starting with a clever initialization, then iteratively pruning and regrowing a fixed number of connections based on weight magnitude and gradient signals, DST transforms a single, overparameterized network into a versatile, continually learning powerhouse. And the cherry on top? Allowing subnetworks to share connections across different tasks means that the network not only learns continuously but also builds upon past knowledge, much like our own brains do.</p>
+<p>In this study, we dive deep into the various ways to run DST in a continual learning setup, offering both technical insights and inspiration for future research. We believe it is a beautiful blend of neuroscience and engineering—a step closer to creating AI that learns and adapts just like we do. Again, if you want to know more, you can check the <a href="https://proceedings.mlr.press/v234/yildirim24a.html">paper</a> 😊</p>
+<p>Stay curious, keep exploring, and let’s continue pushing the boundaries of what intelligent systems can achieve! 🧠🚀</p>
+<hr>
+<p>This post was written by Murat Onur Yildirim and need not reflect the view of co-authors.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
