@@ -9,7 +9,7 @@
 <meta name="author" content="Elif Ceren Gok Yildirim">
 <meta name="dcterms.date" content="2025-06-04">
 
-<title>AdaCL Adaptive Continual Learning – TU/e AutoML Lab</title>
+<title>Continual Learning with Informative Samples An Empirical Evaluation of Coreset Strategies – TU/e AutoML Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,17 +145,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#adacl-adaptive-continual-learning" id="toc-adacl-adaptive-continual-learning" class="nav-link active" data-scroll-target="#adacl-adaptive-continual-learning">AdaCL: Adaptive Continual Learning</a>
+  <li><a href="#continual-learning-with-informative-samples-an-empirical-evaluation-of-coreset-strategies" id="toc-continual-learning-with-informative-samples-an-empirical-evaluation-of-coreset-strategies" class="nav-link active" data-scroll-target="#continual-learning-with-informative-samples-an-empirical-evaluation-of-coreset-strategies">Continual Learning with Informative Samples: An Empirical Evaluation of Coreset Strategies</a>
   <ul class="collapse">
-  <li><a href="#understanding-continual-learning-and-the-catastrophic-forgetting" id="toc-understanding-continual-learning-and-the-catastrophic-forgetting" class="nav-link" data-scroll-target="#understanding-continual-learning-and-the-catastrophic-forgetting">Understanding Continual Learning and the Catastrophic Forgetting</a></li>
-  <li><a href="#understanding-class-incremental-learning" id="toc-understanding-class-incremental-learning" class="nav-link" data-scroll-target="#understanding-class-incremental-learning">Understanding Class-Incremental Learning</a></li>
-  <li><a href="#solutions-for-solving-catastrophic-forgetting" id="toc-solutions-for-solving-catastrophic-forgetting" class="nav-link" data-scroll-target="#solutions-for-solving-catastrophic-forgetting">Solutions for solving Catastrophic Forgetting</a></li>
-  <li><a href="#motivation-for-adacl" id="toc-motivation-for-adacl" class="nav-link" data-scroll-target="#motivation-for-adacl">Motivation for AdaCL</a></li>
-  <li><a href="#high-stability---low-plasticity" id="toc-high-stability---low-plasticity" class="nav-link" data-scroll-target="#high-stability---low-plasticity">High Stability - Low Plasticity:</a></li>
-  <li><a href="#introducing-adacl" id="toc-introducing-adacl" class="nav-link" data-scroll-target="#introducing-adacl">Introducing AdaCL</a></li>
-  <li><a href="#experimental-setup" id="toc-experimental-setup" class="nav-link" data-scroll-target="#experimental-setup">Experimental Setup</a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#the-overall-game-plan" id="toc-the-overall-game-plan" class="nav-link" data-scroll-target="#the-overall-game-plan">The Overall Game Plan</a></li>
+  <li><a href="#cl-baselines" id="toc-cl-baselines" class="nav-link" data-scroll-target="#cl-baselines">CL Baselines</a></li>
+  <li><a href="#coreset-baselines" id="toc-coreset-baselines" class="nav-link" data-scroll-target="#coreset-baselines">Coreset Baselines</a></li>
+  <li><a href="#findings-and-insights" id="toc-findings-and-insights" class="nav-link" data-scroll-target="#findings-and-insights">Findings and Insights</a></li>
+  <li><a href="#why-does-it-work-a-look-into-representations" id="toc-why-does-it-work-a-look-into-representations" class="nav-link" data-scroll-target="#why-does-it-work-a-look-into-representations">Why Does It Work: A Look Into Representations</a></li>
+  <li><a href="#when-coresets-dont-help" id="toc-when-coresets-dont-help" class="nav-link" data-scroll-target="#when-coresets-dont-help">When Coresets Don’t Help</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -165,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AdaCL Adaptive Continual Learning</h1>
+<h1 class="title">Continual Learning with Informative Samples An Empirical Evaluation of Coreset Strategies</h1>
 </div>
 
 
@@ -194,70 +193,98 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="adacl-adaptive-continual-learning" class="level1">
-<h1>AdaCL: Adaptive Continual Learning</h1>
-<p>Elif Ceren Gok Yildirim, Murat Onur Yildirim, Mert Kilickaya, Joaquin Vanschoren</p>
-<section id="understanding-continual-learning-and-the-catastrophic-forgetting" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-continual-learning-and-the-catastrophic-forgetting">Understanding Continual Learning and the Catastrophic Forgetting</h2>
-<p>In the rapidly evolving field of machine learning, one challenge remains particularly persistent: the ability to continually learn new information without forgetting previously acquired knowledge. This forgetting problem is generally referred to in the field as “catastrophic forgetting”. Catastrophic forgetting occurs because, while models are learning new tasks, they lose the ability to recall information about previously learned tasks. This happens because the model’s parameters are updated to fit the new data, which can overwrite the representations of the old data.</p>
+<section id="continual-learning-with-informative-samples-an-empirical-evaluation-of-coreset-strategies" class="level1">
+<h1>Continual Learning with Informative Samples: An Empirical Evaluation of Coreset Strategies</h1>
+<p><a href="https://elifcerengokyildirim.github.io/">Elif Ceren Gok Yildirim</a>, <a href="https://muratonuryildirim.github.io/">Murat Onur Yildirim</a>, <a href="https://joaquinvanschoren.github.io/home/">Joaquin Vanschoren</a></p>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Continual Learning (CL) aims to enable models to learn sequentially from streaming data, retaining previously acquired knowledge while adapting to new tasks, a duality known as the <strong>stability-plasticity</strong> balance. This balance is critical for mimicking human-like learning, where accumulated knowledge is preserved (stability) yet flexibly updated with novel experiences (plasticity). There is big line of research that focus on achieving better stability-plasticity tradeoff by building and proposing new methods to literature.</p>
 </section>
-<section id="understanding-class-incremental-learning" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-class-incremental-learning">Understanding Class-Incremental Learning</h2>
-<p>Class-Incremental Learning is one challenging scenario in CL which aims to update a model’s parameters and expand the classification layer to learn new categories while maintaining its accuracy on previously observed classes. Then during the test time, it assumes not to have access to task ids.</p>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
+<p>While these methods improve performance, they share a common assumption: all training samples are equally valuable and must be exhaustively utilized. By default, this standardized practice prioritizes plasticity (integrating new information) at the risk of destabilizing learned representations, as redundant or noisy samples may overwrite critical prior knowledge. This ”learn-it-all” paradigm diverges from human learning efficiency since, as humans, we are initially exposed to vast amounts of information but intuitively filter and prioritize them, focusing on key experiences (e.g.&nbsp;clear and novel examples) that enrich our understanding while disregarding redundant details.</p>
+<div style="text-align:center;">
+<p><img src="../images/blogs/datadiet/datadietcl.webp" alt="flow of datadietcl" style="width:75%;"></p>
+</div>
 </section>
-<section id="solutions-for-solving-catastrophic-forgetting" class="level2">
-<h2 class="anchored" data-anchor-id="solutions-for-solving-catastrophic-forgetting">Solutions for solving Catastrophic Forgetting</h2>
-<p>Three major approaches have been explored to mitigate this issue:</p>
+<section id="the-overall-game-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-overall-game-plan">The Overall Game Plan</h2>
+<p>In our approach, we put traditional CL methods to the test by comparing their performance when trained on the full dataset versus when they’re trained on a carefully selected, informative subset of samples (coreset).</p>
+<p>We structured our training into two distinct phases:</p>
 <ul>
-<li><strong>Regularization-based Methods:</strong> These techniques prevent abrupt shifts in the neural network weights by applying penalties that stabilize important parameters.</li>
-<li><strong>Replay-based Methods:</strong> These involve storing a subset of training data and replaying it during the learning of new tasks to maintain previous knowledge.</li>
-<li><strong>Architecture-based Methods:</strong> These methods adapt the network structure, either by expanding it or isolating parts of it to retain past information.</li>
+<li><p><strong>Warm-Up Phase:</strong> The CL model undergoes initial, partial training. This phase is key because it lets us analyze the model’s behavior and data representations, which in turn helps us pick out the most informative samples.</p></li>
+<li><p><strong>Learning Phase:</strong> Once the warm-up is complete, we switch to training on just the selected subset of samples. This phase is much longer and is where the model truly refines its knowledge.</p></li>
 </ul>
+<p>Note that the warm-up phase is generally much shorter than the learning phase since it’s only long enough for the model to “warm up” and provide the insights needed for effective sample selection.</p>
 </section>
-<section id="motivation-for-adacl" class="level2">
-<h2 class="anchored" data-anchor-id="motivation-for-adacl">Motivation for AdaCL</h2>
-<p>All these CL methods bring additional hyperparameters to the learning process. For example: <strong>regularization strength</strong>, <strong>learning rate</strong>, <strong>memory size</strong>, etc. Current methods define these hyperparameters to a fixed value and assume that using the same hyperparameter setting will be sufficient for learning all different subsequent tasks. However, this approach does not reflect a realistic scenario. We can imagine 2 realistic scenarios:</p>
-<p>##High Plasticity- Low Stability: Let’s say you have learned large animal categories and now you will have to learn vehicle categories. In this case, you would go for mid-to low <strong>regularization strength</strong> to learn the new categories. In addition to that, you might want to store many exemplars from the large animal category in the memory buffer because you will probably forget that since the vehicle category will change the model’s parameters a lot.</p>
+<section id="cl-baselines" class="level2">
+<h2 class="anchored" data-anchor-id="cl-baselines">CL Baselines</h2>
+<p>Below is a quick comparison of the CL baselines we used in our work:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 24%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Architecture-based</th>
+<th>Memory-based</th>
+<th>Regularization-based</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DER, FOSTER, MEMO</td>
+<td>iCaRL, ER</td>
+<td>LwF</td>
+</tr>
+<tr class="even">
+<td>Dynamically expands the model’s representation space by adding new features for new tasks.</td>
+<td>Holds a memory buffer from previous tasks and keeps learning from them along with new tasks.</td>
+<td>Regularizes the model’s parameters when learning new tasks to retain previously acquired knowledge.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="coreset-baselines" class="level2">
+<h2 class="anchored" data-anchor-id="coreset-baselines">Coreset Baselines</h2>
+<p>Below is a quick comparison of the Coreset baselines we used in our work:</p>
 <div style="text-align:center;">
-<p><img src="../images/blogs/adacl/adaclexample.webp" alt="motivation for adacl" style="width:30%;"></p>
+<p><img src="../images/blogs/datadiet/coreset.webp" alt="flow of datadietcl" style="width:75%;"></p>
 </div>
 </section>
-<section id="high-stability---low-plasticity" class="level2">
-<h2 class="anchored" data-anchor-id="high-stability---low-plasticity">High Stability - Low Plasticity:</h2>
-<p>This time you have learned small vehicle categories and now you will have to learn large vehicle categories. In this case, you would think that these two subsequent tasks are intuitively similar so you don’t need to lower <strong>regularization strength</strong> because with high regularization, model weights will not change too much and current weights will probably be sufficient to learn the large vehicle category. Also, you might not want to store many exemplars from small vehicle categories because you did not change the model’s weights too much and you don’t want to use your budget unnecessarily.</p>
-</section>
-<section id="introducing-adacl" class="level2">
-<h2 class="anchored" data-anchor-id="introducing-adacl">Introducing AdaCL</h2>
-<p>AdaCL (Adaptive Continual Learning) introduces a novel approach where learning rate, regularization, and memory size are treated as dynamic, tunable variables. Instead of being fixed, these parameters adapt according to the learner’s current condition and the complexity of the task.</p>
-<p><strong>But how to find optimum hyperparameter values?</strong></p>
-<p><strong>Search Algorithm =</strong> Tree Parzen Estimators</p>
-<p><strong>Validation set =</strong> some amount of data from the current task + some amount of data from previous tasks.</p>
-<p>To achieve this, we use an AutoML tool which is Optuna and as a search algorithm, we apply Bayesian Optimization Tree Parzen Estimators. AdaCL searches and predicts the optimal values for these hyperparameters by evaluating the model’s performance on the validation set.</p>
+<section id="findings-and-insights" class="level2">
+<h2 class="anchored" data-anchor-id="findings-and-insights">Findings and Insights</h2>
+<p>We observed a significant improvement in continual learning performance when training with <strong>coreset samples</strong> instead of full datasets. We found out that this enhancement comes from achieving optimal <strong>stability-plasticity tradeoff</strong>.</p>
+<p>While training with all samples often boosts performance on the current task, it tends to forget earlier tasks. In contrast, using a selective subset (coreset) of samples helps retain prior knowledge better, even if it sacrifices on current task performance.</p>
+<p>The heatmap below illustrates <strong>accuracy across tasks after each learning session</strong> on Split-CIFAR10. It compares full-sample training with the best-performing coreset strategy.</p>
 <div style="text-align:center;">
-<p><img src="../images/blogs/adacl/adacl.webp" alt="flow of adacl" style="width:75%;"></p>
+<p><img src="../images/blogs/datadiet/heatmap.webp" alt="flow of adacl" style="width:55%;"></p>
 </div>
+<p>As seen in the figure, <strong>coreset training reduces forgetting</strong>, preserving earlier knowledge more effectively.</p>
 </section>
-<section id="experimental-setup" class="level2">
-<h2 class="anchored" data-anchor-id="experimental-setup">Experimental Setup</h2>
-<p>Our experiments utilized two well-known datasets: <strong>CIFAR100</strong> and <strong>MiniImageNet</strong>. Each dataset contains images from 100 different categories, and we trained all models with 10 tasks, with each task containing 10 classes. Standard metrics for evaluation were used:</p>
-<p><strong>Accuracy (ACC)</strong> measures the final accuracy averaged over all tasks.</p>
-<p><strong>Backward Transfer (BWT)</strong> measures the average accuracy change of each task after learning new tasks.</p>
-<p>We compared AdaCL with various baseline methods including EWC, LwF, iCaRL, and WA but the <strong>GOOD NEWS is: it is a plugged-in approach</strong> that means you can actually combine it with other methods that require better hyperparameter setting in CL.</p>
-</section>
-<section id="results" class="level2">
-<h2 class="anchored" data-anchor-id="results">Results</h2>
-<p><strong>Key Findings:</strong></p>
-<ol type="1">
-<li>AdaCL boosts the performance of regularization-based methods.</li>
-<li>AdaCL yields better resource usage by leading to less memory size with the same performance.</li>
-</ol>
+<section id="why-does-it-work-a-look-into-representations" class="level2">
+<h2 class="anchored" data-anchor-id="why-does-it-work-a-look-into-representations">Why Does It Work: A Look Into Representations</h2>
+<p>To better understand <em>why</em> this happens, we visualized the learned feature space using t-SNE plots of DER’s representations on Split-CIFAR10.</p>
 <div style="text-align:center;">
-<p><img src="../images/blogs/adacl/table.webp" alt="main results" style="width:75%;"></p>
+<p><img src="../images/blogs/datadiet/tsne.webp" alt="flow of adacl" style="width:75%;"></p>
 </div>
+<p>With <strong>20%</strong> of the data, coreset-trained models form <strong>well-separated class clusters</strong>, suggesting clearer, less entangled representations.</p>
+<p>As we increased the coreset fraction to <strong>80%</strong>, and then to the full dataset, the class clusters became <strong>less distinct</strong>:</p>
+<p>We also quantified this observation by calculating <strong>inter-class distances</strong> in the t-SNE-embedded space:</p>
+<ul>
+<li><strong>20% coreset:</strong> 11.68</li>
+<li><strong>80% coreset:</strong> 10.71</li>
+<li><strong>Full dataset:</strong> 10.67</li>
+</ul>
+<p>This confirms our visual findings: <strong>more data does not always lead to better representations or ensure better learning</strong>. Sometimes, it blurs the boundaries between classes, increasing the risk of forgetting past tasks specially in CL.</p>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>AdaCL treats crucial hyperparameters as adaptable, addressing the challenges of CIL more effectively than traditional fixed-parameter approaches. We aim to underscore the importance of flexible, dynamic adaptation in the CL scenario. For those interested in further details, the full paper provides an in-depth analysis of the methods, experimental setup, and results. <a href="https://proceedings.mlr.press/v249/yildirim24a.html">Read the full paper here.</a></p>
+<section id="when-coresets-dont-help" class="level2">
+<h2 class="anchored" data-anchor-id="when-coresets-dont-help">When Coresets Don’t Help</h2>
+<p>While coreset-based training improves many CL methods, there are notable exceptions. Methods like <strong>FOSTER</strong> and <strong>LwF</strong> (which relies solely on regularization) perform better when trained with the full dataset. These approaches seem to require the complete data distribution to operate effectively.</p>
+<p>We provide detailed insights and analysis for these exceptions in the full paper, including possible explanations and ablation studies.</p>
+<p>Since I don’t want to bore you with nitty-gritty details, I invite you to check out <a href="https://arxiv.org/pdf/2410.17715">our paper</a>. We would be happy if you want to talk about this work, so please feel free to reach out to us 😊.</p>
 <hr>
 <p>This post was written by Elif Ceren Gok Yildirim and need not reflect the view of co-authors.</p>
 
