@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Murat Onur Yildirim">
+<meta name="dcterms.date" content="2025-06-04">
 
-<title>Blog – TU/e AutoML Lab</title>
+<title>Self-Regulated Neurogenesis for Online Data-Incremental Learning – TU/e AutoML Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -67,9 +69,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../styles.css">
@@ -112,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blogs/blog.html" aria-current="page"> 
+    <a class="nav-link" href="../blogs/blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -146,10 +145,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#method" id="toc-method" class="nav-link active" data-scroll-target="#method">Method</a></li>
-  <li><a href="#hackathon" id="toc-hackathon" class="nav-link" data-scroll-target="#hackathon">Hackathon</a></li>
-  <li><a href="#benchmarking" id="toc-benchmarking" class="nav-link" data-scroll-target="#benchmarking">Benchmarking</a></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
+  <li><a href="#self-regulated-neurogenesis-for-online-data-incremental-learning" id="toc-self-regulated-neurogenesis-for-online-data-incremental-learning" class="nav-link active" data-scroll-target="#self-regulated-neurogenesis-for-online-data-incremental-learning">Self-Regulated Neurogenesis for Online Data-Incremental Learning</a>
+  <ul class="collapse">
+  <li><a href="#the-problem-ais-short-term-memory" id="toc-the-problem-ais-short-term-memory" class="nav-link" data-scroll-target="#the-problem-ais-short-term-memory">❔ The Problem: AI’s Short-Term Memory</a></li>
+  <li><a href="#serena-self-regulated-neurogenesis-meets-continual-learning" id="toc-serena-self-regulated-neurogenesis-meets-continual-learning" class="nav-link" data-scroll-target="#serena-self-regulated-neurogenesis-meets-continual-learning">👧🏻 SERENA: Self-Regulated Neurogenesis meets Continual Learning</a></li>
+  <li><a href="#how-serena-works-its-magic" id="toc-how-serena-works-its-magic" class="nav-link" data-scroll-target="#how-serena-works-its-magic">🧠 How SERENA Works Its Magic</a></li>
+  <li><a href="#performance-that-surpasses-the-best" id="toc-performance-that-surpasses-the-best" class="nav-link" data-scroll-target="#performance-that-surpasses-the-best">🚀 Performance That Surpasses the Best</a></li>
+  <li><a href="#final-thoughts-and-wrapping-it-up" id="toc-final-thoughts-and-wrapping-it-up" class="nav-link" data-scroll-target="#final-thoughts-and-wrapping-it-up">💡 Final Thoughts and Wrapping It Up</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -158,14 +161,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blog</h1>
+<h1 class="title">Self-Regulated Neurogenesis for Online Data-Incremental Learning</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Murat Onur Yildirim </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 4, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -175,180 +190,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<h2 id="method" class="anchored">Method</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/serena/teaser.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/serena-introduction.html" class="blog-title"><strong>Self-Regulated Neurogenesis for Online Data-Incremental Learning</strong></a>
-                <p>A blogpost based on our paper "SERENA" proposing a neuro-inspired solution for continual learning.</p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="hackathon" class="anchored">Hackathon</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/openmlxsci/openmlxsci-1.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
-                <p>We visited Probabl to discuss open source and open science. </p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="benchmarking" class="anchored">Benchmarking</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/amlb/amlb-boat-or-car.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
-                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="analysis" class="anchored">Analysis</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/datadiet/datadietcl.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/cl_with_coreset-introduction.html" class="blog-title"><strong>Continual Learning with Informative Samples An Empirical Evaluation of Coreset Strategies</strong></a>
-                <p>A blogpost based on our paper "Continual Learning with Informative Samples An Empirical Evaluation of Coreset Strategies" showing how continual learning can benefit from training with coreset samples.</p>
-            </div>
-        </div>
-    
-
-    
-    
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/adacl/teaser.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/adacl-introduction.html" class="blog-title"><strong>AdaCL Adaptive Continual Learning</strong></a>
-                <p>A blogpost based on our paper "AdaCL Adaptive Continual Learning" showing how continual learning can benefit from hyperparameter optimization.</p>
-            </div>
-        </div>
-    
-
-    
-    
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/cldst/brain.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
-                <p>A blogpost based on our paper "CL-with-DST" showing how continual learning can benefit from sparse training.</p>
-            </div>
-        </div>
-    
-
-    
-    
+<section id="self-regulated-neurogenesis-for-online-data-incremental-learning" class="level1">
+<h1>Self-Regulated Neurogenesis for Online Data-Incremental Learning</h1>
+<p><a href="https://muratonuryildirim.github.io/">Murat Onur Yildirim</a>, <a href="https://elifcerengokyildirim.github.io/">Elif Ceren Gok Yildirim</a>, <a href="https://scholar.google.nl/citations?user=RlQgUwEAAAAJ&amp;hl=en">Decebal Constantin Mocanu</a>, <a href="https://joaquinvanschoren.github.io/home/">Joaquin Vanschoren</a>.</p>
+<p><strong>TL;DR:</strong> This blog post dives into our recent paper “Self-Regulated Neurogenesis for Online Data-Incremental Learning” (📄 <a href="https://arxiv.org/abs/2403.14684">Paper</a>, 🤖 <a href="https://github.com/muratonuryildirim/serena">Code</a>) published in CoLLAs 2025. SERENA is a brain-inspired continual learning method that detects concept drift and allocates dedicated sparse neural paths called <em>concept cells</em> for each task, enabling efficient and replay-free learning without forgetting. It outperforms state-of-the-art and even offline supervised training in online data-incremental scenarios. Read on for a brief overview of our key findings 😊</p>
+<hr>
+<section id="the-problem-ais-short-term-memory" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem-ais-short-term-memory">❔ The Problem: AI’s Short-Term Memory</h2>
+<p>Traditional neural networks are great at recognizing patterns when all data is presented at once. But in the real world, data arrives bit by bit, like a movie watched frame by frame. Most AI systems fall apart here, suffering from catastrophic forgetting, where learning something new erases what was previously learned. Even worse, many current solutions rely on replaying old data (which isn’t always possible due to privacy) or growing the model’s architecture indefinitely (which becomes inefficient fast).</p>
+</section>
+<section id="serena-self-regulated-neurogenesis-meets-continual-learning" class="level2">
+<h2 class="anchored" data-anchor-id="serena-self-regulated-neurogenesis-meets-continual-learning">👧🏻 SERENA: Self-Regulated Neurogenesis meets Continual Learning</h2>
+<p>Our new approach takes its inspirations directly from the brain’s remarkable ability of “self-regulated neurogenesis” to learn and adapt throughout life. It promises to revolutionize how AI handles dynamic, real-world data streams. Specifically, it detects new concepts on its own and carves paths called concept cells which are embedded in a single over-parameterized network, meaning no model growth, no replay buffer. Once a concept is mastered, its corresponding concept cell is “frozen”, effectively safeguarding that knowledge from future interference.</p>
+<div style="text-align:center;">
+<p><img src="../images/blogs/serena/teaser.webp" alt="Teaser for SERENA." style="width:60%;"></p>
+</div>
+</section>
+<section id="how-serena-works-its-magic" class="level2">
+<h2 class="anchored" data-anchor-id="how-serena-works-its-magic">🧠 How SERENA Works Its Magic</h2>
+<p>SERENA’s design allows it to operate in real-time, online data-incremental learning scenarios without needing explicit task identifiers or multiple training epochs. Here’s a simplified look at its core mechanisms:</p>
+<ul>
+<li><p><strong>Zero-Cost Path Allocation:</strong> When a new concept is detected in the data stream, SERENA allocates a new specialized neural path. This is done efficiently using zero-cost random unstructured pruning.</p></li>
+<li><p><strong>Drift Detection:</strong> If the model notices it’s struggling (via accuracy dips), it knows something new is happening and carves a new concept cell.</p></li>
+<li><p><strong>Knowledge Preservation:</strong> After a concept is learned, its dedicated concept cell is frozen, preventing catastrophic forgetting. This means the model doesn’t need to “re-learn” old information but can benefit from the existing knowledge while learning the new ones.</p></li>
+<li><p><strong>Recency-Effect with Ensemble Inference:</strong> When making decisions, SERENA doesn’t rely on a single neural path. Instead, it employs a neuro-inspired ensemble approach, giving more weight to recently acquired knowledge while still integrating past information. This <em>“recency effect”</em> enhances adaptability to evolving data distributions.</p></li>
+</ul>
+<div style="text-align:center;">
+<p><img src="../images/blogs/serena/graphs.webp" alt="Results as a Figure." style="width:60%;"></p>
+</div>
+</section>
+<section id="performance-that-surpasses-the-best" class="level2">
+<h2 class="anchored" data-anchor-id="performance-that-surpasses-the-best">🚀 Performance That Surpasses the Best</h2>
+<p>Across over ten benchmarks, SERENA doesn’t just outperform all continual learning baselines, it even beats offline supervised batch learning which sees all data in advance and gets to train on it many times. Let that sink in: a one-pass, online, biologically inspired method outperforms traditional training.</p>
+<p>This is a monumental achievement, as offline learning typically has the luxury of revisiting data multiple times. SERENA achieves this superior performance without the need for storing subsets of data for replay or expanding the network architecture, addressing critical concerns around computational overhead,privacy, and memory limitations, so it is game-changer and highly <em>“Real-World Ready”</em> 🌍.</p>
+<div style="text-align:center;">
+<p><img src="../images/blogs/serena/tsne.webp" alt="T-sne comparison." style="width:60%;"></p>
+</div>
+</section>
+<section id="final-thoughts-and-wrapping-it-up" class="level2">
+<h2 class="anchored" data-anchor-id="final-thoughts-and-wrapping-it-up">💡 Final Thoughts and Wrapping It Up</h2>
+<p>SERENA is more than a clever acronym—it represents a significant leap forward in making AI truly adaptive and intelligent. By drawing inspiration from how our brains learn, it shows that continual learning in AI doesn’t have to be clunky, memory-hungry, or brittle. It can be elegant. Efficient. And maybe… just a little bit human. If you want to know more, you can check the <a href="https://arxiv.org/abs/2403.14684">paper</a> 😊</p>
+<p>Stay curious, keep exploring, and let’s continue pushing the boundaries of what intelligent systems can achieve! 🧠🚀</p>
+<hr>
+<p>This post was written by Murat Onur Yildirim and need not reflect the view of co-authors.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
