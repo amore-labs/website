@@ -39,5 +39,11 @@ image: amlb/amlb-boat-or-car.webp # image in the images/blogs subdirectory
 ---
 ```
 
-The `topic` field is used to group similar posts into sections. In each section, the most recent posts are on top. Note that Quarto won't run again the code, so you must run everything before adding the notebook. An example of blog post is given [here](https://github.com/openml-labs/website/blob/main/notebooks/example.ipynb).
-The `date` is in year-month-day format.
+The `topic` field is used to group similar posts into sections. 
+The `date` is in year-month-day format. In each section, the most recent posts are on top. 
+Note that Quarto won't run again the code, so you must run everything before adding the notebook. An example of blog post is given [here](https://github.com/openml-labs/website/blob/main/notebooks/example.ipynb).
+
+Convert the images to WebP format before adding them to the notebook.
+On mac, you can use ` for image in *.png; do magick "$image" "${image%.png}.webp";done` to convert all the images in the folder to WebP format. Replace `*.png` with the appropriate file extension if needed.
+
+
