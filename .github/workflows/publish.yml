@@ -2,6 +2,8 @@ on:
   workflow_dispatch:
   push:
     branches: main
+  pull_request:
+    branches: main
     
 name: Render and deploy Quarto files
 
@@ -26,6 +28,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Render & Publish Quarto Project
+        if: github.ref == 'refs/heads/main'
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
