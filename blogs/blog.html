@@ -141,17 +141,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#benchmarking" id="toc-benchmarking" class="nav-link active" data-scroll-target="#benchmarking">Benchmarking</a></li>
-  <li><a href="#method" id="toc-method" class="nav-link" data-scroll-target="#method">Method</a></li>
-  <li><a href="#hackathon" id="toc-hackathon" class="nav-link" data-scroll-target="#hackathon">Hackathon</a></li>
-  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -175,178 +166,180 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<h2 id="benchmarking" class="anchored">Benchmarking</h2>
 
-    
+<script>
+function toggleView() {
+    let mode = document.getElementById("sort-mode").value;
+    document.getElementById("by-topic").style.display = mode === "topic" ? "block" : "none";
+    document.getElementById("by-date").style.display = mode === "date" ? "block" : "none";
+}
 
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
+window.addEventListener("DOMContentLoaded", toggleView);
+</script>
 
-    
+<label for="sort-mode"><strong>Sort by:</strong></label>
+<select id="sort-mode" onchange="toggleView()" style="margin-bottom: 1em;">
+    <option value="topic">Topic</option>
+    <option value="date" selected="">Date</option>
+</select>
+<div id="by-topic" style="display:none;"><h2 class="anchored">Analysis</h2>
+    <div class="blog-entry" style="margin-bottom: 1em;">
         <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/amlb/amlb-boat-or-car.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
-                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/datadiet/datadietcl.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
             </div>
-        </div>
-    
-
-    
-    
-<h2 id="method" class="anchored">Method</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/adacl/teaser.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/adacl-introduction.html" class="blog-title"><strong>AdaCL Adaptive Continual Learning</strong></a>
-                <p>A blogpost based on our paper "AdaCL Adaptive Continual Learning" showing how continual learning can benefit from hyperparameter optimization.</p>
-            </div>
-        </div>
-    
-
-    
-    
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/serena/teaser.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/serena-introduction.html" class="blog-title"><strong>Self-Regulated Neurogenesis for Online Data-Incremental Learning</strong></a>
-                <p>A blogpost based on our paper "SERENA" proposing a neuro-inspired solution for continual learning.</p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="hackathon" class="anchored">Hackathon</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/openmlxsci/openmlxsci-1.webp" style="height:100px">
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
-                <p>We visited Probabl to discuss open source and open science. </p>
-            </div>
-        </div>
-    
-
-    
-    
-<h2 id="analysis" class="anchored">Analysis</h2>
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
-        <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/datadiet/datadietcl.webp" style="height:100px">
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/cl_with_coreset-introduction.html" class="blog-title"><strong>Continual Learning with Informative Samples An Empirical Evaluation of Coreset Strategies</strong></a>
+                <div><span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
                 <p>A blogpost based on our paper "Continual Learning with Informative Samples An Empirical Evaluation of Coreset Strategies" showing how continual learning can benefit from training with coreset samples.</p>
             </div>
         </div>
+    </div>
     
-
-    
-    
-
-    
-
-    
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    
-
-    
+    <div class="blog-entry" style="margin-bottom: 1em;">
         <div style="display:flex; gap: 2em;">
-            <img src="../images/blogs/cldst/brain.webp" style="height:100px">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/cldst/brain.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
+                <div><span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
                 <p>A blogpost based on our paper "CL-with-DST" showing how continual learning can benefit from sparse training.</p>
             </div>
         </div>
+    </div>
+    <h2 class="anchored">Benchmarking</h2>
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/amlb/amlb-boat-or-car.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
+                <div><span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-12-06</span></div>
+                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
+            </div>
+        </div>
+    </div>
+    <h2 class="anchored">Hackathon</h2>
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/openmlxsci/openmlxsci-1.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
+                <div><span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-09-19</span></div>
+                <p>We visited Probabl to discuss open source and open science. </p>
+            </div>
+        </div>
+    </div>
+    <h2 class="anchored">Method</h2>
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/adacl/teaser.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/adacl-introduction.html" class="blog-title"><strong>AdaCL Adaptive Continual Learning</strong></a>
+                <div><span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
+                <p>A blogpost based on our paper "AdaCL Adaptive Continual Learning" showing how continual learning can benefit from hyperparameter optimization.</p>
+            </div>
+        </div>
+    </div>
     
-
-    
-    
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/serena/teaser.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/serena-introduction.html" class="blog-title"><strong>Self-Regulated Neurogenesis for Online Data-Incremental Learning</strong></a>
+                <div><span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
+                <p>A blogpost based on our paper "SERENA" proposing a neuro-inspired solution for continual learning.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+<div id="by-date">
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/datadiet/datadietcl.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/cl_with_coreset-introduction.html" class="blog-title"><strong>Continual Learning with Informative Samples An Empirical Evaluation of Coreset Strategies</strong></a>
+                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span></div>
+                <p>A blogpost based on our paper "Continual Learning with Informative Samples An Empirical Evaluation of Coreset Strategies" showing how continual learning can benefit from training with coreset samples.</p>
+            </div>
+        </div>
+    </div>
+    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/adacl/teaser.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/adacl-introduction.html" class="blog-title"><strong>AdaCL Adaptive Continual Learning</strong></a>
+                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span></div>
+                <p>A blogpost based on our paper "AdaCL Adaptive Continual Learning" showing how continual learning can benefit from hyperparameter optimization.</p>
+            </div>
+        </div>
+    </div>
+    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/cldst/brain.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
+                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span></div>
+                <p>A blogpost based on our paper "CL-with-DST" showing how continual learning can benefit from sparse training.</p>
+            </div>
+        </div>
+    </div>
+    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/serena/teaser.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/serena-introduction.html" class="blog-title"><strong>Self-Regulated Neurogenesis for Online Data-Incremental Learning</strong></a>
+                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span></div>
+                <p>A blogpost based on our paper "SERENA" proposing a neuro-inspired solution for continual learning.</p>
+            </div>
+        </div>
+    </div>
+    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/amlb/amlb-boat-or-car.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
+                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Benchmarking</span></div>
+                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
+            </div>
+        </div>
+    </div>
+    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
+    <div class="blog-entry" style="margin-bottom: 1em;">
+        <div style="display:flex; gap: 2em;">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/openmlxsci/openmlxsci-1.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
+                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Hackathon</span></div>
+                <p>We visited Probabl to discuss open source and open science. </p>
+            </div>
+        </div>
+    </div>
+    </div>
 
 
 
