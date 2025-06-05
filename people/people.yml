@@ -128,6 +128,7 @@ Prabhant Singh:
 
 Anna Vettoruzzo:
   position: postdoc
+  description:
   <name> is a postdoctoral researcher contributing to the <a href="https://openeurollm.eu/" target="_blank">OpenEuroLLM</a> project, 
     where she focuses on designing scalable model architectures for Large Language Models (LLMs) and developing efficient post-training techniques. 
     She received her Ph.D. in machine learning from Halmstad University, Sweden, as part of the Center for Applied and Intelligent Systems Research (CAISR). 
