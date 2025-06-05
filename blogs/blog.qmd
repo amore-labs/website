@@ -13,47 +13,42 @@ import re
 import glob
 import json
 from string import Template
-from IPython.display import display, Markdown, HTML
+from IPython.display import display, HTML, Markdown
 
-def make_html_link(nb, attributes):
-    s = """
-    <html>
+def make_html_link(nb, attributes, show_topic_tag=False, show_date_tag=False):
+    tags = []
 
-    <head>
-    <style>
-        /* Remove underline from all links */
-        a {
-        text-decoration: none;
-        }
-        .blog-title {
-            color:#1f4eb6;
-            font-size:1.1em;
-        }
-    </style>
-    </head>
+    if show_topic_tag:
+        tags.append(f'<span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">{attributes["topic"]}</span>')
 
-    <body>
+    if show_date_tag:
+        tags.append(f'<span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">{attributes["date"]}</span>')
+
+    tags_html = " ".join(tags)
+
+    s = f"""
+    <div class="blog-entry" style="margin-bottom: 1em;">
         <div style="display:flex; gap: 2em;">
-            <img src=../images/blogs/$image style="height:100px">
+            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/$image"
+                     style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="$nb" class="blog-title"><strong>$title</strong></a>
+                <div>{tags_html}</div>
                 <p>$preview</p>
             </div>
         </div>
-    </body>
-
-    </html>
+    </div>
     """
-    template = Template(s)
-    return template.substitute(nb=nb, **attributes) # preview=attributes["preview"], image=attributes["image"], title=attributes["title"])
-                
-# Find all notebooks and get their metadata by parsing the first cell
+    return Template(s).substitute(nb=nb, **attributes)
+
+# Parse metadata
 D = {}
 for nb in glob.glob("../notebooks/*.ipynb"):
     with open(nb) as f:
         metadata = json.load(f)["cells"][0]
 
-    # Non-nested attributes, otherwise should just reach for yaml parser.
     SIMPLE_ATTRIBUTE = re.compile(r"(\w+) ?: ?(.+)")
     simple_attributes = [
         re.match(SIMPLE_ATTRIBUTE, line)
@@ -61,16 +56,46 @@ for nb in glob.glob("../notebooks/*.ipynb"):
     ]
     D[nb] = defaultdict(str, (attribute.groups() for attribute in simple_attributes if attribute is not None))
 
-# Make a section for each topic and list notebook by date
-try:
-    topics = set([D[nb]["topic"] for nb in D])
-    for topic in topics:
-        display(Markdown("## " + topic ))
-        for nb in sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%Y-%m-%d"), reverse=True):
-            if D[nb]["topic"] == topic:
-                display(HTML(make_html_link(nb, D[nb])))
-except Exception as e:
-    print(f"Exception building blogpost with title: {D[nb].get('title')}")
-    raise
-# 
+# HTML: dropdown and script
+dropdown_script = """
+<script>
+function toggleView() {
+    let mode = document.getElementById("sort-mode").value;
+    document.getElementById("by-topic").style.display = mode === "topic" ? "block" : "none";
+    document.getElementById("by-date").style.display = mode === "date" ? "block" : "none";
+}
+
+window.addEventListener("DOMContentLoaded", toggleView);
+</script>
+
+<label for="sort-mode"><strong>Sort by:</strong></label>
+<select id="sort-mode" onchange="toggleView()" style="margin-bottom: 1em;">
+    <option value="topic">Topic</option>
+    <option value="date" selected>Date</option>
+</select>
+"""
+
+display(HTML(dropdown_script))
+
+# View by topic
+by_topic = ['<div id="by-topic" style="display:none;">']
+topics = sorted(set(D[nb]["topic"] for nb in D))
+for topic in topics:
+    by_topic.append(f"<h2>{topic}</h2>")
+    for nb in sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%Y-%m-%d"), reverse=True):
+        if D[nb]["topic"] == topic:
+            by_topic.append(make_html_link(nb, D[nb], show_topic_tag=False, show_date_tag=True))
+by_topic.append("</div>")
+display(HTML("".join(by_topic)))
+
+# View by date
+by_date = ['<div id="by-date">']
+sorted_nbs = sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%Y-%m-%d"), reverse=True)
+for i, nb in enumerate(sorted_nbs):
+    by_date.append(make_html_link(nb, D[nb], show_topic_tag=True))
+    if i < len(sorted_nbs) - 1:
+        by_date.append('<hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">')
+by_date.append("</div>")
+display(HTML("".join(by_date)))
+
 ```
