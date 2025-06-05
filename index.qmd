@@ -1,7 +1,9 @@
 ---
 title: "Lab"
 ---
-Welcome to the Automated Machine Learning lab at Eindhoven University of Technology!
+Welcome to our lab on **<span style="color:red">A</span>rtificial <span style="color:red">M</span>inds through <span style="color:red">O</span>pen <span style="color:red">R</span>esearch and <span style="color:red">E</span>ngineering** @ <a href="https://www.tue.nl" style="text-decoration: none; color:#E41B17">TU/e</a>! 
+
+_Also known locally as the Automated Machine Learning lab ;)_
 
 ![Our team on a retreat near the sea.](images/group_image2.webp)  
 
@@ -17,7 +19,7 @@ and validate our methods in projects that tackle sustainable development goals, 
 
 You can find our work in [top AI conferences and journals](publications/publications.html), and we take pride in [good engineering and open science](software/software.html) to build AI models and systems that are widely used by people every day.
 
-We are integrated in the [Data and AI cluster](https://dai.win.tue.nl/), which does excellent research in all aspects of AI.
+We are integrated in the [Data and AI cluster](https://dai.win.tue.nl/) at the [Eindhoven University of Technology], which does excellent research in all aspects of AI.
 
 ## Recent highlights
 
