@@ -1265,8 +1265,8 @@ supernet_transfer_nas:
   authors:
     - P. Singh
     - J. Vanschoren
-  year: 2024
-  venue: "arXiv preprint arXiv:2407.20279, 2024"
+  year: 2025
+  venue: "Conference on Lifelong Learning Agents (CoLLAs 2025)"
   preprint: "https://arxiv.org/abs/2407.20279"
 
 automated_time_series:
