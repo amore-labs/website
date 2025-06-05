@@ -2,54 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://openml-labs.github.io/website/publications/publications.html</loc>
-    <lastmod>2025-06-05T19:39:42.295Z</lastmod>
+    <lastmod>2025-06-05T19:42:06.847Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/notebooks/serena-introduction.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/notebooks/cldst-introduction.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/notebooks/adacl-introduction.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/index.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/people/people.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/join/join.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/blogs/blog.html</loc>
-    <lastmod>2025-06-05T19:39:42.259Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/projects/projects.html</loc>
-    <lastmod>2025-06-05T19:39:42.295Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/notebooks/cl_with_coreset-introduction.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://openml-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
+    <lastmod>2025-06-05T19:42:06.847Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/notebooks/amlb-introduction.html</loc>
-    <lastmod>2025-06-05T19:39:42.294Z</lastmod>
+    <lastmod>2025-06-05T19:42:06.846Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
+    <lastmod>2025-06-05T19:42:06.846Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/notebooks/cl_with_coreset-introduction.html</loc>
+    <lastmod>2025-06-05T19:42:06.846Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/projects/projects.html</loc>
+    <lastmod>2025-06-05T19:42:06.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/blogs/blog.html</loc>
+    <lastmod>2025-06-05T19:42:06.799Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/join/join.html</loc>
+    <lastmod>2025-06-05T19:42:06.846Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/people/people.html</loc>
+    <lastmod>2025-06-05T19:42:06.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/index.html</loc>
+    <lastmod>2025-06-05T19:42:06.846Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/notebooks/adacl-introduction.html</loc>
+    <lastmod>2025-06-05T19:42:06.846Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/notebooks/cldst-introduction.html</loc>
+    <lastmod>2025-06-05T19:42:06.847Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openml-labs.github.io/website/notebooks/malibo-blog.html</loc>
+    <lastmod>2025-06-05T19:42:06.847Z</lastmod>
   </url>
   <url>
     <loc>https://openml-labs.github.io/website/software/software.html</loc>
-    <lastmod>2025-06-05T19:39:42.296Z</lastmod>
+    <lastmod>2025-06-05T19:42:06.848Z</lastmod>
   </url>
 </urlset>
