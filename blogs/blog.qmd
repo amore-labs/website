@@ -84,7 +84,7 @@ for topic in topics:
     by_topic.append(f"<h2>{topic}</h2>")
     for nb in sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%Y-%m-%d"), reverse=True):
         if D[nb]["topic"] == topic:
-            by_topic.append(make_html_link(nb, D[nb], show_topic_tag=False, show_date_tag=True))
+            by_topic.append(make_html_link(nb, D[nb], show_topic_tag=True, show_date_tag=True))
 by_topic.append("</div>")
 display(HTML("".join(by_topic)))
 
@@ -92,7 +92,7 @@ display(HTML("".join(by_topic)))
 by_date = ['<div id="by-date">']
 sorted_nbs = sorted(D, key=lambda x: dt.strptime(D[x]["date"], "%Y-%m-%d"), reverse=True)
 for i, nb in enumerate(sorted_nbs):
-    by_date.append(make_html_link(nb, D[nb], show_topic_tag=True))
+    by_date.append(make_html_link(nb, D[nb], show_topic_tag=True, show_date_tag=True))
     if i < len(sorted_nbs) - 1:
         by_date.append('<hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">')
 by_date.append("</div>")

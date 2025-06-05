@@ -17,7 +17,7 @@ website:
       - join/join.qmd
     right:
       - icon: github
-        href: https://github.com/amore-labs/website
+        href: https://github.com/amore-labs
 
 format:
   html:
