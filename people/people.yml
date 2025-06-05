@@ -127,16 +127,18 @@ Prabhant Singh:
   scholar: https://scholar.google.com/citations?user=AGBlKsAAAAAJ
 
 Anna Vettoruzzo:
-  position: alumnus
+  position: postdoc
   description:
-    <name> received her B.Sc. degree in Information Engineering at the University of Padova, Italy, 
-    in 2019, and her M.Sc. degree in ICT for Internet and Multimedia at the University of Padova in 2021, with a focus 
-    on Machine Learning for Healthcare. Since 2021, she has been pursuing a Ph.D. degree in the field of machine learning 
-    at the School of Information Technology, Halmstad University, Sweden, under the supervision of Assoc. Prof. 
-    Mohamed-Rafik Bouguelia and Prof. Thorsteinn Rögnvaldsson. Her research interests include meta-learning, few-shot learning, 
-    continual learning, and, more broadly, enhancing the generalization capabilities of machine learning models.
+    <name> is a postdoctoral researcher contributing to the <a href="https://openeurollm.eu/" target="_blank">OpenEuroLLM</a> project, 
+    where she focuses on designing scalable model architectures for Large Language Models (LLMs) and developing efficient post-training techniques. 
+    She received her Ph.D. in machine learning from Halmstad University, Sweden, as part of the Center for Applied and Intelligent Systems Research (CAISR). 
+    Her doctoral research focused on enhancing the generalization capabilities of machine learning models through meta-learning, exploring how models can learn to learn.
+    Anna received her M.Sc. degree in ICT for Internet and Multimedia from the University of Padova, in 2021, with a focus 
+    on machine learning for healthcare. 
+    Her broader research interests include model generalization and adaptability, few-shot learning, 
+    continual learning, and in-context learning.
   picture: ../images/people/anna.webp
-  mail: anna.vettoruzzo@hh.se
+  mail: a.vettoruzzo@tue.nl
   scholar: https://scholar.google.com/citations?user=lKNNc5kAAAAJ
 
 Branislav Pecher:
