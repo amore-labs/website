@@ -1,11 +1,35 @@
-alfie:
-  title: "Assessment of Learning technologies and Frameworks for Intelligent and Ethical AI"
+elliot:
+  title: "ELLIOT: European Large Open Multi-modal Foundation Models"
   funding: EU Horizon Europe
-  year: 2024-2027
-  description: ALFIE aims to build an AutoML platform that streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values.
-  project_url: https://alfie-project.eu/
-  image: ../images/projects/alfie.webp
+  year: 2025-2030
+  description: ELLIOT aims to develop the next generation of Multimodal Space-Time Foundation Models. More info soon!
+  project_url: https://openml-labs.github.io/
+  image: ../images/projects/elliot.webp
 
+openeurollm:
+  title: "OpenEuroLLM: Open European Family of Large Language Models"
+  funding: EU Horizon Europe
+  year: 2025-2029
+  description: OpenEuroLLM aims to build an entirely open family of Large Language Models, publishing all data, code, and models in an open way.
+  project_url: https://openeurollm.eu/
+  image: ../images/projects/oel.webp
+
+llms4eu:
+  title: "LLMs4EU: Large Language Models for the European Union"
+  funding: Digital Europe
+  year: 2025-2029
+  description: LLMs4EU is OpenEuroLLMs sister project, aiming to develop infrastructure to robustly evaluate and exploit open LLMs. More info soon!
+  project_url: https://openml-labs.github.io/website 
+  image: ../images/projects/llms4eu.webp
+
+mosaic:
+  title: "MOSAIC: Electronic Components and Systems for our Automated Digital Future"
+  funding: EU Horizon Europe
+  year: 2025-2029
+  description: MOSAIC aims to develop the next generation of electronic components offering superior cognitive system intelligence, efficiency, and robustness. More info soon!
+  project_url: https://www.chips-ju.europa.eu/
+  image: ../images/projects/mosaic.webp
+  
 synergies:
   title: "SYNERGIES"
   funding: EU Horizon Europe
