@@ -1,3 +1,20 @@
+sensitivity_heating:
+  title: "In-depth sensitivity analysis of heating demand and overheating in Dutch terraced houses using interpretable machine learning."
+  authors:
+    - Alexis Cvetkov-Iliev
+    - Vasilis Soulios
+    - Luyi Xu
+    - Günsu Merin Abbas
+    - Evangelos Kyrou
+    - Lisanne Havinga
+    - Pieter Jan Hoes
+    - Roel Loonen
+    - Joaquin Vanschoren
+  year: 2025
+  venue: "Energy & Buildings, 337, no. 11561"
+  pdf: https://pure.tue.nl/ws/portalfiles/portal/355604290/1-s2.0-S037877882500341X-main.pdf
+  published_url: https://www.sciencedirect.com/science/article/pii/S037877882500341X
+
 openml:
   title: "OpenML: Networked Science in Machine Learning"
   authors:

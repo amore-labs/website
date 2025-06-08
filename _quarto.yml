@@ -4,7 +4,6 @@ project:
 website:
   title: "<span style='color:#E41B17;font-weight:bold'>AMOR/e</span>"
   navbar:
-    background: light
     logo: "images/logo2.png"
     collapse-below: lg
     left:
@@ -21,6 +20,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: [cosmo, styles.scss]
+    respect-user-color-scheme: true
     css: styles.css
     toc: true

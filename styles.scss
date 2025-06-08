@@ -1,0 +1,9 @@
+/*-- scss:defaults --*/
+
+// 1. Import fonts
+@import url('https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500,700,900&display=swap');
+
+// 2. Override the Bootstrap/Cosmo theme's default font
+$font-family-sans-serif: "Google Sans", sans-serif;
+
+/*-- scss:rules --*/

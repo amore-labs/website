@@ -6,8 +6,6 @@ section-divs: false
 keep-md: true
 ---
 
-***
-
 ```{python}
 import yaml
 from IPython.display import display, Markdown, HTML
