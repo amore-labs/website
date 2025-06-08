@@ -3,6 +3,7 @@ project:
 
 website:
   title: "<span style='color:#E41B17;font-weight:bold'>AMOR/e</span>"
+  favicon: images/favicon.ico 
   navbar:
     logo: "images/logo2.png"
     collapse-below: lg
