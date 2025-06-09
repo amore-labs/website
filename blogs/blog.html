@@ -37,10 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-43a9e23d91fb67c21beb7929c13cfb55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3bb020294f6ba0f93e9b9ebaacb6bed8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-7356e5ce893c626425a64034c05203a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3bb020294f6ba0f93e9b9ebaacb6bed8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,7 +80,178 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -134,19 +309,21 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -155,7 +332,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -168,211 +345,485 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="controls" style="margin-bottom: 3em; margin-top: -1em; text-align: center;">
+    <label><strong>Sort by:</strong></label>
+    <select id="sort-mode" onchange="updateView()">
+        <option value="date" selected="">Date</option>
+        <option value="topic">Type</option>
+    </select>
+    <label style="margin-left: 1em;"><strong>View:</strong></label>
+    <select id="view-mode" onchange="updateView()">
+        <option value="list">List</option>
+        <option value="card" selected="">Cards</option>
+    </select>
+</div>
+<div id="blog-container">
+</div>
 <script>
-function toggleView() {
-    let mode = document.getElementById("sort-mode").value;
-    document.getElementById("by-topic").style.display = mode === "topic" ? "block" : "none";
-    document.getElementById("by-date").style.display = mode === "date" ? "block" : "none";
+function updateView() {
+    const sortMode = document.getElementById("sort-mode").value;
+    const viewMode = document.getElementById("view-mode").value;
+    const allSections = document.querySelectorAll('.blog-section');
+    allSections.forEach(section => section.style.display = 'none');
+    const selected = document.getElementById(`by-${sortMode}-${viewMode}`);
+    if (selected) selected.style.display = 'block';
 }
-
-window.addEventListener("DOMContentLoaded", toggleView);
+document.addEventListener("DOMContentLoaded", updateView);
 </script>
-
-<label for="sort-mode"><strong>Sort by:</strong></label>
-<select id="sort-mode" onchange="toggleView()" style="margin-bottom: 1em;">
-    <option value="topic">Topic</option>
-    <option value="date" selected="">Date</option>
-</select>
-<div id="by-topic" style="display:none;"><h2 class="anchored">Analysis</h2>
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/datadiet/datadietcl.webp">
+<div class="blog-section" id="by-date-list" style="display:none;">
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/datadiet/datadietcl.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/cl_with_coreset-introduction.html" class="blog-title"><strong>Continual Learning with Informative Samples</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
-                <p>We show how continual learning benefits from selecting only the more informative (or surprising) new data points. Based on our paper "Continual Learning with Informative Samples - An Empirical Evaluation of Coreset Strategies".</p>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
+                <p>We show how continual learning benefits from selecting only the more informative (or surprising) new data points.".</p>
             </div>
         </div>
     </div>
     
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/cldst/brain.webp ">
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/adacl/teaser.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/adacl-introduction.html" class="blog-title"><strong>Adaptive Continual Learning</strong></a>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">ContinualAI Unconference 2023</span></div>
+                <p>We introduce AdaCL, a new method that optimally adapts continual learning hyperparameters to every new task.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/cldst/brain.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">CPAL 2024</span></div>
+                <p>We show how sparse training helps us learn much faster while forgetting less. Based on our CPAL paper "Continual Learning with Dynamic Sparse Training".</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/malibo/malibo_features.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/malibo-blog.html" class="blog-title"><strong>Meta-learning for Likelihood-free Bayesian Optimization</strong></a>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">ICML 2024</span></div>
+                <p>We introduce MALIBO, a novel and scalable framework that leverages meta-learning for fast and efficient Bayesian optimization.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/serena/teaser.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/serena-introduction.html" class="blog-title"><strong>Self-Regulated Neurogenesis for Online Data-Incremental Learning</strong></a>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">CoLLAs 2025</span></div>
+                <p>We present SERENA, a neuro-inspired solution for continual learning that mimics the self-regulated neurogenesis process in the human brain.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/amlb/amlb-boat-or-car.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Benchmarking</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-12-06</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">JMLR</span></div>
+                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/openmlxsci/openmlxsci-1.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Hackathon</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-09-19</span></div>
+                <p>We visited Probabl in Paris to discuss open source and open science. </p>
+            </div>
+        </div>
+    </div>
+    </div><div class="blog-section" id="by-date-card"><div class="card-container" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5em;">
+    <a href="../notebooks/cl_with_coreset-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/datadiet/datadietcl.webp" alt="Continual Learning with Informative Samples" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Analysis</span>
+    </div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Continual Learning with Informative Samples</h4>
+            <p class="card-text">We show how continual learning benefits from selecting only the more informative (or surprising) new data points.".</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    
+    <a href="../notebooks/adacl-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/adacl/teaser.webp" alt="Adaptive Continual Learning" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Method</span>
+    <span class="tag">ContinualAI Unconference 2023</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Adaptive Continual Learning</h4>
+            <p class="card-text">We introduce AdaCL, a new method that optimally adapts continual learning hyperparameters to every new task.</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    
+    <a href="../notebooks/cldst-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/cldst/brain.webp " alt="Continual Learning with Dynamic Sparse Training" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Analysis</span>
+    <span class="tag">CPAL 2024</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Continual Learning with Dynamic Sparse Training</h4>
+            <p class="card-text">We show how sparse training helps us learn much faster while forgetting less. Based on our CPAL paper "Continual Learning with Dynamic Sparse Training".</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    
+    <a href="../notebooks/malibo-blog.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/malibo/malibo_features.png" alt="Meta-learning for Likelihood-free Bayesian Optimization" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Method</span>
+    <span class="tag">ICML 2024</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Meta-learning for Likelihood-free Bayesian Optimization</h4>
+            <p class="card-text">We introduce MALIBO, a novel and scalable framework that leverages meta-learning for fast and efficient Bayesian optimization.</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    
+    <a href="../notebooks/serena-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/serena/teaser.webp " alt="Self-Regulated Neurogenesis for Online Data-Incremental Learning" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Method</span>
+    <span class="tag">CoLLAs 2025</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Self-Regulated Neurogenesis for Online Data-Incremental Learning</h4>
+            <p class="card-text">We present SERENA, a neuro-inspired solution for continual learning that mimics the self-regulated neurogenesis process in the human brain.</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    
+    <a href="../notebooks/amlb-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/amlb/amlb-boat-or-car.webp " alt="The AutoML Benchmark" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Benchmarking</span>
+    <span class="tag">JMLR</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">The AutoML Benchmark</h4>
+            <p class="card-text">About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2024-12-06</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    
+    <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/openmlxsci/openmlxsci-1.webp " alt="OpenML x Probabl Hackathon" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Hackathon</span>
+    </div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">OpenML x Probabl Hackathon</h4>
+            <p class="card-text">We visited Probabl in Paris to discuss open source and open science. </p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2024-09-19</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    </div></div><div class="blog-section" id="by-topic-list" style="display:none;"><h2 class="anchored">Analysis</h2>
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/datadiet/datadietcl.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/cl_with_coreset-introduction.html" class="blog-title"><strong>Continual Learning with Informative Samples</strong></a>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
+                <p>We show how continual learning benefits from selecting only the more informative (or surprising) new data points.".</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/cldst/brain.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.3em;">
+                <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">CPAL 2024</span></div>
                 <p>We show how sparse training helps us learn much faster while forgetting less. Based on our CPAL paper "Continual Learning with Dynamic Sparse Training".</p>
             </div>
         </div>
     </div>
     <h2 class="anchored">Benchmarking</h2>
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/amlb/amlb-boat-or-car.webp ">
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/amlb/amlb-boat-or-car.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Benchmarking</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-12-06</span></div>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Benchmarking</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-12-06</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">JMLR</span></div>
                 <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
             </div>
         </div>
     </div>
     <h2 class="anchored">Hackathon</h2>
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/openmlxsci/openmlxsci-1.webp ">
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/openmlxsci/openmlxsci-1.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Hackathon</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-09-19</span></div>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Hackathon</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-09-19</span></div>
                 <p>We visited Probabl in Paris to discuss open source and open science. </p>
             </div>
         </div>
     </div>
     <h2 class="anchored">Method</h2>
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/adacl/teaser.webp">
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/adacl/teaser.webp" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/adacl-introduction.html" class="blog-title"><strong>Adaptive Continual Learning</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">ContinualAI Unconference 2023</span></div>
                 <p>We introduce AdaCL, a new method that optimally adapts continual learning hyperparameters to every new task.</p>
             </div>
         </div>
     </div>
     
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/malibo/malibo_features.png">
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/malibo/malibo_features.png" style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/malibo-blog.html" class="blog-title"><strong>Meta-learning for Likelihood-free Bayesian Optimization</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">ICML 2024</span></div>
                 <p>We introduce MALIBO, a novel and scalable framework that leverages meta-learning for fast and efficient Bayesian optimization.</p>
             </div>
         </div>
     </div>
     
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/serena/teaser.webp ">
+    <div class="blog-entry" style="margin-bottom: 1.5em;">
+        <div class="blog-entry-flex" style="display:flex; gap: 2em;">
+            <div class="blog-image" style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
+                <img src="../images/blogs/serena/teaser.webp " style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="../notebooks/serena-introduction.html" class="blog-title"><strong>Self-Regulated Neurogenesis for Online Data-Incremental Learning</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
+                <div><span class="tag" style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span class="tag" style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span> <span class="tag" style="background:#ddd; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">CoLLAs 2025</span></div>
                 <p>We present SERENA, a neuro-inspired solution for continual learning that mimics the self-regulated neurogenesis process in the human brain.</p>
             </div>
         </div>
     </div>
-    </div>
-<div id="by-date">
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/datadiet/datadietcl.webp">
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/cl_with_coreset-introduction.html" class="blog-title"><strong>Continual Learning with Informative Samples</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
-                <p>We show how continual learning benefits from selecting only the more informative (or surprising) new data points. Based on our paper "Continual Learning with Informative Samples - An Empirical Evaluation of Coreset Strategies".</p>
-            </div>
+    </div><div class="blog-section" id="by-topic-card" style="display:none;"><h2 class="anchored">Analysis</h2><div class="card-container" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5em;">
+    <a href="../notebooks/cl_with_coreset-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/datadiet/datadietcl.webp" alt="Continual Learning with Informative Samples" style="width:100%; height:100%; object-fit:cover;">
         </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Analysis</span>
     </div>
-    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/adacl/teaser.webp">
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/adacl-introduction.html" class="blog-title"><strong>Adaptive Continual Learning</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
-                <p>We introduce AdaCL, a new method that optimally adapts continual learning hyperparameters to every new task.</p>
-            </div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Continual Learning with Informative Samples</h4>
+            <p class="card-text">We show how continual learning benefits from selecting only the more informative (or surprising) new data points.".</p>
         </div>
-    </div>
-    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/cldst/brain.webp ">
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/cldst-introduction.html" class="blog-title"><strong>Continual Learning with Dynamic Sparse Training</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Analysis</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
-                <p>We show how sparse training helps us learn much faster while forgetting less. Based on our CPAL paper "Continual Learning with Dynamic Sparse Training".</p>
-            </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
         </div>
-    </div>
-    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/malibo/malibo_features.png">
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/malibo-blog.html" class="blog-title"><strong>Meta-learning for Likelihood-free Bayesian Optimization</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
-                <p>We introduce MALIBO, a novel and scalable framework that leverages meta-learning for fast and efficient Bayesian optimization.</p>
-            </div>
+    </a>
+    
+    <a href="../notebooks/cldst-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/cldst/brain.webp " alt="Continual Learning with Dynamic Sparse Training" style="width:100%; height:100%; object-fit:cover;">
         </div>
-    </div>
-    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/serena/teaser.webp ">
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/serena-introduction.html" class="blog-title"><strong>Self-Regulated Neurogenesis for Online Data-Incremental Learning</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Method</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2025-06-04</span></div>
-                <p>We present SERENA, a neuro-inspired solution for continual learning that mimics the self-regulated neurogenesis process in the human brain.</p>
-            </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Analysis</span>
+    <span class="tag">CPAL 2024</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Continual Learning with Dynamic Sparse Training</h4>
+            <p class="card-text">We show how sparse training helps us learn much faster while forgetting less. Based on our CPAL paper "Continual Learning with Dynamic Sparse Training".</p>
         </div>
-    </div>
-    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/amlb/amlb-boat-or-car.webp ">
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/amlb-introduction.html" class="blog-title"><strong>The AutoML Benchmark</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Benchmarking</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-12-06</span></div>
-                <p>About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
-            </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
         </div>
-    </div>
-    <hr style="border:none; border-top:1px solid #ccc; margin: 1.5em 0;">
-    <div class="blog-entry" style="margin-bottom: 1em;">
-        <div class="blog-entry-flex">
-            <div class="blog-image">
-                <img src="../images/blogs/openmlxsci/openmlxsci-1.webp ">
-            </div>
-            <div style="display: flex; flex-direction: column; gap: 0.3em;">
-                <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-title"><strong>OpenML x Probabl Hackathon</strong></a>
-                <div><span style="background:#eee; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">Hackathon</span> <span style="background:#f5f5f5; border-radius:4px; padding:0.1em 0.4em; font-size:0.8em;">2024-09-19</span></div>
-                <p>We visited Probabl in Paris to discuss open source and open science. </p>
-            </div>
+    </a>
+    </div><h2 class="anchored">Benchmarking</h2><div class="card-container" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5em;">
+    <a href="../notebooks/amlb-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/amlb/amlb-boat-or-car.webp " alt="The AutoML Benchmark" style="width:100%; height:100%; object-fit:cover;">
         </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Benchmarking</span>
+    <span class="tag">JMLR</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">The AutoML Benchmark</h4>
+            <p class="card-text">About why we wrote our paper <it>"AMLB: an AutoML Benchmark"</it> and its main contributions.</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2024-12-06</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    </div><h2 class="anchored">Hackathon</h2><div class="card-container" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5em;">
+    <a href="../notebooks/OpenMLxProbabl-hackathon.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/openmlxsci/openmlxsci-1.webp " alt="OpenML x Probabl Hackathon" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Hackathon</span>
     </div>
-    </div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">OpenML x Probabl Hackathon</h4>
+            <p class="card-text">We visited Probabl in Paris to discuss open source and open science. </p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2024-09-19</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    </div><h2 class="anchored">Method</h2><div class="card-container" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5em;">
+    <a href="../notebooks/adacl-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/adacl/teaser.webp" alt="Adaptive Continual Learning" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Method</span>
+    <span class="tag">ContinualAI Unconference 2023</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Adaptive Continual Learning</h4>
+            <p class="card-text">We introduce AdaCL, a new method that optimally adapts continual learning hyperparameters to every new task.</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    
+    <a href="../notebooks/malibo-blog.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/malibo/malibo_features.png" alt="Meta-learning for Likelihood-free Bayesian Optimization" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Method</span>
+    <span class="tag">ICML 2024</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Meta-learning for Likelihood-free Bayesian Optimization</h4>
+            <p class="card-text">We introduce MALIBO, a novel and scalable framework that leverages meta-learning for fast and efficient Bayesian optimization.</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    
+    <a href="../notebooks/serena-introduction.html" class="blog-card" style="border:1px solid #ccc; border-radius:1em; overflow:hidden; text-decoration:none; margin-bottom:1em;">
+        <div class="card-image" style="aspect-ratio:16/9; overflow:hidden;">
+            <img src="../images/blogs/serena/teaser.webp " alt="Self-Regulated Neurogenesis for Online Data-Incremental Learning" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+        <div class="card-content" style="padding:1em;">
+            
+    <div class="blog-tags">
+        <span class="tag">Method</span>
+    <span class="tag">CoLLAs 2025</span></div>
+            <h4 class="card-title anchored" style="margin:0.5em 0;">Self-Regulated Neurogenesis for Online Data-Incremental Learning</h4>
+            <p class="card-text">We present SERENA, a neuro-inspired solution for continual learning that mimics the self-regulated neurogenesis process in the human brain.</p>
+        </div>
+        <div class="card-footer" style="display:flex; justify-content:space-between; padding:0 1em 1em 1em;">
+            <span class="card-date">2025-06-04</span>
+            <span class="card-icon">➤</span>
+        </div>
+    </a>
+    </div></div>
 
 
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

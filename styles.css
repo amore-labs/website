@@ -16,7 +16,6 @@
 
 .box {
   padding: 0 15px 15px;
-  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid #e0e0e0;
@@ -72,7 +71,7 @@ section > h1 {
   padding-bottom: 0.5rem;
 }
 
-/* Responsive blog posts */
+/* Responsive blog posts and cards */
 
 .blog-entry-flex {
   display: flex;
@@ -94,6 +93,73 @@ section > h1 {
   object-position: top left;
 }
 
+.view-toggle {
+  margin-bottom: 1em;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease;
+}
+.blog-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card-image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #fafafa; /* slightly darker than white */
+  border-bottom: 1px solid #ddd; /* thin divider line */
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(97%);
+
+}
+
+.card-content {
+  padding: 1em;
+  flex: 1 1 auto; /* allow it to grow */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.card-title {
+  margin: 0.3em 0;
+}
+.card-text {
+  font-size: 0.95em;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8em 1em;
+  font-size: 0.8em;
+}
+.blog-tags .tag {
+  border: 1px solid #ddd;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.75em;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300, 1fr));
+  gap: 1.5em;
+}
+.card-container > .blog-card {
+  height: 100%;
+}
+
 @media (max-width: 768px) {
   .blog-entry-flex {
     flex-direction: column;
@@ -111,6 +177,43 @@ section > h1 {
     object-fit: contain;
     object-position: center;
   }
+}
+
+
+/* Dark mode fixes */
+
+select {
+  background-color: var(--select-bg, #fff);
+  color: var(--select-text, #000);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.3em 0.6em;
+}
+
+.btn {
+  margin-top: 10px;
+  background-color: var(--select-bg, #fff);
+  color: var(--select-text, #000);
+}
+
+.list-group-item {
+  background-color: inherit !important
+}
+
+#quarto-document-content img{
+  background-color: #fff;
+}
+
+.quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  transform: scale(1.5);
+  display: inline-block; /* required to make transform work */
+  transform-origin: center;
+}
+
+.quarto-color-scheme-toggle .bi::before {
+  transform: scale(1.5);
+  display: inline-block; /* required to make transform work */
+  transform-origin: center;
 }
 
 /* People styles */
