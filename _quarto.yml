@@ -6,6 +6,7 @@ website:
   favicon: images/favicon.ico 
   navbar:
     logo: "images/logo2.png"
+    background: "dark"
     collapse-below: lg
     left:
       - index.qmd

@@ -23,42 +23,38 @@ We are integrated in the [Data and AI cluster](https://dai.win.tue.nl/), which d
 
 ## Recent highlights
 
-::::: {.box-container}
-::: {.grid}
-::: {.g-col-12 .g-col-md-4}
+:::: {.masonry}
 
 ::: {.box}
+
 #### We are hiring!
+Our team is growing! We have **8 new openings** for [PhD students, PostDocs, and Research Engineers](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1) for research on large language models and multimodal foundation models. Apply now!
 
----
-
-Our team is growing! We have 7 new openings for [PhD students, PostDocs, and Research Engineers](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1) for research on foundation models,
-AutoML, and industry collaboration. Apply now!
-:::
 :::
 
-::: {.g-col-12 .g-col-md-4}
 ::: {.box}
-#### NeurIPS 2024 Spotlight for Croissant
 
----
+#### Two new papers at CoLLAs 2025!
+We're presenting **SERENA**, a surprisingly efficient neuro-inspired approach for continual learning using sparse models, as well as **SuperNet Transfer**, a new method that efficiently adapts neural architectures during transfer learning.
 
+:::
+
+::: {.box}
+
+#### NeurIPS Spotlight for Croissant
 Croissant is a new standard for describing machine learning datasets, making it easier to share and reuse data and load it automatically into AI libraries. Joined work with Google, HuggingFace, Kaggle, MLCommons, and many more. Join us at NeurIPS 2024!
-:::
+
 :::
 
-::: {.g-col-12 .g-col-md-4}
 ::: {.box}
-#### ICML 2024 Spotlight for MALIBO 
 
----
-
+#### ICML Spotlight for MALIBO
 MALIBO is a neural network that meta-learns how to tune hyperparameters - it learns across many prior tasks to tune models much more efficiently than other techniques. Jiarong Pan will present his work as a spotlight talk at ICML 2024.
-:::
-:::
 
 :::
-:::::
+
+:::: 
+
 
 ## Join us!
 **PhD, PostDoc, or AI Engineer positions**: [please check out our open positions](join/join.html). Without an open position, you need to be self-funded or have a scholarship.
@@ -72,6 +68,6 @@ MALIBO is a neural network that meta-learns how to tune hyperparameters - it lea
 **Address:** Groene Loper 5, Metaforum 7.104, 5600 MB Eindhoven, The Netherlands
 
 
-<div style="height: 3rem;"></div>
+<div style="height: 9rem;"></div>
 ***
 This website is powered by [Quarto](https://quarto.org/), with thanks to [Drew Dimmery](https://ddimmery.com/posts/quarto-website).

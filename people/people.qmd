@@ -12,66 +12,22 @@ from string import Template
 
 def make_person_description(name, attrs):
     s = """
-        <html>
-            <style>
-                .container {
-                    display: flex;
-                    align-items: flex-start;
-                    justify-content: center;
-                }
-
-                .image-container {
-                    flex-shrink: 0;
-                    width: 150px;
-                    margin-right: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-
-                img {
-                    max-width: 100%;
-                    max-height: 100%;
-                }
-
-                .text-container {
-                    display: flex;
-                    flex-direction: column; /* Stack description and icons vertically */
-                    align-items: flex-start; /* Align content to the left */
-                    padding: 10px;
-                }
-                
-                .social-icons {
-                    display: flex;
-                    justify-content: center;
-                }
-
-                .social-icons a {
-                    width: 20px; /* Adjust size as needed */
-                    margin: 0 10px; /* Adjust spacing */
-                    text-decoration: none;
-                }
-            </style>
-            <body>
-                <div class="container">
-                    <div class="image-container">
-                        <img src="$picture">
-                    </div>
-                    <div class="text-container">
-                        <div class="text">
-                            $description
-                        </div>
-                        <div class="social-icons">
-                            $mail
-                            $linkedin
-                            $scholar
-                            $personal
-                        </div>
-                    </div>
-                </div>
-            </body>
-            <br>
-        </html>
+    <div class="container">
+        <div class="image-container">
+            <img src="$picture">
+        </div>
+        <div class="text-container">
+            <div class="text">
+                $description
+            </div>
+            <div class="social-icons">
+                $mail
+                $linkedin
+                $scholar
+                $personal
+            </div>
+        </div>
+    </div>
     """
     template = Template(s)
     description = "<p>" + attrs["description"] + "</p>"

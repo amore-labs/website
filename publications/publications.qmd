@@ -80,7 +80,7 @@ for key, data in yaml_data.items():
             f"<b>{title_str}</b><br>{author_str}<br><em>{venue} ({year_str})</em><br>"
             f"{' '.join(buttons)}"
         )  
-    pub_strs["pubs"][year_str].append(f"<li class='list-group-item'>{content_html}</li>")
+    pub_strs["pubs"][year_str].append(f"<li class='list-group-item'>{content_html}</li><hr>")
 ```
 
 ```{python}

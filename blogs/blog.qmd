@@ -28,10 +28,9 @@ def make_html_link(nb, attributes, show_topic_tag=False, show_date_tag=False):
 
     s = f"""
     <div class="blog-entry" style="margin-bottom: 1em;">
-        <div style="display:flex; gap: 2em;">
-            <div style="flex-shrink:0; width: 30%; aspect-ratio: 4 / 3; overflow: hidden;">
-                <img src="../images/blogs/$image"
-                     style="width: 100%; height: 100%; object-fit: cover; object-position: top left;">
+        <div class="blog-entry-flex">
+            <div class="blog-image">
+                <img src="../images/blogs/$image">
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.3em;">
                 <a href="$nb" class="blog-title"><strong>$title</strong></a>
