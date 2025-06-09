@@ -6,7 +6,7 @@ website:
   favicon: images/favicon.ico 
   navbar:
     logo: "images/logo2.png"
-    background: "dark"
+    background: "primary"
     collapse-below: lg
     left:
       - index.qmd
@@ -22,7 +22,9 @@ website:
 
 format:
   html:
-    theme: [cosmo, styles.scss]
+    theme:
+      light: [flatly, styles.scss]
+      dark: [darkly, styles.scss]
     respect-user-color-scheme: true
     css: styles.css
     toc: true
