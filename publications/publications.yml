@@ -1334,15 +1334,15 @@ continual_learning_diet:
   venue: "arXiv preprint arXiv:2410.17715, 2024"
   preprint: "https://arxiv.org/abs/2410.17715"
 
-focil_sparse_experts:
-  title: "FOCIL: Finetune-and-Freeze for Online Class Incremental Learning by Training Randomly Pruned Sparse Experts"
+serena:
+  title: "Self-Regulated Neurogenesis for Online Data-Incremental Learning"
   authors:
     - M. O. Yildirim
     - E. C. Gok Yildirim
     - D. C. Mocanu
     - J. Vanschoren
-  year: 2024
-  venue: "arXiv preprint arXiv:2403.14684, 2024"
+  year: 2025
+  venue: "Conference on Lifelong Learning Agents (CoLLAs)"
   preprint: "https://arxiv.org/abs/2403.14684"
 
 continual_test_time_adaptation:
