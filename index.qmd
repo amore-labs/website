@@ -8,7 +8,7 @@ _Also known locally as the Automated Machine Learning lab ;)_
 ![Our team on a retreat near the sea.](images/group_image2.webp)  
 
 ## Mission
-<b>Our mission is to scientifically understand and build AI systems with advanced capabilities, and make AI accessible to all to benefit all of humanity.</b>
+<b>Our mission is to scientifically understand and build AI systems with advanced capabilities, and make AI accessible to benefit all of humanity.</b>
 
 We invent new neural network architectures and train them in new ways to learn better and faster, study models systematically, and use our insights to automate this process so 
 that AI systems can self-assemble and optimize themselves. Everything we create is open-source and crafted with user-friendliness in mind.
