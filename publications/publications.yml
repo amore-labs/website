@@ -1278,7 +1278,7 @@ clams_model_selection:
   preprint: "https://arxiv.org/abs/2407.11286"
 
 supernet_transfer_nas:
-  title: "Robust and Efficient Transfer Learning via Supernet Transfer in Warm-Started Neural Architecture Search"
+  title: "On Supernet Transfer Learning for Effective Task Adaptation"
   authors:
     - P. Singh
     - J. Vanschoren
