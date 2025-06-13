@@ -29,6 +29,13 @@ mosaic:
   description: MOSAIC aims to develop the next generation of electronic components offering superior cognitive system intelligence, efficiency, and robustness. More info soon!
   project_url: https://www.chips-ju.europa.eu/
   image: ../images/projects/mosaic.webp
+
+alfie:
+  title: "Assessment of Learning technologies and Frameworks for Intelligent and Ethical AI"
+  funding: EU Horizon Europe
+  year: 2025-2028
+  description: ALFIE aims to harness AI responsibly with essential skills, ethical practices, and people-centered, trustworthy AI. Our AutoML platform streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values. Together, we’ll build a transparent, democratic AI ecosystem for the public good.
+  project_url: https://alfie-project.eu/
   
 synergies:
   title: "SYNERGIES"
