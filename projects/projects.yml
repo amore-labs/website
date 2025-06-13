@@ -36,6 +36,7 @@ alfie:
   year: 2025-2028
   description: ALFIE aims to harness AI responsibly with essential skills, ethical practices, and people-centered, trustworthy AI. Our AutoML platform streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values. Together, we’ll build a transparent, democratic AI ecosystem for the public good.
   project_url: https://alfie-project.eu/
+  image: ../images/projects/alfie.webp
   
 synergies:
   title: "SYNERGIES"
