@@ -1,3 +1,24 @@
+tosca:
+  title: "Sculpting [CLS] Features for Pre-Trained Model-Based Class-Incremental Learning"
+  authors:
+    - M. O. Yildirim
+    - E. C. Gok Yildirim
+    - J. Vanschoren
+  year: 2025
+  venue: "arXiv preprint arXiv:2502.14762, 2025"
+  preprint: "https://arxiv.org/abs/2502.14762"
+
+serena:
+  title: "Self-Regulated Neurogenesis for Online Data-Incremental Learning"
+  authors:
+    - M. O. Yildirim
+    - E. C. Gok Yildirim
+    - D. C. Mocanu
+    - J. Vanschoren
+  year: 2025
+  venue: "Conference on Lifelong Learning Agents (CoLLAs)"
+  preprint: "https://arxiv.org/abs/2403.14684"
+
 sensitivity_heating:
   title: "In-depth sensitivity analysis of heating demand and overheating in Dutch terraced houses using interpretable machine learning."
   authors:
@@ -1333,17 +1354,6 @@ continual_learning_diet:
   year: 2024
   venue: "arXiv preprint arXiv:2410.17715, 2024"
   preprint: "https://arxiv.org/abs/2410.17715"
-
-serena:
-  title: "Self-Regulated Neurogenesis for Online Data-Incremental Learning"
-  authors:
-    - M. O. Yildirim
-    - E. C. Gok Yildirim
-    - D. C. Mocanu
-    - J. Vanschoren
-  year: 2025
-  venue: "Conference on Lifelong Learning Agents (CoLLAs)"
-  preprint: "https://arxiv.org/abs/2403.14684"
 
 continual_test_time_adaptation:
   title: "Evaluating Continual Test-Time Adaptation for Contextual and Semantic Domain Shifts"
