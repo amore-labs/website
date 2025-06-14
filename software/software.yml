@@ -31,3 +31,19 @@
     philosophies, please have a look at the [AutoML Toolkit](https://github.com/automl/amltk).
   website: https://openml-labs.github.io/gama
   github: https://github.com/openml-labs/gama
+
+- title: "SERENA"
+  order: 3
+  description:
+    Self-Regulated Neurogenesis for Online Data-Incremental Learning (SERENA) is a neuro-inspired lightweight and 
+    efficient method for Online Data-Incremental Learning, designed to continually adapt to streaming 
+    data without forgetting the past knowledge.
+  github: https://github.com/amore-labs/serena
+
+- title: "CL-with-DST"
+  order: 4
+  description:
+    Continual Learning with Dynamic Sparse Training (CL-with-DST) investigates the evolution of sparse network topologies
+    within the continual learning framework, where data arrives sequentially in a streaming fashion. This approach dynamically 
+    adapts the sparse structure of the network over time, enabling efficient learning from non-stationary data while mitigating forgetting.
+  github: https://github.com/amore-labs/cl-with-dst
