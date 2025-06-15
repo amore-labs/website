@@ -7,7 +7,7 @@ CAMeLU:
     - Marlena Nowaczyk
   year: 2025
   venue: "International Conference on Learning Representations (ICLR)"
-  preprint: "https://openreview.net/pdf?id=Jprs1v2wPA"
+  pdf: "https://openreview.net/pdf?id=Jprs1v2wPA"
 
 tosca:
   title: "Sculpting [CLS] Features for Pre-Trained Model-Based Class-Incremental Learning"
@@ -17,7 +17,7 @@ tosca:
     - J. Vanschoren
   year: 2025
   venue: "arXiv preprint arXiv:2502.14762, 2025"
-  pdf: "https://arxiv.org/abs/2502.14762"
+  preprint: "https://arxiv.org/abs/2502.14762"
 
 serena:
   title: "Self-Regulated Neurogenesis for Online Data-Incremental Learning"
