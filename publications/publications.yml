@@ -18,6 +18,7 @@ serena:
   year: 2025
   venue: "Conference on Lifelong Learning Agents (CoLLAs)"
   preprint: "https://arxiv.org/abs/2403.14684"
+  github: https://github.com/amore-labs/serena
 
 sensitivity_heating:
   title: "In-depth sensitivity analysis of heating demand and overheating in Dutch terraced houses using interpretable machine learning."
@@ -509,6 +510,7 @@ dynamic_sparse_training:
   year: 2024
   venue: "Conference on Parsimony and Learning (CPAL 2024), 94--107"
   published_url: "https://proceedings.mlr.press/v234/yildirim24a.html"
+  github: https://github.com/amore-labs/cl-with-dst
 
 hytas_analysis:
   title: "HyTAS: A Hyperspectral Image Transformer Architecture Search Benchmark and Analysis"
