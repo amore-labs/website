@@ -9,6 +9,18 @@ CAMeLU:
   venue: "International Conference on Learning Representations (ICLR)"
   pdf: "https://openreview.net/pdf?id=Jprs1v2wPA"
 
+medtransfer:
+  title: "On dataset transferability in medical image classification"
+  authors:
+    - Dovile Juodelyte
+    - Enzo Ferrante
+    - Prabhant Singh
+    - Joaquin Vanschoren
+    - Veronika Cheplygina
+  year: 2024
+  venue: "arXiv:2412.20172v1"
+  pdf: "https://arxiv.org/pdf/2412.20172"
+
 tosca:
   title: "Sculpting [CLS] Features for Pre-Trained Model-Based Class-Incremental Learning"
   authors:
