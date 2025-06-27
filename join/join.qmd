@@ -22,8 +22,14 @@ and experts and lead a new wave for research into transparent, efficient, high-p
 **[2-year position]** 
 
 #### [Research Engineer in Open-Source Multimodal Foundation Models](https://www.tue.nl/en/working-at-tue/vacancy-overview/research-engineer-in-multi-modal-open-source-foundation-models) (1 position)
-We are looking for an exceptional research engineer with a passion for AI and open-source development. In this role, you will design and 
-build cutting-edge tools and software that will shape the future of foundation models, used by millions of people worldwide. You'll be part of a strong team including several PhD students and post-doctoral researchers. Also see the two positions above for more details on the project.
+We are looking for an exceptional research engineer with a passion for AI and open-source development. 
+In this role, you will design and build cutting-edge tools and software that will shape the future of foundation models, used by millions of people worldwide.
+
+The work is carried out as part of the [ELLIOT](https://apigateway.agilitypr.com/distributions/history/52135e0b-9025-48a8-9120-2490054de249) project,a project with a large consortium building multi-modal generalist foundation models (MGFMs). Within the project, we are the lead on the evaluation and testing of the MGFMs. As a research engineer, this means you will be focused on developing frameworks and pipelines to achieve this. It is primarily an engineering role, addressing the challenges of automatically and efficiently evaluating these very large models to enable a quick feedback loop for researchers working on e.g., fine-tuning techniques. There should also be supporting infrastructure of this pipeline, such as the collection of rich meta-data of the evaluation, a dashboard for monitoring, and orchestration tooling. We also have participating roles in tasks such as the evaluation of MGFMs on new modalities, AI safety, and explainability.
+
+You'll be part of a strong team including several PhD students and post-doctoral researchers, among which two PhDs and one Postdoc that are also part of the ELLIOT project. They will focus more on the research, primarily fine-tuning methods. Of course, you will be closely collaborating with them and support their work. Within AMOR/e lab, we have a group of research engineers across a variety of projects, as well as engineers and researchers working on two other European LLM/FM projects.
+
+Also see the two positions above for more details on the project.
 **[4 year position]** 
 
 #### [PhD in Open-Source Large Language Models](https://www.tue.nl/en/working-at-tue/vacancy-overview/phd-on-open-source-large-language-models) (1 position)
