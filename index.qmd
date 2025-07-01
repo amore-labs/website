@@ -63,7 +63,7 @@ MALIBO is a neural network that meta-learns how to tune hyperparameters - it lea
 
 
 ## Contact
-**E-mail:** [openml-labs@tue.nl](mailto:openml-labs@tue.nl)
+**E-mail:** [amore@tue.nl](mailto:amore@tue.nl)
 
 **Address:** Groene Loper 5, Metaforum 7.104, 5600 MB Eindhoven, The Netherlands
 
