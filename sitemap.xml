@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://amore-labs.github.io/website/blogs/blog.html</loc>
-    <lastmod>2025-07-01T11:32:50.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/projects/projects.html</loc>
-    <lastmod>2025-07-01T11:32:50.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/join/join.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/cl_with_coreset-introduction.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/cldst-introduction.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/adacl-introduction.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/serena-introduction.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/people/people.html</loc>
-    <lastmod>2025-07-01T11:32:50.294Z</lastmod>
-  </url>
-  <url>
     <loc>https://amore-labs.github.io/website/publications/publications.html</loc>
-    <lastmod>2025-07-01T11:32:50.294Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/amlb-introduction.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/malibo-blog.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
+    <lastmod>2025-07-24T08:10:43.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/malibo-blog.html</loc>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/amlb-introduction.html</loc>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/blogs/blog.html</loc>
+    <lastmod>2025-07-24T08:10:43.221Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/join/join.html</loc>
+    <lastmod>2025-07-24T08:10:43.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/projects/projects.html</loc>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/people/people.html</loc>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/index.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/pathfinder/index.html</loc>
-    <lastmod>2025-07-01T11:32:50.293Z</lastmod>
+    <lastmod>2025-07-24T08:10:43.273Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/software/software.html</loc>
-    <lastmod>2025-07-01T11:32:50.294Z</lastmod>
+    <lastmod>2025-07-24T08:10:43.275Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/pathfinder/index.html</loc>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/cldst-introduction.html</loc>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/adacl-introduction.html</loc>
+    <lastmod>2025-07-24T08:10:43.273Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/serena-introduction.html</loc>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/cl_with_coreset-introduction.html</loc>
+    <lastmod>2025-07-24T08:10:43.274Z</lastmod>
   </url>
 </urlset>
