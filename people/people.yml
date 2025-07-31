@@ -219,7 +219,7 @@ Diana Alexandra Onutu:
 Matthew Danish:
   position: postdoc
   description:
-    <name> is a postdoctoral researcher in the AutoML group at Eindhoven University of Technology (TU/e) in the Netherlands. He is currently engaged with the AI Pathfinder initiative. He obtained his Ph.D. in 2015 from Boston University, worked on research projects at Cambridge University department of Computer Science and Technology ranging from lightweight Fortran code verification to computer vision and sensor networks, collaborating with industry and governmental initiatives. Later, after moving to the Netherlands, he joined the Geosciences department of Utrecht University for a cross-disciplinary machine learning project.
+    <name> is a postdoctoral researcher in the AutoML group at Eindhoven University of Technology (TU/e) in the Netherlands. He is currently engaged with the <a href="../pathfinder/index.html">AI Pathfinder</a> initiative. He obtained his Ph.D. in 2015 from Boston University, worked on research projects at Cambridge University department of Computer Science and Technology ranging from lightweight Fortran code verification to computer vision and sensor networks, collaborating with industry and governmental initiatives. Later, after moving to the Netherlands, he joined the Geosciences department of Utrecht University for a cross-disciplinary machine learning project.
   picture: ../images/people/mrdanish.webp
   mail: m.r.danish@tue.nl
   scholar: https://scholar.google.com/citations?user=sHGgb_sAAAAJ&hl=en
