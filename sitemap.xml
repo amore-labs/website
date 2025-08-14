@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://amore-labs.github.io/website/publications/publications.html</loc>
-    <lastmod>2025-08-01T11:58:17.023Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
-    <lastmod>2025-08-01T11:58:17.022Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/malibo-blog.html</loc>
-    <lastmod>2025-08-01T11:58:17.023Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/amlb-introduction.html</loc>
-    <lastmod>2025-08-01T11:58:17.022Z</lastmod>
-  </url>
-  <url>
     <loc>https://amore-labs.github.io/website/blogs/blog.html</loc>
-    <lastmod>2025-08-01T11:58:16.968Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/join/join.html</loc>
-    <lastmod>2025-08-01T11:58:17.022Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/projects/projects.html</loc>
-    <lastmod>2025-08-01T11:58:17.023Z</lastmod>
+    <lastmod>2025-08-14T15:15:59.625Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/people/people.html</loc>
-    <lastmod>2025-08-01T11:58:17.023Z</lastmod>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
   </url>
   <url>
-    <loc>https://amore-labs.github.io/website/index.html</loc>
-    <lastmod>2025-08-01T11:58:17.022Z</lastmod>
+    <loc>https://amore-labs.github.io/website/projects/projects.html</loc>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
   </url>
   <url>
-    <loc>https://amore-labs.github.io/website/software/software.html</loc>
-    <lastmod>2025-08-01T11:58:17.023Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/pathfinder/index.html</loc>
-    <lastmod>2025-08-01T11:58:17.023Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/cldst-introduction.html</loc>
-    <lastmod>2025-08-01T11:58:17.023Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/adacl-introduction.html</loc>
-    <lastmod>2025-08-01T11:58:17.022Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/serena-introduction.html</loc>
-    <lastmod>2025-08-01T11:58:17.023Z</lastmod>
+    <loc>https://amore-labs.github.io/website/publications/publications.html</loc>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/notebooks/cl_with_coreset-introduction.html</loc>
-    <lastmod>2025-08-01T11:58:17.022Z</lastmod>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/serena-introduction.html</loc>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/malibo-blog.html</loc>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
+    <lastmod>2025-08-14T15:15:59.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/cldst-introduction.html</loc>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/amlb-introduction.html</loc>
+    <lastmod>2025-08-14T15:15:59.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/adacl-introduction.html</loc>
+    <lastmod>2025-08-14T15:15:59.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/software/software.html</loc>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/join/join.html</loc>
+    <lastmod>2025-08-14T15:15:59.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/index.html</loc>
+    <lastmod>2025-08-14T15:15:59.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/pathfinder/index.html</loc>
+    <lastmod>2025-08-14T15:15:59.681Z</lastmod>
   </url>
 </urlset>
