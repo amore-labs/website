@@ -223,3 +223,13 @@ Matthew Danish:
   picture: ../images/people/mrdanish.webp
   mail: m.r.danish@tue.nl
   scholar: https://scholar.google.com/citations?user=sHGgb_sAAAAJ&hl=en
+
+Shawon Ashraf:
+  position: phd
+  description:
+    <name> is a PhD student working on Open Source Large Language Models focusing on Evaluations, Model Interpretability and Learning Dynamics in larger models. His M.Sc. thesis was on exploring 
+    the effects of Predicate Arguments on multi-modal Procedural Reasoning at IMS, University of Stuttgart. He previously completed his B.Sc. in Computer Science and 
+    Engineering from North South University, Dhaka, Bangladesh.
+  picture: ../images/people/shawon_ashraf.webp
+  scholar: https://scholar.google.com/citations?user=oBUTqt8AAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/shawon-ashraf-96162763/
