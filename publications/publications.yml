@@ -1,3 +1,13 @@
+surgtransfer:
+  title: "Analysis of Transferability Estimation Metrics for Surgical Phase Recognition"
+  authors:
+    - Prabhant Singh
+    - Yiping Li
+    - Yasmina Al Khalil
+  year: 2025
+  venue: "3rd Workshop in Data Engineering in Medical Imaging (DEMI) MICCAI-2025 Workshop (Spotlight)"
+  pdf: "https://arxiv.org/pdf/2508.16730"
+  
 CAMeLU:
   title: "Unsupervised Meta-Learning via In-Context Learning"
   authors:
