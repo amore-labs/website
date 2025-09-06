@@ -4,50 +4,11 @@ title: "Join us!"
 
 ![Impressions of our campus.](../images/campus.webp)  
 
-# Current openings (8)
-We currently have room for **eight** outstanding machine learning Ph.D. students, PostDocs, and Engineers. 
-The vacancies will remain open until the positions are filled. **Apply now!**
+# Current openings (0)
+We currently (temporarily) do not have any fully-funded positions for Ph.D. students, PostDocs, and Engineers.
+Please check again later.
 
-#### [PhD on Multi-modal Open-Source Foundation Models](https://www.tue.nl/en/working-at-tue/vacancy-overview/phd-on-multi-modal-open-source-foundation-models) (2 positions)
-Join a groundbreaking project to develop next-generation, open-source multi-modal foundation models. Collaborate with top research labs 
-and experts to create transparent, efficient, high-performing models with novel capabilities that democratize access to AI.
-We are seeking a proficient and talented PhD student to develop advanced, multimodal, open source foundation models based on 
-solid research on model architecture, data quality, scaling, generalizability, finetuning, and safety. The focus is on multimodality 
-aspects, including tabular and time series data, as well as efficient model finetuning. One position is focused on research to build next-generation multimodal models that generalize well, also including new modalities such as tabular and stream data. This includes study of model architectures (e.g., using scaling laws), training procedures and data mixtures, and their effect on transfer learning, model adaption techniques, and parameter-efficient finetuning. The other position is more focussed on finetuning, including human-aligned finetuning, grounded tuning, automated optimization of finetuning techniques, and test-time tuning. All methods will be evaluated on a wide range of real-world use cases. Both positions will include collaboration with top AI centers in Europe, including the Tuebingen AI center, the University of Amsterdam, the Julich research center, EPFL (Lausanne), the Univeristy of Valencia, LMU Munich, supercomputing centers across Europe, open-source AI communities, and a wide range of companies working on robot perception, autonomous driving, earth modelling, chip design, and many more.
-**[4 year position]** 
-
-#### [Postdoctoral Fellow in Open-Source Multimodal Foundation Models](https://www.tue.nl/en/working-at-tue/vacancy-overview/postdoc-in-multi-modal-open-source-foundation-models) (1 position)
-Join a groundbreaking project to develop next-generation, open-source multi-modal foundation models. Collaborate with top research labs 
-and experts and lead a new wave for research into transparent, efficient, high-performing models with novel capabilities that democratize access to AI. We are seeking a proficient and talented postdoctoral fellow to develop advanced, multimodal, open source foundation models based on solid research on model architecture, data quality, scaling, generalizability, finetuning, and safety. You'll be part of a strong team including several PhD students and research engineers. See the PhD position above for more details on the project.
-**[2-year position]** 
-
-#### [Research Engineer in Open-Source Multimodal Foundation Models](https://www.tue.nl/en/working-at-tue/vacancy-overview/research-engineer-in-multi-modal-open-source-foundation-models) (1 position)
-We are looking for an exceptional research engineer with a passion for AI and open-source development. 
-In this role, you will design and build cutting-edge tools and software that will shape the future of foundation models, used by millions of people worldwide.
-
-The work is carried out as part of the [ELLIOT](https://apigateway.agilitypr.com/distributions/history/52135e0b-9025-48a8-9120-2490054de249) project,a project with a large consortium building multi-modal generalist foundation models (MGFMs). Within the project, we are the lead on the evaluation and testing of the MGFMs. As a research engineer, this means you will be focused on developing frameworks and pipelines to achieve this. It is primarily an engineering role, addressing the challenges of automatically and efficiently evaluating these very large models to enable a quick feedback loop for researchers working on e.g., fine-tuning techniques. There should also be supporting infrastructure of this pipeline, such as the collection of rich meta-data of the evaluation, a dashboard for monitoring, and orchestration tooling. We also have participating roles in tasks such as the evaluation of MGFMs on new modalities, AI safety, and explainability.
-
-You'll be part of a strong team including several PhD students and post-doctoral researchers, among which two PhDs and one Postdoc that are also part of the ELLIOT project. They will focus more on the research, primarily fine-tuning methods. Of course, you will be closely collaborating with them and support their work. Within AMOR/e lab, we have a group of research engineers across a variety of projects, as well as engineers and researchers working on two other European LLM/FM projects.
-
-Also see the two positions above for more details on the project.
-**[4 year position]** 
-
-#### [PhD in Open-Source Large Language Models](https://www.tue.nl/en/working-at-tue/vacancy-overview/phd-on-open-source-large-language-models) (1 position)
-Join a groundbreaking project to develop a next-generation, open-source family of foundation models.  We are seeking a proficient and talented PhD student with a true passion for AI. You will play a pivotal role in a team exploring new large model architectures, novel efficient finetuning and adaptation techniques, refining data to enhance learning and generalizability, creating benchmarks, and ensuring AI safety. This research will focus on deep and insightful evaluations of large language models and how to do such evaluations at scale. This position will include collaboration with top AI centers and companies in Europe, including the Tuebingen AI center, the Julich research center, ellamind, supercomputing centers across Europe, and a wide range of large and small companies under the European Language Technology Alliance (ALT-EDIC).
-**[4 year position]** 
-
-#### [Postdoctoral Fellow in Open-Source Large Language Models](https://www.tue.nl/en/working-at-tue/vacancy-overview/postdoc-in-open-source-large-language-models) (1 position)
-Join a groundbreaking project to develop next-generation, open-source large language models. Collaborate with top research labs 
-and experts and lead a new wave for research into transparent, efficient, high-performing models with novel capabilities that democratize access to AI. We are seeking a proficient and talented postdoctoral fellow to develop advanced, open-source models based on solid research and in-depth evaluation of model capabilities, scaling, generalizability, finetuning, and safety. You'll be part of a strong team including several PhD students and research engineers. Also see the PhD position above for more details.
-**[2.5-year position]** 
-
-#### [PhD on AI for Safety-Critical Multi-modal Learning](https://www.tue.nl/en/working-at-tue/vacancy-overview/phd-on-ai-for-safety-critical-multi-modal-learning) (1 position)
-Are you eager to make a difference in the advancement of AI via reliable state-of-the-art deep learning models? 
-We are seeking a proficient and talented PhD student to develop efficient, trustworthy AI models that have a robust 
-understanding of their environment based on various data sources. For example, the model should be able to integrate camera, 
-radar, and other sensor modalities. Particular attention will be paid to transformer- and post-transformer architectures, 
-and how to adapt them to learn efficiently on resource-constrained hardware, for instance with transfer learning and quantization techniques. This position will include collaboration with leading semiconductor companies such as NXP and Infineon, and universities including TU Delft, TU Graz, UC Louvain, U Aarhus, Politecnico de Milan, and many more.
-**[4 year position]** 
+If you have your own sources of funding, please get in touch with us.
 
 You can also check out [other positions in our department](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1).
 
