@@ -42,7 +42,7 @@ Example projects from the lab:
 <li> Modelling: <a href="https://www.tue.nl/en/research/research-groups/building-physics-and-services/building-performance/renovatieverkenner">a tool</a> to estimate the energy savings of potential home renovations</li>
 </ul>
 <p>
-<strong>Interested?</strong> Let’s discover how a collaboration with a leading AI lab can transform your business. Contact us to explore the possibilities: <a href="m.r.danish@tue.nl">m.r.danish@tue.nl</a> <a href="https://www.linkedin.com/in/matthew-danish/"><img width="28" src="../images/LI-In-Bug.png" /></a>
+<strong>Interested?</strong> Let’s discover how a collaboration with a leading AI lab can transform your business. Contact us to explore the possibilities: <a href="mailto:m.r.danish@tue.nl">m.r.danish@tue.nl</a> <a href="https://www.linkedin.com/in/matthew-danish/"><img width="28" src="../images/LI-In-Bug.png" /></a>
 </p>
 
 
