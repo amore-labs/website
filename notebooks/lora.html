@@ -411,14 +411,14 @@ window.Quarto = {
 </ol>
 <p>Consider, for instance, a model that is prompted with the question <em>What is the capital of the Netherlands?</em>. A pre-trained model which is only capable of generating continuations of text might respond by asking another question or by providing broad information about the Netherlands rather than giving a concise answer. However, the user’s expectation in this case is a clear and direct response - <em>Amsterdam</em> -, and this is where post-training techniques come into play. By adapting the pre-trained model to the user intent, post-training ensures that the model provides a direct answer and only later it follows up with additional relevant context. To illustrate this difference, let’s compare the outputs of Llama-3.2-1B (base model) with Llama-3.2-1B-Instruct (instruction-tuned model).</p>
 <div style="text-align:center">
-<img alt="prompt netherlands" src="../images/blogs/lora/prompt1.png" style="width:70%">
+<img alt="prompt netherlands" src="../images/blogs/lora/prompt1.png" style="width:90%">
 <figcaption>
 Llama-3.2-1B (base model) and Llama-3.2-1B-Instruct (instruction-tuned model) with maximum length generation set to 150 tokens.
 </figcaption>
 </div>
 <p>When the prompt involves new information that the model was not exposed to during pre-training, the base model is unable to produce an accurate answer. In such cases, it often generates plausible but incorrect information, a common behavior in LLMs known as <em>hallucination</em>.</p>
 <div style="text-align:center">
-<img alt="prompt amore" src="../images/blogs/lora/prompt2.png" style="width:70%">
+<img alt="prompt amore" src="../images/blogs/lora/prompt2.png" style="width:90%">
 <figcaption>
 Llama-3.2-1B (base model) with maximum length generation set to 150 tokens.
 </figcaption>
@@ -430,7 +430,7 @@ Llama-3.2-1B (base model) with maximum length generation set to 150 tokens.
 <p>The solution lies in <strong>Parameter Efficient Fine-Tuning (PEFT)</strong>, which updates only a small set of parameters, while the others remain frozen. This approach is significantly less compute and memory instensive and it offers high adaptability across various tasks.</p>
 <p>For instance, fine-tuning a 7B parameter model using FullFT can require up to 50GB of GPU VRAM and only 20GB using PEFT techniques (<em>actual memory usage depends on batch size, sequence length, and specific model architecture</em>).</p>
 <div style="text-align:center">
-<img alt="fullft vs peft" src="../images/blogs/lora/fullft_peft.png" style="width:70%">
+<img alt="fullft vs peft" src="../images/blogs/lora/fullft_peft.png" style="width:80%">
 <figcaption>
 Full fine-tuning vs.&nbsp;parameter efficient fine-tuning.
 </figcaption>
@@ -443,7 +443,7 @@ Full fine-tuning vs.&nbsp;parameter efficient fine-tuning.
 \end{equation*}\]</span></p>
 <p>Instead of learning the massive <span class="math inline">\(\Delta W\)</span> directly, LoRA models it using two smaller trainable matrices: <span class="math inline">\(A\)</span> (size <span class="math inline">\(d \times r\)</span>) and <span class="math inline">\(B\)</span> (size <span class="math inline">\(r \times k\)</span>).</p>
 <div style="text-align:center">
-<img alt="LoRA" src="../images/blogs/lora/lora_update.png" style="width:50%">
+<img alt="LoRA" src="../images/blogs/lora/lora_update.png" style="width:80%">
 <figcaption>
 Visualization of LoRA’s weight update.
 </figcaption>
@@ -459,14 +459,30 @@ Visualization of LoRA’s weight update.
 </section>
 <section id="the-efficiency-of-lora" class="level4">
 <h4 class="anchored" data-anchor-id="the-efficiency-of-lora">The efficiency of LoRA</h4>
-<p>The efficiency of LoRA comes from the choice of the rank. For a weight matrix <span class="math inline">\(W\)</span> of size <span class="math inline">\(d \times k\)</span>: - The original number of parameters in <span class="math inline">\(W\)</span> is <span class="math inline">\(d \times k\)</span> (which remains frozen). - The number of added trainable parameters by LoRA is: <span class="math display">\[\begin{equation*}
+<p>The efficiency of LoRA comes from the choice of the rank. For a weight matrix <span class="math inline">\(W\)</span> of size <span class="math inline">\(d \times k\)</span>:</p>
+<ul>
+<li>The original number of parameters in <span class="math inline">\(W\)</span> is <span class="math inline">\(d \times k\)</span> (which remains frozen).</li>
+<li>The number of added trainable parameters by LoRA is:</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
 LoRA_{params} = (d \times r) + (r \times k) ≪ d \times k
 \end{equation*}\]</span></p>
-<p>For example, if the original <span class="math inline">\(W\)</span> matrix is <span class="math inline">\(4096 \times 4096\)</span> and we choose <span class="math inline">\(r=8\)</span>: - Original parameters: <span class="math inline">\(4096 \times 4096 = 16777216\)</span>. - LoRA parameters: <span class="math inline">\((4096 \times 8) + (8 \times 4096) = 32768 + 32768 = 65 536\)</span>, achieving a <span class="math inline">\(256\times\)</span> reduction.</p>
+<p>For example, if the original <span class="math inline">\(W\)</span> matrix is <span class="math inline">\(4096 \times 4096\)</span> and we choose <span class="math inline">\(r=8\)</span>:</p>
+<ul>
+<li>Original parameters: <span class="math inline">\(4096 \times 4096 = 16777216\)</span>.</li>
+<li>LoRA parameters: <span class="math inline">\((4096 \times 8) + (8 \times 4096) = 32768 + 32768 = 65 536\)</span>, achieving a <span class="math inline">\(256\times\)</span> reduction.</li>
+</ul>
 </section>
 <section id="advantages-of-lora" class="level4">
 <h4 class="anchored" data-anchor-id="advantages-of-lora">Advantages of LoRA</h4>
-<p>The benefits of using LoRA for fine-tuning are significant: * A dramatic reduction in memory and storage requirements. * Lower GPU VRAM consumption, enabling training on smaller hardware setups. * Over 25% faster training compared to FullFT. * Easy task switching by simply swapping the small LoRA adapter modules. * No catastrophic forgetting, since the pre-trained weights remain frozen during adaptation.</p>
+<p>The benefits of using LoRA for fine-tuning are significant:</p>
+<ul>
+<li>A dramatic reduction in memory and storage requirements.</li>
+<li>Lower GPU VRAM consumption, enabling training on smaller hardware setups.</li>
+<li>Over 25% faster training compared to FullFT.</li>
+<li>Easy task switching by simply swapping the small LoRA adapter modules.</li>
+<li>No catastrophic forgetting, since the pre-trained weights remain frozen during adaptation.</li>
+</ul>
 </section>
 </section>
 <section id="lora-vs.-fullft-who-is-the-winner" class="level2">
@@ -490,7 +506,7 @@ LoRA_{params} = (d \times r) + (r \times k) ≪ d \times k
 </ul>
 <p>Furthermore, techniques like Mixture-of-LoRAs (MoLoRA), such as on models like Phi-4-Mini-Multimodal, use separate, dedicated LoRA adapters for different input types (e.g., for vision and for audio). This parameter-efficient strategy allows a single LLM backbone to seamlessly integrate and process complex multimodal inputs without the cost of retraining the entire system for each new modality.</p>
 <div style="text-align:center">
-<img alt="Phi-4-Mini-Multimodal." src="../images/blogs/lora/phi4minimulti.png" style="width:50%">
+<img alt="Phi-4-Mini-Multimodal." src="../images/blogs/lora/phi4minimulti.png" style="width:80%">
 <figcaption>
 Simplified architecture for Phi-4-Mini-Multimodal.
 </figcaption>
