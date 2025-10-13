@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Anna Vettoruzzo">
+<meta name="dcterms.date" content="2025-10-10">
+
+<title>LoRA and Beyond. Fine-Tuning LLMs for Anyone, Anywhere – AMOR/e</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-108e93215d05bb4fff274db65eb1c962.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-d04ede655bf9a142940c387af4cd01e3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-108e93215d05bb4fff274db65eb1c962.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/logo2.png" alt="" class="navbar-logo light-content">
+    <img src="../images/logo2.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title"><span style="color:#FF2400;font-weight:bold">AMOR/e</span></span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects/projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications/publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../software/software.html"> 
+<span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blogs/blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../people/people.html"> 
+<span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../join/join.html"> 
+<span class="menu-text">Join us!</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/amore-labs"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-two-phases-of-llm-development" id="toc-the-two-phases-of-llm-development" class="nav-link active" data-scroll-target="#the-two-phases-of-llm-development">The Two Phases of LLM Development</a></li>
+  <li><a href="#the-fine-tuning-problem" id="toc-the-fine-tuning-problem" class="nav-link" data-scroll-target="#the-fine-tuning-problem">The Fine-Tuning Problem</a></li>
+  <li><a href="#lora-low-rank-adaptation-explained" id="toc-lora-low-rank-adaptation-explained" class="nav-link" data-scroll-target="#lora-low-rank-adaptation-explained">LoRA: Low-Rank Adaptation Explained</a></li>
+  <li><a href="#lora-vs.-fullft-who-is-the-winner" id="toc-lora-vs.-fullft-who-is-the-winner" class="nav-link" data-scroll-target="#lora-vs.-fullft-who-is-the-winner">LoRA vs.&nbsp;FullFT: Who is the winner?</a></li>
+  <li><a href="#beyond-lora" id="toc-beyond-lora" class="nav-link" data-scroll-target="#beyond-lora">Beyond LoRA</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">LoRA and Beyond. Fine-Tuning LLMs for Anyone, Anywhere</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Anna Vettoruzzo </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 10, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-two-phases-of-llm-development" class="level2">
+<h2 class="anchored" data-anchor-id="the-two-phases-of-llm-development">The Two Phases of LLM Development</h2>
+<p>The world of Large Language Models (LLMs) is scaling at an exponential rate. With training costs for base models reaching millions or even billions of dollars, the traditional method of training a model from scratch for every new task or new data is simply unsustainable. This necessity has divided the LLM development pipeline into two distinct phases: pre-training and post-training.</p>
+<ol type="1">
+<li><p><strong>Pre-training</strong>: This is the initial, resource-intensive phase where the LLM learns fundamental language patterns, facts, and broad capability through a massive dataset. This results in a <em>base model</em> that is only capable of performing next-token prediction, generating plausible continuations of text, yet it cannot adapt its answer to the user intent.</p></li>
+<li><p><strong>Post-training</strong>: This phase adapts the highly capable base model for real-world deployment. The goal is to direct its broad knowledge toward specific goals. This process includes:</p>
+<ul>
+<li><strong>Task-specific fine-tuning</strong>: The general adaptation of the base model to improve performance on new tasks, specific domains, or new data.</li>
+<li><strong>Alignment</strong>: A critical refinement process that ensures the model’s responses are in the correct format, helpful and harmless. This often involves using techniques like Instruction-Tuning (IT), Reinforcement Learning from Human Feedback (RLHF) and Direct Preference Optimization (DPO).</li>
+</ul></li>
+</ol>
+<p>Consider, for instance, a model that is prompted with the question <em>What is the capital of the Netherlands?</em>. A pre-trained model which is only capable of generating continuations of text might respond by asking another question or by providing broad information about the Netherlands rather than giving a concise answer. However, the user’s expectation in this case is a clear and direct response - <em>Amsterdam</em> -, and this is where post-training techniques come into play. By adapting the pre-trained model to the user intent, post-training ensures that the model provides a direct answer and only later it follows up with additional relevant context. To illustrate this difference, let’s compare the outputs of Llama-3.2-1B (base model) with Llama-3.2-1B-Instruct (instruction-tuned model).</p>
+<div style="text-align:center">
+<img alt="prompt netherlands" src="../images/blogs/lora/prompt1.png" style="width:70%">
+<figcaption>
+Llama-3.2-1B (base model) and Llama-3.2-1B-Instruct (instruction-tuned model) with maximum length generation set to 150 tokens.
+</figcaption>
+</div>
+<p>When the prompt involves new information that the model was not exposed to during pre-training, the base model is unable to produce an accurate answer. In such cases, it often generates plausible but incorrect information, a common behavior in LLMs known as <em>hallucination</em>.</p>
+<div style="text-align:center">
+<img alt="prompt amore" src="../images/blogs/lora/prompt2.png" style="width:70%">
+<figcaption>
+Llama-3.2-1B (base model) with maximum length generation set to 150 tokens.
+</figcaption>
+</div>
+</section>
+<section id="the-fine-tuning-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-fine-tuning-problem">The Fine-Tuning Problem</h2>
+<p>The most straightforward form of fine-tuning is defined as <strong>Full Fine-Tuning (FullFT)</strong> and it involves updating every single weight of the model. While offering high flexibility, FullFT is computationally intensive and demands significant resources.</p>
+<p>The solution lies in <strong>Parameter Efficient Fine-Tuning (PEFT)</strong>, which updates only a small set of parameters, while the others remain frozen. This approach is significantly less compute and memory instensive and it offers high adaptability across various tasks.</p>
+<p>For instance, fine-tuning a 7B parameter model using FullFT can require up to 50GB of GPU VRAM and only 20GB using PEFT techniques (<em>actual memory usage depends on batch size, sequence length, and specific model architecture</em>).</p>
+<div style="text-align:center">
+<img alt="fullft vs peft" src="../images/blogs/lora/fullft_peft.png" style="width:70%">
+<figcaption>
+Full fine-tuning vs.&nbsp;parameter efficient fine-tuning.
+</figcaption>
+</div>
+</section>
+<section id="lora-low-rank-adaptation-explained" class="level2">
+<h2 class="anchored" data-anchor-id="lora-low-rank-adaptation-explained">LoRA: Low-Rank Adaptation Explained</h2>
+<p>The most popular PEFT method today is <strong>LoRA</strong>, which stands for Low-Rank Adaptation. Introduced in 2021, the central idea is rooted in the hypothesis that the update required for fine-tuning a massive pre-trained weight matrix (<span class="math inline">\(W\)</span>) has an intrinsically low rank. This means that while the original weight matrix <span class="math inline">\(W\)</span> (which can be <span class="math inline">\(d_{model} \times d_{model}\)</span> size) is very large, the necessary change during fine-tuning, <span class="math inline">\(\Delta W = W' - W\)</span>, (where <span class="math inline">\(W'\)</span> is the fine-tuned weight matrix), can be effectively approximated using a technique called <strong>low-rank decomposition</strong>: <span class="math display">\[\begin{equation*}
+\Delta W = \lambda BA, \text{ where }\lambda \text{ is a scaling factor}.
+\end{equation*}\]</span></p>
+<p>Instead of learning the massive <span class="math inline">\(\Delta W\)</span> directly, LoRA models it using two smaller trainable matrices: <span class="math inline">\(A\)</span> (size <span class="math inline">\(d \times r\)</span>) and <span class="math inline">\(B\)</span> (size <span class="math inline">\(r \times k\)</span>).</p>
+<div style="text-align:center">
+<img alt="LoRA" src="../images/blogs/lora/lora_update.png" style="width:50%">
+<figcaption>
+Visualization of LoRA’s weight update.
+</figcaption>
+</div>
+<section id="the-role-of-rank-r-and-scaling-factor-lambda" class="level4">
+<h4 class="anchored" data-anchor-id="the-role-of-rank-r-and-scaling-factor-lambda">The role of rank (<span class="math inline">\(r\)</span>) and scaling factor (<span class="math inline">\(\lambda\)</span>)</h4>
+<p>The variable <span class="math inline">\(r\)</span> is the <strong>rank</strong> of the LoRA matrices. It is a hyperparaneter chosen by the user and it controls the number of trainable parameters. A smaller <span class="math inline">\(r\)</span> leads to fewer parameters and greater memory savings, but a larger <span class="math inline">\(r\)</span> generally allows the adapter to capture more complex task-specific information. Common values are between <span class="math inline">\(r=4\)</span> to <span class="math inline">\(r=256\)</span>, based on the dataset size and the amount of new information that must be learned by the model.</p>
+<p>The <strong>scaling factor</strong> (<span class="math inline">\(\lambda\)</span>) control the magnitude of the weight update. It is usually defined as <span class="math inline">\(\lambda = \frac{\alpha}{r}\)</span>, where <span class="math inline">\(\alpha\)</span> is a constant in <span class="math inline">\(r\)</span> and it is used to prevent the scaled update from becoming too large or too small, helping stabilize the training. Tuning <span class="math inline">\(\alpha\)</span> is roughly the same as tuning the learning rate of the optimizer, so <span class="math inline">\(\alpha\)</span> is usually set equals to <span class="math inline">\(r\)</span>.</p>
+</section>
+<section id="where-to-apply-lora" class="level4">
+<h4 class="anchored" data-anchor-id="where-to-apply-lora">Where to apply LoRA</h4>
+<p>LoRA is most effective when applied to the core computational layers of the transformer architecture used in LLMs. The standard practice is to apply LoRA only to the query and value projection matrices within the self-attention layer. However, recent studies have shown that applying LoRA also to the MLP component of the feed-forward network layers can yield superior performance, sometimes rivaling FullFT.</p>
+</section>
+<section id="the-efficiency-of-lora" class="level4">
+<h4 class="anchored" data-anchor-id="the-efficiency-of-lora">The efficiency of LoRA</h4>
+<p>The efficiency of LoRA comes from the choice of the rank. For a weight matrix <span class="math inline">\(W\)</span> of size <span class="math inline">\(d \times k\)</span>: - The original number of parameters in <span class="math inline">\(W\)</span> is <span class="math inline">\(d \times k\)</span> (which remains frozen). - The number of added trainable parameters by LoRA is: <span class="math display">\[\begin{equation*}
+LoRA_{params} = (d \times r) + (r \times k) ≪ d \times k
+\end{equation*}\]</span></p>
+<p>For example, if the original <span class="math inline">\(W\)</span> matrix is <span class="math inline">\(4096 \times 4096\)</span> and we choose <span class="math inline">\(r=8\)</span>: - Original parameters: <span class="math inline">\(4096 \times 4096 = 16777216\)</span>. - LoRA parameters: <span class="math inline">\((4096 \times 8) + (8 \times 4096) = 32768 + 32768 = 65 536\)</span>, achieving a <span class="math inline">\(256\times\)</span> reduction.</p>
+</section>
+<section id="advantages-of-lora" class="level4">
+<h4 class="anchored" data-anchor-id="advantages-of-lora">Advantages of LoRA</h4>
+<p>The benefits of using LoRA for fine-tuning are significant: * A dramatic reduction in memory and storage requirements. * Lower GPU VRAM consumption, enabling training on smaller hardware setups. * Over 25% faster training compared to FullFT. * Easy task switching by simply swapping the small LoRA adapter modules. * No catastrophic forgetting, since the pre-trained weights remain frozen during adaptation.</p>
+</section>
+</section>
+<section id="lora-vs.-fullft-who-is-the-winner" class="level2">
+<h2 class="anchored" data-anchor-id="lora-vs.-fullft-who-is-the-winner">LoRA vs.&nbsp;FullFT: Who is the winner?</h2>
+<p>While FullFT was long considered the gold standard, there is recently a lot of controversy in deciding whether LoRA can achieve similar ultimate performance and sample efficiency as FullFT.</p>
+<p><strong>The Illusion of Equivalence</strong></p>
+<p>The paper <em>LoRA vs.&nbsp;full fine-tuning: An illusion of equivalence</em> (Shuttleworth et al., 2024) challenges the idea that LoRA is truly equivalent to FullFT. The work suggests that while LoRA can match FullFT on limited budgets, achieving true equivalence requires precise optimization across all hyperparameters, and even then, in highly complex tasks, FullFT is often preferable in terms of performance. The perceived equivalence is often an <em>illusion</em> created by insufficient optimization of both methods or testing on limited datasets.</p>
+<p><strong>Learning and Forgetting Dynamics</strong></p>
+<p>The paper <em>LoRA learn less and forget less</em> (Biderman et al., 2024) explores the dynamics of knowledge transfer. It suggests that FullFT is more accurate and sample-efficient than LoRA in the majority of tasks, but LoRA forget less of the original knowledge. This property makes LoRA a safer, more stable choice for many applications, as it preserves the general capabilities of the base model while still adapting to the new task.</p>
+<p><strong>LoRA Without Regret</strong></p>
+<p>This blog post demonstrate that LoRA can indeed be on par with FullFT but only when a few key factors are chosen correctly. LoRA is most effective for post-training tasks that use small-to-medium-sized datasets, provided these datasets do not exceed LoRA’s capacity. Optimal performance is achieved when LoRA is applied broadly, including not only the attention matrices but also the MLP layers, and when a sufficiently high rank is used to capture the task’s complexity. When these best practices are followed, LoRA’s performance can approach that of FullFT.</p>
+<p>When weighing these findings, the consensus is that it remains unclear if LoRA can match FullFT on all tasks. However, it is evident that LoRA is the recommended solution in budget-constrained scenarios. By correctly tuning the parameters and benefiting from its superior knowledge preservation, LoRA offers a powerful tool to fine-tune LLMs with a fraction of the usual cost.</p>
+</section>
+<section id="beyond-lora" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-lora">Beyond LoRA</h2>
+<p>The field is rapidly innovating on top of the LoRA foundation, with new techniques further optimizing the process:</p>
+<ul>
+<li><p>QLoRA (Quantized LoRA): This technique quantizes the large, pre-trained weights to 4-bit precision (NF4) while keeping the smaller LoRA matrices in full precision. During backpropagation the original weights are dequantized on-the-fly when needed. This approach achieves an impressive 33% GPU memory saving, at the cost of a 39% increased runtime.</p></li>
+<li><p>DoRA (Weight Decomposed LoRA): This method decomposes the pre-trained weights into magnitude and direction. It then applies the LoRA update only to the directional component, resulting in a reported 4% accuracy improvement with minimal added parameters (0.01%).</p></li>
+<li><p>AdaLoRA, QALoRA, etc.</p></li>
+</ul>
+<p>Furthermore, techniques like Mixture-of-LoRAs (MoLoRA), such as on models like Phi-4-Mini-Multimodal, use separate, dedicated LoRA adapters for different input types (e.g., for vision and for audio). This parameter-efficient strategy allows a single LLM backbone to seamlessly integrate and process complex multimodal inputs without the cost of retraining the entire system for each new modality.</p>
+<div style="text-align:center">
+<img alt="Phi-4-Mini-Multimodal." src="../images/blogs/lora/phi4minimulti.png" style="width:50%">
+<figcaption>
+Simplified architecture for Phi-4-Mini-Multimodal.
+</figcaption>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>While the general question of whether LoRA is preferable than FullFT remains open, it is clear that LoRA is a powerful and versatile fine-tuning technique. It has become the preferred approach in many applications where budget, memory efficiency, or training speed are important considerations. By carefully applying LoRA to MLP layers and selecting an appropriate rank, developers can achieve near-state-of-the-art performance at a fraction of the computational cost, making advanced LLM customization accessible to everyone.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>Hu, Edward J., et al.&nbsp;“Lora: Low-rank adaptation of large language models.”&nbsp;ICLR&nbsp; (2022).</li>
+<li>Dettmers, Tim, et al.&nbsp;“Qlora: Efficient finetuning of quantized llms.”&nbsp;NeurIPS (2023): 10088-10115.</li>
+<li>Liu, Shih-Yang, et al.&nbsp;“Dora: Weight-decomposed low-rank adaptation.”&nbsp;Forty-first International Conference on Machine Learning. 2024.</li>
+<li>Shuttleworth, Reece, et al.&nbsp;“Lora vs full fine-tuning: An illusion of equivalence.”&nbsp;arXiv preprint arXiv:2410.21228&nbsp;(2024).</li>
+<li>Biderman, Dan, et al.&nbsp;“LoRA Learns Less and Forgets Less.” Transactions on Machine Learning Research. (2024)</li>
+<li>Houlsby, Neil, et al.&nbsp;“Parameter-efficient transfer learning for NLP.”&nbsp;ICML (2019).</li>
+<li>Abouelenin, Abdelrahman, et al.&nbsp;“Phi-4-mini technical report: Compact yet powerful multimodal language models via mixture-of-loras.”&nbsp;arXiv preprint arXiv:2503.01743&nbsp;(2025).</li>
+<li>Schulman, John and Thinking Machines Lab, “LoRA Without Regret”, Thinking Machines Lab: Connectionism, Sep 2025.</li>
+<li><a href="https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms">Practical Tips for Finetuning LLMs Using LoRA (Low-Rank Adaptation)</a>. Sebastian Raschka. 2023.</li>
+<li><a href="https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training">New LLM Pre-training and Post-training Paradigms</a>. Sebastian Raschka. 2024.</li>
+<li><a href="https://apxml.com/courses/introduction-to-llm-fine-tuning/chapter-4-parameter-efficient-fine-tuning-peft/comparing-peft-full-fine-tuning">Comparing PEFT and Full Fine-Tuning Trade-offs</a>. ApXML.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/amore-labs\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
