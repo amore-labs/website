@@ -3,8 +3,6 @@ title: "Lab"
 ---
 Welcome to our lab on **<span style="color:#FF2400">A</span>dvanced <span style="color:#FF2400">M</span>odels** through **<span style="color:#FF2400">O</span>pen <span style="color:#FF2400">R</span>esearch and <span style="color:#FF2400">E</span>ngineering** @ <a href="https://www.tue.nl" style="text-decoration: none; color:#FF2400">TU/e</a>! 
 
-_Also known locally as the Automated Machine Learning lab ;)_
-
 ![Our team on a retreat near the sea.](images/group_image2.webp)  
 
 ## Mission
@@ -28,7 +26,7 @@ We are integrated in the [Data and AI cluster](https://dai.win.tue.nl/), which d
 ::: {.box}
 
 #### We are hiring!
-Our team is growing! We have **8 new openings** for [PhD students, PostDocs, and Research Engineers](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1) for research on large language models and multimodal foundation models. Apply now!
+Our team is growing! We have **8 new openings** for [PhD students, PostDocs, and Research Engineers](https://amore-labs.github.io/website/join/join.html) for research on large language models and multimodal foundation models.
 
 :::
 
