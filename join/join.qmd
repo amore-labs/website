@@ -4,17 +4,15 @@ title: "Join us!"
 
 ![Impressions of our campus.](../images/campus.webp)  
 
-# Current openings (1)
+# Current openings
 We currently (temporarily) do not have any fully-funded positions for Ph.D. students, PostDocs, and Engineers.
-Please check again later. We do have a temporary opening for a web developer for OpenML!
+Please check again later. 
 
 If you have your own sources of funding, please get in touch with us.
 
 You can also check out [other positions in our department](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1).
 
-#### [Web developer for OpenML (short-term)](https://www.tue.nl/en/working-at-tue/vacancy-overview?filters=1120&search=#c404570) (1 position)
-We are seeking a motivated Web Developer for a short-term position (until 31 December 2025) to contribute to OpenML.org, a global platform for open machine learning. You’ll be part of a dynamic team of engineers dedicated to making machine learning more accessible and create an engaging environment for students.
-You should have experience in frameworks like React and Next.js. In this role, you will help create and fine-tune new features for OpenML.org with a focus on education. You will help create leaderboards for classroom challenges and interactive dashboards to explore machine learning model performance and structure.
+
 
 # Who we are looking for
 We are seeking exceptional individuals who aspire to leave a mark on the world of machine learning and push humanity forward
