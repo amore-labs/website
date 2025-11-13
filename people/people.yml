@@ -232,6 +232,16 @@ Shawon Ashraf:
   picture: ../images/people/shawon_ashraf.webp
   scholar: https://scholar.google.com/citations?user=oBUTqt8AAAAJ&hl=en
   linkedin: https://www.linkedin.com/in/shawon-ashraf-96162763/
+
+Shreya Sajid:
+  position: phd
+  description:
+    <name> is a PhD Candidate at Eindhoven University of Technology (TU/e), where she works on developing novel methods for fine-tuning multi-modal foundation models as part of the EU-funded Project ELLIOT. She holds an M.Sc. in Data Science and Artificial Intelligence from TU/e, where her thesis focused on token sparsification techniques to improve the efficiency of audio transformer models.
+  picture: ../images/people/shreya_sajid.webp
+  mail: s.sajid@tue.nl
+  scholar: https://scholar.google.nl/citations?user=S4cxGtsAAAAJ&hl=nl&oi=sra
+  linkedin: https://www.linkedin.com/in/shreya-sajid/
+
   mail: s.ashraf1@tue.nl
 
 Fabian Denoodt:
