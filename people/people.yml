@@ -180,7 +180,7 @@ Rafael Gomes Mantovani:
 Jan van Rijn:
   position: alumnus
   description:
-    <name> Jan is a former PhD student, and currently assistant professor at Leiden University. During his PhD, he co-founded and developed OpenML.org, and did research towards meta-learning and algorithm selection based on OpenML data. He co-authored the Open Access book on Metalearning. His current research activities include AutoML and Trustworthy Artificial Intelligence.
+    <name> is a former PhD student, and currently assistant professor at Leiden University. During his PhD, he co-founded and developed OpenML.org, and did research towards meta-learning and algorithm selection based on OpenML data. He co-authored the Open Access book on Metalearning. His current research activities include AutoML and Trustworthy Artificial Intelligence.
   picture: ../images/people/janvanrijn.webp
   mail: j.n.van.rijn@liacs.leidenuniv.nl
   scholar: https://scholar.google.be/citations?user=O4X5CpwAAAAJ
@@ -188,7 +188,7 @@ Jan van Rijn:
 Dalton Harmsen:
   position: phd
   description:
-    Dalton Harmsen obtained his M.Sc. degree in Data Science & Artificial Intelligence at Eindhoven University of Technology (Netherlands). His M.Sc. dissertation was carried out on the topic of benchmarking post-training quantization techniques for large language models under the supervision of J.M. Tomczak. Currently, he is a Ph.D. student at Eindhoven University of Technology – Data Science Domain with the DAI Cluster. Dalton Harmsen works on the OpenEuroLLM project under the supervision of Joaquin Vanschoren.
+    <name> obtained his M.Sc. degree in Data Science & Artificial Intelligence at Eindhoven University of Technology (Netherlands). His M.Sc. dissertation was carried out on the topic of benchmarking post-training quantization techniques for large language models under the supervision of J.M. Tomczak. Currently, he is a Ph.D. student at Eindhoven University of Technology – Data Science Domain with the DAI Cluster. Dalton Harmsen works on the OpenEuroLLM project under the supervision of Joaquin Vanschoren.
   picture: ../images/people/dalton.webp
   mail: d.r.harmsen@tue.nl
   scholar: https://scholar.google.com/citations?user=O5wWI0gAAAAJ
