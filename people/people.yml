@@ -50,13 +50,13 @@ Jiarong Pan:
   scholar: https://scholar.google.com/citations?user=3KjbaRUAAAAJ
 
 Taniya Das:
-  position: engineer
+  position: alumnus
   description:
-    <name> is a Research Engineer solving various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a> and  <a href="https://github.com/aiondemand/AIOD-rest-api" target="_blank">AI-on-Demand</a> 
+    <name> is a former Research Engineer solving various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a> and  <a href="https://github.com/aiondemand/AIOD-rest-api" target="_blank">AI-on-Demand</a> 
     platform (an EU project), to make ML research better. 
     She has contributed to <a href="https://github.com/openml/openml-tensorflow" target="_blank">openml-tensorflow</a>  and <a href="https://github.com/openml/openml-pytorch =" target="_blank">openml-pytorch</a> extensions for OpenML, 
     making it possible to use solve deep learning tasks using <a href="https://github.com/openml/openml-python" target="_blank">openml-python</a> API. 
-    She is currently working on using LLMs to  make both the platforms more intelligent. 
+    She also experimented the use of LLMs to make both the platforms more intelligent. 
   picture: ../images/people/taniya_image.webp
   mail: t.das@tue.nl
   scholar: https://scholar.google.com/citations?user=6D5WlrgAAAAJ
