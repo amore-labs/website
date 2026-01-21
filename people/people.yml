@@ -277,3 +277,12 @@ Qingren Yao:
   scholar: https://scholar.google.com/citations?user=NYMYQ5cAAAAJ
   linkedin: https://www.linkedin.com/in/qingren-yao-7937a8263/
   personal: https://github.com/Qingrenn
+
+Thilina Rajapakse:
+  position: postdoc
+  description:
+    <name> is a postdoc working on the LLMs4EU project. His research focus is on Automated Red Teaming for LLMs. His PhD is on using Transformer models for Search and was conducted at the University of Amsterdam.
+  picture: ../images/people/thilina.webp
+  mail: t.c.r.rajapakse@tue.nl
+  scholar: https://scholar.google.com/citations?user=DEs7_YEAAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/t-rajapakse/
