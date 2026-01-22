@@ -241,11 +241,14 @@ Matthew Danish:
 Shawon Ashraf:
   position: phd
   description:
-    <name> is a PhD student working on Open Source Large Language Models focusing on Evaluations, Model Interpretability and Learning Dynamics in Neural Networks. His M.Sc. thesis was on exploring 
-    the effects of Predicate Arguments on multi-modal Procedural Reasoning at IMS, University of Stuttgart. He's currently associated with the LLMs4EU project.
+    <name> is a PhD student working on Open Source Large Language Models focusing on Evaluations, Model Interpretability and Learning Dynamics in 
+    Neural Networks. His M.Sc. thesis was on exploring the effects of Predicate Arguments on 
+    multi-modal Procedural Reasoning at IMS, University of Stuttgart. He's currently associated with the LLMs4EU project.
   picture: ../images/people/shawon_ashraf.webp
   scholar: https://scholar.google.com/citations?user=oBUTqt8AAAAJ&hl=en
   linkedin: https://www.linkedin.com/in/shawon-ashraf-96162763/
+  mail: s.ashraf1@tue.nl
+
 
 Shreya Sajid:
   position: phd
@@ -256,7 +259,6 @@ Shreya Sajid:
   scholar: https://scholar.google.nl/citations?user=S4cxGtsAAAAJ&hl=nl&oi=sra
   linkedin: https://www.linkedin.com/in/shreya-sajid/
 
-  mail: s.ashraf1@tue.nl
 
 Fabian Denoodt:
   position: phd
