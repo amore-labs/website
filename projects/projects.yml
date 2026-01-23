@@ -180,3 +180,11 @@ mlopen-platform:
   year: 2012-2013
   description: This exploratory project brought together scientists and engineers to create an open machine learning platform, forming the foundation of the OpenML community.
   image: ../images/projects/pascal.webp
+
+pathfinder:
+  title: "AI Pathfinder"
+  funding: EDIH
+  year: 2025-2026
+  description: Connecting Dutch SMEs with expertise to build practical AI solutions that addresses their specific challenges.
+  project_url: ../pathfinder/index.html
+  image: ../images/ai_pathfinder_1.jpg

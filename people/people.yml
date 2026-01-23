@@ -50,13 +50,13 @@ Jiarong Pan:
   scholar: https://scholar.google.com/citations?user=3KjbaRUAAAAJ
 
 Taniya Das:
-  position: engineer
+  position: alumnus
   description:
-    <name> is a Research Engineer solving various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a> and  <a href="https://github.com/aiondemand/AIOD-rest-api" target="_blank">AI-on-Demand</a> 
+    <name> is a former Research Engineer solving various engineering and machine learning tasks for <a href="https://github.com/openml" target="_blank">openml.org</a> and  <a href="https://github.com/aiondemand/AIOD-rest-api" target="_blank">AI-on-Demand</a> 
     platform (an EU project), to make ML research better. 
     She has contributed to <a href="https://github.com/openml/openml-tensorflow" target="_blank">openml-tensorflow</a>  and <a href="https://github.com/openml/openml-pytorch =" target="_blank">openml-pytorch</a> extensions for OpenML, 
     making it possible to use solve deep learning tasks using <a href="https://github.com/openml/openml-python" target="_blank">openml-python</a> API. 
-    She is currently working on using LLMs to  make both the platforms more intelligent. 
+    She also experimented the use of LLMs to make both the platforms more intelligent. 
   picture: ../images/people/taniya_image.webp
   mail: t.das@tue.nl
   scholar: https://scholar.google.com/citations?user=6D5WlrgAAAAJ
@@ -64,7 +64,7 @@ Taniya Das:
 Joaquin Vanschoren:
   position: permanent
   description:
-    <name> is an associate professor and head of the Automated Machine Learning lab at TU Eindhoven. He aims to scientifically understand (human-like) intelligence and build AI systems with advanced capabilities for the benefit of all humanity. 
+    <name> is an associate professor and head of the AMOR/e lab at TU Eindhoven. He aims to scientifically understand (human-like) intelligence and build AI systems with advanced capabilities for the benefit of all humanity. 
     He authored the first <a href="https://link.springer.com/book/10.1007/978-3-030-05318-5" target="_blank">book on AutoML</a>, gave <a href="https://www.youtube.com/watch?v=0eBR8a4MQ30" target="_blank">tutorials at NeurIPS</a> and AAAI and won several awards, including the <a href="https://researchdata.nl/en/history-dutch-data-prize/" target="_blank">Dutch Data Prize</a> and <a href="https://www.amazon.science/research-awards" target="_blank">Amazon Research Award</a>. 
     He founded <a href="https://www.openml.org/" target="_blank">OpenML</a>, a useful open science platform for machine learning, and co-founded the <a href="https://mlcommons.org/working-groups/data/croissant/" target="_blank">Croissant</a> standard for sharing AI resources. 
     He was the inaugural chair of the <a href="https://neuripsconf.medium.com/announcing-the-neurips-2021-datasets-and-benchmarks-track-644e27c1e66c" target="_blank">NeurIPS Datasets and Benchmarks track</a>, editor-in-chief of the <a href="https://data.mlr.press/" target="_blank">DMLR journal</a>, and co-chair of the <a href="https://mlcommons.org/working-groups/ai-risk-reliability/ai-risk-reliability/" target="_blank">MLCommons AI Risk & Reliability</a> working group. 
@@ -141,6 +141,20 @@ Anna Vettoruzzo:
   mail: a.vettoruzzo@tue.nl
   scholar: https://scholar.google.com/citations?user=lKNNc5kAAAAJ
 
+Bram Grooten:
+  position: postdoc
+  description:
+    <name> is a postdoc working on multimodal foundation models for robotic manipulation, focusing on generalization across tasks and environments. 
+    He is finishing his PhD in deep reinforcement learning at the TU Eindhoven in April 2026. 
+    His doctoral research focused on increasing the adaptability of deep RL agents to challenging out-of-distribution scenarios, such as unseen vehicles or backgrounds.
+    During his PhD, he worked at the University of Alberta for five months and interned at Sony AI in the Gran Turismo team.
+    In 2021, Bram received his double MSc degree in Applied Mathematics and Science Education.
+  picture: ../images/people/bram_grooten.webp
+  mail: b.grooten@tue.nl
+  scholar: https://scholar.google.com/citations?user=zkYA_KEAAAAJ
+  linkedin: https://www.linkedin.com/in/bramgrooten/
+  personal: https://www.bramgrooten.nl/
+
 Branislav Pecher:
   position: alumnus
   description:
@@ -180,7 +194,7 @@ Rafael Gomes Mantovani:
 Jan van Rijn:
   position: alumnus
   description:
-    <name> Jan is a former PhD student, and currently assistant professor at Leiden University. During his PhD, he co-founded and developed OpenML.org, and did research towards meta-learning and algorithm selection based on OpenML data. He co-authored the Open Access book on Metalearning. His current research activities include AutoML and Trustworthy Artificial Intelligence.
+    <name> is a former PhD student, and currently assistant professor at Leiden University. During his PhD, he co-founded and developed OpenML.org, and did research towards meta-learning and algorithm selection based on OpenML data. He co-authored the Open Access book on Metalearning. His current research activities include AutoML and Trustworthy Artificial Intelligence.
   picture: ../images/people/janvanrijn.webp
   mail: j.n.van.rijn@liacs.leidenuniv.nl
   scholar: https://scholar.google.be/citations?user=O4X5CpwAAAAJ
@@ -188,7 +202,7 @@ Jan van Rijn:
 Dalton Harmsen:
   position: phd
   description:
-    Dalton Harmsen obtained his M.Sc. degree in Data Science & Artificial Intelligence at Eindhoven University of Technology (Netherlands). His M.Sc. dissertation was carried out on the topic of benchmarking post-training quantization techniques for large language models under the supervision of J.M. Tomczak. Currently, he is a Ph.D. student at Eindhoven University of Technology – Data Science Domain with the DAI Cluster. Dalton Harmsen works on the OpenEuroLLM project under the supervision of Joaquin Vanschoren.
+    <name> obtained his M.Sc. degree in Data Science & Artificial Intelligence at Eindhoven University of Technology (Netherlands). His M.Sc. dissertation was carried out on the topic of benchmarking post-training quantization techniques for large language models under the supervision of J.M. Tomczak. Currently, he is a Ph.D. student at Eindhoven University of Technology – Data Science Domain with the DAI Cluster. Dalton Harmsen works on the OpenEuroLLM project under the supervision of Joaquin Vanschoren.
   picture: ../images/people/dalton.webp
   mail: d.r.harmsen@tue.nl
   scholar: https://scholar.google.com/citations?user=O5wWI0gAAAAJ
@@ -219,7 +233,58 @@ Diana Alexandra Onutu:
 Matthew Danish:
   position: postdoc
   description:
-    <name> is a postdoctoral researcher in the AutoML group at Eindhoven University of Technology (TU/e) in the Netherlands. He is currently engaged with the AI Pathfinder initiative. He obtained his Ph.D. in 2015 from Boston University, worked on research projects at Cambridge University department of Computer Science and Technology ranging from lightweight Fortran code verification to computer vision and sensor networks, collaborating with industry and governmental initiatives. Later, after moving to the Netherlands, he joined the Geosciences department of Utrecht University for a cross-disciplinary machine learning project.
+    <name> is a postdoctoral researcher in the AutoML group at Eindhoven University of Technology (TU/e) in the Netherlands. He is currently engaged with the <a href="../pathfinder/index.html">AI Pathfinder</a> initiative. He obtained his Ph.D. in 2015 from Boston University, worked on research projects at Cambridge University department of Computer Science and Technology ranging from lightweight Fortran code verification to computer vision and sensor networks, collaborating with industry and governmental initiatives. Later, after moving to the Netherlands, he joined the Geosciences department of Utrecht University for a cross-disciplinary machine learning project.
   picture: ../images/people/mrdanish.webp
   mail: m.r.danish@tue.nl
   scholar: https://scholar.google.com/citations?user=sHGgb_sAAAAJ&hl=en
+
+Shawon Ashraf:
+  position: phd
+  description:
+    <name> is a PhD student working on Open Source Large Language Models focusing on Evaluations, Model Interpretability and Learning Dynamics in 
+    Neural Networks. His M.Sc. thesis was on exploring the effects of Predicate Arguments on 
+    multi-modal Procedural Reasoning at IMS, University of Stuttgart. He's currently associated with the LLMs4EU project.
+  picture: ../images/people/shawon_ashraf.webp
+  scholar: https://scholar.google.com/citations?user=oBUTqt8AAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/shawon-ashraf-96162763/
+  mail: s.ashraf1@tue.nl
+
+
+Shreya Sajid:
+  position: phd
+  description:
+    <name> is a PhD Candidate at Eindhoven University of Technology (TU/e), where she works on developing novel methods for fine-tuning multi-modal foundation models as part of the EU-funded Project ELLIOT. She holds an M.Sc. in Data Science and Artificial Intelligence from TU/e, where her thesis focused on token sparsification techniques to improve the efficiency of audio transformer models.
+  picture: ../images/people/shreya_sajid.webp
+  mail: s.sajid@tue.nl
+  scholar: https://scholar.google.nl/citations?user=S4cxGtsAAAAJ&hl=nl&oi=sra
+  linkedin: https://www.linkedin.com/in/shreya-sajid/
+
+
+Fabian Denoodt:
+  position: phd
+  description:
+    <name> is a PhD candidate focusing on Efficient Uncertainty Quantification. He is particularly interested in the fundamental aspects of uncertainty estimation and in developing new, efficient methods targeted for hardware-constrained devices. Before joining TU/e, Fabian worked as a teaching assistant at the University of Antwerp, where he taught the practical sessions for the courses Artificial Intelligence, Artificial Neural Networks, Numerical Linear Algebra, Advanced Programming, and Distributed Systems.
+  picture: ../images/people/fabian.webp
+  mail: f.l.m.denoodt@tue.nl
+  scholar: https://scholar.google.com/citations?user=A4o7IsMAAAAJ
+  linkedin: https://www.linkedin.com/in/fabian-denoodt/
+  personal: https://fdenoodt.github.io/
+
+Qingren Yao:
+  position: phd
+  description:
+    <name> is a PhD student working on ELLIOT project, which aims to develop advanced open-source multimodal foundation models. His research interests include multimodality, embodied intelligence, and time series analysis.
+  picture: ../images/people/qingren_yao.webp
+  mail: q.yao@tue.nl
+  scholar: https://scholar.google.com/citations?user=NYMYQ5cAAAAJ
+  linkedin: https://www.linkedin.com/in/qingren-yao-7937a8263/
+  personal: https://github.com/Qingrenn
+
+Thilina Rajapakse:
+  position: postdoc
+  description:
+    <name> is a postdoc working on the LLMs4EU project. His research focus is on Automated Red Teaming for LLMs. His PhD is on using Transformer models for Search and was conducted at the University of Amsterdam.
+  picture: ../images/people/thilina.webp
+  mail: t.c.r.rajapakse@tue.nl
+  scholar: https://scholar.google.com/citations?user=DEs7_YEAAAAJ&hl=en
+  linkedin: https://www.linkedin.com/in/t-rajapakse/

@@ -1,3 +1,26 @@
+unsupautoml:
+  title: "Automated Machine Learning for Unsupervised Tabular Tasks"
+  authors:
+    - P. Singh
+    - P. Gijsbers
+    - E. C. Gok Yildirim
+    - M. O. Yildirim
+    - J. Vanschoren
+  year: 2025
+  venue: "Machine Learning Journal, ACML 2025"
+  preprint: "https://arxiv.org/pdf/2510.07569v1"
+  
+
+surgtransfer:
+  title: "Analysis of Transferability Estimation Metrics for Surgical Phase Recognition"
+  authors:
+    - Prabhant Singh
+    - Yiping Li
+    - Yasmina Al Khalil
+  year: 2025
+  venue: "3rd Workshop in Data Engineering in Medical Imaging (DEMI) MICCAI-2025 Workshop (Spotlight)"
+  pdf: "https://link.springer.com/chapter/10.1007/978-3-032-08009-7_9"
+  
 CAMeLU:
   title: "Unsupervised Meta-Learning via In-Context Learning"
   authors:
