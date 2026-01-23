@@ -2,7 +2,7 @@
 
 ### Adding yourself to the team members
 
-You must add yourself to [people.yml](https://github.com/openml-labs/website/blob/main/people/people.yml) and indicate your name, position, a short description and a picture.
+Please add yourself to [people.yml](https://github.com/openml-labs/website/blob/main/people/people.yml) and indicate your name, position, a short description and a picture.
 Resizing your portrait picture to 160x200 and compressing it into WebP format with [squoosh](https://squoosh.app/) is strongly recommended.
 
 ### Adding publications and software
