@@ -5,7 +5,7 @@ website:
   title: "<span style='color:#FF2400;font-weight:bold'>AMOR/e</span>"
   favicon: images/favicon.ico 
   navbar:
-    logo: "images/logo2.png"
+    logo: "images/amore-logo-light.png"
     background: "primary"
     collapse-below: lg
     left:
