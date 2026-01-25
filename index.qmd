@@ -40,14 +40,14 @@ We are integrated in the [Data and AI cluster](https://dai.win.tue.nl/), which d
 
 ::: {.box}
 
-#### We are hiring!
-Our team is growing! We have **8 new openings** for [PhD students, PostDocs, and Research Engineers](https://amore-labs.github.io/website/join/join.html) for research on large language models and multimodal foundation models.
+#### Top paper in Cell Patterns
+We're thrilled that our paper [OpenML: Insights from 10 years and more than a thousand papers](https://lnkd.in/eypZFa4D) is among the editor picks as [one of the best papers in the Patterns journal](https://info.cell.com/collection-research-highlights-from-2024-0) in 2025.
 
 :::
 
 ::: {.box}
 
-#### Two new papers at CoLLAs 2025!
+#### Two new papers at CoLLAs 2025
 We're presenting **SERENA**, a surprisingly efficient neuro-inspired approach for continual learning using sparse models, as well as **SuperNet Transfer**, a new method that efficiently adapts neural architectures during transfer learning.
 
 :::

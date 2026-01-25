@@ -1,5 +1,9 @@
 /* css styles */
 
+.navbar-logo {
+  max-height: 35px !important;
+  vertical-align: middle;
+}
 
 /* News cards */
 
