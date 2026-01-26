@@ -80,16 +80,23 @@ for key, data in yaml_data.items():
             f"<b>{title_str}</b><br>{author_str}<br><em>{venue} ({year_str})</em><br>"
             f"{' '.join(buttons)}"
         )  
-    pub_strs["pubs"][year_str].append(f"<li class='list-group-item'>{content_html}</li><hr>")
+    pub_strs["pubs"][year_str].append((pub_url is not None, f"<li class='list-group-item'>{content_html}</li><hr>"))
 ```
 
 ```{python}
-#| label: "published-year"
-#| id: "published-year"
-#| output: asis
+# render
 for year in sorted(pub_strs["pubs"].keys(), reverse=True):
     display(Markdown(f"### {year}" + "{#" + f"published-{year}" + "}"))
+
+    # published_url first, then the rest
+    items = [
+        html for _, html in sorted(
+            pub_strs["pubs"][year],
+            key=lambda item: item[0],
+            reverse=True
+        )
+    ]
     display(HTML(
-        "<ul class='list-group list-group-flush'>" + '\n'.join(pub_strs["pubs"][year]) + "</ul>"
+        "<ul class='list-group list-group-flush'>" + "\n".join(items) + "</ul>"
     ))
 ```

@@ -9,24 +9,109 @@ keep-md: true
 
 
 
-::: {#published-year .cell execution_count=2}
-### 2025{#published-2025}
+::: {#a1b61fa5 .cell execution_count=2}
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
+### 2026{#published-2026}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
-<ul class='list-group list-group-flush'><li class='list-group-item'><b>In-depth sensitivity analysis of heating demand and overheating in Dutch terraced houses using interpretable machine learning.</b><br>Alexis Cvetkov-Iliev, Vasilis Soulios, Luyi Xu, Günsu Merin Abbas, Evangelos Kyrou, Lisanne Havinga, Pieter Jan Hoes, Roel Loonen, and Joaquin Vanschoren<br><em>Energy & Buildings, 337, no. 11561 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://pure.tue.nl/ws/portalfiles/portal/355604290/1-s2.0-S037877882500341X-main.pdf" target="_blank" rel="noopener noreferrer">
+<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/transferbenchmark.png' alt='How NOT to benchmark your SITE metric: Beyond Static Leaderboards and Towards Realistic Evaluation' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>How NOT to benchmark your SITE metric: Beyond Static Leaderboards and Towards Realistic Evaluation</b><br>P. Singh, S. Hess, and J. Vanschoren<br><em>International Conference on Learning Representations (ICLR 2026) (2026)</em><br><a class="btn btn-outline-dark btn-sm", href="https://openreview.net/pdf?id=ZHKVPkJMSI" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/specdecoding.png' alt='An Empirical Study of Speculative Decoding for Small Language Models' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>An Empirical Study of Speculative Decoding for Small Language Models</b><br>L. Mainardi, S. Sandikci, and J. Vanschoren<br><em>Conference of the European Chapter of the Association for Computational Linguistics (EACL 2026) (2026)</em><br><a class="btn btn-outline-dark btn-sm", href="https://openreview.net/forum?id=JFyEhJpo7i" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/pam.png' alt='Pruned Adaptation Modules: A Simple yet Strong Baseline for Continual Foundation Models' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Pruned Adaptation Modules: A Simple yet Strong Baseline for Continual Foundation Models</b><br>E. C. Gok Yildirim, M. O. Yildirim, and J. Vanschoren<br><em>Conference on Parsimony and Learning (CPAL 2026) (2026)</em><br><a class="btn btn-outline-dark btn-sm", href="https://openreview.net/forum?id=eGofyQoLrr#discussion" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/tosca.webp' alt='Unlocking [CLS] Features for Continual Post-Training' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Unlocking [CLS] Features for Continual Post-Training</b><br>M. O. Yildirim, E. C. Gok Yildirim, and J. Vanschoren<br><em>Transactions on Machine Learning Research, 2026 (2026)</em><br><a class="btn btn-outline-dark btn-sm", href="https://openreview.net/forum?id=OWfWyj6krc" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr></ul>
+```
+
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
+### 2025{#published-2025}
+:::
+
+::: {.cell-output .cell-output-display}
+
+```{=html}
+<ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/crypticbio.png' alt='CrypticBio: A Large Multimodal Dataset for Visually Confusing Species' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>CrypticBio: A Large Multimodal Dataset for Visually Confusing Species</b><br>G. Manolache, G. Schouten, and J. Vanschoren<br><em>Advances in Neural Information Processing Systems (NeurIPS 2025) (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://openreview.net/forum?id=RGZzSbo4jj" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/patterns.png' alt='OpenML: Insights from 10 years and more than a thousand papers' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>OpenML: Insights from 10 years and more than a thousand papers</b><br>B. Bischl, G. Casalicchio, T. Das, M. Feurer, S. Fischer, P. Gijsbers, S. Mukherjee, A. C. Müller, L. Németh, L. Oala, L. Purucker, S. Ravi, J. N. van Rijn, P. Singh, J. Vanschoren, J. van der Velde, and M. Wever<br><em>Patterns 6(7), 101317, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.cell.com/patterns/fulltext/S2666-3899(25)00165-5" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/cosmology.png' alt='Score Matching on Large Geometric Graphs for Cosmology Generation' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Score Matching on Large Geometric Graphs for Cosmology Generation</b><br>D. Onuțu, Y. Zhao, J. Vanschoren, and V. Menkovski<br><em>International Conference on Discovery Science, 17-31, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://link.springer.com/content/pdf/10.1007/978-3-032-05461-6_2.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/unsupautoml.webp' alt='Automated Machine Learning for Unsupervised Tabular Tasks' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Automated Machine Learning for Unsupervised Tabular Tasks</b><br>P. Singh, P. Gijsbers, E. C. Gok Yildirim, M. O. Yildirim, and J. Vanschoren<br><em>Machine Learning Journal, ACML 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/pdf/2510.07569v1" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/surgtransfer.webp' alt='Analysis of Transferability Estimation Metrics for Surgical Phase Recognition' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Analysis of Transferability Estimation Metrics for Surgical Phase Recognition</b><br>Prabhant Singh, Yiping Li, and Yasmina Al Khalil<br><em>3rd Workshop in Data Engineering in Medical Imaging (DEMI) MICCAI-2025 Workshop (Spotlight) (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://link.springer.com/chapter/10.1007/978-3-032-08009-7_9" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/CAMeLU.png' alt='Unsupervised Meta-Learning via In-Context Learning' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Unsupervised Meta-Learning via In-Context Learning</b><br>Anna Vettoruzzo, Lorenzo Braccaioli, Joaquin Vanschoren, and Marlena Nowaczyk<br><em>International Conference on Learning Representations (ICLR) (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://openreview.net/pdf?id=Jprs1v2wPA" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/serena.webp' alt='Self-Regulated Neurogenesis for Online Data-Incremental Learning' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Self-Regulated Neurogenesis for Online Data-Incremental Learning</b><br>M. O. Yildirim, E. C. Gok Yildirim, D. C. Mocanu, and J. Vanschoren<br><em>Conference on Lifelong Learning Agents (CoLLAs) (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://github.com/amore-labs/serena" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-github" role='img' aria-label='Github'></i>
+        Github
+    </a> <a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2403.14684" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/sensitivity_heating.png' alt='In-depth sensitivity analysis of heating demand and overheating in Dutch terraced houses using interpretable machine learning.' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>In-depth sensitivity analysis of heating demand and overheating in Dutch terraced houses using interpretable machine learning.</b><br>Alexis Cvetkov-Iliev, Vasilis Soulios, Luyi Xu, Günsu Merin Abbas, Evangelos Kyrou, Lisanne Havinga, Pieter Jan Hoes, Roel Loonen, and Joaquin Vanschoren<br><em>Energy & Buildings, 337, no. 11561 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://pure.tue.nl/ws/portalfiles/portal/355604290/1-s2.0-S037877882500341X-main.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf" role='img' aria-label='PDF'></i>
         PDF
     </a> <a class="btn btn-outline-dark btn-sm", href="https://www.sciencedirect.com/science/article/pii/S037877882500341X" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
-    </a></li><hr>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/supernet_transfer_nas.webp' alt='Robust and Efficient Transfer Learning via Supernet Transfer in Warm-Started Neural Architecture Search' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Robust and Efficient Transfer Learning via Supernet Transfer in Warm-Started Neural Architecture Search</b><br>P. Singh and J. Vanschoren<br><em>Conference on Lifelong Learning Agents (CoLLAs 2025) (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2407.20279" target="_blank" rel="noopener noreferrer">
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/in_context_generalization.png' alt='Meta-Learning Transformers to Improve In-Context Generalization' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Meta-Learning Transformers to Improve In-Context Generalization</b><br>L. Braccaioli, A. Vettoruzzo, P. Singh, J. Vanschoren, M. R. Bouguelia, and N. Conci<br><em>arXiv preprint arXiv:2507.05019, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2507.05019" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
+        Preprint
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/automl_short.png' alt='AutoML Benchmark with shorter time constraints and early stopping' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>AutoML Benchmark with shorter time constraints and early stopping</b><br>I. C. Jurado, P. Gijsbers, and J. Vanschoren<br><em>arXiv preprint arXiv:2504.01222, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2504.01222" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
+        Preprint
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/occam.png' alt='Occam's model: Selecting simpler representations for better transferability estimation' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Occam's model: Selecting simpler representations for better transferability estimation</b><br>P. Singh, S. Hess, and J. Vanschoren<br><em>arXiv preprint arXiv:2502.06925, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2502.06925" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
+        Preprint
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/ai_luminate.png' alt='AILuminate: Introducing v1.0 of the AI risk and reliability benchmark from MLCommons' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>AILuminate: Introducing v1.0 of the AI risk and reliability benchmark from MLCommons</b><br>S. Ghosh, H. Frase, A. Williams, ..., P. Mattson, P. Liang, and J. Vanschoren<br><em>arXiv preprint arXiv:2503.05731, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2503.05731" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
+        Preprint
+    </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/supernet_transfer_nas.webp' alt='On Supernet Transfer Learning for Effective Task Adaptation' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>On Supernet Transfer Learning for Effective Task Adaptation</b><br>P. Singh and J. Vanschoren<br><em>Conference on Lifelong Learning Agents (CoLLAs 2025) (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2407.20279" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
         Preprint
     </a></div></div></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2024{#published-2024}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/amlb.webp' alt='AMLB: An AutoML Benchmark' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>AMLB: An AutoML Benchmark</b><br>P. Gijsbers, M. L. P. Bueno, S. Coors, E. LeDell, S. Poirier, J. Thomas, B. Bischl, and J. Vanschoren<br><em>Journal of Machine Learning Research, 25 (101), 1--65 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.jmlr.org/papers/volume25/22-0493/22-0493.pdf" target="_blank" rel="noopener noreferrer">
@@ -79,7 +164,10 @@ keep-md: true
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
     </a></div></div></li><hr>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/dynamic_sparse_training.webp' alt='Continual Learning with Dynamic Sparse Training: Exploring Algorithms for Effective Model Updates' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Continual Learning with Dynamic Sparse Training: Exploring Algorithms for Effective Model Updates</b><br>M. O. Yildirim, E. C. Gok, G. Sokar, D. C. Mocanu, and J. Vanschoren<br><em>Conference on Parsimony and Learning (CPAL 2024), 94--107 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://proceedings.mlr.press/v234/yildirim24a.html" target="_blank" rel="noopener noreferrer">
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/dynamic_sparse_training.webp' alt='Continual Learning with Dynamic Sparse Training: Exploring Algorithms for Effective Model Updates' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Continual Learning with Dynamic Sparse Training: Exploring Algorithms for Effective Model Updates</b><br>M. O. Yildirim, E. C. Gok, G. Sokar, D. C. Mocanu, and J. Vanschoren<br><em>Conference on Parsimony and Learning (CPAL 2024), 94--107 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://github.com/amore-labs/cl-with-dst" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-github" role='img' aria-label='Github'></i>
+        Github
+    </a> <a class="btn btn-outline-dark btn-sm", href="https://proceedings.mlr.press/v234/yildirim24a.html" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
     </a></div></div></li><hr>
@@ -101,6 +189,10 @@ keep-md: true
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
     </a></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/medtransfer.png' alt='On dataset transferability in medical image classification' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>On dataset transferability in medical image classification</b><br>Dovile Juodelyte, Enzo Ferrante, Prabhant Singh, Joaquin Vanschoren, and Veronika Cheplygina<br><em>arXiv preprint arXiv:2412.20172v1, 2024 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/pdf/2412.20172" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
+        Preprint
+    </a></div></div></li><hr>
 <li class='list-group-item'><b>A Standardized Machine-Readable Dataset Documentation Format for Responsible AI</b><br>N. Jain, M. Akhtar, J. Giner-Miguelez, R. Shinde, J. Vanschoren, S. Vogler, S. Goswami, Y. Rao, T. Santos, and L. Oala<br><em>arXiv preprint arXiv:2407.16883, 2024 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2407.16883" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
         Preprint
@@ -128,14 +220,16 @@ keep-md: true
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/continual_learning_diet.webp' alt='Continual Learning on a Data Diet' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Continual Learning on a Data Diet</b><br>E. C. Gok Yildirim, M. O. Yildirim, and J. Vanschoren<br><em>arXiv preprint arXiv:2410.17715, 2024 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2410.17715" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
         Preprint
-    </a></div></div></li><hr>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/focil_sparse_experts.webp' alt='FOCIL: Finetune-and-Freeze for Online Class Incremental Learning by Training Randomly Pruned Sparse Experts' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>FOCIL: Finetune-and-Freeze for Online Class Incremental Learning by Training Randomly Pruned Sparse Experts</b><br>M. O. Yildirim, E. C. Gok Yildirim, D. C. Mocanu, and J. Vanschoren<br><em>arXiv preprint arXiv:2403.14684, 2024 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2403.14684" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
-        Preprint
     </a></div></div></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2023{#published-2023}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/signal_quality_ecg.png' alt='Signal Quality Analysis for Long-Term ECG Monitoring Using a Health Patch in Cardiac Patients' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Signal Quality Analysis for Long-Term ECG Monitoring Using a Health Patch in Cardiac Patients</b><br>I. Campero Jurado, I. Lorato, J. Morales, L. Fruytier, S. Stuart, P. Panditha, D. M. Janssen, N. Rossetti, N. Uzunbajakava, I. B. Serban, L. Rikken, M. de Kok, J. Vanschoren, and A. Brombacher<br><em>Sensors, 23 (4), Art. 2130 (2023)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.mdpi.com/1424-8220/23/4/2130" target="_blank" rel="noopener noreferrer">
@@ -204,7 +298,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2022{#published-2022}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>AgroML: An Open-Source Repository to Forecast Reference Evapotranspiration in Different Geo-Climatic Conditions Using Machine Learning and Transformer-Based Models</b><br>J. A. Bellido-Jiménez, J. Estévez, J. Vanschoren, and A. P. García-Marín<br><em>Agronomy, 12 (3), 656 (2022)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.mdpi.com/2073-4395/12/3/656" target="_blank" rel="noopener noreferrer">
@@ -257,7 +357,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2021{#published-2021}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>A Comparison of Optimisation Algorithms for High-Dimensional Particle and Astrophysics Applications</b><br>C. Balázs, M. van Beekveld, S. Caron, B. M. Dillon, B. Farmer, A. Fowlie, W. Handley, L. Hendriks, G. Jóhannesson, A. Leinweber, J. Mamužić, G. D. Martinez, P. Scott, E. C. Garrido-Merchán, R. Ruiz de Austri, Z. Searle, B. Stienen, J. Vanschoren, and M. White<br><em>Journal of High Energy Physics, 2021 (5), 1–46 (2021)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2101.04525" target="_blank" rel="noopener noreferrer">
@@ -339,7 +445,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2020{#published-2020}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>Aerial Imagery Pixel-Level Segmentation</b><br>M. R. Heffels and J. Vanschoren<br><em>arXiv preprint arXiv:2012.02024, 2020 (2020)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/pdf/2012.02024.pdf" target="_blank" rel="noopener noreferrer">
@@ -352,7 +464,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2019{#published-2019}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/gama_genetic_automl.webp' alt='GAMA: Genetic Automated Machine Learning Assistant' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>GAMA: Genetic Automated Machine Learning Assistant</b><br>P. Gijsbers and J. Vanschoren<br><em>Journal of Open Source Software, 4 (33), 1–2 (2019)</em><br><a class="btn btn-outline-dark btn-sm", href="https://github.com/openml-labs/gama" target="_blank" rel="noopener noreferrer">
@@ -412,7 +530,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2018{#published-2018}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>Speeding Up Algorithm Selection via Meta-Learning and Active Testing</b><br>S. Abdulrahman, P. Brazdil, J. N. van Rijn, and J. Vanschoren<br><em>Machine Learning, 107 (1), 79–108 (2018)</em><br><a class="btn btn-outline-dark btn-sm", href="" target="_blank" rel="noopener noreferrer">
@@ -453,7 +577,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2017{#published-2017}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>OpenML: An R Package to Connect to the Networked Machine Learning Platform</b><br>G. Casalicchio, B. Hofner, M. Lang, D. Kirchhoff, P. Kerschke, H. Seibold, J. Bossek, J. Vanschoren, and B. Bischl<br><em>Computational Statistics, 32 (3), 1–15 (2017)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/1701.01293" target="_blank" rel="noopener noreferrer">
@@ -470,7 +600,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2016{#published-2016}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>An Algorithm, Implementation and Execution Ontology Design Pattern</b><br>A. Lawrynowicz, D. Esteves, P. Panov, T. Soru, S. Dzeroski, and J. Vanschoren<br><em>In: Studies on the Semantic Web (Hitzler.P., Gangemi, A., Janowicz, K., Krisnadhi, A., Presutti, V., eds.), IOS Press (2016)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.researchgate.net/publication/308608405" target="_blank" rel="noopener noreferrer">
@@ -511,7 +647,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2015{#published-2015}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>Decreasing the False Alarm Rate of Arrhythmias in Intensive Care Using a Machine Learning Approach</b><br>L. M. Eerikainen, J. Vanschoren, M. J. Rooijakkers, R. Vullings, and R. M. Aarts<br><em>IEEE Computing in Cardiology, 42, 293-297 (2015)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.researchgate.net/publication/289996580" target="_blank" rel="noopener noreferrer">
@@ -564,7 +706,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2014{#published-2014}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>OpenML: Networked Science in Machine Learning</b><br>Joaquin Vanschoren, Jan N. van Rijn, Bernd Bischl, and Luis Torgo<br><em>ACM SIGKDD Explorations Newsletter (2014)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/1407.7722" target="_blank" rel="noopener noreferrer">
@@ -595,7 +743,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2013{#published-2013}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>A Survey of Intelligent Assistants for Data Analysis</b><br>F. Serban, J. Vanschoren, J. U. Kietz, and A. Bernstein<br><em>ACM Computing Surveys, 45 (3), Art. 31 (2013)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.researchgate.net/publication/262405094" target="_blank" rel="noopener noreferrer">
@@ -608,7 +762,13 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
+
+::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2012{#published-2012}
+:::
+
+::: {.cell-output .cell-output-display}
 
 ```{=html}
 <ul class='list-group list-group-flush'><li class='list-group-item'><b>Experiment Databases: A New Way to Share, Organize and Learn from Experiments</b><br>J. Vanschoren, H. Blockeel, B. Pfahringer, and G. Holmes<br><em>Machine Learning, 87 (2), 127–158 (2012)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.researchgate.net/publication/257618363" target="_blank" rel="noopener noreferrer">
@@ -617,6 +777,7 @@ keep-md: true
     </a></li><hr></ul>
 ```
 
+:::
 :::
 
 

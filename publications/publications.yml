@@ -1474,7 +1474,7 @@ supernet_transfer_nas:
     - J. Vanschoren
   year: 2025
   venue: "Conference on Lifelong Learning Agents (CoLLAs 2025)"
-  preprint: "https://arxiv.org/abs/2407.20279"
+  published_url: "https://lifelong-ml.cc/Conferences/2025/acceptedpapersandvideos/conf-2025-3"
 
 automated_time_series:
   title: "Can Time Series Forecasting Be Automated? A Benchmark and Analysis"
@@ -1484,17 +1484,6 @@ automated_time_series:
   year: 2024
   venue: "arXiv preprint arXiv:2407.16445, 2024"
   preprint: "https://arxiv.org/abs/2407.16445"
-
-unsupervised_meta_learning:
-  title: "Unsupervised Meta-Learning via In-Context Learning"
-  authors:
-    - A. Vettoruzzo
-    - L. Braccaioli
-    - J. Vanschoren
-    - M. Nowaczyk
-  year: 2024
-  venue: "arXiv preprint arXiv:2405.16124, 2024"
-  preprint: "https://arxiv.org/abs/2405.16124"
 
 ai_safety_benchmark:
   title: "Introducing v0.5 of the AI Safety Benchmark from MLCommons"

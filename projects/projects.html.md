@@ -32,6 +32,10 @@ keep-md: true
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/alfie.webp' alt='Assessment of Learning technologies and Frameworks for Intelligent and Ethical AI' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Assessment of Learning technologies and Frameworks for Intelligent and Ethical AI</b><br>EU Horizon Europe (2025-2028)<br><em>ALFIE aims to harness AI responsibly with essential skills, ethical practices, and people-centered, trustworthy AI. Our AutoML platform streamlines AI evaluation, ensuring performance aligns with ethical standards and societal values. Together, we’ll build a transparent, democratic AI ecosystem for the public good.</em><br><a class="btn btn-outline-dark btn-sm", href="https://alfie-project.eu/" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
+    </a></div></div></li>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/ai_pathfinder_1.jpg' alt='AI Pathfinder' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>AI Pathfinder</b><br>EDIH (2025-2025)<br><em>Connecting Dutch SMEs with expertise to build practical AI solutions that addresses their specific challenges.</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.aipathfinder.eu" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
+        Project website
     </a></div></div></li></ul>
 ```
 
@@ -47,10 +51,6 @@ keep-md: true
         Project website
     </a></div></div></li>
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/projects/automl4all.webp' alt='Automated Machine Learning for all' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Automated Machine Learning for all</b><br>Dutch Science Foundation, Open Science Fund (2024-2025)<br><em>This project leverages OpenML and AutoML to automatically build AI models and provide intuitive reports to help scientists make progress across many different fields.</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.nwo.nl/projecten/osf232109" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
-        Project website
-    </a></div></div></li>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/ai_pathfinder_1.jpg' alt='AI Pathfinder' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>AI Pathfinder</b><br>EDIH (2024-2025)<br><em>Connecting Dutch SMEs with expertise to build practical AI solutions that addresses their specific challenges.</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.aipathfinder.eu" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Project website'></i>
         Project website
     </a></div></div></li></ul>
