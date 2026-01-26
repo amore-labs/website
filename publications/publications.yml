@@ -96,9 +96,9 @@ transferbenchmark:
     - P. Singh
     - S. Hess
     - J. Vanschoren
-  year: 2025
-  venue: "arXiv preprint arXiv:2510.06448, 2025"
-  preprint: "https://arxiv.org/abs/2510.06448"
+  year: 2026
+  venue: "International Conference on Learning Representations (ICLR 2026)"
+  published_url: "https://openreview.net/pdf?id=ZHKVPkJMSI"
 
 specdecoding:
   title: "An Empirical Study of Speculative Decoding for Small Language Models"
