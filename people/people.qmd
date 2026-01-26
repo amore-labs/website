@@ -54,7 +54,14 @@ positions = {
 
 for long_pos, short_pos in positions.items():
     display(Markdown(f"## {long_pos}"))
-    for name, attrs in yaml_data.items():
-        if attrs["position"] == short_pos:
-            display(HTML(make_person_description(name, attrs)))
+    # Get all people with this position and sort by last name
+    people_in_position = [
+        (name, attrs) for name, attrs in yaml_data.items()
+        if attrs["position"] == short_pos
+    ]
+    # Sort by last name (last word in the name)
+    people_in_position.sort(key=lambda x: x[0].split()[-1])
+    
+    for name, attrs in people_in_position:
+        display(HTML(make_person_description(name, attrs)))
 ```
