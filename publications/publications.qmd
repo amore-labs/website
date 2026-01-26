@@ -24,6 +24,11 @@ def button(url, str, icon):
         {str}
     </a>"""
 
+def comment_button(text):
+    return f"""<span class="btn btn-sm" style="background-color: #2563eb; color: white;">
+        {text}
+    </span>"""
+
 
 yaml_data = yaml.safe_load(open("publications.yml"))
 pub_strs = {"pubs": {}}
@@ -51,7 +56,8 @@ for key, data in yaml_data.items():
 
     pub_url = data.get("published_url")
     venue = data.get("venue")
-    image = data.get("image") 
+    image = data.get("image")
+    comment = data.get("comment")
 
     if not image:
         if os.path.exists(f"../images/papers/{key}.png"):
@@ -61,6 +67,9 @@ for key, data in yaml_data.items():
 
     if pub_url is not None:
         buttons.append(button(pub_url, "Published", "bi-journal-text"))
+
+    if comment is not None:
+        buttons.append(comment_button(comment))
 
     if image:
         image_html = f"<img src='{image}' alt='{title_str}' style='float:left; margin-right:10px; width:100%; height:auto;'>" if image else ""

@@ -9,7 +9,7 @@ keep-md: true
 
 
 
-::: {#a1b61fa5 .cell execution_count=2}
+::: {#77683b23 .cell execution_count=2}
 
 ::: {.cell-output .cell-output-display .cell-output-markdown}
 ### 2026{#published-2026}
@@ -52,7 +52,9 @@ keep-md: true
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/patterns.png' alt='OpenML: Insights from 10 years and more than a thousand papers' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>OpenML: Insights from 10 years and more than a thousand papers</b><br>B. Bischl, G. Casalicchio, T. Das, M. Feurer, S. Fischer, P. Gijsbers, S. Mukherjee, A. C. Müller, L. Németh, L. Oala, L. Purucker, S. Ravi, J. N. van Rijn, P. Singh, J. Vanschoren, J. van der Velde, and M. Wever<br><em>Patterns 6(7), 101317, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.cell.com/patterns/fulltext/S2666-3899(25)00165-5" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
-    </a></div></div></li><hr>
+    </a> <span class="btn btn-sm" style="background-color: #2563eb; color: white;">
+        Editors’ pick: Best of 2025
+    </span></div></div></li><hr>
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/cosmology.png' alt='Score Matching on Large Geometric Graphs for Cosmology Generation' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Score Matching on Large Geometric Graphs for Cosmology Generation</b><br>D. Onuțu, Y. Zhao, J. Vanschoren, and V. Menkovski<br><em>International Conference on Discovery Science, 17-31, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://link.springer.com/content/pdf/10.1007/978-3-032-05461-6_2.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
@@ -83,6 +85,10 @@ keep-md: true
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
     </a></div></div></li><hr>
+<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/supernet_transfer_nas.webp' alt='On Supernet Transfer Learning for Effective Task Adaptation' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>On Supernet Transfer Learning for Effective Task Adaptation</b><br>P. Singh and J. Vanschoren<br><em>Conference on Lifelong Learning Agents (CoLLAs 2025) (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://lifelong-ml.cc/Conferences/2025/acceptedpapersandvideos/conf-2025-3" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
+        Published
+    </a></div></div></li><hr>
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/in_context_generalization.png' alt='Meta-Learning Transformers to Improve In-Context Generalization' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Meta-Learning Transformers to Improve In-Context Generalization</b><br>L. Braccaioli, A. Vettoruzzo, P. Singh, J. Vanschoren, M. R. Bouguelia, and N. Conci<br><em>arXiv preprint arXiv:2507.05019, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2507.05019" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
         Preprint
@@ -96,10 +102,6 @@ keep-md: true
         Preprint
     </a></div></div></li><hr>
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/ai_luminate.png' alt='AILuminate: Introducing v1.0 of the AI risk and reliability benchmark from MLCommons' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>AILuminate: Introducing v1.0 of the AI risk and reliability benchmark from MLCommons</b><br>S. Ghosh, H. Frase, A. Williams, ..., P. Mattson, P. Liang, and J. Vanschoren<br><em>arXiv preprint arXiv:2503.05731, 2025 (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2503.05731" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
-        Preprint
-    </a></div></div></li><hr>
-<li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/supernet_transfer_nas.webp' alt='On Supernet Transfer Learning for Effective Task Adaptation' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>On Supernet Transfer Learning for Effective Task Adaptation</b><br>P. Singh and J. Vanschoren<br><em>Conference on Lifelong Learning Agents (CoLLAs 2025) (2025)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2407.20279" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
         Preprint
     </a></div></div></li><hr></ul>
@@ -142,7 +144,9 @@ keep-md: true
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/croissant_metadata.png' alt='Croissant: A Metadata Format for ML-Ready Datasets' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Croissant: A Metadata Format for ML-Ready Datasets</b><br>M. Akhtar, O. Benjelloun, C. Conforti, P. Gijsbers, J. Giner-Miguelez, N. Jain, M. Kuchnik, Q. Lhoest, P. Marcenac, M. Maskey, P. Mattson, L. Oala, P. Ruyssen, R. Shinde, E. Simperl, G. Thomas, S. Tykhonov, J. Vanschoren, J. van der Velde, S. Vogler, and C.-J. Wu<br><em>Advances in Neural Information Processing Systems (NeurIPS 2024) (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://kclpure.kcl.ac.uk/ws/portalfiles/portal/311276594/Croissant_A_Metadata_Format_for_ML-Ready_Datasets.pdf" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
-    </a></div></div></li><hr>
+    </a> <span class="btn btn-sm" style="background-color: #2563eb; color: white;">
+        NeurIPS Spotlight
+    </span></div></div></li><hr>
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/trustllm.png' alt='TrustLLM: Trustworthiness in Large Language Models' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>TrustLLM: Trustworthiness in Large Language Models</b><br>Y. Huang, L. Sun, H. Wang, and others, and J. Vanschoren<br><em>International Conference on Machine Learning (ICML 2024), 20166--20270 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://proceedings.mlr.press/v235/huang24x.html" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
@@ -156,7 +160,9 @@ keep-md: true
     </a> <a class="btn btn-outline-dark btn-sm", href="https://proceedings.mlr.press/v235/pan24b.html" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
-    </a></div></div></li><hr>
+    </a> <span class="btn btn-sm" style="background-color: #2563eb; color: white;">
+        ICML Spotlight
+    </span></div></div></li><hr>
 <li class='list-group-item'><div class='grid'><div class='g-col-12 g-col-md-4'><img src='../images/papers/learning_attention.png' alt='Learning to Learn without Forgetting Using Attention' style='float:left; margin-right:10px; width:100%; height:auto;'></div><div class='g-col-12 g-col-md-8'><b>Learning to Learn without Forgetting Using Attention</b><br>A. Vettoruzzo, J. Vanschoren, M.-R. Bouguelia, and T. Rögnvaldsson<br><em>Conference on Lifelong Learning Agents (CoLLAs 2024) (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://drive.google.com/file/d/1RhBj6JlAygfO7Ptip_NW4ygBRYSpIEbL/view?usp=share_link" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf" role='img' aria-label='PDF'></i>
         PDF
@@ -206,10 +212,6 @@ keep-md: true
         Preprint
     </a></li><hr>
 <li class='list-group-item'><b>Can Time Series Forecasting Be Automated? A Benchmark and Analysis</b><br>A. T. Sreedhara and J. Vanschoren<br><em>arXiv preprint arXiv:2407.16445, 2024 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2407.16445" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
-        Preprint
-    </a></li><hr>
-<li class='list-group-item'><b>Unsupervised Meta-Learning via In-Context Learning</b><br>A. Vettoruzzo, L. Braccaioli, J. Vanschoren, and M. Nowaczyk<br><em>arXiv preprint arXiv:2405.16124, 2024 (2024)</em><br><a class="btn btn-outline-dark btn-sm", href="https://arxiv.org/abs/2405.16124" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-file-earmark-pdf" role='img' aria-label='Preprint'></i>
         Preprint
     </a></li><hr>
@@ -724,7 +726,9 @@ keep-md: true
     </a> <a class="btn btn-outline-dark btn-sm", href="https://dl.acm.org/doi/10.1145/2641190.2641198" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
-    </a></li><hr>
+    </a> <span class="btn btn-sm" style="background-color: #2563eb; color: white;">
+        Dutch Data Prize 2016
+    </span></li><hr>
 <li class='list-group-item'><b>Towards Meta-Learning on Data Streams</b><br>J. N. van Rijn, G. Holmes, B. Pfahringer, and J. Vanschoren<br><em>MetaSel Workshop @ ECAI 2014, CEUR Workshop Proceedings 1201, 37-38 (2014)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.researchgate.net/publication/267213271" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
@@ -756,10 +760,12 @@ keep-md: true
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
     </a></li><hr>
-<li class='list-group-item'><b>A RapidMiner Extension for Open Machine Learning</b><br>J. N. van Rijn, V. Umaashankar, S. Fischer, B. Bischl, T. Lorgo, B. Gao, P. Winter, B. Wiswedel, M. R. Berthold, and J. Vanschoren<br><em>Proceedings of RCOMM 2013, 59-70 (2013)</em><br><a class="btn btn-outline-dark btn-sm", href="https://www.researchgate.net/publication/260311444" target="_blank" rel="noopener noreferrer">
+<li class='list-group-item'><b>OpenML: A collaborative science platform</b><br>J. N. van Rijn, B. Bischl, L. Torgo, B. Gao, V. Umaashankar, S. Fischer, P. Winter, B. Wiswedel, M. R. Berthold, and J. Vanschoren<br><em>European Conference on Machine Learning and Knowledge Discovery in Databases (ECMLPKDD Demo Track) (2013)</em><br><a class="btn btn-outline-dark btn-sm", href="https://link.springer.com/chapter/10.1007/978-3-642-40994-3_46" target="_blank" rel="noopener noreferrer">
         <i class="bi bi-journal-text" role='img' aria-label='Published'></i>
         Published
-    </a></li><hr></ul>
+    </a> <span class="btn btn-sm" style="background-color: #2563eb; color: white;">
+        Best Demo Award
+    </span></li><hr></ul>
 ```
 
 :::

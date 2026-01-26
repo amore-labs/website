@@ -31,6 +31,7 @@ patterns:
   year: 2025
   venue: "Patterns 6(7), 101317, 2025"
   published_url: "https://www.cell.com/patterns/fulltext/S2666-3899(25)00165-5"
+  comment: "Editors’ pick: Best of 2025"
 
 in_context_generalization:
   title: "Meta-Learning Transformers to Improve In-Context Generalization"
@@ -216,6 +217,7 @@ openml:
   preprint: https://arxiv.org/abs/1407.7722
   published_url: https://dl.acm.org/doi/10.1145/2641190.2641198
   github: https://github.com/openml/OpenML
+  comment: "Dutch Data Prize 2016"
   
 amlb:
   title: "AMLB: An AutoML Benchmark"
@@ -627,6 +629,7 @@ croissant_metadata:
   year: 2024
   venue: "Advances in Neural Information Processing Systems (NeurIPS 2024)"
   published_url: "https://kclpure.kcl.ac.uk/ws/portalfiles/portal/311276594/Croissant_A_Metadata_Format_for_ML-Ready_Datasets.pdf"
+  comment: "NeurIPS Spotlight"
 
 trustllm:
   title: "TrustLLM: Trustworthiness in Large Language Models"
@@ -652,6 +655,7 @@ malibo_bayesian_optimization:
   published_url: "https://proceedings.mlr.press/v235/pan24b.html"
   pdf: "https://raw.githubusercontent.com/mlresearch/v235/main/assets/pan24b/pan24b.pdf"
   github: "https://github.com/boschresearch/meta-learning-likelihood-free-bayesian-optimization"
+  comment: "ICML Spotlight"
 
 learning_attention:
   title: "Learning to Learn without Forgetting Using Attention"
@@ -1677,19 +1681,20 @@ medieval_social_networks:
   venue: "Population Reconstruction 2014"
   published_url: "https://www.researchgate.net/publication/275966769"
 
-openml_rapidminer:
-  title: "A RapidMiner Extension for Open Machine Learning"
+openml_demo:
+  title: "OpenML: A collaborative science platform"
   authors:
     - J. N. van Rijn
+    - B. Bischl
+    - L. Torgo
+    - B. Gao
     - V. Umaashankar
     - S. Fischer
-    - B. Bischl
-    - T. Lorgo
-    - B. Gao
     - P. Winter
     - B. Wiswedel
     - M. R. Berthold
     - J. Vanschoren
   year: 2013
-  venue: "Proceedings of RCOMM 2013, 59-70"
-  published_url: "https://www.researchgate.net/publication/260311444"
+  venue: "European Conference on Machine Learning and Knowledge Discovery in Databases (ECMLPKDD Demo Track)"
+  published_url: "https://link.springer.com/chapter/10.1007/978-3-642-40994-3_46"
+  comment: "Best Demo Award"
