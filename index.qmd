@@ -41,7 +41,7 @@ We are integrated in the [Data and AI cluster](https://dai.win.tue.nl/), which d
 ::: {.box}
 
 #### Top paper in Cell Patterns
-We're thrilled that our paper [OpenML: Insights from 10 years and more than a thousand papers](https://lnkd.in/eypZFa4D) is among the editor picks as [one of the best papers in the Patterns journal](https://info.cell.com/collection-research-highlights-from-2024-0) in 2025.
+We're thrilled that our paper [OpenML: Insights from 10 years and more than a thousand papers](https://www.cell.com/patterns/fulltext/S2666-3899(25)00165-5) is among the editor picks as [one of the best papers in the Patterns journal](https://info.cell.com/collection-research-highlights-from-2024-0) in 2025.
 
 :::
 
