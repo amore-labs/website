@@ -1291,7 +1291,7 @@ democratising_ai:
     - J. Vanschoren
   year: 2023
   venue: "In: Artificial Intelligence in Science, OECD, 2023"
-  published_url: "https://www.oecd-ilibrary.org/docserver/be9632d7-en.pdf?expires=1732747076&id=id&accname=guest&checksum=19689B25EEC5352892DC79DEC2BABA4B"
+  published_url: "https://www.oecd.org/en/publications/artificial-intelligence-in-science_a8d820bd-en/full-report/democratising-artificial-intelligence-to-accelerate-scientific-discovery_186db148.html"
 
 meta_learning:
   title: "Meta-Learning"
@@ -1420,16 +1420,6 @@ meta_learning_2015:
   year: 2015
   venue: "CEUR Workshop Proceedings 1455, CEUR 2015"
   published_url: "https://www.researchgate.net/publication/289380479"
-
-meta_learning_2014:
-  title: "Proceedings of the 2014 International Workshop on Meta-Learning and Algorithm Selection @ ECAI"
-  authors:
-    - J. Vanschoren
-    - P. Brazdil
-    - L. Kotthoff
-  year: 2014
-  venue: "CEUR Workshop Proceedings 1201, CEUR 2014"
-  published_url: "https://www.researchgate.net/publication/275966998"
 
 standardized_dataset_docs:
   title: "A Standardized Machine-Readable Dataset Documentation Format for Responsible AI"
@@ -1668,18 +1658,6 @@ reproducible_meta_learning:
   year: 2018
   venue: "arXiv preprint arXiv:1808.10406, 2018"
   preprint: "https://arxiv.org/pdf/1808.10406.pdf"
-
-medieval_social_networks:
-  title: "Reconstructing Medieval Social Networks from English and Latin Charters"
-  authors:
-    - A. J. Knobbe
-    - M. Meeng
-    - J. Vanschoren
-    - S. Rees Jones
-    - S. Merlo Penning
-  year: 2014
-  venue: "Population Reconstruction 2014"
-  published_url: "https://www.researchgate.net/publication/275966769"
 
 openml_demo:
   title: "OpenML: A collaborative science platform"
