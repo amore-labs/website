@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Subhaditya Mukherjee, Emily Chen">
-<meta name="dcterms.date" content="2024-09-19">
+<meta name="author" content="Shreya Sajid">
+<meta name="dcterms.date" content="2026-02-13">
 
-<title>OpenML x Probabl Hackathon – AMOR/e</title>
+<title>A Shift Toward Data-Centric Compression – AMOR/e</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -325,13 +325,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#community-engagement-and-onboarding-contributors" id="toc-community-engagement-and-onboarding-contributors" class="nav-link" data-scroll-target="#community-engagement-and-onboarding-contributors">Community Engagement and Onboarding Contributors</a></li>
-  <li><a href="#governance-funding-and-sponsorship" id="toc-governance-funding-and-sponsorship" class="nav-link" data-scroll-target="#governance-funding-and-sponsorship">Governance, Funding, and Sponsorship</a></li>
-  <li><a href="#development-tooling-and-workflows" id="toc-development-tooling-and-workflows" class="nav-link" data-scroll-target="#development-tooling-and-workflows">Development Tooling and Workflows</a></li>
-  <li><a href="#broader-ecosystem-and-scope-of-collaboration" id="toc-broader-ecosystem-and-scope-of-collaboration" class="nav-link" data-scroll-target="#broader-ecosystem-and-scope-of-collaboration">Broader Ecosystem and Scope of Collaboration</a></li>
-  <li><a href="#discussion-on-croissant" id="toc-discussion-on-croissant" class="nav-link" data-scroll-target="#discussion-on-croissant">Discussion on Croissant</a></li>
+  <li><a href="#attention-based-methods" id="toc-attention-based-methods" class="nav-link" data-scroll-target="#attention-based-methods">Attention-based Methods</a></li>
+  <li><a href="#similarity-based-methods" id="toc-similarity-based-methods" class="nav-link" data-scroll-target="#similarity-based-methods">Similarity-based Methods</a></li>
+  <li><a href="#query-based-methods" id="toc-query-based-methods" class="nav-link" data-scroll-target="#query-based-methods">Query-based Methods</a></li>
+  <li><a href="#transformation-based-methods" id="toc-transformation-based-methods" class="nav-link" data-scroll-target="#transformation-based-methods">Transformation-based Methods</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  <li><a href="#reach-out" id="toc-reach-out" class="nav-link" data-scroll-target="#reach-out">Reach out</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -341,7 +340,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">OpenML x Probabl Hackathon</h1>
+<h1 class="title">A Shift Toward Data-Centric Compression</h1>
 </div>
 
 
@@ -351,14 +350,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Subhaditya Mukherjee, Emily Chen </p>
+             <p>Shreya Sajid </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 19, 2024</p>
+      <p class="date">February 13, 2026</p>
     </div>
   </div>
   
@@ -372,96 +371,89 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p><a href="http://scikit-learn.org">scikit-learn</a> is a free and open-source machine learning library for the Python programming language, while <a href="http://openml.org">OpenML</a> is an open platform for sharing datasets, algorithms, and experiments. While our teams have been working together for many years, we do not always have the time to meet in person. When we do get the chance though, many interesting discussions stem from those conversations.</p>
-<p>Last June we had a developers hackathon at the Paris office of <a href="https://probabl.ai/about">Probabl</a>, the official operating brand of scikit-learn, focused on maintaining and expanding open-source ML in Europe and beyond. We met to discuss not only the state of AI and how both our organizations fit in, but also to brainstorm solutions to challenges faced by our developers and communities.</p>
+<p>For a long time, ‘Efficient AI’ mostly meant smaller models. We quantized weights, pruned layers, distilled teachers into student models, and celebrated whenever parameter counts went down without performance collapsing. That framing made sense when model size was the primary cost. But that assumption is quietly breaking.</p>
+<p>Today’s bottleneck is no longer just how big a model is, but how much data it has to process - long text contexts, high-resolution images, hours of audio and video. Even when the model itself is frozen, inference efficiency degrades because attention scales with sequence length, rather than parameter count. This necessitates a shift in optimization strategy: efficiency is no longer just a model-centric problem, but also a data-centric one. The question shifts from ‘How do we shrink the network?’ to ‘How do we reduce what the network has to look at?’</p>
+<p>In modern architectures, ‘data’ appears as tokens. Whether they come from words, image patches, video frames, or audio segments, tokens are the units over which computation scales. Compressing data therefore means compressing tokens. Seen through this lens, a wide range of recent methods across modalities can be understood as forms of token compression. Despite their surface differences, most of them revolve around three core questions:</p>
+<ol type="1">
+<li>Which tokens matter?</li>
+<li>Which tokens are redundant?</li>
+<li>When is it safe to forget?</li>
+</ol>
+<p>Different papers answer these questions in quite different ways. As illustrated in Figure 1, these diverse approaches can be categorized into a structured taxonomy based on their underlying mechanisms - such as attention, similarity, query or transformation-based compression - and the specific modalities they target.</p>
 <div style="text-align:center">
-<p><img alt="View from the office" src="../images/blogs/openmlxsci/openmlxsci-1.webp" style="width:40%"></p>
-</div>
-<p>Many interesting topics were brought up, most of which were not only relevant to us but also to the broader open-source community. In the spirit of open-source, we wanted to share these insights with you.</p>
-</section>
-<section id="community-engagement-and-onboarding-contributors" class="level2">
-<h2 class="anchored" data-anchor-id="community-engagement-and-onboarding-contributors">Community Engagement and Onboarding Contributors</h2>
-<p>The focus of this discussion was around community engagement and emphasized the importance of effectively attracting, onboarding, and retaining contributors, especially newcomers.</p>
-<p>Over the past few years, both in OpenML and scikit-learn, we have been noticing that a majority of contributors are only active for short durations and do not stick around for too long. The ones that do are distributed between a smaller number of more experienced senior developers and a much larger pool of junior developers. This then leads to many PR’s being of lower quality and thus requiring a lot more verification and correction.</p>
-<p>The question at hand then, is not only how we can attract new contributors to our projects but also how we can make it easier for them and our developers to maintain these projects. Some of the ideas that came up have been tried and tested by communities our colleagues have founded or been part of across the globe.</p>
-<p><strong>Takeaways:</strong></p>
-<ul>
-<li><p><strong>Emotional connection</strong> : All of the participants agreed that the most important part of any community is its people. Contributors only stick around if they have an emotional connection to either the project, or the people contributing to the project. In this vein, it would be nice if the maintainers of the project could also be present at events. It also helps if the contributors use the projects themselves.</p></li>
-<li><p><strong>Focus on beginners</strong> : Since we see that most of our contributors are beginners, it serves to organize sprints that are inclusive of them with a focus on beginner-friendly issues, especially documentation tasks. Having these would not only help them understand the project and contribute better, but also let them form a connection with the project.</p></li>
-<li><p><strong>Curated issues</strong> : Most of our external contributors have enough on their plate already. Having a curated list of issues before sprints would ensure that no time is wasted and let our contributors focus on the tasks suitable for them.</p></li>
-<li><p><strong>Different tiers of events</strong> : To ensure that everyone is given tasks they can handle, it would be nice to have separate events for contributors with varying levels of expertise. This would also have the added benefit of retaining beginner-friendly issues for sprints to prevent more experienced contributors from claiming them early.</p></li>
-<li><p><strong>Mentoring</strong> : Incorporating one-to-one mentoring to help new contributors set up their development environments would help them feel more connected to the project. It is understandable that this is time consuming, so perhaps some way of deciding who gets mentored can be set up in time.</p></li>
-<li><p><strong>Contributors guide</strong> : Simplifying the contributor’s guide and adding video tutorials would make it a lot more beginner-friendly, especially to those who have never filed a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#about-pull-requests">pull request</a> (PR) before.</p></li>
-<li><p><strong>Semi regular events</strong> : Some of our colleagues found that they tended to care about a project more if there were semi regular events they could set time aside for. Having these helped them slowly build a sense of community as well.</p></li>
-<li><p><strong>Incentives</strong> : A common question that many developers have is why they should even bother contributing. Helping them understand how contributing to open source projects can aid their careers, bring them closer to the community and also help them get internships would be a good start.</p></li>
-</ul>
-<div style="text-align:center">
-<p><img alt="Discussions" src="../images/blogs/openmlxsci/discussion.webp" style="width:40%"></p>
+<img alt="TokenCompressionTaxonomy" src="../images/blogs/token-compression/token_compression_taxonomy.png" style="width:90%">
+<figcaption>
+Fig 1. A taxonomy of token compression methods, categorized according to their underlying mechanism and dominant modality, largely inspired from [3].
+</figcaption>
 </div>
 </section>
-<section id="governance-funding-and-sponsorship" class="level2">
-<h2 class="anchored" data-anchor-id="governance-funding-and-sponsorship">Governance, Funding, and Sponsorship</h2>
-<p>This focus of this discussion was the governance structures of open-source projects, sustainable funding models, and the role of sponsorships in supporting project activities.</p>
-<p><strong>Takeaways:</strong></p>
-<ul>
-<li><p><strong>Evolving Governance</strong> : Since governance is not static, we can treat it as a living document that evolves with the needs of the community.</p></li>
-<li><p><strong>Communication</strong>: It is good practise to maintain open communication channels, such as mailing lists and monthly meetings. This keeps all interested contributors in the loop.</p></li>
-<li><p><strong>Pull Requests</strong>: When a project becomes popular on GitHub, it often receives a large number of pull requests from the broader community, many of which may lack quality and become a time sink for senior developers. Finding a balance between approving and rejecting these contributions, without making the community feel unheard, remains an ongoing challenge.</p></li>
-<li><p><strong>Sponsorship</strong>: It would be beneficial to explore sponsorship models similar to the <a href="https://www.fondation-inria.fr">INRIA Foundation (website is in French)</a>, where sponsors have a voice in company policy during bi-annual meetings. Such a policy could also provide an added incentive for companies to sponsor, especially if they frequently use the products of their beneficiaries.</p></li>
-<li><p><strong>Corporate partnerships</strong>: To keep investors interested, it would also be interesting to look into corporate partnerships (similar to those used by the Linux Foundation) that are of mutual benefit.</p></li>
-</ul>
-</section>
-<section id="development-tooling-and-workflows" class="level2">
-<h2 class="anchored" data-anchor-id="development-tooling-and-workflows">Development Tooling and Workflows</h2>
-<p>Setting up and maintaining CI/CD pipelines across multiple repositories and programming languages puts a huge burden on the maintainers of the repositories.</p>
-<p>Having to keep up with the trends and learn new technology very frequently also makes developers more reluctant to change the stack, even if doing so would be beneficial.</p>
-<p>This discussion looked at how to tackle these challenges and make it easier for developers to handle such complex workloads.</p>
-<p><strong>Takeaways:</strong></p>
-<ul>
-<li><p><strong>Automation</strong>: Automating as much of the CI/CD pipeline as possible by using bots for linting and code coverage checks makes PR quality control easier.</p></li>
-<li><p><strong>Better workflows</strong>: Migrating to Github Actions and Azure workflows for testing and deployment also seems to help significantly.</p></li>
-<li><p><strong>Open source tools</strong>: There are many open source platforms/tools that offer comparable convenience to tools that are currently used. Some examples of these are CodeBerg and Forgejo as an alternative to GitHub and its issue trackers. Eventually migrating to using these tools might also help manage projects like scikit-learn and OpenML.</p></li>
-<li><p><strong>CircleCI</strong>: Tools for rendering documentation examples directly in the browser can also be used to enhance the review process.</p></li>
-</ul>
+<section id="attention-based-methods" class="level2">
+<h2 class="anchored" data-anchor-id="attention-based-methods">Attention-based Methods</h2>
 <div style="text-align:center">
-<p><img alt="Brainstorming sessions" src="../images/blogs/openmlxsci/discussion2.webp" style="width:40%"></p>
+<img alt="AttentionIllustration" src="../images/blogs/token-compression/attention_illustration.svg" style="width:30%">
+<figcaption>
+Fig 2. An example illustration of a naïve attention-based token pruning method called Top-K [1].
+</figcaption>
 </div>
+<p>Attention-based methods are the most intuitive starting point. The underlying assumption is simple: if a model assigns a low attention score to a token, that token is likely unimportant. Removing it reduces the sequence length and, in turn, the total computation. As illustrated in Fig. 2, Top-K token pruning [1] computes an attention score for each input token, typically relative to the [CLS] token. It then retains only the K highest-scoring tokens for the subsequent layers.</p>
+<p>While this works reasonably well in shallow or unimodal settings, it tends to break down in deeper or multimodal models. Attention is inherently layer-dependent. A token that appears unimportant early on may become critical later, particularly once cross-modal interactions or higher-level semantics emerge. As a result, pruning decisions made too early can permanently discard information that the model has not yet learned to exploit.</p>
+<p>Several recent analyses highlight this failure mode: pruning based on a single layer often introduces errors that only surface downstream. Balanced Token Pruning [4] makes this trade-off explicit by separating the effect of pruning on the current layer from its impact on future layers. They show that attention-based pruning lacks a single-layer criterion that is optimal across the model’s depth. As a result, attention alone is not a stable importance signal.</p>
+<p>To counter this instability, multi-stage approaches extend this idea by delaying decisions. In methods like MustDrop [5], tokens are evaluated during vision encoding, again during prefilling when text semantics appear, and once more during decoding. Only tokens that are consistently deemed irrelevant across stages are removed.</p>
 </section>
-<section id="broader-ecosystem-and-scope-of-collaboration" class="level2">
-<h2 class="anchored" data-anchor-id="broader-ecosystem-and-scope-of-collaboration">Broader Ecosystem and Scope of Collaboration</h2>
-<p>While both OpenML and scikit-learn focus on the open source ML community, it is sometimes hard to explain how we fit into the broader AI ecosystem.</p>
-<p>Especially with the rise of LLMs and Generative AI, stakeholders are somewhat inclined to think that frameworks such as ours are just not “enough”. Of course, this is not true at all.</p>
-<p><strong>Takeaways:</strong></p>
-<ul>
-<li><p><strong>Community projects</strong>: There are so many successful examples of open source projects, and a lot can be learned from their efforts. Projects like Scientific Python for example, have very well set up CI documentation and governance processes that can be quite readily applied to any open source project.</p></li>
-<li><p><strong>Exploring connections</strong>: A longer term focus for both our teams would be to explore connections with other open-source ML frameworks, such as PyTorch, Tensorflow as well as AutoML tools. Doing so would also help integrate and strengthen the open-source ML communities and ecosystems.</p></li>
-</ul>
+<section id="similarity-based-methods" class="level2">
+<h2 class="anchored" data-anchor-id="similarity-based-methods">Similarity-based Methods</h2>
+<div style="text-align:center">
+<img alt="SimilarityIllustration" src="../images/blogs/token-compression/similarity_illustration.png" style="width:50%">
+<figcaption>
+Fig 3. An example illustration of a naïve token merging method called ToMe [2].
+</figcaption>
+</div>
+<p>Across modalities, tokens are often redundant by construction. Adjacent audio frames may often encode the same phonetic content. Neighboring image patches may frequently describe the same surface. Consecutive video frames can be nearly identical. In such cases, the question is if all these tokens are actually needed.</p>
+<p>Similarity-based methods exploit this redundancy directly. Rather than deleting tokens outright, they merge those that encode similar information. As illustrated in Fig. 3, this typically involves identifying pairs or groups of tokens with high representational overlap - often measured using metrics such as cosine similarity - and collapsing them into a single shared token. In speech, Adjacent Token Merging [6] combines neighboring frames, preserving the temporal order while reducing the sequence length. In vision-language models, prune-and-merge hybrid methods [7, 8] first keep a small set of salient tokens, then merge nearby or related tokens into them.</p>
+<p>As a result, similarity-based approaches tend to be more conservative and robust. They avoid relying on potentially unstable importance estimates and instead operate under the assumption that redundancy is inherent in the input representation and can be removed with limited risk to downstream performance.</p>
 </section>
-<section id="discussion-on-croissant" class="level2">
-<h2 class="anchored" data-anchor-id="discussion-on-croissant">Discussion on Croissant</h2>
-<p>Machine Learning datasets can consist of structure, unstructured data, or both, which makes them all the more complicated to manage. This has led to the rise of multiple “dataset formats” which further make it hard to consistently load data across platforms and tools.</p>
-<p><a href="https://github.com/mlcommons/croissant">Croissant</a> is a dataset metadata format which, among other things, describes how to load and interpret the dataset, which helps load data regardless of which underlying dataset format is used. This format is now not only compatible with the most popular ML libraries/platforms (scikit-learn, PyTorch, Tensorflow, Kaggle, Hugging Face), it is also recommended by NeurIPS (one of the topmost conferences in the AI space).</p>
-<p><strong>Features of Croissant:</strong></p>
-<ul>
-<li><p><strong>Schema.org</strong>: Croissant was built on top of schema.org with more metadata information specific to ML datasets. Since it does not require any changes to the underlying data structure, existing datasets can quite easily be converted to use it.</p></li>
-<li><p><strong>Layers</strong>: The format has 4 layers - Dataset level metadata, resource descriptions, content structure, and ML semantics. Each of which make it possible to encode and maintain structural information about datasets regardless of platform.</p></li>
-<li><p><strong>XAI and Visualization</strong>: Analysis and visualisation of the data works out of the box for all datasets and across multiple platforms. Croissant also supports the Core RAI vocabulary for explainable AI.</p></li>
-<li><p><strong>Supported Platforms</strong>: Every dataset in OpenML has a Croissant representation, while a majority of data on Kaggle and Google Dataset search also support it.</p></li>
-</ul>
+<section id="query-based-methods" class="level2">
+<h2 class="anchored" data-anchor-id="query-based-methods">Query-based Methods</h2>
+<div style="text-align:center">
+<img alt="QueryIllustration" src="../images/blogs/token-compression/query_illustration.svg" style="width:40%">
+<figcaption>
+Fig 4. An illustration of what a query-based token compression method would look like (inspired from [3]).
+</figcaption>
+</div>
+<p>In multimodal models, a large fraction of tokens may never be relevant to the user’s question. A detailed background patch in an image might be useless for one query and critical for another. As illustrated in Fig 4, models like BLIP-2 [9] address this by introducing a small set of learnable query tokens that perform cross-attention over a frozen encoder. These queries selectively extract only the most relevant visual or audio tokens and pass them to a frozen language model.</p>
+<p>This approach is effective because compression is guided directly by task semantics rather than generic importance heuristics. This also explains why query-guided pruning often works better in multimodal reasoning than purely attention-based heuristics. However, this benefit comes with trade-offs. Query-based compression is inherently context-dependent: the same input may yield different compressed representations under different prompts, which can complicate reuse, caching, and systematic evaluation.</p>
+</section>
+<section id="transformation-based-methods" class="level2">
+<h2 class="anchored" data-anchor-id="transformation-based-methods">Transformation-based Methods</h2>
+<div style="text-align:center">
+<img alt="TransformationIllustration" src="../images/blogs/token-compression/transform.svg" style="width:40%">
+<figcaption>
+Fig 5. An illustration of transformation-based compression methods (inspired from [3]).
+</figcaption>
+</div>
+<p>Some approaches avoid token selection entirely by changing how inputs are represented. Instead of generating a large number of fine-grained tokens and compressing them later, transformation-based methods produce a smaller token set from the start. Pooling [10], pixel unshuffling [11, 12] and spatial convolutions [13] are some of the approaches that fall into this category. As illustrated in Fig. 5, this compression happens implicitly through the representation itself, by mapping dense input regions to a coarser token grid.</p>
+<p>For example, in LLaMA-VID [14], rather than encoding each frame into hundreds of patch tokens, every frame is represented using just two tokens: one capturing instruction-guided context (generated via cross-modal attention between the user query and image features) and one capturing general visual content (generated via average pooling over the image features). This kind of compression scales well and avoids the complexity of dynamic pruning logic.</p>
 </section>
 <section id="conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<div style="text-align:center">
-<p><img alt="Our teams enjoying a nice lunch in Paris" src="../images/blogs/openmlxsci/lunch.webp" style="width:40%"></p>
-</div>
-<p>Overall, this discussion was quite a successful one for both of our teams. We learnt a lot from each other and found new ways of collaborating on our shared dream of open-source ML. So much in fact, that we wanted to share our discussion with you, dear reader.</p>
-<p>We hope you learnt something new. We would love to welcome you to our community and would be glad to support your journey in this ML space.</p>
-<p>❤️ The OpenML and scikit-learn team</p>
+<p>Seen together, these families of methods suggest a broader shift in how we think about efficiency. Token compression is not merely a trick to make models faster; it is an implicit statement about what information is worth representing at all. Tokens carry structure, order, and semantics that interact across layers and modalities. Much of the current research can be reinterpreted as a search for the answer to a single unresolved question: when does the model know enough to safely compress? Looking ahead, the most promising directions likely lie in hybrid and adaptive schemes that treat compression as a progressive process rather than a one-shot decision. As inputs continue to grow and model sizes begin to plateau, data-centric compression moves from an implementation detail to a design choice. Efficiency is therefore shaped not just by model size, but by the mechanisms that regulate which information is retained across layers.</p>
 </section>
-<section id="reach-out" class="level2">
-<h2 class="anchored" data-anchor-id="reach-out">Reach out</h2>
-<hr>
-<p>For more information about this hackathon or just to chat with us, feel free to reach out to us on <a href="mailto:openml-labs@tue.nl">OpenML Email</a>, <a href="https://probabl.ai/about">Probabl</a>. To contact the authors, send them an email here - <a href="mailto:msubhaditya@gmail.com">Subhaditya Mukherjee</a>, <a href="mailto:emilyxinyi.chen2021@gmail.com">Emily Chen</a>.</p>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>[1] Xu, Xuwei, Changlin Li, Yudong Chen, Xiaojun Chang, Jiajun Liu, and Sen Wang. 2023. “No Token Left Behind: Efficient Vision Transformer via Dynamic Token Idling.” arXiv preprint arXiv:2310.05654. https://arxiv.org/abs/2310.05654</p>
+<p>[2] Bolya, Daniel, Cheng-Yang Fu, Xiaoliang Dai, Peizhao Zhang, Christoph Feichtenhofer, and Judy Hoffman. 2023. “Token Merging: Your ViT But Faster.” arXiv preprint arXiv:2210.09461. https://arxiv.org/abs/2210.09461</p>
+<p>[3] Shao, Kele, Keda Tao, Kejia Zhang, Sicheng Feng, Mu Cai, Yuzhang Shang, Haoxuan You, Can Qin, Yang Sui, and Huan Wang. 2025. “When Tokens Talk Too Much: A Survey of Multimodal Long-Context Token Compression across Images, Videos, and Audios.” arXiv preprint arXiv:2507.20198. https://arxiv.org/abs/2507.20198.</p>
+<p>[4] Li, Kaiyuan, Xiaoyue Chen, Chen Gao, Yong Li, and Xinlei Chen. 2025. “Balanced Token Pruning: Accelerating Vision Language Models Beyond Local Optimization.” arXiv preprint arXiv:2505.22038. https://arxiv.org/abs/2505.22038</p>
+<p>[5] Liu, Ting, Liangtao Shi, Richang Hong, Yue Hu, Quanjun Yin, and Linfeng Zhang. 2024. “Multi-Stage Vision Token Dropping: Towards Efficient Multimodal Large Language Model.” arXiv preprint arXiv:2411.10803. https://arxiv.org/abs/2411.10803</p>
+<p>[6] Li, Yuang, Yu Wu, Jinyu Li, and Shujie Liu. 2023. “Accelerating Transducers through Adjacent Token Merging.” arXiv preprint arXiv:2306.16009. https://arxiv.org/abs/2306.16009</p>
+<p>[7] Cao, Qingqing, Bhargavi Paranjape, and Hannaneh Hajishirzi. 2023. “PuMer: Pruning and Merging Tokens for Efficient Vision Language Models.” arXiv preprint arXiv:2305.17530. https://arxiv.org/abs/2305.17530</p>
+<p>[8] Shang, Yuzhang, Mu Cai, Bingxin Xu, Yong Jae Lee, and Yan Yan. 2024. “LLaVA-PruMerge: Adaptive Token Reduction for Efficient Large Multimodal Models.” arXiv preprint arXiv:2403.15388. https://arxiv.org/abs/2403.15388</p>
+<p>[9] Li, Junnan, Dongxu Li, Silvio Savarese, and Steven Hoi. 2023. “BLIP-2: Bootstrapping Language-Image Pre-Training with Frozen Image Encoders and Large Language Models.” arXiv preprint arXiv:2301.12597. https://arxiv.org/abs/2301.12597</p>
+<p>[10] Zhang, Yuanhan, Jinming Wu, Wei Li, Bo Li, Zejun Ma, Ziwei Liu, and Chunyuan Li. 2025. “LLaVA-Video: Video Instruction Tuning with Synthetic Data.” arXiv preprint arXiv:2410.02713. https://arxiv.org/abs/2410.02713</p>
+<p>[11] Chen, Zhe, Weiyun Wang, Hao Tian, Shenglong Ye, Zhangwei Gao, and et al.&nbsp;2024. “How Far Are We to GPT-4V? Closing the Gap to Commercial Multimodal Models with Open-Source Suites.” arXiv preprint arXiv:2404.16821. https://arxiv.org/abs/2404.16821</p>
+<p>[12] Dai, Wenliang, Nayeon Lee, Boxin Wang, Zhuolin Yang, Zihan Liu, Jon Barker, et al.&nbsp;2024. “NVLM: Open Frontier-Class Multimodal LLMs.” arXiv preprint arXiv:2409.11402. https://arxiv.org/abs/2409.11402</p>
+<p>[13] Cha, J., Kang, W., Mun, J., and Roh, B. 2024. “Honeybee: Locality-Enhanced Projector for Multimodal LLM.” In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</p>
+<p>[14] Li, Yanwei, Chengyao Wang, and Jiaya Jia. 2023. “LLaMA-VID: An Image Is Worth 2 Tokens in Large Language Models.” arXiv preprint arXiv:2311.17043. https://arxiv.org/abs/2311.17043</p>
 
 
 </section>
