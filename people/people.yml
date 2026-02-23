@@ -94,6 +94,14 @@ Subhaditya Mukherjee:
   linkedin: https://www.linkedin.com/in/subhaditya-mukherjee-a36883100/
   personal: https://www.github.com/SubhadityaMukherjee
 
+Ivan Slobozhan:
+  position: engineer
+  description:
+    <name> is a research engineer working on the evaluation framework for multimodal models as part of the EU-funded Project ELLIOT, extending the current approach from text to image, video, audio, and time series modalities.
+  picture: ../images/people/ivan.webp
+  mail: i.slobozhan@tue.nl
+  scholar: https://scholar.google.com/citations?user=4j9MzooAAAAJ&hl
+
 Elif Ceren Gok Yildirim:
   position: phd
   description:
