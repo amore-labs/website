@@ -20,20 +20,21 @@ Would you like to work on open source software full-time and make machine learni
 Join us to build the next generation of OpenML, a popular open science platform for sharing interconnected AI artifacts (e.g. datasets, models, and benchmarks) using open standards and structured APIs. 
 OpenML serves over 300,000 users, has supported over 1,600 scientific studies, and won the Dutch Data Prize.
 
-For this position, you will help strengthen the impact and sustainability of OpenML, by:  
+This project will help strengthen the impact and sustainability of OpenML, by:  
 
 1. Modernizing Infrastructure to simplify deployment and streamline community contributions.
 2. Improving Open Data, enriching OpenML metadata with FAIR-aligned elements (e.g. data cards and model cards), supporting diverse data types and modalities, and allowing integration with other open science infrastructures.
 3. Enhancing User Experience through better interfaces and collaboration features.
 4. Engaging the Scientific Community, ensuring that the platform meets the evolving needs of the open science community.
 
-Specific key tasks include:  
+You will focus primarily on task 1 and 2, specific responsibilities include:  
 
 - Update the technical infrastructure components of OpenML to more modern and contributor-friendly technologies.
 - Enrich metadata by building on community standards such as Croissant, including quality metrics, DOI references, data provenance (e.g. data cards and model cards) and responsible AI metadata. 
 - Extend support for more data modalities (e.g. imagery, time series, text, and multi-modal data), and domain-specific open data formats (e.g., genomic data).
 - Streamline data loading into AI tools to facilitate AI experimentation in many scientific workflows.
 - Update developer tools and documentation to speed up the onboarding of new community contributors and streamline maintenance.
+- Close collaboration with another hire for the project based in Leiden University that focuses on task 3 and 4.
 
 We will provide you with an ideal environment for advanced AI research and collaboration. 
 You will work directly with AMOR/e’s engineering team, including Pieter Gijsbers, Subhaditya Mukherjee, and Joaquin Vanschoren. 
@@ -64,7 +65,6 @@ We will provide you with an ideal environment for advanced AI research and colla
 You will work directly with AMOR/e’s engineering team, including Pieter Gijsbers, Subhaditya Mukherjee, and Joaquin Vanschoren. 
 
 You will also be supported by project partners in Leiden University, the SURF supercomputing center, and the Dutch e-Science Center. 
-Beyond that, you work toget
 
 # Who we are looking for
 We are seeking exceptional individuals who aspire to leave a mark on the world of machine learning and push humanity forward
