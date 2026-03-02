@@ -1,3 +1,12 @@
+agenticthought:
+  title: "Agentic Thought Collectives: Multi-Agent Communities For Open-Ended Scientific Discovery"
+  authors:
+    - P. Singh
+    - J. Vanschoren
+  year: 2026
+  venue: "Post-AGI Science and Society Workshop (ICLR 2026)"
+  published_url: "https://openreview.net/forum?id=hFfOiaMkF3"
+
 crypticbio:
   title: "CrypticBio: A Large Multimodal Dataset for Visually Confusing Species"
   authors:
