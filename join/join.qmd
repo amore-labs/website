@@ -15,7 +15,7 @@ If you have your own sources of funding, please get in touch with us.
 You can also check out [other positions in our department](https://jobs.tue.nl/en/vacancies.html#filter=p_type%3DSEARCH_RESULTS%26p_search%3D%26p_category_code_arr%3D6048-461676&page=1).
 
 
-#### [Research Engineer for OpenML (2 years)]() (will open soon)
+#### [Research Engineer for OpenML (2 years)](https://www.tue.nl/werken-bij-tue/vacatureoverzicht/research-engineer-in-open-source-machine-learning) Apply now!
 Would you like to work on open source software full-time and make machine learning more accessible and reproducible? 
 Join us to build the next generation of OpenML, a popular open science platform for sharing interconnected AI artifacts (e.g. datasets, models, and benchmarks) using open standards and structured APIs. 
 OpenML serves over 300,000 users, has supported over 1,600 scientific studies, and won the Dutch Data Prize.
@@ -42,7 +42,7 @@ You will work directly with AMOR/e’s engineering team, including Pieter Gijsbe
 You will also be supported by project partners in Leiden University, the SURF supercomputing center, and the Dutch e-Science Center. 
 Beyond that, you work together with the wider OpenML community, especially the core contributors, as well as the Croissant community (led by Google and the Open Data Institute), and developers from other AI platforms such as Hugging Face.
 
-#### [Research Engineer for OpenML (4 years)]() (will open soon)
+#### [Research Engineer for OpenML (4 years)](https://www.tue.nl/werken-bij-tue/vacatureoverzicht/research-engineer-in-open-source-machine-learning) Apply now!
 Would you like to work on open source software full-time and make machine learning more accessible and reproducible? 
 Join us to build a new international AI ecosystem around OpenML, a popular open science platform for sharing interconnected AI artifacts (e.g. datasets, models, and benchmarks) using open standards and structured APIs. 
 OpenML serves over 300,000 users, has supported over 1,600 scientific studies, and won the Dutch Data Prize.
