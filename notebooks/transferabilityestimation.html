@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Prabhant Singh">
+<meta name="dcterms.date" content="2026-04-02">
 
-<title>AI Pathfinder – AMOR/e</title>
+<title>How NOT to benchmark your transferability estimation metric – AMOR/e</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -76,6 +78,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -319,8 +350,20 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#issues-with-the-standard-benchmark" id="toc-issues-with-the-standard-benchmark" class="nav-link active" data-scroll-target="#issues-with-the-standard-benchmark">🚩 Issues with the “Standard” Benchmark</a></li>
+  <li><a href="#site-benchmark-and-evaluation-checklist" id="toc-site-benchmark-and-evaluation-checklist" class="nav-link" data-scroll-target="#site-benchmark-and-evaluation-checklist">SITE Benchmark and Evaluation Checklist</a>
+  <ul class="collapse">
+  <li><a href="#best-practices-for-building-a-benchmark" id="toc-best-practices-for-building-a-benchmark" class="nav-link" data-scroll-target="#best-practices-for-building-a-benchmark">Best practices for Building a Benchmark</a></li>
+  <li><a href="#best-practices-for-reporting-experiments-and-evaluation" id="toc-best-practices-for-reporting-experiments-and-evaluation" class="nav-link" data-scroll-target="#best-practices-for-reporting-experiments-and-evaluation">Best practices for Reporting Experiments and Evaluation</a></li>
+  <li><a href="#best-practices-for-releasing-code" id="toc-best-practices-for-releasing-code" class="nav-link" data-scroll-target="#best-practices-for-releasing-code">Best practices for Releasing Code</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -328,14 +371,26 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">AI Pathfinder</h1>
+<h1 class="title">How NOT to benchmark your transferability estimation metric</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Prabhant Singh </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 2, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -345,70 +400,169 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<h1>
-This webpage is now archived
-</h1>
-<p>Please visit <a href="https://www.aipathfinder.eu">AI Pathfinder</a> for the latest news (from Jan 2026).</p>
-<h1>
-Unleash AI potential for your business
-</h1>
-<img style="float: right; margin-left: 5px" width="300" src="../images/ai_pathfinder_1.jpg">
-<p>
-<strong> Partner with a leading AI lab and transform your SME with customized AI solutions </strong>
-</p>
-<p>
-AI is revolutionizing how businesses operate: from automating tasks and improving efficiency, to supporting customers and answering enquiries. AI Pathfinder connects Dutch SMEs with expertise to build practical AI solutions that address your specific challenges. We co-create AI-driven solutions tailored to your business, with practical value and sustainable integration.
-</p>
-<p>
-Recent project examples include: automatically simplifying and organizing complex customer orders, AI health care agent chatbot with guardrails and EU data protection,
-</p>
-<p>
-What we offer:
-</p>
-<ul>
-<li>
-Expert guidance from AI specialists working directly within your team
-</li>
-<li>
-A flexible collaboration model starting with brainstorming sessions and growing to proofs-of-concept and prototypes, and beyond
-</li>
-<li>
-Access to top AI tools, platforms and expertise through the Technical University of <a href="https://dai.win.tu.nl">Eindhoven (TU/e) Data and AI Lab</a>
-</li>
+<p>Source Independent Transferability Estimation (SITE) metrics have become a hot topic in AI research. The goal is simple: pick the best pre-trained model for a target task without the cost of fine-tuning or needing access to the original source data. Our recent paper accepted at ICLR 2026 reveals a troubling reality: the benchmarks we use to measure progress in this field are fundamentally flawed.</p>
+<p><strong><a href="https://openreview.net/forum?id=ZHKVPkJMSI">Paper Link</a></strong></p>
+<p><strong><a href="https://github.com/amore-labs/HowNOTtoBenchmarkSITE-ICLR2026">Github Repo</a></strong></p>
+<p><strong><a href="">ICLR Link</a></strong></p>
+<section id="issues-with-the-standard-benchmark" class="level2">
+<h2 class="anchored" data-anchor-id="issues-with-the-standard-benchmark">🚩 Issues with the “Standard” Benchmark</h2>
+<p>We’ve noticed that most metrics are tested on a model zoo dominated by ResNets, DenseNets and MobileNets. When we looked closer at the data, three major red flags stood out:</p>
+<ol type="1">
+<li><strong>We aren’t testing models; we’re testing model size</strong>: In the real world, we aren’t just choosing between a big ResNet and a small one. But in current benchmarks, larger models predictably win almost every time. When researchers removed the largest models from the overrepresented families, we saw the performance of these SITE metrics absolutely crater. They simply couldn’t tell the difference between two models of similar size. We validate this with ablating one model at a time and see the performance change of SITE metrics. We see that with a reduced search space, the metrics lose performance, which is counterintuitive.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/blogs/site/ablation_all_metrics_cifar10.webp" class="img-fluid figure-img"></p>
+<figcaption>alt text</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><strong>The “Static Ranker” is beating standard benchmark</strong> : This is the most interesting part: we could “solve” most current benchmarks without looking at the target data at all. By using a Static Ranking Heuristic, just a pre-defined list ordered by model size, we can outperform every proposed metric listed. The stats: This “static” ranker hit a correlation of 0.91, while one of the most popular SITE metrics, LogME, only managed 0.57. If a static list beats SITE metrics, standard benchmark isn’t testing transferability; it’s testing for a bias on static lists.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/blogs/site/rank_distribution_stacked_gradient.webp" class="img-fluid figure-img"></p>
+<figcaption>alt text</figcaption>
+</figure>
+</div>
+<ol start="3" type="1">
+<li><strong>Lack of fidelity:</strong> If we use a metric and it tells us Model A is “10 points better” than Model B, we expect a significant accuracy gain. However, we’ve found that current metrics have a very weak correlation with actual accuracy differences (<span class="math inline">\(\Delta_{Acc}\)</span>). A huge score gap might mean a 2% jump, or it might mean nothing at all. We show the verification of this approach by studying correlation between the changes in score and accuracy per metric per dataset.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/blogs/site/correlation_heatmap.webp" class="img-fluid figure-img"></p>
+<figcaption>Correlation heatmap showing how changes in metric scores relate weakly to changes in accuracy across datasets and SITE metrics</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 12%">
+<col style="width: 11%">
+<col style="width: 12%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dataset / Metric</th>
+<th>Aircraft</th>
+<th>CIFAR10</th>
+<th>CIFAR100</th>
+<th>DTD</th>
+<th>Food</th>
+<th>Pets</th>
+<th>Average</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GBC</td>
+<td>-0.12</td>
+<td>-0.02</td>
+<td>0.09</td>
+<td>0.14</td>
+<td>0.10</td>
+<td>-0.15</td>
+<td>0.007</td>
+</tr>
+<tr class="even">
+<td>TransRate</td>
+<td>0.14</td>
+<td>0.51</td>
+<td>0.20</td>
+<td>0.20</td>
+<td>-0.05</td>
+<td>0.17</td>
+<td>0.195</td>
+</tr>
+<tr class="odd">
+<td>SFDA</td>
+<td>-0.22</td>
+<td>0.85</td>
+<td>0.79</td>
+<td>0.63</td>
+<td>0.30</td>
+<td>0.34</td>
+<td>0.448</td>
+</tr>
+<tr class="even">
+<td>H-Score</td>
+<td>0.60</td>
+<td>0.91</td>
+<td>0.80</td>
+<td>0.04</td>
+<td>0.59</td>
+<td>0.37</td>
+<td>0.552</td>
+</tr>
+<tr class="odd">
+<td>NLEEP</td>
+<td>-0.51</td>
+<td>0.76</td>
+<td>0.84</td>
+<td>0.70</td>
+<td>0.69</td>
+<td>0.84</td>
+<td>0.553</td>
+</tr>
+<tr class="even">
+<td>LogME</td>
+<td>0.41</td>
+<td>0.85</td>
+<td>0.72</td>
+<td>0.66</td>
+<td>0.39</td>
+<td>0.41</td>
+<td>0.573</td>
+</tr>
+<tr class="odd">
+<td><strong>Static Ranking</strong></td>
+<td><strong>0.84</strong></td>
+<td><strong>0.91</strong></td>
+<td><strong>0.98</strong></td>
+<td><strong>0.99</strong></td>
+<td><strong>0.80</strong></td>
+<td><strong>0.94</strong></td>
+<td><strong>0.91</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="site-benchmark-and-evaluation-checklist" class="level2">
+<h2 class="anchored" data-anchor-id="site-benchmark-and-evaluation-checklist">SITE Benchmark and Evaluation Checklist</h2>
+<p>To apply our learnings from this study we devise a checklist for evaluating SITE Metrics fairly.</p>
+<section id="best-practices-for-building-a-benchmark" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-building-a-benchmark">Best practices for Building a Benchmark</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Ensure Diversity (Models should be from different families).</label></li>
+<li><label><input type="checkbox">Match computational budgets (Models should be under similar parameter range).</label></li>
+<li><label><input type="checkbox">Avoid Trivial hierarchies (Models should not be in incremental improvements over each other e.g.&nbsp;Inceptionv2, Inceptionv3, Inceptionv4) where one improvement is a proven improvement over another.</label></li>
+<li><label><input type="checkbox">Include datasets with room for improvement (Do not include datasets where all scores &gt; 99%).</label></li>
+<li><label><input type="checkbox">Include datasets from multiple domains.</label></li>
+<li><label><input type="checkbox">Engineer for rank dispersion (so different models win in different tasks) to avoid a static leaderboard. If this is not possible, examine if the following task requires transferability estimation.</label></li>
 </ul>
-<p>
-Why choose AI Pathfinder?
-</p>
-<ul>
-<li>
-We link state-of-the-art techniques and business needs to achieve tangible results
-</li>
-<li>
-Our people-centric approach focuses AI solutions on real business problems
-</li>
-<li>
-We strengthen your team’s digital competencies for long-term success
-</li>
+</section>
+<section id="best-practices-for-reporting-experiments-and-evaluation" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-reporting-experiments-and-evaluation">Best practices for Reporting Experiments and Evaluation</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Report <span class="math inline">\(\tau_w\)</span> with ablation over every model.</label></li>
+<li><label><input type="checkbox">Report correlation of <span class="math inline">\(\Delta_{T}\)</span> and <span class="math inline">\(\Delta_{Acc}\)</span>.</label></li>
 </ul>
-<p>
-Example projects from the lab:
-</p>
-<ul>
-<li>
-Vision: <a href="https://dai.win.tue.nl/researchprojects/110/">smart automated monitoring of plants</a> for greenhouse optimization
-</li>
-<li>
-Sensors: <a href="https://research.tue.nl/en/publications/signal-quality-analysis-for-long-term-ecg-monitoring-using-a-heal">performance analysis</a> of electrocardiogram monitoring patch signal quality
-</li>
-<li>
-Modelling: <a href="https://www.tue.nl/en/research/research-groups/building-physics-and-services/building-performance/renovatieverkenner">a tool</a> to estimate the energy savings of potential home renovations
-</li>
+</section>
+<section id="best-practices-for-releasing-code" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-releasing-code">Best practices for Releasing Code</h3>
+<p>For all experiments you report, check if you released:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Code for the training pipeline used to evaluate the final architectures.</label></li>
+<li><label><input type="checkbox">Code for computing SITE metric for specialized tasks such as object detection and regression.</label></li>
 </ul>
-<p>
-<strong>Interested?</strong> Let’s discover how a collaboration with a leading AI lab can transform your business. Contact us to explore the possibilities: <a href="mailto:md@aipathfinder.eu">md@aipathfinder.eu</a> <a href="https://www.linkedin.com/in/matthew-danish/"><img width="28" src="../images/LI-In-Bug.png"></a>
-</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

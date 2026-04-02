@@ -1,71 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://amore-labs.github.io/website/software/software.html</loc>
-    <lastmod>2026-03-25T22:27:30.115Z</lastmod>
+    <loc>https://amore-labs.github.io/website/pathfinder/index.html</loc>
+    <lastmod>2026-04-02T14:30:30.592Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/blogs/blog.html</loc>
-    <lastmod>2026-03-25T22:27:29.978Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/amlb-introduction.html</loc>
-    <lastmod>2026-03-25T22:27:30.114Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/token-compression.html</loc>
-    <lastmod>2026-03-25T22:27:30.114Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/cldst-introduction.html</loc>
-    <lastmod>2026-03-25T22:27:30.114Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/malibo-blog.html</loc>
-    <lastmod>2026-03-25T22:27:30.114Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/adacl-introduction.html</loc>
-    <lastmod>2026-03-25T22:27:30.114Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/join/join.html</loc>
-    <lastmod>2026-03-25T22:27:30.113Z</lastmod>
+    <lastmod>2026-04-02T14:30:30.467Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/index.html</loc>
-    <lastmod>2026-03-25T22:27:30.113Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/projects/projects.html</loc>
-    <lastmod>2026-03-25T22:27:30.115Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/publications/publications.html</loc>
-    <lastmod>2026-03-25T22:27:30.115Z</lastmod>
+    <lastmod>2026-04-02T14:30:30.591Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/notebooks/lora.html</loc>
-    <lastmod>2026-03-25T22:27:30.114Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
-    <lastmod>2026-03-25T22:27:30.113Z</lastmod>
-  </url>
-  <url>
-    <loc>https://amore-labs.github.io/website/notebooks/serena-introduction.html</loc>
-    <lastmod>2026-03-25T22:27:30.114Z</lastmod>
+    <lastmod>2026-04-02T14:30:30.591Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/notebooks/cl_with_coreset-introduction.html</loc>
-    <lastmod>2026-03-25T22:27:30.114Z</lastmod>
+    <lastmod>2026-04-02T14:30:30.591Z</lastmod>
   </url>
   <url>
-    <loc>https://amore-labs.github.io/website/pathfinder/index.html</loc>
-    <lastmod>2026-03-25T22:27:30.115Z</lastmod>
+    <loc>https://amore-labs.github.io/website/notebooks/token-compression.html</loc>
+    <lastmod>2026-04-02T14:30:30.592Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/malibo-blog.html</loc>
+    <lastmod>2026-04-02T14:30:30.592Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/OpenMLxProbabl-hackathon.html</loc>
+    <lastmod>2026-04-02T14:30:30.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/software/software.html</loc>
+    <lastmod>2026-04-02T14:30:30.593Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/projects/projects.html</loc>
+    <lastmod>2026-04-02T14:30:30.593Z</lastmod>
   </url>
   <url>
     <loc>https://amore-labs.github.io/website/people/people.html</loc>
-    <lastmod>2026-03-25T22:27:30.115Z</lastmod>
+    <lastmod>2026-04-02T14:30:30.592Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/transferabilityestimation.html</loc>
+    <lastmod>2026-04-02T14:30:30.592Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/serena-introduction.html</loc>
+    <lastmod>2026-04-02T14:30:30.592Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/amlb-introduction.html</loc>
+    <lastmod>2026-04-02T14:30:30.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/cldst-introduction.html</loc>
+    <lastmod>2026-04-02T14:30:30.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/notebooks/adacl-introduction.html</loc>
+    <lastmod>2026-04-02T14:30:30.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/publications/publications.html</loc>
+    <lastmod>2026-04-02T14:30:30.593Z</lastmod>
+  </url>
+  <url>
+    <loc>https://amore-labs.github.io/website/join/join.html</loc>
+    <lastmod>2026-04-02T14:30:30.591Z</lastmod>
   </url>
 </urlset>
