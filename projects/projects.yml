@@ -1,9 +1,26 @@
+hippocampus:
+  title: "Project Hippocampus: a next-gen platform for AI-driven science"
+  funding: Dutch Science Foundation, Open Science Infrastructure Fund
+  year: 2026-2030
+  description: Project Hippocampus aims to seamlessly integrate OpenML, scientific data platforms, and high-performance compute infrastructure for frictionless AI-driven research.
+  project_url: https://www.nwo.nl/projecten/uegjj73025
+  image: ../images/projects/hippocampus.png
+
+
+openml-next:
+  title: "OpenML-Next: Make OpenML great again" 
+  funding: Dutch Science Foundation, Open Science Fund
+  year: 2024-2025
+  description: This project aims to strenghten the impact and sustainability of the OpenML platform using modern technologies, improved open data, exhanced user experience, and community engagement. 
+  project_url: https://www.openml.org
+  image: ../images/projects/openml-next.png
+
 elliot:
   title: "ELLIOT: European Large Open Multi-modal Foundation Models"
   funding: EU Horizon Europe
   year: 2025-2030
-  description: ELLIOT aims to develop the next generation of Multimodal Space-Time Foundation Models. More info soon!
-  project_url: https://openml-labs.github.io/
+  description: ELLIOT aims to develop the next generation of open Multimodal Space-Time Foundation Models.
+  project_url: https://elliot-ai.eu/
   image: ../images/projects/elliot.webp
 
 openeurollm:
