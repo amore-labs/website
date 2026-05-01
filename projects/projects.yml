@@ -1,16 +1,15 @@
 hippocampus:
   title: "Project Hippocampus: a next-gen platform for AI-driven science"
-  funding: Dutch Science Foundation, Open Science Infrastructure Fund
+  funding: Dutch Science Foundation, Open Science Fund
   year: 2026-2030
   description: Project Hippocampus aims to seamlessly integrate OpenML, scientific data platforms, and high-performance compute infrastructure for frictionless AI-driven research.
   project_url: https://www.nwo.nl/projecten/uegjj73025
   image: ../images/projects/hippocampus.png
 
-
 openml-next:
   title: "OpenML-Next: Make OpenML great again" 
   funding: Dutch Science Foundation, Open Science Fund
-  year: 2024-2025
+  year: 2026-2028
   description: This project aims to strenghten the impact and sustainability of the OpenML platform using modern technologies, improved open data, exhanced user experience, and community engagement. 
   project_url: https://www.openml.org
   image: ../images/projects/openml-next.png
