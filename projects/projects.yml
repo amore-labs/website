@@ -16,10 +16,9 @@ openml-next:
 
 adapt:
   title: "ADAPT: Agentic Dynamic AI for Plant Technology" 
-  funding: Dutch Science Foundation, Public-Private Partnership Fund
+  funding: Dutch Science Foundation, Public-Private Partnership
   year: 2026-2027
   description: This project aims to create self-learning multi-modal AI agents capable of reasoning across heterogeneous biological data and autonomously orchestrating bioinformatics tools.
-  project_url: https://amore-labs.github.io
   image: ../images/projects/adapt.png
 
 
