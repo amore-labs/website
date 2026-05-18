@@ -15,7 +15,7 @@ robustness_automldirtycategorical:
    venue: "arXiv preprint arXiv:2602.00412, 2026"
    preprint: "https://arxiv.org/abs/2602.00412"
 
-croissant_baker_metadata_generation:
+croissant_baker:
    title: "Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets"
    authors:
      - Rafi Al Attrach
@@ -1121,19 +1121,6 @@ nas_embedding_score:
   year: 2022
   venue: "ECMLPKDD Workshop on Meta-Knowledge Transfer, PMLR, 51--61"
   published_url: "https://proceedings.mlr.press/v191/franken22a.html"
-
-ai_manufacturing_trends:
-  title: "Introduction to the Special Section on AI in Manufacturing: Current Trends and Challenges"
-  authors:
-    - J. Lijffijt
-    - D. Gkorou
-    - P. Van Hertum
-    - A. Ypma
-    - M. Pechenizkiy
-    - J. Vanschoren
-  year: 2022
-  venue: "ACM SIGKDD Explorations Newsletter, 24 (2), 81--85"
-  published_url: "https://dl.acm.org/doi/10.1145/3575637.3575650"
 
 advances_metadl:
   title: "Advances in MetaDL: AAAI 2021 Challenge and Workshop"
