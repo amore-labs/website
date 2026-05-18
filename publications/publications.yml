@@ -1,3 +1,68 @@
+ai_safety_benchmarks:
+   title: "The Role of AI Safety Benchmarks in Evaluating Systemic Risks in General-Purpose AI Models"
+   authors:
+     - Joaquin Vanschoren
+   year: 2025
+   venue: "JRC Technical Report, Publications Office of the European Union, Luxembourg"
+   published_url: "https://data.europa.eu/doi/10.2760/1807342"
+
+robustness_automldirtycategorical:
+   title: "Robustness of AutoML on Dirty Categorical Data"
+   authors:
+     - Marcos L. P. Bueno
+     - Joaquin Vanschoren
+   year: 2026
+   venue: "arXiv preprint arXiv:2602.00412, 2026"
+   preprint: "https://arxiv.org/abs/2602.00412"
+
+croissant_baker_metadata_generation:
+   title: "Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets"
+   authors:
+     - Rafi Al Attrach
+     - Rajna Fani
+     - Sebastian Lobentanzer
+     - Joan Giner-Miguelez
+     - Debanshu Das
+     - Varuni H. K.
+     - Nobin Sarwar
+     - Rajat Ghosh
+     - Anwai Archit
+     - Surbhi Motghare
+     - Christina Conrad Parry
+     - Luis Oala
+     - Lara Grosso
+     - Joaquin Vanschoren
+     - Steffen Vogler
+     - Sujata Goswami
+     - Eric S. Rosenthal
+     - Marzyeh Ghassemi
+     - Matthew McDermott
+     - Tom Pollard
+   year: 2026
+   venue: "arXiv preprint arXiv:2605.15079, 2026"
+   preprint: "https://arxiv.org/abs/2605.15079"
+
+coresets_replay:
+  title: "Coresets are More Than Replay: A Data-Centric View of Continual Learning"
+  authors:
+    - E. C. Gok Yildirim
+    - M. O. Yildirim
+    - J. Vanschoren
+  year: 2026
+  venue: "Neural Computing and Applications, 2026"
+  published_url: "https://openreview.net/pdf?id=gquE9AOmTb"
+
+sample_selection_few_shot:
+  title: "Automatic Combination of Sample Selection Strategies for Few-Shot Learning"
+  authors:
+    - B. Pecher
+    - I. Srba
+    - M. Bielikova
+    - J. Vanschoren
+  year: 2026
+  venue: "Findings of the Association for Computational Linguistics (ACL 2026)"
+  published_url: "https://arxiv.org/abs/2402.03038"
+
 agenticthought:
   title: "Agentic Thought Collectives: Multi-Agent Communities For Open-Ended Scientific Discovery"
   authors:
@@ -15,7 +80,7 @@ crypticbio:
     - J. Vanschoren
   year: 2025
   venue: "Advances in Neural Information Processing Systems (NeurIPS 2025)"
-  published_url: "https://openreview.net/forum?id=RGZzSbo4jj"
+  published_url: "https://proceedings.neurips.cc/paper_files/paper/2025/hash/0216c27a05dc3ca81677734fca1f7aca-Abstract-Datasets_and_Benchmarks_Track.html"
 
 patterns:
   title: "OpenML: Insights from 10 years and more than a thousand papers"
@@ -118,7 +183,7 @@ specdecoding:
     - J. Vanschoren
   year: 2026
   venue: "Conference of the European Chapter of the Association for Computational Linguistics (EACL 2026)"
-  published_url: "https://openreview.net/forum?id=JFyEhJpo7i"
+  published_url: "https://aclanthology.org/2026.eacl-long.255/"
 
 pam:
   title: "Pruned Adaptation Modules: A Simple yet Strong Baseline for Continual Foundation Models"
@@ -139,8 +204,8 @@ unsupautoml:
     - M. O. Yildirim
     - J. Vanschoren
   year: 2025
-  venue: "Machine Learning Journal, ACML 2025"
-  published_url: "https://arxiv.org/pdf/2510.07569v1"
+  venue: "Machine Learning Journal, 115(3), Art. 39"
+  published_url: "https://link.springer.com/article/10.1007/s10994-025-06984-x"
   
 surgtransfer:
   title: "Analysis of Transferability Estimation Metrics for Surgical Phase Recognition"
@@ -1446,17 +1511,6 @@ standardized_dataset_docs:
   year: 2024
   venue: "arXiv preprint arXiv:2407.16883, 2024"
   preprint: "https://arxiv.org/abs/2407.16883"
-
-sample_selection_few_shot:
-  title: "Automatic Combination of Sample Selection Strategies for Few-Shot Learning"
-  authors:
-    - B. Pecher
-    - I. Srba
-    - M. Bielikova
-    - J. Vanschoren
-  year: 2024
-  venue: "arXiv preprint arXiv:2402.03038, 2024"
-  preprint: "https://arxiv.org/abs/2402.03038"
 
 clams_model_selection:
   title: "CLAMS: A System for Zero-Shot Model Selection for Clustering"

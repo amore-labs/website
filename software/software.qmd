@@ -8,7 +8,7 @@ This page provides an overview of the software that we built with the goal of tr
 the way people do (automated) machine learning research in a way that is more open, reproducible, and accessible.
 Most of the software below is developed with collaborators outside of our lab.
 
-We also open-source the code for our papers under our [GitHub organisation](https://github.com/openml-labs).
+We also open-source the code for our papers under our [GitHub organisation](https://github.com/amore-labs).
 Code for each paper is also linked in the overview in the [papers](../publications/publications.qmd) page.
 
 ```{python}
