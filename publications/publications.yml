@@ -1,7 +1,7 @@
 ai_safety_benchmarks:
    title: "The Role of AI Safety Benchmarks in Evaluating Systemic Risks in General-Purpose AI Models"
    authors:
-     - Joaquin Vanschoren
+     - J. Vanschoren
    year: 2025
    venue: "JRC Technical Report, Publications Office of the European Union, Luxembourg"
    published_url: "https://data.europa.eu/doi/10.2760/1807342"
@@ -9,8 +9,8 @@ ai_safety_benchmarks:
 robustness_automldirtycategorical:
    title: "Robustness of AutoML on Dirty Categorical Data"
    authors:
-     - Marcos L. P. Bueno
-     - Joaquin Vanschoren
+     - M.L.P. Bueno
+     - J. Vanschoren
    year: 2026
    venue: "arXiv preprint arXiv:2602.00412, 2026"
    preprint: "https://arxiv.org/abs/2602.00412"
@@ -18,26 +18,26 @@ robustness_automldirtycategorical:
 croissant_baker:
    title: "Croissant Baker: Metadata Generation for Discoverable, Governable, and Reusable ML Datasets"
    authors:
-     - Rafi Al Attrach
-     - Rajna Fani
-     - Sebastian Lobentanzer
-     - Joan Giner-Miguelez
-     - Debanshu Das
-     - Varuni H. K.
-     - Nobin Sarwar
-     - Rajat Ghosh
-     - Anwai Archit
-     - Surbhi Motghare
-     - Christina Conrad Parry
-     - Luis Oala
-     - Lara Grosso
-     - Joaquin Vanschoren
-     - Steffen Vogler
-     - Sujata Goswami
-     - Eric S. Rosenthal
-     - Marzyeh Ghassemi
-     - Matthew McDermott
-     - Tom Pollard
+     - R. Al Attrach
+     - R. Fani
+     - S. Lobentanzer
+     - J. Giner-Miguelez
+     - D. Das
+     - V. H.K.
+     - N. Sarwar
+     - R. Ghosh
+     - A. Archit
+     - S. Motghare
+     - C. Conrad Parry
+     - L. Oala
+     - L. Grosso
+     - J. Vanschoren
+     - S. Vogler
+     - S. Goswami
+     - E.S. Rosenthal
+     - M. Ghassemi
+     - M. McDermott
+     - T. Pollard
    year: 2026
    venue: "arXiv preprint arXiv:2605.15079, 2026"
    preprint: "https://arxiv.org/abs/2605.15079"
@@ -69,7 +69,7 @@ agenticthought:
     - P. Singh
     - J. Vanschoren
   year: 2026
-  venue: "Post-AGI Science and Society Workshop (ICLR 2026)"
+  venue: "Post-AGI Science and Society Workshop (ICLR WS 2026)"
   published_url: "https://openreview.net/forum?id=hFfOiaMkF3"
 
 crypticbio:
@@ -210,9 +210,9 @@ unsupautoml:
 surgtransfer:
   title: "Analysis of Transferability Estimation Metrics for Surgical Phase Recognition"
   authors:
-    - Prabhant Singh
-    - Yiping Li
-    - Yasmina Al Khalil
+    - P. Singh
+    - Y. Li
+    - Y. Al Khalil
   year: 2025
   venue: "3rd Workshop in Data Engineering in Medical Imaging (DEMI) MICCAI-2025 Workshop (Spotlight)"
   published_url: "https://link.springer.com/chapter/10.1007/978-3-032-08009-7_9"
@@ -220,10 +220,10 @@ surgtransfer:
 CAMeLU:
   title: "Unsupervised Meta-Learning via In-Context Learning"
   authors:
-    - Anna Vettoruzzo
-    - Lorenzo Braccaioli
-    - Joaquin Vanschoren
-    - Marlena Nowaczyk
+    - A. Vettoruzzo
+    - L. Braccaioli
+    - J. Vanschoren
+    - M. Nowaczyk
   year: 2025
   venue: "International Conference on Learning Representations (ICLR)"
   published_url: "https://openreview.net/pdf?id=Jprs1v2wPA"
@@ -231,11 +231,11 @@ CAMeLU:
 medtransfer:
   title: "On dataset transferability in medical image classification"
   authors:
-    - Dovile Juodelyte
-    - Enzo Ferrante
-    - Prabhant Singh
-    - Joaquin Vanschoren
-    - Veronika Cheplygina
+    - D. Juodelyte
+    - E. Ferrante
+    - P. Singh
+    - J. Vanschoren
+    - V. Cheplygina
   year: 2024
   venue: "arXiv preprint arXiv:2412.20172v1, 2024"
   preprint: "https://arxiv.org/pdf/2412.20172"
@@ -265,15 +265,15 @@ serena:
 sensitivity_heating:
   title: "In-depth sensitivity analysis of heating demand and overheating in Dutch terraced houses using interpretable machine learning."
   authors:
-    - Alexis Cvetkov-Iliev
-    - Vasilis Soulios
-    - Luyi Xu
-    - Günsu Merin Abbas
-    - Evangelos Kyrou
-    - Lisanne Havinga
-    - Pieter Jan Hoes
-    - Roel Loonen
-    - Joaquin Vanschoren
+    - A. Cvetkov-Iliev
+    - V. Soulios
+    - L. Xu
+    - G. Merin Abbas
+    - E. Kyrou
+    - L. Havinga
+    - P. J. Hoes
+    - R. Loonen
+    - J. Vanschoren
   year: 2025
   venue: "Energy & Buildings, 337, no. 11561"
   pdf: https://pure.tue.nl/ws/portalfiles/portal/355604290/1-s2.0-S037877882500341X-main.pdf
@@ -282,8 +282,8 @@ sensitivity_heating:
 openml:
   title: "OpenML: Networked Science in Machine Learning"
   authors:
-    - Joaquin Vanschoren
-    - Jan N. van Rijn
+    - J. Vanschoren
+    - J. N. van Rijn
     - Bernd Bischl
     - Luis Torgo
   year: 2014
