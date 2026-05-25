@@ -21,7 +21,6 @@ adapt:
   description: This project aims to create self-learning multi-modal AI agents capable of reasoning across heterogeneous biological data and autonomously orchestrating bioinformatics tools.
   image: ../images/projects/adapt.png
 
-
 elliot:
   title: "ELLIOT: European Large Open Multi-modal Foundation Models"
   funding: EU Horizon Europe
@@ -102,19 +101,11 @@ digital-twin-farm:
   project_url: https://dai.win.tue.nl/researchprojects/110/
   image: ../images/projects/twinergy.webp
 
-ai4europe:
-  title: "AI4Europe"
-  funding: EU Horizon Europe
-  year: 2022-2025
-  description: The AI-on-Demand platform (AIoD) is a community-driven platform designed to empower European research and innovation in Artificial Intelligence (AI).
-  project_url: https://aiod.eu/
-  image: ../images/projects/aiod.webp
-
 stairway-to-ai:
   title: "Stairway to AI"
   funding: EU Horizon 2020
   year: 2020-2024
-  description: The StairwAI project aims to provide a matchmaking service for users of the AI-on-Demand platform to easily find AI assets, experts, knowledge, hardware resource providers and much more.
+  description: The StairwAI project aims to provide a service for users of the AI-on-Demand platform to find AI assets, experts, knowledge, and hardware resources.
   project_url: https://stairwai.nws.cs.unibo.it/
   image: ../images/projects/stairwai.webp
 
