@@ -6,7 +6,7 @@ ai_safety_benchmarks:
    venue: "JRC Technical Report, Publications Office of the European Union, Luxembourg"
    published_url: "https://data.europa.eu/doi/10.2760/1807342"
 
-ai_safety_capabilities:
+ai_safety_capability:
    title: "A Proposal to Identify High-Impact Capabilities in General-Purpose AI Models"
    authors:
      - M. Hobbhahn
