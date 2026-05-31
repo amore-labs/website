@@ -6,6 +6,27 @@ ai_safety_benchmarks:
    venue: "JRC Technical Report, Publications Office of the European Union, Luxembourg"
    published_url: "https://data.europa.eu/doi/10.2760/1807342"
 
+ai_safety_capabilities:
+   title: "A Proposal to Identify High-Impact Capabilities in General-Purpose AI Models"
+   authors:
+     - M. Hobbhahn
+     - D. Hovy
+     - J. Vanschoren
+   year: 2025
+   venue: "JRC Technical Report, Publications Office of the European Union, Luxembourg"
+   published_url: "https://data.europa.eu/doi/10.2760/1807342"
+
+ai_safety_reach:
+   title: "General-Purpose AI Model Reach as a Criterion for Systemic Risk"
+   authors:
+     - P. Röttger
+     - D. Hovy
+     - D. Nozza
+     - J. Vanschoren
+   year: 2025
+   venue: "JRC Technical Report, Publications Office of the European Union, Luxembourg"
+   published_url: "https://data.europa.eu/doi/10.2760/1807342"
+
 robustness_automldirtycategorical:
    title: "Robustness of AutoML on Dirty Categorical Data"
    authors:
