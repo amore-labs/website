@@ -1,10 +1,45 @@
-ai_safety_benchmarks:
-   title: "The Role of AI Safety Benchmarks in Evaluating Systemic Risks in General-Purpose AI Models"
+croissant_tasks:
+   title: "Croissant Tasks: A Metadata Format for Reproducible Machine Learning Evaluations"
    authors:
+     - O. Benjelloun
+     - L. Martins Bianco
+     - I. Guyon
+     - T.G.H. Khuong
+     - J. Lebensold
+     - S. Lobentanzer
+     - L. Oala
+     - B. Kent Rachmat
+     - I. Ullah
+     - P. Vahidi
      - J. Vanschoren
-   year: 2025
-   venue: "JRC Technical Report, Publications Office of the European Union, Luxembourg"
-   published_url: "https://data.europa.eu/doi/10.2760/1807342"
+   year: 2026
+   venue: "arXiv preprint arXiv:2605.29786, 2026"
+   preprint: "https://arxiv.org/abs/2605.29786 "
+
+towards_uniformity:
+   title: "Towards Uniformity and Alignment for Multimodal Representation Learning"
+   authors: 
+     - W. Yin
+     - P. Zhou
+     - Z. Xiao
+     - J. Liu
+     - S. Yu
+     - JJ. Sonke
+     - S. Gavves
+   year: 2026
+   venue: "ICML 2026"
+   published_url: "https://openreview.net/forum?id=KfNl6zgIKJ"
+
+selected_latent_thinking:
+   title: "Selective Latent Thinking: Adaptive Compression of LLM Reasoning Chains"
+   authors:
+     - H. Xie
+     - J. Liu
+     - Z. Qiao
+     - J. Vanschoren
+   year: 2026
+   venue: "arXiv preprint arXiv:2605.25745, 2026"
+   preprint: "https://arxiv.org/pdf/2605.25745v1"
 
 ai_should_verify_not_judge:
    title: "Position: AI Should Verify, Not Judge, Scientific Work"
@@ -27,6 +62,23 @@ ai_should_verify_not_judge:
    published_url: "https://openreview.net/forum?id=xz1gOOOh9Z"
    comment: "Oral"
 
+continual_adaptation_of_LLMs:
+   title: "Route, Reuse, Repurpose: Continual Adaptation of LLMs with Bounded Adapter Pools"
+   authors: 
+     - B. Celik
+     - A. Vettoruzzo
+     - J. Vanschoren
+   year: 2026
+   venue: "ICML 2026 Workshop on Continual Adaptation at Scale"
+   published_url: "https://openreview.net/forum?id=MYsSeRRRpm"
+
+ai_safety_benchmarks:
+   title: "The Role of AI Safety Benchmarks in Evaluating Systemic Risks in General-Purpose AI Models"
+   authors:
+     - J. Vanschoren
+   year: 2025
+   venue: "JRC Technical Report, Publications Office of the European Union, Luxembourg"
+   published_url: "https://data.europa.eu/doi/10.2760/1807342"
 
 ai_safety_capability:
    title: "A Proposal to Identify High-Impact Capabilities in General-Purpose AI Models"
