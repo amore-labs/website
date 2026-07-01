@@ -156,7 +156,7 @@ sample_selection_few_shot:
     - J. Vanschoren
   year: 2026
   venue: "Findings of the Association for Computational Linguistics (ACL 2026)"
-  published_url: "https://arxiv.org/abs/2402.03038"
+  published_url: "https://aclanthology.org/2026.findings-acl.2008/"
 
 agenticthought:
   title: "Agentic Thought Collectives: Multi-Agent Communities For Open-Ended Scientific Discovery"
