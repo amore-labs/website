@@ -1,3 +1,37 @@
+timesage_ev:
+  title: "TimeSage-EV: A Live Benchmark for Agentic Time Series Analysis in Evolving Environments"
+  authors:
+    - Q. Yao
+    - Y. Kong 
+    - Y. Nie
+    - Y. Li
+    - S. Zohren
+    - A. Vettoruzzo 
+    - Q. Wen
+    - M. Jin 
+    - J. Vanschoren
+  year: 2026
+  venue: "EMNLP 2026 Findings"
+  published_url: "https://arxiv.org/abs/2608.14270"
+
+timesage_mt:
+  title: "TimeSage-MT: A Multi-Turn Benchmark for Evaluating Agentic Time Series Reasoning"
+  authors:
+    - Y. Kong
+    - Q. Yao 
+    - Y. Nie 
+    - Y. Li 
+    - Y. Shao
+    - S. Zohren
+    - A. Vettoruzzo 
+    - J. Vanschoren
+    - M. Jin 
+    - Q. Wen
+  year: 2026
+  venue: "https://arxiv.org/abs/2606.01498, 2026"
+  preprint: "https://arxiv.org/abs/2606.01498"
+
+
 croissant_tasks:
    title: "Croissant Tasks: A Metadata Format for Reproducible Machine Learning Evaluations"
    authors:
