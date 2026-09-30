@@ -1,3 +1,15 @@
+evolving_ml:
+  title: "Evolving Machine Learning in Non-Stationary Environments: A Unified Survey of Drift, Forgetting, and Adaptation"
+  authors:
+    - I.C. Martin
+    - S. Mukherjee
+    - A. Baimagambetov
+    - J. Vanschoren
+    - N. Polatidis
+  year: 2026
+  venue: "Applied Artificial Intelligence (Taylor and Francis Journal)"
+  published_url: "https://www.tandfonline.com/doi/full/10.1080/08839514.2026.2707047"
+
 timesage_ev:
   title: "TimeSage-EV: A Live Benchmark for Agentic Time Series Analysis in Evolving Environments"
   authors:
