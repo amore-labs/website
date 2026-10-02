@@ -1,3 +1,21 @@
+d_logdet:
+  title: "Residual Correlation as a Diagnostic for Joint-Uncertainty Gains from GP Coregionalisation"
+  authors:
+    - F. Zhou
+    - J. Vanschoren
+  year: 2026
+  venue: "Asian Conference on Machine Learning (ACML)"
+  published_url: "https://arxiv.org/pdf/2609.30085"
+
+mtl_eva:
+  title: "Beyond Correlation: Validity Conditions for Task-Affinity Evaluation"
+  authors:
+    - F. Zhou
+    - J. Vanschoren
+  year: 2026
+  venue: "NeurIPS 2026 Trust-AI-Eval Workshop"
+  preprint: "https://openreview.net/forum?id=GH5RhiIkNz"
+
 evolving_ml:
   title: "Evolving Machine Learning in Non-Stationary Environments: A Unified Survey of Drift, Forgetting, and Adaptation"
   authors:
