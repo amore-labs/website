@@ -1,3 +1,15 @@
+zero-compute-cross-lingual:
+  title: "Zero-Compute Cross-Lingual Transferability Estimation Using Typological Feature Proxies"
+  authors:
+    - D.R. Harmsen
+    - S. Garst
+    - T. van Osch
+    - Z. Palanciyan
+    - J. Vanschoren
+  year: 2026
+  venue: "NeurIPS 2026 Linguistic Principles for Foundation Models (LP4FM) Workshop"
+  published_url: "https://arxiv.org/abs/2609.39640"
+
 evolving_ml:
   title: "Evolving Machine Learning in Non-Stationary Environments: A Unified Survey of Drift, Forgetting, and Adaptation"
   authors:
