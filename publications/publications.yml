@@ -1,3 +1,13 @@
+
+vla_augm:
+  title: "How (and How Not) to Use Data Augmentation in VLA Post-Training"
+  authors:
+    - B. Grooten
+    - J. Vanschoren
+  year: 2026
+  venue: "NeurIPS 2026 Workshop RoboPAD on Post-Training Adaptation of Robot Foundation Models"
+  published_url: "https://bramgrooten.nl/vla-augm/"
+
 evolving_ml:
   title: "Evolving Machine Learning in Non-Stationary Environments: A Unified Survey of Drift, Forgetting, and Adaptation"
   authors:
