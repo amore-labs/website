@@ -1,3 +1,16 @@
+timestamp:
+  title: "Put the World Back: Timestamps Matter in Time Series Reasoning"
+  authors:
+    - T. Huang
+    - Y. Deng
+    - Q. Yao
+    - J. Vanschoren
+    - M. Pechenizkiy
+    - S. Deng
+  year: 2026
+  venue: "NeurIPS 2026 FMTS Workshop"
+  published_url: ""
+
 evolving_ml:
   title: "Evolving Machine Learning in Non-Stationary Environments: A Unified Survey of Drift, Forgetting, and Adaptation"
   authors:
