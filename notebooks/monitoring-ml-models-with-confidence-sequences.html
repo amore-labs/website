@@ -443,7 +443,11 @@ window.Quarto = {
 
 
 <p>Consider the following situation. You have an existing model, model <span class="math inline">\(A\)</span>, that is already deployed, and you have just trained a challenger model, model <span class="math inline">\(B\)</span>. On the test set, model <span class="math inline">\(B\)</span> appears to perform better. But how sure can we be that this improvement is real? A test set is still only a finite sample: a small difference in accuracy could reflect a genuine improvement, but it could also be the result of a lucky or unlucky draw of test examples.</p>
-<p><img src="../images/blogs/model-monitoring/model-comparison.webp" class="img-fluid" style="width:65.0%" alt="Neural network model A compared with challenger model B"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/blogs/model-monitoring/model-comparison.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%" alt="Neural network model A compared with challenger model B"></p>
+</figure>
+</div>
 <p>This tutorial shows how <u>confidence sequences</u> can be used to monitor a model’s performance with statistical guarantees. In particular, we will use them to assess improvements in overall accuracy while <u>simultaneously monitoring subgroup performance</u>.</p>
 <section id="confidence-sequences" class="level2">
 <h2 class="anchored" data-anchor-id="confidence-sequences">Confidence Sequences</h2>
