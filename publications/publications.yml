@@ -1,3 +1,23 @@
+high_dim_cs:
+   title: "On the Tightness and Computational Tractability of Higher-Dimensional Confidence Sequences"
+   authors: 
+     - F. Denoodt
+     - S. Hess 
+     - J. Vanschoren
+     - C. Naesseth
+   year: 2026
+   venue: "Advances in Neural Information Processing Systems"
+   published_url: "https://arxiv.org/abs/2610.03727"
+   comment: "Spotlight"
+
+when_bnn_sampled_enough:
+   title: "When Has a Bayesian Neural Network Sampled Enough? Adaptive Inference Time with Statistical Guarantees"
+   authors: 
+     - F. Denoodt
+     - S. Hess 
+   year: 2026
+   venue: "NeurIPS Workshop on E-values: From Statistics To ML"
+
 evolving_ml:
   title: "Evolving Machine Learning in Non-Stationary Environments: A Unified Survey of Drift, Forgetting, and Adaptation"
   authors:
