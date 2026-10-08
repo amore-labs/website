@@ -75,7 +75,7 @@ def make_card_html_link(nb, attributes):
 # Load and parse metadata
 D = {}
 for nb in glob.glob("../notebooks/*.ipynb"):
-    with open(nb) as f:
+    with open(nb, encoding="utf-8") as f:
         metadata = json.load(f)["cells"][0]
     SIMPLE_ATTRIBUTE = re.compile(r"(\w+) ?: ?(.+)")
     simple_attributes = [re.match(SIMPLE_ATTRIBUTE, line) for line in metadata["source"]]
