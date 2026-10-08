@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Fabian Denoodt">
+<meta name="dcterms.date" content="2026-04-30">
+
+<title>Monitoring ML Models with Confidence Sequences – AMOR/e</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d3f00400729eb0e2d8251f90d020b329.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-834358e4d6af735265474caadfbccb17.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d3f00400729eb0e2d8251f90d020b329.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/amore-logo-light.png" alt="" class="navbar-logo light-content">
+    <img src="../images/amore-logo-light.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title"><span style="color:#FF2400;font-weight:bold">AMOR/e</span></span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Lab</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../projects/projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../publications/publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../software/software.html"> 
+<span class="menu-text">Software</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../blogs/blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../people/people.html"> 
+<span class="menu-text">People</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../join/join.html"> 
+<span class="menu-text">Join us!</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/amore-labs"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#confidence-sequences" id="toc-confidence-sequences" class="nav-link active" data-scroll-target="#confidence-sequences">Confidence Sequences</a>
+  <ul class="collapse">
+  <li><a href="#a-bounding-box-confidence-sequence" id="toc-a-bounding-box-confidence-sequence" class="nav-link" data-scroll-target="#a-bounding-box-confidence-sequence">A Bounding-Box Confidence Sequence</a></li>
+  </ul></li>
+  <li><a href="#accuracy-is-a-mean" id="toc-accuracy-is-a-mean" class="nav-link" data-scroll-target="#accuracy-is-a-mean">Accuracy is a mean</a>
+  <ul class="collapse">
+  <li><a href="#building-the-observation-vector" id="toc-building-the-observation-vector" class="nav-link" data-scroll-target="#building-the-observation-vector">Building the observation vector</a></li>
+  <li><a href="#conditional-subgroup-accuracy" id="toc-conditional-subgroup-accuracy" class="nav-link" data-scroll-target="#conditional-subgroup-accuracy">Conditional subgroup accuracy</a></li>
+  </ul></li>
+  <li><a href="#from-accuracy-estimation-to-model-comparison" id="toc-from-accuracy-estimation-to-model-comparison" class="nav-link" data-scroll-target="#from-accuracy-estimation-to-model-comparison">From accuracy estimation to model comparison</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Monitoring ML Models with Confidence Sequences</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Fabian Denoodt </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 30, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Consider the following situation. You have an existing model, model <span class="math inline">\(A\)</span>, that is already deployed, and you have just trained a challenger model, model <span class="math inline">\(B\)</span>. On the test set, model <span class="math inline">\(B\)</span> appears to perform better. But how sure can we be that this improvement is real? A test set is still only a finite sample: a small difference in accuracy could reflect a genuine improvement, but it could also be the result of a lucky or unlucky draw of test examples.</p>
+<p><img src="../images/blogs/model-monitoring/model-comparison.webp" class="img-fluid" style="width:65.0%" alt="Neural network model A compared with challenger model B"></p>
+<p>This tutorial shows how <u>confidence sequences</u> can be used to monitor a model’s performance with statistical guarantees. In particular, we will use them to assess improvements in overall accuracy while <u>simultaneously monitoring subgroup performance</u>.</p>
+<section id="confidence-sequences" class="level2">
+<h2 class="anchored" data-anchor-id="confidence-sequences">Confidence Sequences</h2>
+<p>Confidence sequences are a sequential extension of the confidence intervals you may have seen in a statistics course. The key difference is that they are designed to remain valid when we repeatedly inspect the result as more data arrives. Nonetheless, many of the ideas discussed here also apply to fixed-time confidence intervals.</p>
+<p><strong>Definition: Confidence Sequence.</strong></p>
+<p>Assume that we observe vectors <span class="math inline">\(\mathbf{y}_1,\mathbf{y}_2,\dots \in [0,1]^D\)</span> with <span class="math inline">\(\mathbb{E}[\mathbf{y}_t]=\mathbf{\mu}\)</span> for all <span class="math inline">\(t\)</span>, where <span class="math inline">\(\mathbf{\mu}\in[0,1]^D\)</span>. A multivariate <u>confidence sequence</u> for <span class="math inline">\(\mathbf{\mu}\)</span> is a sequence of sets <span class="math inline">\(\mathcal{C}_1,\mathcal{C}_2,\dots\)</span> with <span class="math inline">\(\mathcal{C}_t\subseteq[0,1]^D\)</span> satisfying</p>
+<p><span class="math display">\[
+\mathbb{P}\!\left( \forall t \ge 1:\ \mathbf{\mu} \in \mathcal{C}_t \right) \ge 1-\alpha,
+\]</span></p>
+<p>for a prescribed error level <span class="math inline">\(\alpha\)</span> (e.g., <span class="math inline">\(5\%\)</span>).</p>
+<p>The statement inside the probability is important. It does not say that <span class="math inline">\(\mathbf{\mu}\)</span> is covered at one particular time <span class="math inline">\(t\)</span>. It says that, with probability at least <span class="math inline">\(1-\alpha\)</span>, the whole sequence covers <span class="math inline">\(\mathbf{\mu}\)</span> simultaneously at all times. This is what makes confidence sequences safe to monitor repeatedly over an incoming stream of data.</p>
+<p>Here, the observations are vectors, and the sets <span class="math inline">\(\mathcal{C}_t\)</span> are <span class="math inline">\(D\)</span>-dimensional shapes. This is especially relevant for machine learning evaluation, where we usually care about more than one metric. For example, we may want to track overall accuracy, accuracy on women, accuracy on men, accuracy for people below a certain age, and so on. Each coordinate of <span class="math inline">\(\mathbf{\mu}\)</span> then corresponds to one quantity of interest.</p>
+<p>A curious reader may wonder whether we could instead construct a separate confidence sequence for each metric. We can, but separate guarantees do not automatically give a joint guarantee over all metrics. If each metric is monitored separately, the chance that at least one confidence sequence makes an error increases as we monitor more metrics. A multivariate confidence sequence handles this directly: it gives a single confidence set for the full vector mean <span class="math inline">\(\mathbf{\mu}\)</span>.</p>
+<section id="a-bounding-box-confidence-sequence" class="level3">
+<h3 class="anchored" data-anchor-id="a-bounding-box-confidence-sequence">A Bounding-Box Confidence Sequence</h3>
+<p>There are many ways to construct confidence sequences. In this tutorial, we use the bounding-box construction from our paper because it is easy to work with and performs well in practice. Understanding all the technical details is not needed here; what matters is that the resulting confidence set has a particularly simple form.</p>
+<p>The bounding box is defined as:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathcal{C}_t
+&amp;=
+\left\{\mathbf{m}\in[0,1]^D \mid m_d\in[l_d,u_d],
+\ d=1,\dots,D\right\},
+\\
+[l_d,u_d]
+&amp;=
+\left\{m_d\in[0,1]\mid
+w_d k^d(m_d)
+\le
+\frac{1}{\alpha}-\sum_{j\neq d} w_j k^j_\star
+\right\}.
+\end{aligned}
+\]</span></p>
+<p>Here, <span class="math inline">\(k^d(m):[0,1]\rightarrow \mathbb{R}^+\)</span> is a one-dimensional function for coordinate <span class="math inline">\(d\)</span>, computed from the observations seen so far, <span class="math inline">\(\mathbf{y}_1,\dots,\mathbf{y}_t\)</span>. The term <span class="math inline">\(w_d\)</span> is a weighting term (usually set to <span class="math inline">\(1/D\)</span>), and <span class="math inline">\(k^d_\star\)</span> is the global minimum of <span class="math inline">\(k^d\)</span>. The exact definitions are not important for this tutorial. The main message is that the final confidence set is simply a box:</p>
+<p><span class="math display">\[
+\mathcal{C}_t = [l_1,u_1] \times [l_2,u_2] \times \cdots \times [l_D,u_D].
+\]</span></p>
+<p>Thus, every coordinate gets an interval. For example, the first interval may estimate overall accuracy, while the next intervals estimate subgroup-related quantities. Computationally, each interval can be found using fast numerical root-finding algorithms.</p>
+</section>
+</section>
+<section id="accuracy-is-a-mean" class="level2">
+<h2 class="anchored" data-anchor-id="accuracy-is-a-mean">Accuracy is a mean</h2>
+<p>We now return to the machine learning problem. How can a confidence sequence for a mean tell us something about accuracy? The key observation is that accuracy is itself an expectation. Let <span class="math inline">\(\mathbf{x}_t\)</span> be a test input, let <span class="math inline">\(z_t \in [K]\)</span> be its true label, and let <span class="math inline">\(f(\mathbf{x}_t)=\hat z_t\)</span> be the prediction of a classifier <span class="math inline">\(f(\cdot)\)</span>. The indicator</p>
+<p><span class="math display">\[
+1\{ f(\mathbf{x}_t)=z_t \} \in \{ 0, 1\}
+\]</span></p>
+<p>is equal to <span class="math inline">\(1\)</span> when the classifier is correct and <span class="math inline">\(0\)</span> otherwise. Therefore,</p>
+<p><span class="math display">\[
+\mathbb{E}\left[1\{ f(\mathbf{x})=z \}\right]
+= p(f(\mathbf{x})=z)
+= \text{Acc}(f).
+\]</span></p>
+<p>So, if we feed the sequence <span class="math inline">\(1\lbrace f(\mathbf{x}_t)=z_t \rbrace\)</span> into a confidence sequence, the resulting interval estimates the model’s true accuracy. A similar idea can be used for the conditional accuracy on the various subgroups; however, it requires a little more care.</p>
+<p>The snippets below focus on the confidence-sequence construction. The <a href="https://github.com/fdenoodt/higher-dimensional-confidence-sequences/blob/main/examples/model_monitoring/tutorial.py">full runnable script</a> is available in the repository.</p>
+<section id="building-the-observation-vector" class="level3">
+<h3 class="anchored" data-anchor-id="building-the-observation-vector">Building the observation vector</h3>
+<p>Let <span class="math inline">\(\mathbf y_t \in [0,1]^D\)</span> denote the vector-valued observation that we feed into the confidence sequence at time <span class="math inline">\(t\)</span>. Each <span class="math inline">\(\mathbf y_t\)</span> is computed from one test example <span class="math inline">\((\mathbf{x}_t,z_t)\)</span>. A multivariate confidence sequence then gives a region <span class="math inline">\(\mathcal C_t \subseteq [0,1]^D\)</span> for <span class="math inline">\(\mathbb E[\mathbf y_t]\)</span> at every time <span class="math inline">\(t\)</span>.</p>
+<p>A first attempt is to define</p>
+<p><span class="math display">\[
+\mathbf{y}_t=\left(\begin{array}{c}
+1\{ f(\mathbf{x}_t) = z_t \} \\
+1\{ f(\mathbf{x}_t) = z_t \text{ and } \mathbf{x}_t \in \text{Women}\} \\
+1\{ f(\mathbf{x}_t) = z_t \text{ and } \mathbf{x}_t \in \text{Men}\} \\
+\vdots
+\end{array}\right) \in[0,1]^D.
+\]</span></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume we have one input x_t, its label z_t, and a model_predict() function.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>correct <span class="op">=</span> <span class="bu">float</span>(model_predict(x_t) <span class="op">==</span> z_t)  <span class="co"># 0 or 1</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>woman <span class="op">=</span> <span class="bu">float</span>(x_t[<span class="st">"sex"</span>] <span class="op">==</span> <span class="st">"Female"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>age_over_40 <span class="op">=</span> <span class="bu">float</span>(x_t[<span class="st">"age"</span>] <span class="op">&gt;</span> <span class="dv">40</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>y_t <span class="op">=</span> np.array([</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    correct,                    <span class="co"># global accuracy</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">*</span> woman,            <span class="co"># p(correct and woman)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> woman),    <span class="co"># p(correct and man)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">*</span> age_over_40,      <span class="co"># p(correct and age &gt; 40)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> age_over_40),</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Taking expectations gives</p>
+<p><span class="math display">\[
+\mathbb{E} [ \mathbf{y} ] = \left(\begin{array}{c}
+\mathbb{E}[1\{ f(\mathbf{x}) = z \}] \\
+\mathbb{E}[1\{ f(\mathbf{x}) = z \text{ and } \mathbf{x} \in \text{Women}\}] \\
+\mathbb{E}[1\{ f(\mathbf{x}) = z \text{ and } \mathbf{x} \in \text{Men}\}] \\
+\vdots
+\end{array}\right)
+=
+\left(\begin{array}{c}
+p( f(\mathbf{x}) = z) \\
+p(f(\mathbf{x}) = z, \, \mathbf{x} \in \text{Women}) \\
+p(f(\mathbf{x}) = z, \, \mathbf{x} \in \text{Men}) \\
+\vdots
+\end{array}\right)
+=
+\left(\begin{array}{c}
+\text{Acc}(f) \\
+p(f(\mathbf{x}) = z, \, \mathbf{x} \in \text{Women}) \\
+p(f(\mathbf{x}) = z, \, \mathbf{x} \in \text{Men}) \\
+\vdots
+\end{array}\right).
+\]</span></p>
+<p>The first coordinate is exactly the model accuracy. The remaining coordinates are not yet conditional subgroup accuracies. For example, <span class="math inline">\(p(f(\mathbf{x})=z, \, \mathbf{x} \in \text{Women})\)</span> is the probability that a randomly selected test example is both classified correctly and belongs to the subgroup Women. This number depends both on the model’s performance on the subgroup and on how common the subgroup is in the data.</p>
+<p>Usually, we want the conditional accuracy instead:</p>
+<p><span class="math display">\[
+p(f(\mathbf{x})=z \mid \mathbf{x} \in \text{Women}).
+\]</span></p>
+<p>This answers the more useful question: among examples belonging to this subgroup, how often is the model correct?</p>
+</section>
+<section id="conditional-subgroup-accuracy" class="level3">
+<h3 class="anchored" data-anchor-id="conditional-subgroup-accuracy">Conditional subgroup accuracy</h3>
+<p>We can obtain conditional subgroup accuracy using the chain rule:</p>
+<p><span class="math display">\[
+p(f(\mathbf{x})=z \mid \mathbf{x} \in \text{Women})
+=
+\frac{p(f(\mathbf{x})=z, \, \mathbf{x} \in \text{Women})}{p(\mathbf{x} \in \text{Women})}.
+\]</span></p>
+<p>The numerator is already present in our observation vector. The denominator, <span class="math inline">\(p(\mathbf{x} \in \text{Women})\)</span>, is also an unknown population quantity, which we can estimate with the same multivariate confidence sequence. We simply add subgroup-membership indicators to the observation vector:</p>
+<p><span class="math display">\[
+\mathbf{y}_t=\left(\begin{array}{c}
+1\{ f(\mathbf{x}_t) = z_t \} \\
+1\{ f(\mathbf{x}_t) = z_t \text{ and } \mathbf{x}_t \in \text{Women}\} \\
+1\{ f(\mathbf{x}_t) = z_t \text{ and } \mathbf{x}_t \in \text{Men}\} \\
+\vdots \\
+1\{\mathbf{x}_t\in \text{Women}\} \\
+\vdots
+\end{array}\right) \in[0,1]^D.
+\]</span></p>
+<p>Note that subgroup indicators for men are not needed since they can be obtained indirectly via <span class="math inline">\(p(\mathbf{x} \in \text{Men} ) = 1-p(\mathbf{x} \in \text{Women} )\)</span>.</p>
+<p>Suppose the confidence sequence gives the following intervals:</p>
+<p><span class="math display">\[
+p(f(\mathbf{x})=z, \, \mathbf{x} \in \text{Women}) \in [l_\text{num},u_\text{num}],
+\qquad
+p(\mathbf{x} \in \text{Women}) \in [l_\text{den},u_\text{den}].
+\]</span></p>
+<p>A conservative interval for the conditional subgroup accuracy is then obtained by dividing the numerator interval by the denominator interval and assuming worst-case behavior:</p>
+<p><span class="math display">\[
+p(f(\mathbf{x})=z \mid \mathbf{x} \in \text{Women})
+\in
+\left[
+\frac{l_\text{num}}{u_\text{den}},
+\frac{u_\text{num}}{l_\text{den}}
+\right].
+\]</span></p>
+<p>This is the basic recipe: include both the joint event and the subgroup-membership event in the vector, run a multivariate confidence sequence, and transform the resulting intervals into conditional accuracies afterwards.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> observation(x_t, z_t, model_predict):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    correct <span class="op">=</span> <span class="bu">float</span>(model_predict(x_t) <span class="op">==</span> z_t)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    woman <span class="op">=</span> <span class="bu">float</span>(x_t[<span class="st">"sex"</span>] <span class="op">==</span> <span class="st">"Female"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    age_over_40 <span class="op">=</span> <span class="bu">float</span>(x_t[<span class="st">"age"</span>] <span class="op">&gt;</span> <span class="dv">40</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.array([</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        correct,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        correct <span class="op">*</span> woman,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        correct <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> woman),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        correct <span class="op">*</span> age_over_40,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        correct <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> age_over_40),</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        woman,          <span class="co"># Denominator for accuracy on women</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        age_over_40,    <span class="co"># Denominator for accuracy among age &gt; 40</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>confidence_sequence <span class="op">=</span> StreamingBoundingBox(</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.05</span>,     <span class="co"># 5% error level</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    dimension<span class="op">=</span><span class="dv">7</span>,    <span class="co"># number of coordinates in y_t</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x_t, z_t <span class="kw">in</span> <span class="bu">zip</span>(X, y):</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    y_t <span class="op">=</span> observation(x_t, z_t, model_b_predict)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    mean_t, bounding_box_t <span class="op">=</span> confidence_sequence.observe(y_t)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Here <code>bounding_box_t</code> contains one interval for each coordinate of <span class="math inline">\(\mathbb{E}[\mathbf{y}_t]\)</span>. The first interval is already the global accuracy interval. The subgroup intervals are obtained by dividing the joint-accuracy coordinates by the subgroup-proportion coordinates.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>lower_t, upper_t <span class="op">=</span> bounding_box_t <span class="co"># shape (D,), (D,)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> conditional_interval(num_idx, den_lower, den_upper):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        lower_t[num_idx] <span class="op">/</span> den_upper,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        upper_t[num_idx] <span class="op">/</span> den_lower,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>women_interval <span class="op">=</span> conditional_interval(<span class="dv">1</span>, lower_t[<span class="dv">5</span>], upper_t[<span class="dv">5</span>])</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>men_interval <span class="op">=</span> conditional_interval(<span class="dv">2</span>, <span class="fl">1.0</span> <span class="op">-</span> upper_t[<span class="dv">5</span>], <span class="fl">1.0</span> <span class="op">-</span> lower_t[<span class="dv">5</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The resulting intervals for model <span class="math inline">\(B\)</span> are shown below. Each row reports a point estimate and its simultaneous confidence sequence interval.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/blogs/model-monitoring/tutorial_accuracy_intervals.svg" class="img-fluid figure-img"></p>
+<figcaption>Model B accuracy intervals</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="from-accuracy-estimation-to-model-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="from-accuracy-estimation-to-model-comparison">From accuracy estimation to model comparison</h2>
+<p>Now suppose we want to compare a baseline model <span class="math inline">\(A\)</span> with a challenger model <span class="math inline">\(B\)</span>. This can again be done with a single multivariate confidence sequence by replacing accuracy indicators with per-example accuracy gains.</p>
+<p>For a test example <span class="math inline">\((\mathbf{x}_t,z_t)\)</span>, define a single vector that contains both per-example gains and the subgroup indicators needed as denominators:</p>
+<p><span class="math display">\[
+\mathbf{\Delta}_t=\left(\begin{array}{c}
+1\{ f_B(\mathbf{x}_t) = z_t \} - 1\{ f_A(\mathbf{x}_t) = z_t \} \\
+1\{ f_B(\mathbf{x}_t) = z_t \text{ and } \mathbf{x}_t \in \text{Women}\} - 1\{ f_A(\mathbf{x}_t) = z_t \text{ and } \mathbf{x}_t \in \text{Women}\} \\
+1\{ f_B(\mathbf{x}_t) = z_t \text{ and } \mathbf{x}_t \in \text{Men}\} - 1\{ f_A(\mathbf{x}_t) = z_t \text{ and } \mathbf{x}_t \in \text{Men}\} \\
+\vdots \\
+1\{\mathbf{x}_t \in \text{Women}\} \\
+\vdots
+\end{array}\right).
+\]</span></p>
+<p>The first coordinates estimate joint accuracy gains:</p>
+<p><span class="math display">\[
+\mathbb{E}[\mathbf{\Delta}_t] =
+\left(\begin{array}{c}
+\text{Acc}(f_B) - \text{Acc}(f_A) \\
+p(f_B(\mathbf{x}) = z, \, \mathbf{x} \in \text{Women}) - p(f_A(\mathbf{x}) = z, \, \mathbf{x} \in \text{Women}) \\
+p(f_B(\mathbf{x}) = z, \, \mathbf{x} \in \text{Men}) - p(f_A(\mathbf{x}) = z, \, \mathbf{x} \in \text{Men}) \\
+\vdots \\
+p(\mathbf{x} \in \text{Women}) \\
+\vdots
+\end{array}\right).
+\]</span></p>
+<p>Thus, model comparison is still a mean-estimation problem. The first coordinates are gains, while the subgroup-membership coordinates are denominators. These denominator coordinates are included for the same reason as before: they let us convert joint subgroup gains into conditional subgroup gains.</p>
+<p>The only extra detail is that the gain coordinates lie in <span class="math inline">\([-1,1]\)</span>, while our confidence sequence expects observations in <span class="math inline">\([0,1]\)</span>. We therefore rescale only the gain coordinates before feeding them into the confidence sequence:</p>
+<p><span class="math display">\[
+\tilde{\Delta}_{t,d}=\frac{\Delta_{t,d}+1}{2}
+\quad \text{for gain coordinates } d,
+\]</span></p>
+<p>while leaving the subgroup-membership indicators unchanged. After constructing the confidence sequence, we map the gain intervals back to the original scale using</p>
+<p><span class="math display">\[
+\Delta_{d}=2\tilde{\Delta}_{d}-1.
+\]</span></p>
+<p>A multivariate confidence sequence then gives simultaneous confidence intervals for the true gains. If the interval for the overall accuracy gain lies entirely above <span class="math inline">\(0\)</span>, we can conclude that model <span class="math inline">\(B\)</span> improves overall accuracy over model <span class="math inline">\(A\)</span>. If a subgroup gain interval lies entirely below <span class="math inline">\(0\)</span>, this indicates subgroup degradation. If the intervals still contain <span class="math inline">\(0\)</span>, the data collected so far do not yet distinguish the two models on those metrics.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gain_observation(x_t, z_t, model_a_predict, model_b_predict):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    correct_a <span class="op">=</span> <span class="bu">float</span>(model_a_predict(x_t) <span class="op">==</span> z_t)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    correct_b <span class="op">=</span> <span class="bu">float</span>(model_b_predict(x_t) <span class="op">==</span> z_t)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    gain <span class="op">=</span> correct_b <span class="op">-</span> correct_a <span class="co"># 1, 0 or -1</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    woman <span class="op">=</span> <span class="bu">float</span>(x_t[<span class="st">"sex"</span>] <span class="op">==</span> <span class="st">"Female"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    age_over_40 <span class="op">=</span> <span class="bu">float</span>(x_t[<span class="st">"age"</span>] <span class="op">&gt;</span> <span class="dv">40</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    gains <span class="op">=</span> np.array([</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        gain,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        gain <span class="op">*</span> woman,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        gain <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> woman),</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        gain <span class="op">*</span> age_over_40,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        gain <span class="op">*</span> (<span class="fl">1.0</span> <span class="op">-</span> age_over_40),</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    ])</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    scaled_gains <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> (gains <span class="op">+</span> <span class="fl">1.0</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> np.concatenate([scaled_gains, [woman, age_over_40]])</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>gain_sequence <span class="op">=</span> StreamingBoundingBox(alpha<span class="op">=</span><span class="fl">0.05</span>, dimension<span class="op">=</span><span class="dv">7</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x_t, z_t <span class="kw">in</span> <span class="bu">zip</span>(X, y):</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    y_t <span class="op">=</span> gain_observation(x_t, z_t, model_a_predict, model_b_predict)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    mean_t, bounding_box_t <span class="op">=</span> gain_sequence.observe(y_t)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Reporting conditional gains.</strong> Conditional subgroup gains are obtained exactly as in the single-model case, by dividing the joint subgroup-gain coordinate by the corresponding subgroup-proportion coordinate. For example,</p>
+<p><span class="math display">\[
+\text{Acc}(f_B \mid \text{Women}) - \text{Acc}(f_A \mid \text{Women})
+=
+\frac{
+p(f_B(\mathbf{x}) = z, \mathbf{x}\in\text{Women})
+-
+p(f_A(\mathbf{x}) = z, \mathbf{x}\in\text{Women})
+}{
+p(\mathbf{x}\in\text{Women})
+}.
+\]</span></p>
+<p>The resulting interval should account for uncertainty in both the above numerator and the subgroup proportion.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>lower_t, upper_t <span class="op">=</span> bounding_box_t</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> conditional_interval(num_lower, num_upper, den_lower, den_upper):</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    candidates <span class="op">=</span> [</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        num_lower <span class="op">/</span> den_lower,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        num_lower <span class="op">/</span> den_upper,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        num_upper <span class="op">/</span> den_lower,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        num_upper <span class="op">/</span> den_upper,</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [<span class="bu">min</span>(candidates), <span class="bu">max</span>(candidates)]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># First map the gain coordinates back from [0, 1] to [-1, 1].</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>gain_lower <span class="op">=</span> lower_t.copy()</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>gain_upper <span class="op">=</span> upper_t.copy()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>gain_lower[:<span class="dv">5</span>] <span class="op">=</span> <span class="fl">2.0</span> <span class="op">*</span> gain_lower[:<span class="dv">5</span>] <span class="op">-</span> <span class="fl">1.0</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>gain_upper[:<span class="dv">5</span>] <span class="op">=</span> <span class="fl">2.0</span> <span class="op">*</span> gain_upper[:<span class="dv">5</span>] <span class="op">-</span> <span class="fl">1.0</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>global_gain_interval <span class="op">=</span> [gain_lower[<span class="dv">0</span>], gain_upper[<span class="dv">0</span>]]</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>women_gain_interval <span class="op">=</span> conditional_interval(</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    gain_lower[<span class="dv">1</span>],</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    gain_upper[<span class="dv">1</span>],</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    lower_t[<span class="dv">5</span>],</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    upper_t[<span class="dv">5</span>],</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>men_gain_interval <span class="op">=</span> conditional_interval(</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    gain_lower[<span class="dv">2</span>],</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    gain_upper[<span class="dv">2</span>],</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.0</span> <span class="op">-</span> upper_t[<span class="dv">5</span>],</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.0</span> <span class="op">-</span> lower_t[<span class="dv">5</span>],</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The same construction can be applied to the accuracy gains of model <span class="math inline">\(B\)</span> over model <span class="math inline">\(A\)</span>. The dashed line marks zero gain.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/blogs/model-monitoring/tutorial_gain_intervals.svg" class="img-fluid figure-img"></p>
+<figcaption>Model B versus Model A accuracy gain intervals</figcaption>
+</figure>
+</div>
+<p>Interestingly, while the new model shows a statistically significant improvement in overall accuracy, its accuracy on women shows a plausible performance decrease of up to <span class="math inline">\(1\%\)</span>. This suggests a concrete next step, such as collecting more representative data or improving performance on that subgroup before deployment.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>The main takeaway is that model evaluation can be rewritten as a mean-estimation problem. By choosing the right observation vector, the same confidence sequence machinery can track overall performance, subgroup performance, and model-to-model gains in a single framework.</p>
+<p>Confidence sequences are useful because they remain valid under repeated monitoring. We can inspect the intervals as data arrive, decide to collect more examples if the conclusion is still unclear, and keep the same statistical guarantee. In a multivariate setting, this lets us monitor overall accuracy and subgroup performance at the same time, so a model that improves on average can still be checked for subgroup-specific regressions.</p>
+<p>The <a href="https://github.com/fdenoodt/higher-dimensional-confidence-sequences/blob/main/examples/model_monitoring/tutorial.py">complete runnable code for this tutorial</a> is available in the repository.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/amore-labs\.github\.io\/website\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
