@@ -1,3 +1,21 @@
+d_logdet:
+  title: "Residual Correlation as a Diagnostic for Joint-Uncertainty Gains from GP Coregionalisation"
+  authors:
+    - F. Zhou
+    - J. Vanschoren
+  year: 2026
+  venue: "Asian Conference on Machine Learning (ACML)"
+  published_url: "https://arxiv.org/pdf/2609.30085"
+
+mtl_eva:
+  title: "Beyond Correlation: Validity Conditions for Task-Affinity Evaluation"
+  authors:
+    - F. Zhou
+    - J. Vanschoren
+  year: 2026
+  venue: "NeurIPS 2026 Trust-AI-Eval Workshop"
+  preprint: "https://openreview.net/forum?id=GH5RhiIkNz"
+  
 zero-compute-cross-lingual:
   title: "Zero-Compute Cross-Lingual Transferability Estimation Using Typological Feature Proxies"
   authors:
@@ -8,7 +26,7 @@ zero-compute-cross-lingual:
     - J. Vanschoren
   year: 2026
   venue: "NeurIPS 2026 Linguistic Principles for Foundation Models (LP4FM) Workshop"
-  published_url: "https://arxiv.org/abs/2609.39640"
+  preprint: "https://arxiv.org/abs/2609.39640"
   
 high_dim_cs:
    title: "On the Tightness and Computational Tractability of Higher-Dimensional Confidence Sequences"
