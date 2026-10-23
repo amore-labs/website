@@ -22,6 +22,11 @@ amlb:
 ```
 Will use image `images/papers/amlb.webp` or `.png`.
 
+### Adding a TEA Talks session
+
+Add an entry to [teatalks.yml](https://github.com/openml-labs/website/blob/main/teatalks/teatalks.yml) (the field template is at the top of the file) and put the speaker pictures / poster in `images/teatalks/`.
+Sessions are listed newest first and are tagged "Upcoming" or "Past" automatically based on their date.
+
 ### Adding a blog post
 
 Blog posts in the form of a Jupyter notebook can be added to the `notebooks` folder. However, you must add a "raw" cell at the top of the notebook and fill it with the following content:

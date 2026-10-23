@@ -1,0 +1,21 @@
+tea-2026-10:
+  topic: "AI for Science"
+  date: 2026-10-28
+  time: "16:00-17:00"
+  location: "Room TBA, TU/e campus"
+  online: true
+  register:
+  description: This month, TEA Talks explores AI for Science, from AI for physical systems to AI that accelerates plant breeding.
+  speakers:
+    - name: Kiet Bennema ten Brinke
+      type: academic
+      affiliation: TU/e, Machine Learning for Physical Sciences Group
+      picture: ../images/teatalks/kiet_bennema_ten_brinke.webp
+      talk: 
+      profile: https://www.linkedin.com/in/kiet-bennema-ten-brinke/
+    - name: Maureen van Eijnatten
+      type: industry
+      affiliation: KeyGene, Systems Biology & Artificial Intelligence Team
+      picture: ../images/teatalks/maureen_van_eijnatten.webp
+      talk: "Revolutionizing plant breeding: combining systems biology with AI for complex trait enhancement"
+      profile: https://www.linkedin.com/in/mvaneijnatten/?isSelfProfile=false

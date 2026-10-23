@@ -14,6 +14,7 @@ website:
       - publications/publications.qmd
       - software/software.qmd
       - blogs/blog.qmd
+      - teatalks/teatalks.qmd
       - people/people.qmd
       - join/join.qmd
     right:
