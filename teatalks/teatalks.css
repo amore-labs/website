@@ -112,39 +112,32 @@
 
 .tea-speakers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25em;
   margin-top: 1em;
-  padding-top: 1.1em;
   border-top: 1px solid rgba(127, 127, 127, 0.25);
 }
 
 .tea-speaker {
-  display: flex;
-  gap: 0.9em;
-  align-items: flex-start;
+  padding: 1em 0;
 }
 
-.tea-avatar {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(127, 127, 127, 0.12);
-  font-size: 1.2em;
-  font-weight: 500;
-  color: #888;
+.tea-speaker + .tea-speaker {
+  border-top: 1px solid rgba(127, 127, 127, 0.2);
 }
 
-.tea-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+@media (min-width: 768px) {
+  .tea-speakers {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tea-speaker:first-child {
+    padding-right: 1.5em;
+  }
+
+  .tea-speaker + .tea-speaker {
+    border-top: none;
+    border-left: 1px solid rgba(127, 127, 127, 0.2);
+    padding-left: 1.5em;
+  }
 }
 
 .tea-kind {
@@ -178,11 +171,18 @@
   color: var(--bs-secondary-color, #6c757d);
 }
 
-/* Reserve two lines so Profile and talk line up across the two speaker columns */
+/* Reserve two lines so the talk titles line up across the two speaker columns */
 @media (min-width: 768px) {
   .tea-affiliation {
     min-height: 3em;
   }
+}
+
+.tea-speaker-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .tea-profile {
@@ -199,7 +199,19 @@
 
 .tea-talk {
   font-style: italic;
-  margin: 0.3em 0 0.1em;
+  margin-top: 0.9em;
+  line-height: 1.4;
+}
+
+.tea-talk-label {
+  display: block;
+  margin-bottom: 0.2em;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-style: normal;
+  color: var(--bs-secondary-color, #6c757d);
 }
 
 .tea-actions {

@@ -49,23 +49,19 @@ def time_str(session):
 
 def make_speaker(speaker):
     name = speaker["name"]
-    if speaker.get("picture"):
-        avatar = f"<img src='{speaker['picture']}' alt='{escape(name)}'>"
-    else:
-        avatar = "".join(part[0] for part in name.split()[:2]).upper()
     kind = speaker.get("type", "academic")
     profile = f"<a class='tea-profile' href='{speaker['profile']}' target='_blank'>Profile <i class='bi bi-arrow-up-right'></i></a>" if speaker.get("profile") else ""
-    talk = f"<div class='tea-talk'>&ldquo;{speaker['talk']}&rdquo;</div>" if speaker.get("talk") else f"<div class='tea-talk'>{tba('Talk title to be announced')}</div>"
+    talk = f"<div class='tea-talk'><span class='tea-talk-label'>Talk</span>{speaker.get('talk') or tba('Title to be announced')}</div>"
     slides = button(speaker["slides"], "Slides", "bi-file-earmark-slides") if speaker.get("slides") else ""
     return f"""
     <div class="tea-speaker">
-        <div class="tea-avatar">{avatar}</div>
-        <div class="tea-speaker-text">
+        <div class="tea-speaker-top">
             <span class="tea-kind tea-{kind}">{SPEAKER_TYPES.get(kind, kind)}</span>
-            <div class="tea-speaker-name">{name}</div>
-            <div class="tea-affiliation">{speaker.get('affiliation', '')}</div>
-            {profile}{talk}{slides}
+            {profile}
         </div>
+        <div class="tea-speaker-name">{name}</div>
+        <div class="tea-affiliation">{speaker.get('affiliation', '')}</div>
+        {talk}{slides}
     </div>"""
 
 def make_session(key, session, number, is_past):
