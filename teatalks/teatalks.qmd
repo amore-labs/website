@@ -1,0 +1,138 @@
+---
+title: "TEA Talks"
+echo: false
+jupyter: python3
+section-divs: false
+toc: false
+css: teatalks.css
+---
+
+**<span style="color:#FF2400">T</span>hought <span style="color:#FF2400">E</span>xchange at <span style="color:#FF2400">A</span>MOR/e** (TEA) Talks aim to connect PhD students with frontier researchers from academia and industry.
+Each month, AMOR/e Lab brings together an academic and an industry researcher to share their work on a frontier topic.
+Sessions are held both on the TU/e campus and online, and are open to everyone interested.
+
+
+```{python}
+import yaml
+from html import escape
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
+from IPython.display import display, HTML
+
+AMSTERDAM = ZoneInfo("Europe/Amsterdam")
+SPEAKER_TYPES = {"academic": "Academia", "industry": "Industry"}
+
+def tba(text):
+    # Placeholder for details that are not confirmed yet
+    return f"<span class='tea-tba'>{text}</span>"
+
+def button(url, text, icon, style="btn-outline-dark"):
+    return f"""<a class="btn {style} btn-sm" href="{url}" target="_blank" rel="noopener noreferrer">
+        <i class="bi {icon}" role='img' aria-label='{text}'></i>
+        {text}
+    </a>"""
+
+def as_date(value):
+    return value if isinstance(value, date) else datetime.strptime(str(value), "%Y-%m-%d").date()
+
+def time_range(session):
+    # "16:00-17:30" -> ("16:00", "17:30")
+    start, _, end = str(session.get("time", "")).replace("–", "-").partition("-")
+    return start.strip(), end.strip()
+
+def time_str(session):
+    start, end = time_range(session)
+    if not start:
+        return tba("Time to be announced")
+    tz = datetime.combine(session["date"], datetime.strptime(start, "%H:%M").time(), AMSTERDAM).tzname()
+    return f"{start}&ndash;{end} {tz}" if end else f"{start} {tz}"
+
+def make_speaker(speaker):
+    name = speaker["name"]
+    kind = speaker.get("type", "academic")
+    profile = f"<a class='tea-profile' href='{speaker['profile']}' target='_blank'>Profile <i class='bi bi-arrow-up-right'></i></a>" if speaker.get("profile") else ""
+    talk = f"<div class='tea-talk'><span class='tea-talk-label'>Talk</span>{speaker.get('talk') or tba('Title to be announced')}</div>"
+    slides = button(speaker["slides"], "Slides", "bi-file-earmark-slides") if speaker.get("slides") else ""
+    return f"""
+    <div class="tea-speaker">
+        <div class="tea-speaker-top">
+            <span class="tea-kind tea-{kind}">{SPEAKER_TYPES.get(kind, kind)}</span>
+            {profile}
+        </div>
+        <div class="tea-speaker-name">{name}</div>
+        <div class="tea-affiliation">{speaker.get('affiliation', '')}</div>
+        {talk}{slides}
+    </div>"""
+
+def make_session(key, session, number, is_past):
+    day = session["date"]
+    meta = [f"<li><i class='bi bi-clock'></i> {time_str(session)}</li>"]
+    meta.append(f"<li><i class='bi bi-geo-alt'></i> {session.get('location') or tba('Location to be announced')}</li>")
+    if session.get("online"):
+        meta.append("<li><i class='bi bi-camera-video'></i> Online</li>")
+
+    upcoming_buttons = []
+    if session.get("register"):
+        upcoming_buttons.append(button(session["register"], "Register", "bi-pencil-square", "tea-btn-primary"))
+    else:
+        upcoming_buttons.append("<span class='btn btn-sm tea-btn-soon'><i class='bi bi-hourglass-split'></i> Registration opens soon</span>")
+    past_buttons = []
+    if session.get("recording"):
+        past_buttons.append(button(session["recording"], "Recording", "bi-play-btn"))
+
+    topic = session.get("topic") or tba("Topic to be announced")
+    poster = f"<img class='tea-poster' src='{session['poster']}' alt='Poster: {escape(session.get('topic', ''))}'>" if session.get("poster") else ""
+    description = f"<p class='tea-description'>{session['description']}</p>" if session.get("description") else ""
+    speakers = "".join(make_speaker(s) for s in session.get("speakers", []))
+    register_note = f"<p class='tea-register-note tea-upcoming-only'>{session['register_note']}</p>" if session.get("register") and session.get("register_note") else ""
+    return f"""
+    <article class="tea-session{' tea-past' if is_past else ''}" id="{key}" data-date="{day.isoformat()}">
+        <div class="tea-session-head">
+            <div class="tea-datebox">
+                <span>{day.strftime('%b')}</span><b>{day.day}</b><span>{day.year}</span>
+            </div>
+            <div class="tea-head-text">
+                <a class="tea-number" href="#{key}">TEA Talk #{number}</a>
+                <span class="tea-status">{'Past' if is_past else 'Upcoming'}</span>
+                <div class="tea-topic">{topic}</div>
+                <ul class="tea-meta">{''.join(meta)}</ul>
+            </div>
+            <div class="tea-actions tea-upcoming-only">{' '.join(upcoming_buttons)}</div>
+            <div class="tea-actions tea-past-only">{' '.join(past_buttons)}</div>
+        </div>
+        {poster}{description}
+        <div class="tea-speakers">{speakers}</div>
+        {register_note}
+    </article>"""
+
+
+sessions = yaml.safe_load(open("teatalks.yml")) or {}
+for session in sessions.values():
+    session["date"] = as_date(session["date"])
+
+chronological = sorted(sessions, key=lambda k: sessions[k]["date"])
+numbers = {key: i + 1 for i, key in enumerate(chronological)}
+today = date.today()
+```
+
+```{python}
+#| output: asis
+display(HTML(
+    "<div class='tea-sessions'>"
+    + "".join(make_session(k, sessions[k], numbers[k], sessions[k]["date"] < today) for k in reversed(chronological))
+    + "</div>"
+    + """
+<script>
+// The site is only rebuilt on push, so mark sessions whose date has passed as past on page load.
+document.addEventListener("DOMContentLoaded", () => {
+    const now = new Date();
+    document.querySelectorAll(".tea-session:not(.tea-past)").forEach(session => {
+        if (new Date(session.dataset.date + "T23:59:59") < now) {
+            session.classList.add("tea-past");
+            session.querySelector(".tea-status").textContent = "Past";
+        }
+    });
+});
+</script>"""
+))
+```
