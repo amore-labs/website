@@ -218,6 +218,12 @@
   flex-shrink: 0;
 }
 
+.tea-register-note {
+  margin: 0.5em 0 0;
+  font-size: 0.72em;
+  opacity: 0.35;
+}
+
 .tea-actions .btn {
   margin-top: 0;
 }

@@ -84,6 +84,7 @@ def make_session(key, session, number, is_past):
     poster = f"<img class='tea-poster' src='{session['poster']}' alt='Poster: {escape(session.get('topic', ''))}'>" if session.get("poster") else ""
     description = f"<p class='tea-description'>{session['description']}</p>" if session.get("description") else ""
     speakers = "".join(make_speaker(s) for s in session.get("speakers", []))
+    register_note = f"<p class='tea-register-note tea-upcoming-only'>{session['register_note']}</p>" if session.get("register") and session.get("register_note") else ""
     return f"""
     <article class="tea-session{' tea-past' if is_past else ''}" id="{key}" data-date="{day.isoformat()}">
         <div class="tea-session-head">
@@ -101,6 +102,7 @@ def make_session(key, session, number, is_past):
         </div>
         {poster}{description}
         <div class="tea-speakers">{speakers}</div>
+        {register_note}
     </article>"""
 
 
