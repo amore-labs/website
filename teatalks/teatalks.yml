@@ -12,7 +12,7 @@ tea-2026-10:
       type: academic
       affiliation: TU/e, Machine Learning for Physical Sciences Group
       picture: ../images/teatalks/kiet_bennema_ten_brinke.webp
-      talk: 
+      talk: "From Data to Simulation: Generative Modelling of Dynamical Systems"
       profile: https://www.linkedin.com/in/kiet-bennema-ten-brinke/
     - name: Maureen van Eijnatten
       type: industry
