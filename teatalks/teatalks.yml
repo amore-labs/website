@@ -1,3 +1,24 @@
+tea-2026-11:
+  topic: "World Models & Fairness"
+  date: 2026-11-25
+  time: "16:00-17:00"
+  location: "Neuron 0.118, TU/e campus"
+  online: true
+  register: https://events.teams.microsoft.com/event/061c5a28-87e1-4c1d-874f-8beb8b9227fe@cc7df247-60ce-4a0f-9d75-704cf60efc64?source=copyLinkOneEventsShareDialog
+  register_note: "Online participants from outside TU/e are asked to register to receive the join link."
+  description:
+  speakers:
+    - name: Ruize Xu
+      type: academic
+      affiliation: Dartmouth College, Science and Art of Human-AI Systems Lab
+      talk: "Delving into Agentic World Models"
+      profile: https://www.linkedin.com/in/ruize-xu-a43ba22b6/
+    - name: Clara Rus
+      type: academic
+      affiliation: University of Amsterdam, Information Retrieval Lab
+      talk: "AI Fairness"
+      profile: https://www.linkedin.com/in/clara-rus/
+
 tea-2026-10:
   topic: "AI for Science"
   date: 2026-10-28
