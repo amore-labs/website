@@ -5,8 +5,8 @@ tea-2026-11:
   location: "Neuron 0.118, TU/e campus"
   online: true
   register: https://events.teams.microsoft.com/event/061c5a28-87e1-4c1d-874f-8beb8b9227fe@cc7df247-60ce-4a0f-9d75-704cf60efc64?source=copyLinkOneEventsShareDialog
-  register_note: "Online participants from outside TU/e are asked to register to receive the join link."
-  description:
+  register_note: "Guests from outside TU/e are kindly asked to register."
+  description: "This month, TEA Talks explores World Models & Fairness: how agents benefit from understanding their environment, and how AI can assist people fairly."
   speakers:
     - name: Ruize Xu
       type: academic
